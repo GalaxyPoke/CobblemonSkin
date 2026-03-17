@@ -1,0 +1,14 @@
+将你的皮肤贴图（PNG格式）放在这个目录下。
+
+文件命名规则：
+  <skinId>.png
+
+例如：
+  pikachu_black.png  ← 对应 skin ID: pikachu_black
+  pikachu_red.png    ← 对应 skin ID: pikachu_red
+
+贴图尺寸与对应精灵的原版贴图尺寸保持一致即可。
+可以用原版贴图为模板，然后修改颜色/图案。
+
+原版精灵贴图路径（在Cobblemon资源包里）：
+  assets/cobblemon/textures/pokemon/<species>/<species>.png

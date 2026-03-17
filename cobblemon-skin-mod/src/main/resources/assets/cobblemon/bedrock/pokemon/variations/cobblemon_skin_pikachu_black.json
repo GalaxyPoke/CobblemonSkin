@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:pikachu",
+  "order": 100,
+  "variations": [
+    {
+      "aspects": ["skin_pikachu_black"],
+      "texture": "cobblemon_skin:textures/pokemon/skins/pikachu_black.png"
+    }
+  ]
+}

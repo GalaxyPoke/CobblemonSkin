@@ -1,0 +1,11 @@
+将 Cobblemon Fabric JAR 文件放在这个目录。
+
+文件名格式：cobblemon-fabric-<version>.jar
+例如：cobblemon-fabric-1.6.1+1.21.1.jar
+
+下载地址：
+  Modrinth: https://modrinth.com/mod/cobblemon/versions
+  CurseForge: https://www.curseforge.com/minecraft/mc-mods/cobblemon
+
+备注：只需要 Cobblemon 的 Fabric 版本 JAR。
+这个文件只用于编译期（compileOnly），不会被打包进最终 mod JAR。

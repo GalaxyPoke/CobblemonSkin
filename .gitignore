@@ -1,0 +1,32 @@
+# Gradle
+.gradle/
+build/
+**/build/
+**/.gradle/
+
+# Compiled output
+**/bin/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Cobblemon source (reference only, not part of mod)
+cobblemon-main/
+
+# Build logs
+*.log
+build-errors.txt
+build_output.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pencil design files
+*.pen
+
+# Windsurf
+.windsurfrules
+.windsurf/

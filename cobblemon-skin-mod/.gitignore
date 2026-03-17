@@ -1,0 +1,27 @@
+# Gradle
+.gradle/
+build/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Fabric Loom cache
+.loom-cache/
+
+# Cobblemon JAR (user must supply)
+libs/*.jar
+
+# Config generated at runtime
+run/
+
+# OS
+.DS_Store
+Thumbs.db
