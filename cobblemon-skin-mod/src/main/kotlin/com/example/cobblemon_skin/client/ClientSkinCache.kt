@@ -4,9 +4,9 @@ import com.example.cobblemon_skin.CobblemonSkinMod
 import com.example.cobblemon_skin.loader.SkinPackLoader
 import com.example.cobblemon_skin.network.SkinInfo
 import net.fabricmc.loader.api.FabricLoader
-import java.io.ByteArrayInputStream
-import java.io.ByteArrayOutputStream
 import java.io.File
+import java.io.FileInputStream
+import java.io.FileOutputStream
 import java.util.zip.ZipInputStream
 
 /**
@@ -30,8 +30,9 @@ object ClientSkinCache {
         File(packDir, ".server_pack_hash")
     }
 
-    /** Buffer for accumulating resource pack chunks during download. */
-    private var chunkBuffer: ByteArrayOutputStream? = null
+    /** Temp file for streaming resource pack chunks to disk (avoids memory pressure). */
+    private var tempFile: File? = null
+    private var tempOutputStream: FileOutputStream? = null
     private var expectedChunks = 0
     private var receivedChunks = 0
 
@@ -75,34 +76,51 @@ object ClientSkinCache {
      * Accumulates chunks and triggers extraction when all are received.
      */
     fun onChunkReceived(chunkIndex: Int, totalChunks: Int, data: ByteArray, packHash: String) {
-        if (chunkBuffer == null) {
-            chunkBuffer = ByteArrayOutputStream()
-            expectedChunks = totalChunks
-            receivedChunks = 0
-            CobblemonSkinMod.LOGGER.info("Starting resource pack download ($totalChunks chunks)")
+        try {
+            if (tempFile == null) {
+                val gameDir = FabricLoader.getInstance().gameDir.toFile()
+                tempFile = File(gameDir, "cobblemon_skin_pack_download.tmp")
+                tempOutputStream = FileOutputStream(tempFile!!)
+                expectedChunks = totalChunks
+                receivedChunks = 0
+                CobblemonSkinMod.LOGGER.info("Starting resource pack download ($totalChunks chunks) → temp file")
+            }
+
+            tempOutputStream!!.write(data)
+            receivedChunks++
+
+            if (receivedChunks % 10 == 0 || receivedChunks >= expectedChunks) {
+                CobblemonSkinMod.LOGGER.info("Resource pack download: $receivedChunks/$expectedChunks chunks")
+            }
+
+            if (receivedChunks >= expectedChunks) {
+                tempOutputStream!!.close()
+                tempOutputStream = null
+                val zipFile = tempFile!!
+                tempFile = null
+
+                CobblemonSkinMod.LOGGER.info("Resource pack download complete (${zipFile.length() / 1024}KB)")
+                extractServerPack(zipFile, packHash)
+                zipFile.delete()
+            }
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.error("Error receiving chunk: ${e.message}")
+            cleanupTempFile()
         }
+    }
 
-        chunkBuffer!!.write(data)
-        receivedChunks++
-
-        if (receivedChunks % 10 == 0 || receivedChunks >= expectedChunks) {
-            CobblemonSkinMod.LOGGER.info("Resource pack download: $receivedChunks/$expectedChunks chunks")
-        }
-
-        if (receivedChunks >= expectedChunks) {
-            val zipBytes = chunkBuffer!!.toByteArray()
-            chunkBuffer = null
-
-            CobblemonSkinMod.LOGGER.info("Resource pack download complete (${zipBytes.size / 1024}KB)")
-            extractServerPack(zipBytes, packHash)
-        }
+    private fun cleanupTempFile() {
+        try { tempOutputStream?.close() } catch (_: Exception) {}
+        tempOutputStream = null
+        try { tempFile?.delete() } catch (_: Exception) {}
+        tempFile = null
     }
 
     /**
      * Extract the server-delivered resource pack ZIP to the resource pack directory
      * and schedule a resource reload.
      */
-    private fun extractServerPack(zipBytes: ByteArray, packHash: String) {
+    private fun extractServerPack(zipFile: File, packHash: String) {
         try {
             // Clean existing pack directory (except .server_pack_hash)
             if (packDir.exists()) {
@@ -114,9 +132,9 @@ object ClientSkinCache {
             }
             packDir.mkdirs()
 
-            // Extract ZIP
+            // Extract ZIP from temp file (streams from disk, low memory usage)
             var fileCount = 0
-            ZipInputStream(ByteArrayInputStream(zipBytes)).use { zis ->
+            ZipInputStream(FileInputStream(zipFile)).use { zis ->
                 var entry = zis.nextEntry
                 while (entry != null) {
                     val file = File(packDir, entry.name)
@@ -155,7 +173,7 @@ object ClientSkinCache {
 
     fun clear() {
         skinList = emptyList()
-        chunkBuffer = null
+        cleanupTempFile()
         expectedChunks = 0
         receivedChunks = 0
         needsReload = false

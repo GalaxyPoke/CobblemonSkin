@@ -3,13 +3,22 @@ package com.example.cobblemon_skin.server
 import com.cobblemon.mod.common.Cobblemon
 import com.example.cobblemon_skin.CobblemonSkinMod
 import com.example.cobblemon_skin.network.*
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
+import java.util.UUID
 
 /**
  * Server-side packet handler. Registers C2S packet receivers and JOIN event.
+ * Uses tick-based throttling for resource pack delivery to avoid flooding connections.
  */
 object ServerPacketHandler {
+
+    /** Pending resource pack transfers: player UUID → next chunk index to send. */
+    private val pendingTransfers = mutableMapOf<UUID, Int>()
+
+    /** How many 512KB chunks to send per server tick (512KB × 2 = 1MB/tick = ~20MB/sec). */
+    private const val CHUNKS_PER_TICK = 2
 
     fun register() {
         // Send skin list + pack hash when player joins
@@ -18,6 +27,37 @@ object ServerPacketHandler {
             val packHash = ResourcePackTransfer.packHash
             CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${SkinManager.getSkinInfoList().size} skins, pack=$packHash)")
             SkinPackets.sendSkinList(player, SkinManager.getSkinInfoList(), packHash)
+        }
+
+        // Tick-based throttled chunk sending
+        ServerTickEvents.END_SERVER_TICK.register { server ->
+            if (pendingTransfers.isEmpty()) return@register
+            val totalChunks = ResourcePackTransfer.getTotalChunks()
+            val iterator = pendingTransfers.iterator()
+            while (iterator.hasNext()) {
+                val (uuid, startIndex) = iterator.next()
+                val player = server.playerList.getPlayer(uuid)
+                if (player == null) {
+                    iterator.remove()
+                    continue
+                }
+                val endIndex = minOf(startIndex + CHUNKS_PER_TICK, totalChunks)
+                for (i in startIndex until endIndex) {
+                    try {
+                        ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, ResourcePackTransfer.getChunkData(i)))
+                    } catch (e: Exception) {
+                        CobblemonSkinMod.LOGGER.error("Failed to send chunk $i to ${player.name.string}: ${e.message}")
+                        iterator.remove()
+                        break
+                    }
+                }
+                if (endIndex >= totalChunks) {
+                    CobblemonSkinMod.LOGGER.info("Resource pack transfer complete for ${player.name.string}")
+                    iterator.remove()
+                } else {
+                    pendingTransfers[uuid] = endIndex
+                }
+            }
         }
 
         // Handle C2S: skin resource request (on-demand, kept for compatibility)
@@ -34,7 +74,7 @@ object ServerPacketHandler {
             }
         }
 
-        // Handle C2S: resource pack download request
+        // Handle C2S: resource pack download request — queue for tick-based delivery
         ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { _: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
             val player = context.player()
             if (!ResourcePackTransfer.isReady()) {
@@ -43,17 +83,8 @@ object ServerPacketHandler {
             }
 
             val totalChunks = ResourcePackTransfer.getTotalChunks()
-            CobblemonSkinMod.LOGGER.info("Sending resource pack to ${player.name.string} ($totalChunks chunks)")
-
-            for (i in 0 until totalChunks) {
-                val chunkData = ResourcePackTransfer.getChunkData(i)
-                try {
-                    ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, chunkData))
-                } catch (e: Exception) {
-                    CobblemonSkinMod.LOGGER.error("Failed to send chunk $i to ${player.name.string}: ${e.message}")
-                    break
-                }
-            }
+            CobblemonSkinMod.LOGGER.info("Queuing resource pack transfer for ${player.name.string} ($totalChunks chunks)")
+            pendingTransfers[player.uuid] = 0
         }
 
         // Handle C2S: skin apply request
