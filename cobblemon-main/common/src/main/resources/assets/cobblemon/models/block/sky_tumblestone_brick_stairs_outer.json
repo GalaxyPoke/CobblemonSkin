@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "cobblemon:block/tumblestone/sky_tumblestone_bricks",
-    "side": "cobblemon:block/tumblestone/sky_tumblestone_bricks",
-    "top": "cobblemon:block/tumblestone/sky_tumblestone_bricks"
-  }
-}

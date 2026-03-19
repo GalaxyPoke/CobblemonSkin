@@ -1,6 +1,0 @@
-{
-    "parent": "cobblemon:item/citrine_rod",
-    "textures": {
-        "layer0": "cobblemon:item/fishing/citrine_rod_cast"
-    }
-}

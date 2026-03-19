@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "textures": {
-    "bottom": "cobblemon:block/wood/saccharine_door_bottom",
-    "top": "cobblemon:block/wood/saccharine_door_top"
-  }
-}

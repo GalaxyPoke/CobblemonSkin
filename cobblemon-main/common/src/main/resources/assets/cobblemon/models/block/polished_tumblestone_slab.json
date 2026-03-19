@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "cobblemon:block/tumblestone/polished_tumblestone",
-    "side": "cobblemon:block/tumblestone/polished_tumblestone_slab",
-    "top": "cobblemon:block/tumblestone/polished_tumblestone"
-  }
-}

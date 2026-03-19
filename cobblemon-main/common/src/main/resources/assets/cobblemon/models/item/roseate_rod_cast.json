@@ -1,7 +1,0 @@
-{
-    "parent": "cobblemon:item/roseate_rod",
-    
-    "textures": {
-        "layer0": "cobblemon:item/fishing/roseate_rod_cast"
-    }
-}

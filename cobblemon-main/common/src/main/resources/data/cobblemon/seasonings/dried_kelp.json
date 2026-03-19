@@ -1,8 +1,0 @@
-{
-  "ingredient": "minecraft:dried_kelp",
-  "colour": "gray",
-  "food": {
-    "hunger": 1,
-    "saturation": 0.3
-  }
-}

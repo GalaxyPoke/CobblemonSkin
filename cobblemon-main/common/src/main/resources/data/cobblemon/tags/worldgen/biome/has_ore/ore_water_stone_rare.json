@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#cobblemon:is_jungle",
-    "#cobblemon:is_thermal",
-    "#cobblemon:is_tropical_island"
-  ]
-}

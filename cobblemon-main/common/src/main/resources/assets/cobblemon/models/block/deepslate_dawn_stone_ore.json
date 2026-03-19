@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "cobblemon:block/evolution/deepslate_dawn_stone_ore"
-  }
-}

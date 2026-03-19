@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "cobblemon:block/tumblestone/smooth_sky_tumblestone"
-  }
-}
-

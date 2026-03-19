@@ -1,8 +1,0 @@
-{
-  "parent": "adorn:block/templates/coffee_table",
-  "textures": {
-    "planks": "cobblemon:block/wood/apricorn_planks",
-    "leg": "cobblemon:block/wood/apricorn_log",
-    "rim": "cobblemon:block/wood/apricorn_log"
-  }
-}

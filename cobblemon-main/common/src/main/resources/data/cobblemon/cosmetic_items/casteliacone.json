@@ -1,9 +1,0 @@
-{
-  "pokemon": ["pikachu", "raichu", "pichu"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "cobblemon:casteliacone",
-      "aspects": ["cosmetic_item-casteliacone"]
-    }
-  ]
-}

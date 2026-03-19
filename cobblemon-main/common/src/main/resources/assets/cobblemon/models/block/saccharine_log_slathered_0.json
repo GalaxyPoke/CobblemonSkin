@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/orientable",
-  "textures": {
-    "front": "cobblemon:block/wood/saccharine_log_slathered_0",
-    "side": "cobblemon:block/wood/saccharine_log",
-    "top": "cobblemon:block/wood/saccharine_log_top"
-  }
-}

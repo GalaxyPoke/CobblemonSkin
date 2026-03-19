@@ -1,7 +1,0 @@
-{
-  "parent": "cobblemon:block/full_heal_2",
-  "textures": {
-        "texture": "cobblemon:block/decorative/burn_heal",
-        "particle": "cobblemon:block/decorative/burn_heal"
-  }
-}

@@ -1,9 +1,0 @@
-{
-  "pokemon": ["treecko", "grovyle", "sceptile"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "minecraft:stick",
-      "aspects": ["cosmetic_item-stick"]
-    }
-  ]
-}

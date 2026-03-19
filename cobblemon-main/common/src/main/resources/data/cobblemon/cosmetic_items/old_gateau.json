@@ -1,9 +1,0 @@
-{
-  "pokemon": ["pikachu", "raichu", "pichu"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "cobblemon:old_gateau",
-      "aspects": ["cosmetic_item-old_gateau"]
-    }
-  ]
-}

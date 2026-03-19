@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "cobblemon:block/tumblestone/large_budding_sky_tumblestone"
-  }
-}

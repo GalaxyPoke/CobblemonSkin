@@ -1,6 +1,0 @@
-{
-  "parent": "cobblemon:item/ponigiri",
-  "textures": {
-    "layer1": "cobblemon:item/food/ponigiri/ponigiri_golden_carrot"
-  }
-}

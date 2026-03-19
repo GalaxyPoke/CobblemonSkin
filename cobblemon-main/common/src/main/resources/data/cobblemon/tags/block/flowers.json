@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#minecraft:flowers",
-	"#cobblemon:small_flowers",
-    "#cobblemon:saccharine_leaves"
-  ]
-}

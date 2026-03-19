@@ -1,6 +1,0 @@
-{
-    "parent": "cobblemon:item/beast_rod",
-    "textures": {
-        "layer0": "cobblemon:item/fishing/beast_rod_cast"
-    }
-}

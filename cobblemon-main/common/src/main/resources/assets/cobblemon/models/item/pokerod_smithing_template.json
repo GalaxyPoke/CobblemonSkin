@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "cobblemon:item/pokerod_smithing_template"
-  }
-}

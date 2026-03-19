@@ -1,9 +1,0 @@
-{
-  "item": "cobblemon:enigma_berry",
-  "effects": [
-    {
-      "type": "cobblemon:ha_chance",
-      "chance": 0.05
-    }
-  ]
-}

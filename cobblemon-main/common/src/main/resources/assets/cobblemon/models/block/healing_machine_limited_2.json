@@ -1,6 +1,0 @@
-{
-    "parent": "cobblemon:block/healing_machine_2",
-    "textures": {
-        "all": "cobblemon:block/functional/healing_machine_limited"
-    }
-}

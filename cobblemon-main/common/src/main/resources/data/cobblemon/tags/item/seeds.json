@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-	"cobblemon:vivichoke_seeds",
-	"#cobblemon:mint_seeds",
-	"#cobblemon:held/terrain_seeds"
-  ]
-}

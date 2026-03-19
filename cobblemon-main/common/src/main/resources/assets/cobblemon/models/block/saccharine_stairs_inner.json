@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "cobblemon:block/wood/saccharine_planks",
-    "top": "cobblemon:block/wood/saccharine_planks",
-    "side": "cobblemon:block/wood/saccharine_planks"
-  }
-}

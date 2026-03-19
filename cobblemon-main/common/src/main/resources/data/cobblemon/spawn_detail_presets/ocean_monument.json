@@ -1,8 +1,0 @@
-{
-  "condition": {
-	"structures": [
-	  "minecraft:monument"
-    ],
-	"maxY": 62
-  }
-}

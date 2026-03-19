@@ -1,7 +1,0 @@
-{
-  "parent": "cobblemon:block/potion_0",
-  "textures": {
-    "texture": "cobblemon:block/decorative/hyper_potion",
-    "particle": "cobblemon:block/decorative/hyper_potion"
-  }
-}

@@ -1,6 +1,0 @@
-{
-    "parent": "cobblemon:item/fast_rod",
-    "textures": {
-        "layer0": "cobblemon:item/fishing/fast_rod_cast"
-    }
-}

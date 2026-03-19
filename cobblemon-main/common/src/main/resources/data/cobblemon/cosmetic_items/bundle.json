@@ -1,9 +1,0 @@
-{
-  "pokemon": ["dragonite"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "minecraft:bundle",
-      "aspects": ["cosmetic_item-bundle"]
-    }
-  ]
-}

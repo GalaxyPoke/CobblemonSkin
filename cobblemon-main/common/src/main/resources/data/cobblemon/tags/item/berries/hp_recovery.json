@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "cobblemon:oran_berry",
-    "cobblemon:sitrus_berry",
-    "cobblemon:enigma_berry",
-    "#cobblemon:berries/nature_recovery"
-  ]
-}

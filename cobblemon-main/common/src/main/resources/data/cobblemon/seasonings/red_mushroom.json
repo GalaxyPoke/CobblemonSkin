@@ -1,8 +1,0 @@
-{
-  "ingredient": "minecraft:red_mushroom",
-  "colour": "red",
-  "food": {
-    "hunger": 2,
-    "saturation": 1.8
-  }
-}

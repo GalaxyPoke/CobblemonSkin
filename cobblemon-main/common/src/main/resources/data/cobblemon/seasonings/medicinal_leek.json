@@ -1,8 +1,0 @@
-{
-  "ingredient": "cobblemon:medicinal_leek",
-  "colour": "magenta",
-  "food": {
-    "hunger": 1,
-    "saturation": 0.6
-  }
-}

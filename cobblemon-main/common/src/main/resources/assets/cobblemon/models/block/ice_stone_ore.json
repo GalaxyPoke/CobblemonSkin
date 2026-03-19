@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "cobblemon:block/evolution/ice_stone_ore"
-  }
-}

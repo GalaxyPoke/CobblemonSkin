@@ -1,6 +1,0 @@
-{
-	"parent": "minecraft:item/generated",
-	"textures": {
-		"layer0": "cobblemon:item/wood/red_apricorn_seed"
-	}
-}

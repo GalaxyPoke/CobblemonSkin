@@ -1,9 +1,0 @@
-{
-	"name": "cobblemon.mark.mark_partner",
-	"title": "cobblemon.mark.mark_partner.title",
-	"titleColor": "40B282",
-	"description": "cobblemon.mark.mark_partner.desc",
-	"texture": "cobblemon:textures/gui/mark/mark_partner.png",
-	"indexNumber": 104,
-	"chance": 0.01
-}

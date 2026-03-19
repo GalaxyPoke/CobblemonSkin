@@ -1,9 +1,0 @@
-{
-  "pokemon": ["squirtle", "wartortle", "blastoise"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "cobblemon:wise_glasses",
-      "aspects": ["cosmetic_item-wise_glasses"]
-    }
-  ]
-}

@@ -1,9 +1,0 @@
-{
-  "pokemon": ["pikachu", "raichu", "pichu"],
-  "cosmeticItems": [
-    {
-      "consumedItem": "minecraft:compass",
-      "aspects": ["cosmetic_item-compass"]
-    }
-  ]
-}

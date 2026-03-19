@@ -1,1 +1,0 @@
-battle.add('') is the format for a || message out of showdown, e.g. battle.add('detailschange', ...)

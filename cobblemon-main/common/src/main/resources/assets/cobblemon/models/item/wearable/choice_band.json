@@ -1,7 +1,0 @@
-{
-	"parent": "cobblemon:item/wearable/template_band",
-	"textures": {
-		"texture": "cobblemon:item/wearable/choice_band",
-		"particle": "cobblemon:item/wearable/choice_band"
-	}
-}

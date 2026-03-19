@@ -1,6 +1,0 @@
-{
-    "parent": "cobblemon:item/premier_rod",
-    "textures": {
-        "layer0": "cobblemon:item/fishing/premier_rod_cast"
-    }
-}

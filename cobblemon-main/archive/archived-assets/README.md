@@ -1,1 +1,0 @@
-These are assets that may be used in the future, but can't be put in tFheir respective folders at the moment for some reason or another

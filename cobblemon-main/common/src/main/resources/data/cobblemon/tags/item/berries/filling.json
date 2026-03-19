@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#cobblemon:berries/damage_reduction",
-    "#cobblemon:berries/damaging",
-    "#cobblemon:berries/non_battle"
-  ]
-}

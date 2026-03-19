@@ -1,6 +1,0 @@
-{
-  "keys": ["has_nectar"],
-  "type": "flag",
-  "isAspect": true,
-  "default": false
-}

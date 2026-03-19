@@ -1,7 +1,0 @@
-{
-  "parent": "cobblemon:block/dire_hit_2",
-  "textures": {
-        "texture": "cobblemon:block/decorative/x_defense",
-        "particle": "cobblemon:block/decorative/x_defense"
-  }
-}
