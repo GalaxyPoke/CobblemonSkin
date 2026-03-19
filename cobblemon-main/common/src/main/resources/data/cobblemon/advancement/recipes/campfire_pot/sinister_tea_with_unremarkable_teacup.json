@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cup": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:unremarkable_teacup"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/sinister_tea_with_unremarkable_teacup"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cup"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/sinister_tea_with_unremarkable_teacup"
+    ]
+  }
+}

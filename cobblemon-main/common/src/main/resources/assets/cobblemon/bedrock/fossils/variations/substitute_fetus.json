@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:substitute_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:substitute_fetus",
+      "model": "cobblemon:substitute_fetus.geo",
+      "texture": "cobblemon:textures/fossils/substitute.png",
+      "layers": []
+    }
+  ]
+}

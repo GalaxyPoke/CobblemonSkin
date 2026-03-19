@@ -1,0 +1,17 @@
+{
+    "species": "cobblemon:doublade",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:doublade",
+        "model": "cobblemon:doublade.geo",
+        "texture": "cobblemon:textures/pokemon/0680_doublade/doublade.png",
+        "layers": []
+      },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0680_doublade/doublade_shiny.png"
+      }
+    ]
+  }

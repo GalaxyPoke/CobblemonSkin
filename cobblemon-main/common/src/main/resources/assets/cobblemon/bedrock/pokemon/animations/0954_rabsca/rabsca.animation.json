@@ -1,0 +1,116 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.rabsca.ground_idle": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, 1, 0]
+				},
+				"torso": {
+					"rotation": [-2.5, 0, 0]
+				},
+				"leg_left": {
+					"rotation": [0, 0, 5]
+				},
+				"leg_left2": {
+					"rotation": [0, 0, -10]
+				},
+				"leg_left3": {
+					"rotation": [0, 0, -7.5]
+				},
+				"leg_right": {
+					"rotation": [0, 0, -5]
+				},
+				"leg_right2": {
+					"rotation": [0, 0, 5]
+				},
+				"leg_right3": {
+					"rotation": [0, 0, 7.5]
+				},
+				"beard_left3": {
+					"rotation": [0, -2.5, 0]
+				},
+				"beard_left4": {
+					"rotation": [0, -5, 0]
+				},
+				"beard_right3": {
+					"rotation": [0, 2.5, 0]
+				},
+				"beard_right4": {
+					"rotation": [0, 5, 0]
+				},
+				"arm_left": {
+					"rotation": [0, 0, 7.5]
+				},
+				"arm_left2": {
+					"rotation": [0, 0, 5]
+				},
+				"arm_left3": {
+					"rotation": [0, 0, 7.5]
+				},
+				"arm_right": {
+					"rotation": [0, 0, -7.5]
+				},
+				"arm_right2": {
+					"rotation": [0, 0, -5]
+				},
+				"arm_right3": {
+					"rotation": [0, 0, -7.5]
+				},
+				"ball": {
+					"position": [0, -2, -2]
+				},
+				"ball_rotation": {
+					"rotation": [0, 0, 5]
+				},
+				"beard_left2": {
+					"rotation": [0, 0, 5]
+				},
+				"beard_right2": {
+					"rotation": [0, 0, -5]
+				},
+				"ball_active": {
+					"scale": 0
+				},
+				"inner_ball_active": {
+					"scale": 0
+				},
+				"inner_ball_rotation": {
+					"rotation": [0, 0, -5]
+				}
+			}
+		},
+		"animation.rabsca.open_eyes": {
+			"loop": true,
+			"bones": {
+				"eye_closed_left": {
+					"position": [0, 0, 0.1]
+				},
+				"eye_open_left": {
+					"position": [0, 0, -0.1]
+				},
+				"eye_open_right": {
+					"position": [0, 0, -0.1]
+				},
+				"eye_closed_right": {
+					"position": [0, 0, 0.1]
+				},
+				"inner_ball": {
+					"scale": 0
+				},
+				"ball_inactive": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.rabsca.cry": {
+			"sound_effects": {
+				"animation_length": 1.25,
+				"0.04": {
+					"effect": "pokemon.rabsca.cry"
+				}
+			}
+		}
+	}
+}

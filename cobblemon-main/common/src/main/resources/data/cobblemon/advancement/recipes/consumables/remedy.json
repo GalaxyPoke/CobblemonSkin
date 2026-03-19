@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_root": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+				"cobblemon:big_root"
+			]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:remedy"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_root",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:remedy"
+    ]
+  }
+}

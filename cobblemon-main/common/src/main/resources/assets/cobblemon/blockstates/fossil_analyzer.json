@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=south,on=false": {
+      "model": "cobblemon:block/fossil_analyzer"
+    },
+    "facing=west,on=false": {
+      "model": "cobblemon:block/fossil_analyzer",
+      "y": 90
+    },
+    "facing=north,on=false": {
+      "model": "cobblemon:block/fossil_analyzer",
+      "y": 180
+    },
+    "facing=east,on=false": {
+      "model": "cobblemon:block/fossil_analyzer",
+      "y": 270
+    },
+    "facing=south,on=true": {
+      "model": "cobblemon:block/fossil_analyzer_scanning"
+    },
+    "facing=west,on=true": {
+      "model": "cobblemon:block/fossil_analyzer_scanning",
+      "y": 90
+    },
+    "facing=north,on=true": {
+      "model": "cobblemon:block/fossil_analyzer_scanning",
+      "y": 180
+    },
+    "facing=east,on=true": {
+      "model": "cobblemon:block/fossil_analyzer_scanning",
+      "y": 270
+    }
+  }
+}

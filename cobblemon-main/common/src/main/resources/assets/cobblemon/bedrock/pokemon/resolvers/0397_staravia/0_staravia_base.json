@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:staravia",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:staravia",
+      "model": "cobblemon:staravia_male.geo",
+      "texture": "cobblemon:textures/pokemon/0397_staravia/staravia.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0397_staravia/staravia_shiny.png"
+    }
+  ]
+}

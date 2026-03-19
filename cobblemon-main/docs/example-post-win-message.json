@@ -1,0 +1,288 @@
+{
+  "winner": "005a04f7-4cb5-3251-9991-d8e9288e0034",
+  "seed": [
+    14112,
+    9040,
+    59282,
+    38999
+  ],
+  "turns": 6,
+  "p1": "005a04f7-4cb5-3251-9991-d8e9288e0034",
+  "p2": "c028742d-38fd-4260-b25b-e5c4c7bc06e4",
+  "p1team": [
+    {
+      "name": "Charizard",
+      "species": "charizard",
+      "uuid": "d5e9de52-9275-4ea5-a1d6-cdeaa3808545",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Tail Whip",
+        "Dragon Claw",
+        "Tackle",
+        "Heat Wave"
+      ],
+      "nature": "Lax",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 20,
+        "atk": 20,
+        "def": 17,
+        "spa": 22,
+        "spd": 14,
+        "spe": 28
+      },
+      "level": 11,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    },
+    {
+      "name": "Gyarados",
+      "species": "gyarados",
+      "uuid": "1748cfcc-dba7-449d-ae5e-f500b1a83c2d",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Tail Whip",
+        "Growl",
+        "Tackle",
+        "Helping Hand"
+      ],
+      "nature": "Impish",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 22,
+        "atk": 0,
+        "def": 24,
+        "spa": 6,
+        "spd": 24,
+        "spe": 29
+      },
+      "level": 1,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    },
+    {
+      "name": "Charizard",
+      "species": "charizard",
+      "uuid": "7606a1b1-9fed-4962-a55a-c494a701712c",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Tail Whip",
+        "Growl",
+        "Tackle",
+        "Helping Hand"
+      ],
+      "nature": "Impish",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 10,
+        "atk": 10,
+        "def": 19,
+        "spa": 26,
+        "spd": 10,
+        "spe": 12
+      },
+      "level": 1,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    },
+    {
+      "name": "Venusaur",
+      "species": "venusaur",
+      "uuid": "ace77175-c500-4c0f-9020-8ec4736c1ebd",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Tail Whip",
+        "Growl",
+        "Tackle",
+        "Helping Hand"
+      ],
+      "nature": "Quiet",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 22,
+        "atk": 0,
+        "def": 22,
+        "spa": 9,
+        "spd": 15,
+        "spe": 27
+      },
+      "level": 5,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    },
+    {
+      "name": "Charizard",
+      "species": "charizard",
+      "uuid": "5205b484-9598-4579-a62f-917738e1c4f7",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Dragon Claw",
+        "Growl",
+        "Ember",
+        "Smokescreen"
+      ],
+      "nature": "Adamant",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 6,
+        "atk": 7,
+        "def": 29,
+        "spa": 9,
+        "spd": 22,
+        "spe": 30
+      },
+      "level": 1,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    },
+    {
+      "name": "Blastoise",
+      "species": "blastoise",
+      "uuid": "ab63689c-b4e7-4c89-b720-9fc7f8e2fe05",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "Water Gun",
+        "Tail Whip",
+        "Tackle",
+        "Flash Cannon"
+      ],
+      "nature": "Modest",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 16,
+        "atk": 30,
+        "def": 13,
+        "spa": 15,
+        "spd": 26,
+        "spe": 26
+      },
+      "shiny": true,
+      "level": 1,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    }
+  ],
+  "p2team": [
+    {
+      "name": "Caterpie",
+      "species": "caterpie",
+      "uuid": "c028742d-38fd-4260-b25b-e5c4c7bc06e4",
+      "item": "",
+      "ability": "Flash Fire",
+      "moves": [
+        "String Shot",
+        "Tackle"
+      ],
+      "nature": "Naive",
+      "evs": {
+        "hp": 0,
+        "atk": 0,
+        "def": 0,
+        "spa": 0,
+        "spd": 0,
+        "spe": 0
+      },
+      "gender": "M",
+      "ivs": {
+        "hp": 30,
+        "atk": 30,
+        "def": 17,
+        "spa": 0,
+        "spd": 19,
+        "spe": 2
+      },
+      "level": 1,
+      "happiness": null,
+      "hpType": "",
+      "pokeball": "",
+      "gigantamax": false
+    }
+  ],
+  "score": [
+    6,
+    0
+  ],
+  "inputLog": [
+    ">start {\"seed\":[14112,9040,59282,38999]}",
+    ">player p1 {\"name\":\"005a04f7-4cb5-3251-9991-d8e9288e0034\",\"team\":\"charizard||d5e9de52-9275-4ea5-a1d6-cdeaa3808545||flashfire|tailwhip,dragonclaw,tackle,heatwave|lax|0,0,0,0,0,0|M|20,20,17,22,14,28||11|0|||]gyarados||1748cfcc-dba7-449d-ae5e-f500b1a83c2d||flashfire|tailwhip,growl,tackle,helpinghand|impish|0,0,0,0,0,0|M|22,0,24,6,24,29||1|0|||]charizard||7606a1b1-9fed-4962-a55a-c494a701712c||flashfire|tailwhip,growl,tackle,helpinghand|impish|0,0,0,0,0,0|M|10,10,19,26,10,12||1|0|||]venusaur||ace77175-c500-4c0f-9020-8ec4736c1ebd||flashfire|tailwhip,growl,tackle,helpinghand|quiet|0,0,0,0,0,0|M|22,0,22,9,15,27||5|0|||]charizard||5205b484-9598-4579-a62f-917738e1c4f7||flashfire|dragonclaw,growl,ember,smokescreen|adamant|0,0,0,0,0,0|M|6,7,29,9,22,30||1|0|||]blastoise||ab63689c-b4e7-4c89-b720-9fc7f8e2fe05||flashfire|watergun,tailwhip,tackle,flashcannon|modest|0,0,0,0,0,0|M|16,30,13,15,26,26|S|1|0|||\"}",
+    ">player p2 {\"name\":\"c028742d-38fd-4260-b25b-e5c4c7bc06e4\",\"team\":\"caterpie||c028742d-38fd-4260-b25b-e5c4c7bc06e4||flashfire|stringshot,tackle|naive|0,0,0,0,0,0|M|30,30,17,0,19,2||1|0|||\"}",
+    ">p1 move heatwave",
+    ">p2 move stringshot",
+    ">p1 move heatwave",
+    ">p2 move tackle",
+    ">p1 move heatwave",
+    ">p2 move tackle",
+    ">p1 move heatwave",
+    ">p2 move tackle",
+    ">p1 move heatwave",
+    ">p2 move tackle",
+    ">p1 move dragonclaw",
+    ">p2 move stringshot"
+  ]
+}

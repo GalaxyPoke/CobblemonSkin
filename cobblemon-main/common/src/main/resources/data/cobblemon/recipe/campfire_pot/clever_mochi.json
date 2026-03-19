@@ -1,0 +1,22 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "group": "ev_mochi",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "cobblemon:hearty_grains"
+        },
+        {
+            "item": "minecraft:honey_bottle"
+        },
+        {
+            "item": "cobblemon:grepa_berry"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:clever_mochi",
+        "count": 3
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

@@ -1,0 +1,80 @@
+{
+  "portraitScale": 1.82,
+  "portraitTranslation": [-0.64, 1.24, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [0, 0.88, 0],
+  "rootBone": "amaura",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('amaura', 'faint')",
+    "cry": "q.bedrock_stateful('amaura', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND","FLOAT","PORTRAIT","PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('amaura', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('amaura', 'blink')",
+        "q.bedrock_quirk('amaura', 'quirk_idle')"
+      ]
+    },
+    "battle_standing": {
+      "poseName": "battle_standing",
+      "poseTypes": ["STAND"],
+       "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('amaura', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('amaura', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": ["WALK", "FLOAT","SWIM"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('amaura', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('amaura', 'blink')"
+      ]
+    },
+    "running": {
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('amaura', 'ground_run')"
+      ],
+      "quirks": ["q.bedrock_quirk('amaura', 'blink')"]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('amaura', 'sleep')"
+      ]
+    }
+  }
+}

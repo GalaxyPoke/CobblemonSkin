@@ -1,0 +1,83 @@
+{
+  "id": "cobblemon:alcremie",
+  "speciesId": "cobblemon:alcremie",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Ruby-Cream",
+      "unlockForms": [
+        "Ruby-Cream"
+      ]
+    },
+    {
+      "displayForm": "Matcha-Cream",
+      "unlockForms": [
+        "Matcha-Cream"
+      ]
+    },
+    {
+      "displayForm": "Mint-Cream",
+      "unlockForms": [
+        "Mint-Cream"
+      ]
+    },
+    {
+      "displayForm": "Lemon-Cream",
+      "unlockForms": [
+        "Lemon-Cream"
+      ]
+    },
+    {
+      "displayForm": "Salted-Cream",
+      "unlockForms": [
+        "Salted-Cream"
+      ]
+    },
+    {
+      "displayForm": "Ruby-Swirl",
+      "unlockForms": [
+        "Ruby-Swirl"
+      ]
+    },
+    {
+      "displayForm": "Caramel-Swirl",
+      "unlockForms": [
+        "Caramel-Swirl"
+      ]
+    },
+    {
+      "displayForm": "Rainbow-Swirl",
+      "unlockForms": [
+        "Rainbow-Swirl"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "displayName": "cobblemon.pokedex.variation.decoration",
+      "icon": "cobblemon:textures/gui/pokedex/variation/shape.png",
+      "aspects": [
+        "decoration-strawberry",
+        "decoration-berry",
+        "decoration-love",
+        "decoration-star",
+        "decoration-clover",
+        "decoration-flower",
+        "decoration-ribbon"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["iceshard", "ice", "special"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:iceshard_actor",
+      "locators": ["special", "middle"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    }
+  ]
+}

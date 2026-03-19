@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:thundurus",
+  "speciesId": "cobblemon:thundurus",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Therian",
+      "unlockForms": [
+        "Therian"
+      ]
+    }
+  ],
+  "variations": []
+}

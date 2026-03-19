@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_absent-minded",
+	"title": "cobblemon.mark.mark_personality_absent-minded.title",
+	"titleColor": "F8B63A",
+	"description": "cobblemon.mark.mark_personality_absent-minded.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_absent-minded.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 71
+}

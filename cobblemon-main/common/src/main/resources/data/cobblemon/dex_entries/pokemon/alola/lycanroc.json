@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:lycanroc",
+  "speciesId": "cobblemon:lycanroc",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Midnight",
+      "unlockForms": [
+        "Midnight"
+      ]
+    },
+    {
+      "displayForm": "Dusk",
+      "unlockForms": [
+        "Dusk"
+      ]
+    }
+  ],
+  "variations": []
+}

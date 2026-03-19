@@ -1,0 +1,45 @@
+{
+  "apricornStatEffects": {
+    "BLACK": {},
+    "BLUE": {
+      "SKILL": 2,
+      "JUMP": -1
+    },
+    "GREEN": {
+      "JUMP": 2,
+      "SPEED": -1
+    },
+    "PINK": {
+      "SPEED": 2,
+      "ACCELERATION": -1
+    },
+    "RED": {
+      "ACCELERATION": 2,
+      "STAMINA": -1
+    },
+    "WHITE": {
+      "SPEED": -2,
+      "STAMINA": -2,
+      "JUMP": -2,
+      "ACCELERATION": -2,
+      "SKILL": -2
+    },
+    "YELLOW": {
+      "STAMINA": 2,
+      "SKILL": -1
+    }
+  },
+  "statPointFlavourThresholds": {
+      "15": 1,
+      "35": 2,
+      "45": 3,
+      "55": 4,
+      "75": 5,
+      "105": 6
+  },
+  "cookingQualityPointThresholds": {
+    "-999": "LOW",
+    "4": "MEDIUM",
+    "8": "HIGH"
+  }
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_titan",
+	"title": "cobblemon.mark.mark_titan.title",
+	"titleColor": "40B282",
+	"description": "cobblemon.mark.mark_titan.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_titan.png",
+	"indexNumber": 109
+}

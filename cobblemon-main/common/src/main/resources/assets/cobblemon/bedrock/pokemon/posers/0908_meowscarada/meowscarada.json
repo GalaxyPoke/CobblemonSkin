@@ -1,0 +1,83 @@
+{
+  "portraitScale": 1.77,
+  "portraitTranslation": [-0.33, 2.7, 0.0],
+  "profileScale": 0.46,
+  "profileTranslation": [0.0, 1.1, 0.0],
+  "rootBone": "meowscarada",
+  "animations": {
+    "cry": "q.bedrock_stateful('meowscarada', 'cry')"
+  },
+  "poses": {
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('meowscarada', 'sleep')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('meowscarada', q.array('sleep_quirk', 'sleep_quirk2', 'sleep_quirk3', 'sleep_quirk4'), 6, 20, 1)"
+      ]
+    },
+    "battle_idle": {
+      "poseName": "battle_idle",
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.look('neck_ruff', 1, 0, 50, -45 )",
+        "q.bedrock('meowscarada', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('meowscarada', 'battle_cry')"
+      },
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('meowscarada', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.look('neck_ruff', 1, 0, 50, -45 )",
+        "q.bedrock('meowscarada', 'ground_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('meowscarada', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.look('neck_ruff', 1, 0, 50, -45 )",
+        "q.bedrock('meowscarada', 'ground_walk')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('meowscarada', 'blink')"
+      ]
+    }
+  }
+}

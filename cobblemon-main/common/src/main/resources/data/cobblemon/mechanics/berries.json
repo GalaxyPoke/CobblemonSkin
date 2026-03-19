@@ -1,0 +1,8 @@
+{
+  "portionHealRatio": "0.33",
+  "sitrusHealAmount": "Math.floor(v.pokemon.max_hp * 0.33)",
+  "friendshipRaiseAmount": "v.pokemon.friendship < 100 ? 10 : (v.pokemon.friendship < 200 ? 5 : 1)",
+  "evLowerAmount": "10",
+  "ppRestoreAmount": "10",
+  "oranRestoreAmount": "10"
+}

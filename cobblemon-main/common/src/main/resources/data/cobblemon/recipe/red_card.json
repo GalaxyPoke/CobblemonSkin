@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " P ",
+        "PRP",
+        " P "
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:paper"
+        },
+        "R": {
+            "tag": "c:dyes/red"
+        }
+    },
+    "result": {
+        "id": "cobblemon:red_card"
+    }
+}

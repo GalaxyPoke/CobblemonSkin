@@ -1,0 +1,28 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.nanab_berry",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Nanab",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -1, -0.5], "size": [3, 1, 1], "uv": [8, 0]},
+						{"origin": [0.25, -5, -3.5], "size": [0, 4, 4], "pivot": [0.25, -1, 0], "rotation": [5, -5, -25], "uv": [0, -4]},
+						{"origin": [0, -5, -3.5], "size": [0, 4, 4], "pivot": [0, -1, 0], "rotation": [0, 2.5, 10], "uv": [0, 4]},
+						{"origin": [0, -5, -3.5], "size": [0, 4, 4], "pivot": [0, -1, 0], "rotation": [0, -2.5, -10], "uv": [0, 0]},
+						{"origin": [-0.25, -5, -3.5], "size": [0, 4, 4], "pivot": [-0.25, -1, 0], "rotation": [5, 5, 25], "uv": [0, 8]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+  "species": "cobblemon:gimmighoul",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["roaming"],
+      "poser": "cobblemon:gimmighoulroaming",
+      "model": "cobblemon:gimmighoul_roaming.geo",
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_roaming.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "roaming"],
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_roaming_shiny.png"
+    },
+    {
+      "aspects": ["red-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["yellow-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["green-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["blue-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["pink-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["black-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["white-gilded-chest", "roaming"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blank.png"
+        }
+      ]
+    }
+  ]
+}

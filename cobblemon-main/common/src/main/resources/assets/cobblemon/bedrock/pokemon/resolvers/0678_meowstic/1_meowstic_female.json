@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:meowstic",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "poser": "cobblemon:meowstic_female",
+      "model": "cobblemon:meowstic_female.geo",
+      "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_female.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_female_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["female", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_female_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_female_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

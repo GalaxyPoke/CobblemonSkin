@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:hitmonchan",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:hitmonchan",
+      "model": "cobblemon:hitmonchan.geo",
+      "texture": "cobblemon:textures/pokemon/0107_hitmonchan/hitmonchan.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0107_hitmonchan/hitmonchan_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+    "name": "cobblemon.behaviour.dialogue_selection.name",
+    "description": "cobblemon.behaviour.dialogue_selection.desc",
+    "entityType": "cobblemon:npc",
+    "undo": [
+      "q.entity.unset_interaction();"
+    ],
+    "configurations": [
+      {
+        "type": "script",
+        "variables": [
+          {
+            "variableName": "dialogue_selection",
+            "displayName": "cobblemon.entity.variable.dialogue_selection.name",
+            "description": "cobblemon.entity.variable.dialogue_selection.desc",
+            "type": "TEXT",
+            "defaultValue": "npc-example"
+          }
+        ],
+        "script": [
+          "q.entity.set_dialogue_interaction(q.entity.config.dialogue_selection);"
+        ]
+      }
+    ]
+  }

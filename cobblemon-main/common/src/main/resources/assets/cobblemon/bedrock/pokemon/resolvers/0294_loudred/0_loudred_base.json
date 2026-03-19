@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:loudred",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:loudred",
+      "model": "cobblemon:loudred.geo",
+      "texture": "cobblemon:textures/pokemon/0294_loudred/loudred.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0294_loudred/loudred_shiny.png"
+    }
+  ]
+}

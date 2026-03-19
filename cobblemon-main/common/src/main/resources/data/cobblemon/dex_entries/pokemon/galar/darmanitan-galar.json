@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:darmanitan-galar",
+  "speciesId": "cobblemon:darmanitan",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Galar",
+      "unlockForms": [
+        "Galar"
+      ]
+    },
+    {
+      "displayForm": "Galar-Zen",
+      "unlockForms": [
+        "Galar-Zen"
+      ]
+    }
+  ],
+  "variations": []
+}

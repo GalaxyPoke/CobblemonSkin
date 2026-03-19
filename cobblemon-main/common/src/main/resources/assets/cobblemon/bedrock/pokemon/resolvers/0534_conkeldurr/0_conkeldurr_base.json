@@ -1,0 +1,137 @@
+{
+  "species": "cobblemon:conkeldurr",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:conkeldurr",
+      "model": "cobblemon:conkeldurr.geo",
+      "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_shiny.png"
+    },
+    {
+      "aspects": ["color-white"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_white.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-orange"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_orange.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-magenta"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_magenta.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-light_blue"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_light_blue.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-yellow"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_yellow.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-lime"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_lime.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-pink"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_pink.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-gray"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_gray.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-purple"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_purple.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-blue"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_blue.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-brown"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_brown.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-green"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_green.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-red"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_red.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-black"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_black.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["color-cyan"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0534_conkeldurr/conkeldurr_cyan.png"
+        }
+      ]
+    }
+  ]
+}

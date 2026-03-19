@@ -1,0 +1,26 @@
+{
+    "name": "cobblemon.behaviour.configurable_resource_identifier.name",
+    "description": "cobblemon.behaviour.configurable_resource_identifier.desc",
+    "entityType": "cobblemon:npc",
+    "undo": [
+        "q.entity.unset_resource_identifier();"
+    ],
+    "configurations": [
+        {
+            "type": "script",
+            "variables": [
+                {
+                    "variableName": "resource_identifier",
+                    "displayName": "cobblemon.entity.variable.resource_identifier.name",
+                    "description": "cobblemon.entity.variable.resource_identifier.desc",
+                    "type": "TEXT",
+                    "defaultValue": "cobblemon:pikachu"
+                }
+            ],
+            "script": [
+                "!q.is_blank(q.entity.config.resource_identifier) ? q.entity.set_resource_identifier(q.entity.config.resource_identifier);",
+                "q.is_blank(q.entity.config.resource_identifier) ? q.entity.unset_resource_identifier();"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:watchog",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:watchog",
+      "model": "cobblemon:watchog.geo",
+      "texture": "cobblemon:textures/pokemon/0505_watchog/watchog.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0505_watchog/watchog_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0505_watchog/watchog_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0505_watchog/watchog_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:phantump",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:phantump",
+      "model": "cobblemon:phantump.geo",
+      "texture": "cobblemon:textures/pokemon/0708_phantump/phantump.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0708_phantump/phantump_emissives.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0708_phantump/phantump_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0708_phantump/phantump_shiny_emissives.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

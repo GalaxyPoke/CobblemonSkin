@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ride_test.sitting": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, -9, 0],
+					"rotation": [25, 0, 0]
+				},
+				"_torso_disabled_because_it_cannot_be_reparented": {
+					"rotation": [25, 0, 0]
+				},
+				"arm_right": {
+					"rotation": [0, 0, 22.5]
+				},
+				"arm_left": {
+					"rotation": [0, 0, -27.5]
+				},
+				"leg_right": {
+					"rotation": [-90, 20, 0]
+				},
+				"leg_left": {
+					"rotation": [-90, -20, 0]
+				}
+			}
+		}
+	}
+}

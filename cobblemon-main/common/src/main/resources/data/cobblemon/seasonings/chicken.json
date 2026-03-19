@@ -1,0 +1,8 @@
+{
+  "ingredient": "minecraft:chicken",
+  "colour": "brown",
+  "food": {
+    "hunger": 3,
+    "saturation": 3.6
+  }
+}

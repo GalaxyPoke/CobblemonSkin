@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:natu",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:natu",
+      "model": "cobblemon:natu.geo",
+      "texture": "cobblemon:textures/pokemon/0177_natu/natu.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0177_natu/natu_shiny.png"
+    }
+  ]
+}

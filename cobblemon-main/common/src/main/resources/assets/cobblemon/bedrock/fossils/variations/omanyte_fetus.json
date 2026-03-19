@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:omanyte_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:omanyte_fetus",
+      "model": "cobblemon:omanyte_fetus.geo",
+      "texture": "cobblemon:textures/fossils/omanyte.png",
+      "layers": []
+    }
+  ]
+}

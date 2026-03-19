@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " S ",
+        "S S",
+        "GGG"
+    ],
+    "key": {
+        "G": {
+            "tag": "c:gems/amethyst"
+        },
+        "S": {
+            "item": "minecraft:turtle_scute"
+        }
+    },
+    "result": {
+        "id": "cobblemon:safety_goggles"
+    }
+}

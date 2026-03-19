@@ -1,0 +1,9 @@
+{
+  "pokemon": ["squirtle", "wartortle", "blastoise", "sandile", "krokorok", "krookodile"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:black_glasses",
+      "aspects": ["cosmetic_item-black_glasses"]
+    }
+  ]
+}

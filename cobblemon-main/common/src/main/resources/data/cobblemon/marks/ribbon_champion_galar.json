@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_champion_galar",
+	"title": "cobblemon.mark.ribbon_champion_galar.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.ribbon_champion_galar.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_champion_galar.png",
+	"indexNumber": 50
+}

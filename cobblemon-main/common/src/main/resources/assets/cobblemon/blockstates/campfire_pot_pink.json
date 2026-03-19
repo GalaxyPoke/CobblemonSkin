@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "facing=east,open=false,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink",
+      "y": 270
+    },
+    "facing=east,open=true,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink_open",
+      "y": 270
+    },
+    "facing=north,open=false,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink",
+      "y": 180
+    },
+    "facing=north,open=true,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink_open",
+      "y": 180
+    },
+    "facing=south,open=false,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink"
+    },
+    "facing=south,open=true,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink_open"
+    },
+    "facing=west,open=false,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink",
+      "y": 90
+    },
+    "facing=west,open=true,occupied=false": {
+      "model": "cobblemon:block/campfire_pot_pink_open",
+      "y": 90
+    },
+    "facing=east,open=false,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_broth",
+      "y": 270
+    },
+    "facing=east,open=true,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_open_broth",
+      "y": 270
+    },
+    "facing=north,open=false,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_broth",
+      "y": 180
+    },
+    "facing=north,open=true,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_open_broth",
+      "y": 180
+    },
+    "facing=south,open=false,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_broth"
+    },
+    "facing=south,open=true,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_open_broth"
+    },
+    "facing=west,open=false,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_broth",
+      "y": 90
+    },
+    "facing=west,open=true,occupied=true": {
+      "model": "cobblemon:block/campfire_pot_pink_open_broth",
+      "y": 90
+    }
+  }
+}

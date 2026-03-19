@@ -1,0 +1,74 @@
+{
+  "portraitScale": 1.19,
+  "portraitTranslation": [-0.16, 0.5, 0],
+  "profileScale": 0.75,
+  "profileTranslation": [0.0, 0.62, 0.0],
+  "rootBone": "bellibolt",
+  "animations": {
+    "faint": "q.bedrock_primary('bellibolt', 'faint', q.curve('one'))",
+    "recoil": "q.bedrock_stateful('bellibolt', 'recoil')",
+    "physical": "q.bedrock_primary('bellibolt', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('bellibolt', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('bellibolt', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai', 1, 1, 13, -25, 7, -7)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('bellibolt', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bellibolt', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('bellibolt', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai', 1, 1, 13, -25, 7, -7)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('bellibolt', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bellibolt', 'blink')",
+        "q.bedrock_quirk('bellibolt', 'quirk_pog')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isBattle": false,
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head_ai', 1, 1, 13, -25, 7, -7)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('bellibolt', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('bellibolt', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isBattle": false,
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head_ai', 1, 1, 13, -25, 7, -7)",
+        "q.look('torso', 1, 1, 10, -5, 0, 0)",
+        "q.bedrock('bellibolt', 'ground_run')"
+      ],
+      "quirks": ["q.bedrock_quirk('bellibolt', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('bellibolt', 'sleep')"]
+    }
+  }
+}
+

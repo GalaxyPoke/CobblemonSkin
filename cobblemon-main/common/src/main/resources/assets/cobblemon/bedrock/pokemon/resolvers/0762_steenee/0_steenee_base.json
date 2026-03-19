@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:steenee",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:steenee",
+      "model": "cobblemon:steenee.geo",
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0762_steenee/steenee_shiny.png"
+    }
+  ]
+}

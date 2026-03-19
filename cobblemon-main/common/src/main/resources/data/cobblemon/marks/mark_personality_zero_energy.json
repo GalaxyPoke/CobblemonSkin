@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_zero_energy",
+	"title": "cobblemon.mark.mark_personality_zero_energy.title",
+	"titleColor": "4E75C4",
+	"description": "cobblemon.mark.mark_personality_zero_energy.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_zero_energy.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 91
+}

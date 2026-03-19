@@ -1,0 +1,6 @@
+{
+  "parent": "cobblemon:block/revival_herb",
+  "textures": {
+    "0": "cobblemon:block/crops/white_herb_stage_0"
+  }
+}

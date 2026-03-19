@@ -1,0 +1,71 @@
+{
+  "portraitScale": 2.25,
+  "portraitTranslation": [-0.16,-1.6,0],
+  "profileScale": 1,
+  "profileTranslation": [0,0.22,0],
+  "animations": {
+    "faint": "q.bedrock_primary('lechonk', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('lechonk', 'cry')",
+    "recoil": "q.bedrock_stateful('lechonk', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "namedAnimations": {
+        "faint": "q.bedrock_primary('lechonk', 'battle_faint', q.curve('one'))"
+      },
+      "animations": [
+        "q.bedrock('lechonk', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lechonk', 'blink')",
+        "q.bedrock_quirk('lechonk', 'snort_quirk', 8, 20, 1)"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.bedrock('lechonk', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lechonk', 'blink')",
+        "q.bedrock_quirk('lechonk', 'snort_quirk', 8, 20, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('lechonk', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lechonk', 'blink')",
+        "q.bedrock_quirk('lechonk', 'snort_quirk', 8, 20, 1)"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+      "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('lechonk', 'sleep')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('lechonk', 'snort_quirk', 10, 30, 1)"
+      ]
+    }
+  }
+}

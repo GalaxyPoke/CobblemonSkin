@@ -1,0 +1,50 @@
+{
+  "name": "cobblemon.behaviour.panics.name",
+  "description": "cobblemon.behaviour.panics.desc",
+  "configurations": [
+    {
+      "type": "cobblemon:add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "tasksByPriority": {
+        "0": ["cobblemon:flee_attacker"],
+        "10": ["cobblemon:switch_to_panic_when_hurt"]
+      }
+    },
+    {
+      "type": "cobblemon:add_tasks_to_activity",
+      "activity": "minecraft:panic",
+      "tasksByPriority": {
+        "0": [
+          "cobblemon:flee_attacker",
+          {
+            "type": "cobblemon:activity_change",
+            "activity": "minecraft:idle",
+            "condition": "q.entity.lacks_memory_value('minecraft:avoid_target')"
+          }
+        ],
+        "1": [
+          "cobblemon:flee_nearest_hostile"
+        ],
+        "2": [
+          "cobblemon:walk_away_from_avoid_target"
+        ],
+        "3": [
+          {
+            "type": "cobblemon:wander",
+            "speedMultiplier": {
+              "variableName": "flee_speed_multiplier",
+              "category": "cobblemon.entity.variable.category.fear",
+              "defaultValue": 0.5,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.flee_speed_multiplier.name",
+              "description": "cobblemon.entity.variable.flee_speed_multiplier.desc"
+            },
+            "horizontalRange": 4,
+            "verticalRange": 4,
+            "shouldWander": true
+          }
+        ]
+      }
+    }
+  ]
+}

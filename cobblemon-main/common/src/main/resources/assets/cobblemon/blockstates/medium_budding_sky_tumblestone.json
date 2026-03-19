@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone"
+    },
+    "facing=west": {
+      "model": "cobblemon:block/medium_budding_sky_tumblestone",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

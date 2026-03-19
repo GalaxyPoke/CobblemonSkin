@@ -1,0 +1,54 @@
+{
+  "replace": false,
+  "comments": [
+    "We don't manually tag stones because the platform specific ones already handle vanilla for us",
+    "Fabric dirt extends vanilla and some mods use only that instead"
+  ],
+  "values": [
+    "#minecraft:dirt",
+    "minecraft:stone",
+    "minecraft:infested_stone",
+    "minecraft:andesite",
+    "minecraft:diorite",
+    "minecraft:granite",
+    "minecraft:deepslate",
+    "minecraft:infested_deepslate",
+    "minecraft:tuff",
+    "minecraft:cobblestone",
+    "minecraft:mossy_cobblestone",
+    "minecraft:infested_cobblestone",
+    "minecraft:cobbled_deepslate",
+    {
+      "id": "#c:dirt",
+      "required": false
+    },
+    {
+      "id": "#c:stone",
+      "required": false
+    },
+    {
+      "id": "#c:cobblestone",
+      "required": false
+    },
+    {
+      "id": "#forge:stone",
+      "required": false
+    },
+    {
+      "id": "#forge:cobblestone/normal",
+      "required": false
+    },
+    {
+      "id": "#forge:cobblestone/mossy",
+      "required": false
+    },
+    {
+      "id": "#forge:cobblestone/infested",
+      "required": false
+    },
+    {
+      "id": "#forge:cobblestone/deepslate",
+      "required": false
+    }
+  ]
+}

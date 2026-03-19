@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:fletchinder",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:fletchinder",
+      "model": "cobblemon:fletchinder.geo",
+      "texture": "cobblemon:textures/pokemon/0662_fletchinder/fletchinder.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0662_fletchinder/fletchinder_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "condition": {
+    "neededNearbyBlocks": [
+	  "cobblemon:saccharine_leaves",
+	  "cobblemon:saccharine_log",
+	  "cobblemon:saccharine_wood",
+	  "cobblemon:stripped_saccharine_log",
+	  "cobblemon:stripped_saccharine_wood"
+	]
+  }
+}

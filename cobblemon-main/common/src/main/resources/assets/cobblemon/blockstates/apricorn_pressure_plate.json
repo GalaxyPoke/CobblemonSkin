@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "cobblemon:block/apricorn_pressure_plate"
+    },
+    "powered=true": {
+      "model": "cobblemon:block/apricorn_pressure_plate_down"
+    }
+  }
+}

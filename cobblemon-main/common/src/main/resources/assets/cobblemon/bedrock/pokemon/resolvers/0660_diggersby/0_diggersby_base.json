@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:diggersby",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:diggersby",
+      "model": "cobblemon:diggersby.geo",
+      "texture": "cobblemon:textures/pokemon/0660_diggersby/diggersby.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0660_diggersby/diggersby_shiny.png"
+    }
+  ]
+}

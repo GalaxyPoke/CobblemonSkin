@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:farmland",
+    {
+      "id": "#c:farmland",
+      "required": false
+    },
+    {
+      "id": "#c:farmlands",
+      "required": false
+    },
+    {
+      "id": "aether:aether_farmland",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:rich_soil_farmland",
+      "required": false
+    }
+  ]
+}

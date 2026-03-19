@@ -1,0 +1,30 @@
+{
+  "pokemon": [
+    "squirtle",
+    "wartortle",
+    "blastoise",
+    "sandile",
+    "krokorok",
+    "krookodile",
+    "sneasler",
+    "treecko",
+    "grovyle",
+    "sceptile",
+    "braixen",
+    "delphox",
+    "dragonite",
+    "hawlucha",
+    "pichu",
+    "pikachu",
+    "raichu",
+    "electrode",
+    "alakazam",
+    "sudowoodo",
+    "gengar",
+    "jigglypuff",
+    "tinkatink",
+    "tinkatuff",
+    "tinkaton"
+  ],
+  "features": ["cosmetic_item"]
+}

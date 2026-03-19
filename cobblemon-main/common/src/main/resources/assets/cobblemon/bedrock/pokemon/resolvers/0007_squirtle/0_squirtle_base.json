@@ -1,0 +1,33 @@
+{
+  "species": "cobblemon:squirtle",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:squirtle",
+      "model": "cobblemon:squirtle.geo",
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_shiny.png"
+    },
+    {
+      "aspects": ["cosmetic_item-black_glasses"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_triangleglasses.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["cosmetic_item-wise_glasses"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0007_squirtle/squirtle_circleglasses.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "pokemon": ["pikachu", "raichu", "pichu"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:lumiose_galette",
+      "aspects": ["cosmetic_item-lumiose_galette"]
+    }
+  ]
+}

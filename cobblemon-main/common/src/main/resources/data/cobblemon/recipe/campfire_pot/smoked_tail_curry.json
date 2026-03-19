@@ -1,0 +1,23 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "foods",
+    "ingredients": [
+        {
+            "item": "cobblemon:hearty_grains"
+        },
+        {
+            "item": "cobblemon:tasty_tail"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "cobblemon:galarica_nuts"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:smoked_tail_curry"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

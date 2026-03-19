@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:xerneas",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:xerneas",
+      "model": "cobblemon:xerneas.geo",
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0716_xerneas/xerneas_shiny.png"
+    }
+  ]
+}

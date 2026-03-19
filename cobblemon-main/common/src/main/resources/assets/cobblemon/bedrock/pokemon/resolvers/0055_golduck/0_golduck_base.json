@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:golduck",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:golduck",
+      "model": "cobblemon:golduck.geo",
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0055_golduck/golduck_emissive.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

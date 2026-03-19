@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:slowking",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:slowking",
+      "model": "cobblemon:slowking.geo",
+      "texture": "cobblemon:textures/pokemon/0199_slowking/slowking.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0199_slowking/slowking_shiny.png"
+    }
+  ]
+}

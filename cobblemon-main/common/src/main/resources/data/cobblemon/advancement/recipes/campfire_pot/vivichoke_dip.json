@@ -1,0 +1,41 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_vivichoke": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+				"cobblemon:vivichoke"
+			]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_crafting_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:vivichoke_dip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/vivichoke_dip"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_vivichoke",
+      "has_the_recipe",
+	  "has_crafting_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/vivichoke_dip"
+    ]
+  }
+}

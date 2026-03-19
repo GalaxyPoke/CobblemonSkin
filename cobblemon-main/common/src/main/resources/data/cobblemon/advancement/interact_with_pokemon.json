@@ -1,0 +1,160 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:shears"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.interact_with_pokemon"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.interact_with_pokemon.description"
+    },
+    "hidden": false
+  },
+  "parent": "cobblemon:use_pasture",
+  "criteria": {
+    "bucket_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:bucket"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "shear_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:shears"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "bottle_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:glass_bottle"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "brush_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:brush"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "bonemeal_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:bone_meal"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    },
+    "bowl_interactable_pokemon": {
+      "conditions": {
+        "player": {
+          "flags": {
+            "is_sneaking": false
+          }
+        },
+        "entity": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "type": "cobblemon:pokemon"
+            }
+          }
+        ],
+        "item": {
+          "items": "minecraft:bowl"
+        }
+      },
+      "trigger": "minecraft:player_interacted_with_entity"
+    }
+  },
+  "requirements": [
+    [
+      "bucket_interactable_pokemon",
+      "shear_interactable_pokemon",
+      "bottle_interactable_pokemon",
+      "brush_interactable_pokemon",
+      "bonemeal_interactable_pokemon",
+      "bowl_interactable_pokemon"
+    ]
+  ],
+  "sends_telemetry_event": false
+}

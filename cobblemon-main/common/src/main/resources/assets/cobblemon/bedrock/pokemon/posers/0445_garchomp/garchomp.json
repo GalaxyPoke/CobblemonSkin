@@ -1,0 +1,393 @@
+{
+  "portraitScale": 1.92,
+  "portraitTranslation": [-0.59, 2.71, 0],
+  "profileScale": 0.54,
+  "profileTranslation": [0.02, 1, 0.0],
+  "rootBone": "garchomp",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.45, 1],
+    "seat_1_reverse": [0, 0.45, 1]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.45, 1],
+    "seat_1_reverse": [0, 0.45, 1]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('garchomp', 'cry')",
+    "recoil": "q.bedrock_stateful('garchomp', 'recoil')",
+    "physical": "q.bedrock_primary('garchomp', math.random(0, 1) < (1/3) ? 'physical' : (math.random(0, 1) < 0.5 ? 'physical_alt' : 'physical_blunt'), q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('garchomp', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('garchomp', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "boat-jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "isRideStyle": ["LIQUID"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ride_jump_liquid')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_surfacewater_swim')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 2
+    },
+    "land-jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ride_jump_land')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transitions": {
+        "battle-idle": "q.bedrock_primary('garchomp', 'battle_intro')"
+      }
+    },
+    "mount-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && q.is_ridden",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_idle')",
+        "q.bedrock('garchomp', 'ride_ground_walk')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transitions": {
+        "battle-idle": "q.bedrock_primary('garchomp', 'battle_intro')"
+      }
+    },
+    "battle-idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "isTouchingWater": false,
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'battle_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"]
+    },
+    "sand-idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_ridden && q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.bedrock('garchomp', 'sand_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ground_idle')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"]
+    },
+    "sand-swim": {
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_ridden && q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.bedrock('garchomp', 'sand_swim')"
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_ridden && !q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_walk')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformTicks": 5
+    },
+    "running": {
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "condition": "!q.in_air && !q.is_ridden && !q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_run')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformTicks": 5
+    },
+    "mount-walking": {
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "condition": "!q.in_air && q.is_ridden && !q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_walk')",
+        "q.bedrock('garchomp', 'ride_ground_walk')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformTicks": 5
+    },
+    "mount-running": {
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "condition": "!q.in_air && q.is_ridden && q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'ground_run')",
+        "q.bedrock('garchomp', 'ride_ground_run')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformTicks": 5
+    },
+    "surface-swimming": {
+      "isBattle": false,
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('garchomp', 'surfacewater_swim')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_surfacewater_swim')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, 26, 0]
+        }
+      ],
+      "transformTicks": 3,
+      "transformToTicks": 10
+    },
+    "surface-floating": {
+      "isBattle": false,
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "poseTypes": ["STAND"],
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'surfacewater_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_surfacewater_swim')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, 26, 0]
+        }
+      ],
+      "transformTicks": 3,
+      "transformToTicks": 10
+    },
+    "swimming": {
+      "isBattle": false,
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'surfacewater_swim')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_surfacewater_swim')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "floating": {
+      "isBattle": false,
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'surfacewater_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('garchomp', 'ride_surfacewater_swim')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('garchomp', 'blink')"]
+    },
+    "mount-flying": {
+      "poseTypes": ["FLY"],
+      "condition": "q.is_ridden",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'air_fly')",
+        "q.bedrock('garchomp', 'ride_air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, -10, 0]
+        }
+      ]
+    },
+    "flying": {
+      "poseTypes": ["FLY"],
+      "condition": "!q.is_ridden",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')",
+        "q.bedrock_quirk('garchomp', q.array('air_fly_quirk1', 'air_fly_quirk2'), 10, 30, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, -10, 0]
+        }
+      ]
+    },
+    "hovering": {
+      "poseTypes": ["HOVER"],
+      "condition": "!q.is_ridden",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')",
+        "q.bedrock_quirk('garchomp', q.array('air_fly_quirk1', 'air_fly_quirk2'), 10, 30, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, -10, 0]
+        }
+      ]
+    },
+    "mount_hovering": {
+      "poseTypes": ["HOVER"],
+      "condition": "q.is_ridden",
+      "animations": [
+        "q.look('head', 1, 1, 25, -25, 25, -25)",
+        "q.look('neck', 1, 1, 25, -25, 25, -25)",
+        "q.bedrock('garchomp', 'air_fly')",
+        "q.bedrock('garchomp', 'ride_air_fly')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('garchomp', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [0, -10, 0]
+        }
+      ]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('garchomp', 'sleep')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ]
+    },
+    "battle-sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('garchomp', 'battle_sleep')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('garchomp', 'hold_item')"
+        }
+      ]
+    }
+  }
+}

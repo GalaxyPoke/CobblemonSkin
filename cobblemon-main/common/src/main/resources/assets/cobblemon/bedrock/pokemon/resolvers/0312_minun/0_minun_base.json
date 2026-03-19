@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:minun",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:minun",
+      "model": "cobblemon:minun.geo",
+      "texture": "cobblemon:textures/pokemon/0312_minun/minun.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0312_minun/minun_shiny.png"
+    }
+  ]
+}

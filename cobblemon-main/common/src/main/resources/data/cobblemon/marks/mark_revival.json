@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_revival",
+	"title": "cobblemon.mark.mark_revival.title",
+	"titleColor": "42B8AB",
+	"description": "cobblemon.mark.mark_revival.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_revival.png",
+	"chance": 0.04
+}

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:poke_bait",
+      "components": {
+        "cobblemon:food_colour": [ "white", "light_blue", "red" ]
+      }
+    },
+    "title": {
+      "translate": "advancements.cobblemon.use_poke_bait"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.use_poke_bait.description"
+    }
+  },
+  "parent": "cobblemon:craft_rod",
+  "criteria": {
+    "use_poke_bait": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:poke_bait"
+      }
+    }
+  },
+  "requirements": [
+    ["use_poke_bait"]
+  ]
+}

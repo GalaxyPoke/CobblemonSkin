@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "cobblemon:blue_mint_leaf"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:resist_feather",
+        "count": 3
+    }
+}

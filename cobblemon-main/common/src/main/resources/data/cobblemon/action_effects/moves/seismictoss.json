@@ -1,0 +1,73 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["seismictoss", "fighting", "physical"],
+      "delay": 0.5
+    },
+    {
+      "type": "entity_molang",
+      "expressions": ["q.sound('move.seismictoss.actor');"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:seismictoss_actor",
+      "locator": "middle"
+    },
+    {
+      "type": "entity_molang",
+      "expressions": ["q.play_animation(q.bedrock_stateful('seismictoss', 'actor'))"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.28
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:seismictoss_actorgrab",
+      "locator": "target"
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:seismictoss_actorin",
+      "locator": "target"
+    },
+    {
+      "type": "pause",
+      "pause": 0.1
+    },
+    {
+      "type": "animation",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "animation": ["recoil"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": ["q.play_animation(q.bedrock_stateful('seismictoss', 'target'))"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false",
+      "expressions": ["q.sound('move.seismictoss.target');"]
+    },
+    {
+      "type": "pause",
+      "pause": 2.25
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

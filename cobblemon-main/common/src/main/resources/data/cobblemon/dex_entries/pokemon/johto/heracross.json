@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:heracross",
+  "speciesId": "cobblemon:heracross",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Mega",
+      "unlockForms": [
+        "Mega"
+      ]
+    }
+  ],
+  "variations": []
+}

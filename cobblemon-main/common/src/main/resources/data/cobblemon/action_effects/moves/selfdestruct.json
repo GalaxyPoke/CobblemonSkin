@@ -1,0 +1,77 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == true",
+      "effect": "cobblemon:explosion_actororbs",
+      "locators": ["middle"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.5
+    },
+    {
+      "type": "entity_molang",
+      "expressions": ["q.play_animation(q.bedrock_stateful('explosion', 'actor'))"]
+     },
+    {
+      "type": "animation",
+      "animation": ["explosion", "status", "physical"],
+      "delay":1.25
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_particles",
+          "entityCondition": "q.entity.is_user == true",
+          "effect": "cobblemon:explosion_actorboom",
+          "locators": ["middle"]
+        },
+        {
+          "type": "entity_particles",
+          "entityCondition": "q.entity.is_user == true",
+          "effect": "cobblemon:explosion_actorfire",
+          "locators": ["root"]
+        },
+        {
+          "type": "entity_molang",
+          "expressions": ["q.play_animation(q.bedrock_stateful('faint', 'actor'))"]
+        },
+        {
+          "type": "entity_sound",
+          "entityCondition": "q.entity.is_user == true",
+          "sound": "minecraft:entity.generic.explode"
+        }
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == true",
+      "effect": "cobblemon:explosion_actorbigring",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.05
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == true && q.entity.is_on_ground == true",
+      "effect": "cobblemon:explosion_actorfloorscorch",
+      "locators": ["middle"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

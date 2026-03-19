@@ -1,0 +1,176 @@
+{
+  "species": "cobblemon:furfrou",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:furfrou",
+      "model": "cobblemon:furfrou.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/furfrou.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/furfrou_shiny.png"
+    },
+    {
+      "aspects": ["natural-trim"],
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/furfrou.png"
+    },
+    {
+      "aspects": ["natural-trim", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/furfrou_shiny.png"
+    },
+    {
+      "aspects": ["heart-trim"],
+      "model": "cobblemon:furfrou_heart.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/heart/furfrou_heart.png"
+    },
+    {
+      "aspects": ["heart-trim", "shiny"],
+      "model": "cobblemon:furfrou_heart.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/heart/furfrou_heart_shiny.png"
+    },
+    {
+      "aspects": ["star-trim"],
+      "model": "cobblemon:furfrou_star.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/star/furfrou_star.png"
+    },
+    {
+      "aspects": ["star-trim", "shiny"],
+      "model": "cobblemon:furfrou_star.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/star/furfrou_star_shiny.png"
+    },
+    {
+      "aspects": ["diamond-trim"],
+      "model": "cobblemon:furfrou_diamond.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/diamond/furfrou_diamond.png"
+    },
+    {
+      "aspects": ["diamond-trim", "shiny"],
+      "model": "cobblemon:furfrou_diamond.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/diamond/furfrou_diamond_shiny.png"
+    },
+    {
+      "aspects": ["debutante-trim"],
+      "model": "cobblemon:furfrou_debutante.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/debutante/furfrou_debutante.png"
+    },
+    {
+      "aspects": ["debutante-trim", "shiny"],
+      "model": "cobblemon:furfrou_debutante.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/debutante/furfrou_debutante_shiny.png"
+    },
+    {
+      "aspects": ["matron-trim"],
+      "model": "cobblemon:furfrou_matron.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/matron/furfrou_matron.png"
+    },
+    {
+      "aspects": ["matron-trim", "shiny"],
+      "model": "cobblemon:furfrou_matron.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/matron/furfrou_matron_shiny.png"
+    },
+    {
+      "aspects": ["dandy-trim"],
+      "model": "cobblemon:furfrou_dandy.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/dandy/furfrou_dandy.png"
+    },
+    {
+      "aspects": ["dandy-trim", "shiny"],
+      "model": "cobblemon:furfrou_dandy.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/dandy/furfrou_dandy_shiny.png"
+    },
+    {
+      "aspects": ["la_reine-trim"],
+      "model": "cobblemon:furfrou_lareine.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/lareine/furfrou_lareine.png"
+    },
+    {
+      "aspects": ["la_reine-trim", "shiny"],
+      "model": "cobblemon:furfrou_lareine.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/lareine/furfrou_lareine_shiny.png"
+    },
+    {
+      "aspects": ["kabuki-trim"],
+      "model": "cobblemon:furfrou_kabuki.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/kabuki/furfrou_kabuki.png"
+    },
+    {
+      "aspects": ["kabuki-trim", "shiny"],
+      "model": "cobblemon:furfrou_kabuki.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/kabuki/furfrou_kabuki_shiny.png"
+    },
+    {
+      "aspects": ["pharaoh-trim"],
+      "model": "cobblemon:furfrou_pharaoh.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/pharaoh/furfrou_pharaoh.png"
+    },
+    {
+      "aspects": ["pharaoh-trim", "shiny"],
+      "model": "cobblemon:furfrou_pharaoh.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/pharaoh/furfrou_pharaoh_shiny.png"
+    },
+    {
+      "aspects": ["cinnamon-trim"],
+      "model": "cobblemon:furfrou_cinnamon.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/cinnamon/furfrou_cinnamon.png"
+    },
+    {
+      "aspects": ["cinnamon-trim", "shiny"],
+      "model": "cobblemon:furfrou_cinnamon.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/cinnamon/furfrou_cinnamon_shiny.png"
+    },
+    {
+      "aspects": ["crusader-trim"],
+      "model": "cobblemon:furfrou_crusader.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/crusader/furfrou_crusader.png"
+    },
+    {
+      "aspects": ["crusader-trim", "shiny"],
+      "model": "cobblemon:furfrou_crusader.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/crusader/furfrou_crusader_shiny.png"
+    },
+    {
+      "aspects": ["lavender-trim"],
+      "model": "cobblemon:furfrou_lavender.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/lavender/furfrou_lavender.png"
+    },
+    {
+      "aspects": ["lavender-trim", "shiny"],
+      "model": "cobblemon:furfrou_lavender.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/lavender/furfrou_lavender_shiny.png"
+    },
+    {
+      "aspects": ["matcha-trim"],
+      "model": "cobblemon:furfrou_matcha.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/matcha/furfrou_matcha.png"
+    },
+    {
+      "aspects": ["matcha-trim", "shiny"],
+      "model": "cobblemon:furfrou_matcha.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/matcha/furfrou_matcha_shiny.png"
+    },
+    {
+      "aspects": ["mourner-trim"],
+      "model": "cobblemon:furfrou_mourner.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/mourner/furfrou_mourner.png"
+    },
+    {
+      "aspects": ["mourner-trim", "shiny"],
+      "model": "cobblemon:furfrou_mourner.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/mourner/furfrou_mourner_shiny.png"
+    },
+    {
+      "aspects": ["rocker-trim"],
+      "model": "cobblemon:furfrou_rocker.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/rocker/furfrou_rocker.png"
+    },
+    {
+      "aspects": ["rocker-trim", "shiny"],
+      "model": "cobblemon:furfrou_rocker.geo",
+      "texture": "cobblemon:textures/pokemon/0676_furfrou/rocker/furfrou_rocker_shiny.png"
+    }
+  ]
+}
+

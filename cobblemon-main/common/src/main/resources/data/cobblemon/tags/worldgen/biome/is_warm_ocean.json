@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warm_ocean",
+    {
+      "id": "blooming_biosphere:tidepools",
+      "required": false
+    },
+    {
+      "id": "biomeswevegone:lush_stacks",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_event",
+	"title": "cobblemon.mark.ribbon_event.title",
+	"titleColor": "A6DB60",
+	"description": "cobblemon.mark.ribbon_event.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_event.png",
+	"indexNumber": 28
+}

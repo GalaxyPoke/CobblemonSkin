@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_training",
+	"title": "cobblemon.mark.ribbon_training.title",
+	"titleColor": "A373DE",
+	"description": "cobblemon.mark.ribbon_training.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_training.png",
+	"indexNumber": 4
+}

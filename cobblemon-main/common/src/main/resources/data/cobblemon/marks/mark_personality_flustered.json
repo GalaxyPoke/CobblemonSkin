@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_flustered",
+	"title": "cobblemon.mark.mark_personality_flustered.title",
+	"titleColor": "49BCF4",
+	"description": "cobblemon.mark.mark_personality_flustered.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_flustered.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 89
+}

@@ -1,0 +1,18 @@
+{
+  "hitbox": "player",
+  "names": [
+    "AI Man"
+  ],
+  "presets": [
+    "cobblemon:battler_test"
+  ],
+  "canDespawn": false,
+  "ai": [
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:core"
+      ]
+    }
+  ]
+}

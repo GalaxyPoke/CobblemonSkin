@@ -1,0 +1,26 @@
+{
+  "type": "cobblemon:cooking_pot",
+  "group": "iv_candy",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "cobblemon:grepa_berry"
+    },
+    "H": {
+      "item": "minecraft:honeycomb"
+    },
+    "E": {
+      "item": "cobblemon:exp_candy_l"
+    }
+  },
+  "pattern": [
+    "GHG",
+    "HEH",
+    "GHG"
+  ],
+  "result": {
+    "id": "cobblemon:courage_candy"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

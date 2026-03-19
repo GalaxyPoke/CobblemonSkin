@@ -1,0 +1,50 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["bubblebeam", "water", "spray", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_particles",
+          "effect": "cobblemon:bubblebeam_actor",
+          "locators": ["special", "target"],
+          "targetLocators": ["target"]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == true",
+          "expressions": [
+            "q.sound('move.bubblebeam.actor');"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.575
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.bubblebeam.target');"
+      ]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.9
+    }
+  ]
+}

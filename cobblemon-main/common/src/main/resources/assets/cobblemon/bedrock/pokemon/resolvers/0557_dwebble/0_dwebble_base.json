@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:dwebble",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:dwebble",
+      "model": "cobblemon:dwebble.geo",
+      "texture": "cobblemon:textures/pokemon/0557_dwebble/dwebble.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0557_dwebble/dwebble_shiny.png"
+    }
+  ]
+}

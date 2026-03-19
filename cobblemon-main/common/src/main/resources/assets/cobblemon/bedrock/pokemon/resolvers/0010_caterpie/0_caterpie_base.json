@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:caterpie",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:caterpie",
+      "model": "cobblemon:caterpie.geo",
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0010_caterpie/caterpie_shiny.png"
+    }
+  ]
+}

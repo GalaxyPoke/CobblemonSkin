@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_excited",
+	"title": "cobblemon.mark.mark_personality_excited.title",
+	"titleColor": "CE3A49",
+	"description": "cobblemon.mark.mark_personality_excited.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_excited.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 73
+}

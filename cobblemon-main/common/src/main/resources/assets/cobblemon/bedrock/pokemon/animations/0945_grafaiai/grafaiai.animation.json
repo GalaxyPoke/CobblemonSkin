@@ -1,0 +1,219 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.grafaiai.ground_idle": {
+			"loop": true,
+			"bones": {
+				"torso2": {
+					"rotation": [15, 0, 0]
+				},
+				"arm_left": {
+					"rotation": [21.64881, 48.8936, 63.9632],
+					"position": [0, -0.75, -0.75]
+				},
+				"hand_left": {
+					"rotation": [-96.45102, -53.29201, 226.73474]
+				},
+				"finger_left_middle": {
+					"rotation": [0, 0, 7.5]
+				},
+				"finger_left_middle2": {
+					"rotation": [0, 0, 85]
+				},
+				"head_angle": {
+					"rotation": [-20, -5, -2.5]
+				},
+				"leg_left": {
+					"rotation": [-55, -45, 0]
+				},
+				"foot_left": {
+					"rotation": [-40, 0, 0]
+				},
+				"ear_right": {
+					"rotation": [0, -5, 10]
+				},
+				"finger_left2": {
+					"rotation": [0, -14.50644, 5]
+				},
+				"finger_left_tip2": {
+					"rotation": [0, 0, 82.5]
+				},
+				"finger_left": {
+					"rotation": [0, 15, 10]
+				},
+				"finger_left_tip": {
+					"rotation": [0, 0, 80]
+				},
+				"arm_right": {
+					"rotation": [-7.56928, -34.22348, -13.63548]
+				},
+				"arm_right2": {
+					"rotation": [0, -85, 0]
+				},
+				"hand_right": {
+					"rotation": [0, -52.5, 0]
+				},
+				"finger_right_middle": {
+					"rotation": [0, 0, 45]
+				},
+				"finger_right_middle2": {
+					"rotation": [0, 0, -67.5]
+				},
+				"finger_right2": {
+					"rotation": [0, 15, -12.5]
+				},
+				"finger_right_tip2": {
+					"rotation": [0, 0, -82.5]
+				},
+				"finger_right": {
+					"rotation": [0, -15, -15]
+				},
+				"finger_right_tip": {
+					"rotation": [0, 0, -80]
+				},
+				"torso": {
+					"rotation": [10, 0, 0]
+				},
+				"arm_left2": {
+					"rotation": [0, 40, 0]
+				},
+				"ear_left": {
+					"rotation": [0, 5, -10]
+				},
+				"leg_left2": {
+					"rotation": [55, 0, 0]
+				},
+				"body": {
+					"rotation": [0, 10, 0],
+					"position": [0, 0.25, 0]
+				},
+				"head_tuft_back": {
+					"rotation": [-15, 0, 0]
+				},
+				"tail": {
+					"rotation": [-45, 0, 0]
+				},
+				"tail2": {
+					"rotation": [45, 0, 0]
+				},
+				"tail3": {
+					"rotation": [45, 0, 0]
+				},
+				"tail4": {
+					"rotation": [30, 0, 0]
+				},
+				"hair": {
+					"rotation": [-5, 0, 0]
+				},
+				"hair2": {
+					"rotation": [-45, 0, 0]
+				},
+				"finger_left_middle_tip": {
+					"rotation": [0, 0, 80],
+					"position": [0, 0.5, 0]
+				},
+				"toes_left": {
+					"rotation": [-50, 0, 0]
+				},
+				"leg_right": {
+					"rotation": [-55, 35, 0]
+				},
+				"leg_right2": {
+					"rotation": [55, 0, 0]
+				},
+				"foot_right": {
+					"rotation": [-40, 0, 0]
+				},
+				"toes_right": {
+					"rotation": [-50, 0, 0]
+				},
+				"finger_left_drip": {
+					"position": [0, 0.2, 0],
+					"scale": 0.1
+				},
+				"finger_left_drip2": {
+					"position": [0, 0.25, 0],
+					"scale": 0.1
+				},
+				"arms_torso": {
+					"rotation": [10, 0, 0]
+				},
+				"arms_torso2": {
+					"rotation": [15, 0, 0]
+				},
+				"locator_item_face": {
+					"position": [0, -0.5, 0]
+				}
+			}
+		},
+		"animation.grafaiai.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eyelid_left": {
+					"position": {
+						"0.0": [0.1, 0.1, -0.1],
+						"0.1667": {"pre": [0.1, 0.1, -0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eyelid_right": {
+					"position": {
+						"0.0": [-0.1, 0.1, -0.1],
+						"0.1667": {"pre": [-0.1, 0.1, -0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eye_left": {
+					"position": {
+						"0.0": [-0.1, -0.1, 0.1],
+						"0.1667": {"pre": [-0.1, -0.1, 0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eye_right": {
+					"position": {
+						"0.0": [0.1, -0.1, 0.1],
+						"0.1667": {"pre": [0.1, -0.1, 0.1], "post": [0, 0, 0]}
+					}
+				}
+			}
+		},
+		"animation.grafaiai.cry": {
+			"animation_length": 1.125,
+			"bones": {
+				"head_angle": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.25": [-17.5, 0, 0],
+						"0.5833": [-15, 0, 0],
+						"0.875": [-17.5, 0, 0],
+						"1.125": [0, 0, 0]
+					}
+				},
+				"jaw": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, 0, 0],
+						"0.25": [45, 0, 0],
+						"0.875": [45, 0, 0],
+						"1.0": [0, 0, 0]
+					}
+				},
+				"tooth_bottom": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.0417": {"pre": [0, 0, 0], "post": [-60, 0, 0]},
+						"1.0": {"pre": [-60, 0, 0], "post": [0, 0, 0]}
+					},
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": {"pre": [0, 0, 0], "post": [0, 0.5, 0]},
+						"1.0": {"pre": [0, 0.5, 0], "post": [0, 0, 0]}
+					}
+				}
+			},
+          "sound_effects": {
+            "0.0417": {
+              "effect": "pokemon.grafaiai.cry"
+            }
+          }
+		}
+	}
+}

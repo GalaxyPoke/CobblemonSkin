@@ -1,0 +1,6 @@
+{
+  "parent": "cobblemon:block/mulch",
+  "textures": {
+    "0": "cobblemon:block/crops/rich_mulch"
+  }
+}

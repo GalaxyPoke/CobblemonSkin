@@ -1,0 +1,41 @@
+{
+  "species": "cobblemon:deerling",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:deerling",
+      "model": "cobblemon:deerling.geo",
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_spring_shiny.png"
+    },
+    {
+      "aspects": ["autumn"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn.png"
+    },
+    {
+      "aspects": ["summer"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer.png"
+    },
+    {
+      "aspects": ["winter"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter.png"
+    },
+    {
+      "aspects": ["autumn", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_autumn_shiny.png"
+    },
+    {
+      "aspects": ["summer", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_summer_shiny.png"
+    },
+    {
+      "aspects": ["winter", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0585_deerling/deerling_winter_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "ingredient": "minecraft:rotten_flesh",
+  "colour": "brown",
+  "food": {
+    "hunger": 2,
+    "saturation": 0.4
+  },
+  "mobEffects": [
+    {
+      "effect": "minecraft:hunger",
+      "duration": 600,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

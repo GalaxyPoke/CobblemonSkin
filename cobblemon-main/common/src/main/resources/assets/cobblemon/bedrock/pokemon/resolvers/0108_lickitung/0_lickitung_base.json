@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:lickitung",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:lickitung",
+      "model": "cobblemon:lickitung.geo",
+      "texture": "cobblemon:textures/pokemon/0108_lickitung/lickitung.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0108_lickitung/lickitung_shiny.png"
+    }
+  ]
+}

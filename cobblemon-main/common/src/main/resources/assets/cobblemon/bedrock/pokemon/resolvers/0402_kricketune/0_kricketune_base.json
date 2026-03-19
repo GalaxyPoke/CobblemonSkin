@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:kricketune",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:kricketune",
+      "model": "cobblemon:kricketune_male.geo",
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0402_kricketune/kricketune_shiny.png"
+    }
+  ]
+}

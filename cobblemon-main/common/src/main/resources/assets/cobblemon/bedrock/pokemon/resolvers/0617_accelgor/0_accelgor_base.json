@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:accelgor",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:accelgor",
+      "model": "cobblemon:accelgor.geo",
+      "texture": "cobblemon:textures/pokemon/0617_accelgor/accelgor.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0617_accelgor/accelgor_shiny.png"
+    }
+  ]
+}

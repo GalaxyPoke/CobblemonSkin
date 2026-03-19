@@ -1,0 +1,14 @@
+{
+  "ingredient": "cobblemon:cyan_mint_leaf",
+  "colour": "cyan",
+  "mobEffects": [
+    {
+      "effect": "minecraft:luck",
+      "duration": 140,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

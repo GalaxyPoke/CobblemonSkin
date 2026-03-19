@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:wormadam",
+  "speciesId": "cobblemon:wormadam",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Sandy",
+      "unlockForms": [
+        "Sandy"
+      ]
+    },
+    {
+      "displayForm": "Trash",
+      "unlockForms": [
+        "Trash"
+      ]
+    }
+  ],
+  "variations": []
+}

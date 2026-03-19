@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_battler_expert",
+	"title": "cobblemon.mark.ribbon_battler_expert.title",
+	"titleColor": "FCABC8",
+	"description": "cobblemon.mark.ribbon_battler_expert.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_battler_expert.png",
+	"indexNumber": 6
+}

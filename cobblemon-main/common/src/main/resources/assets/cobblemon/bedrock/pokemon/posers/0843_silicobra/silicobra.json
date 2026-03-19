@@ -1,0 +1,27 @@
+{
+  "portraitScale": 1.92,
+  "portraitTranslation": [-0.48, -0.34, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0.09, 0.75, 0],
+  "rootBone": "silicobra",
+  "animations": {
+    "cry": "q.bedrock_stateful('silicobra', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('neck')", 
+        "q.bedrock('silicobra', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('silicobra', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.bedrock('silicobra', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('silicobra', 'blink')"]
+    }
+  }
+}

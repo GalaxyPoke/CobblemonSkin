@@ -1,0 +1,14 @@
+{
+  "type": "integer",
+  "keys": ["blocks_traveled"],
+  "default": 0,
+  "min": 0,
+  "max": 1000,
+  "visible": true,
+  "display": {
+    "name": "cobblemon.ui.stats.blocks_traveled",
+    "colour": [150, 210, 160],
+    "underlay": "cobblemon:textures/gui/summary/summary_stats_other_bar.png",
+    "overlay": "cobblemon:textures/gui/summary/summary_stats_steps_overlay.png"
+  }
+}

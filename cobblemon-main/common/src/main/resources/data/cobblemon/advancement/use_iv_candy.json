@@ -1,0 +1,91 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:health_candy"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.use_iv_candy"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.use_iv_candy.description"
+    },
+	"hidden": false
+  },
+  "parent": "cobblemon:use_candy",
+  "criteria": {
+    "use_health_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:health_candy"
+      }
+    },
+	"use_mighty_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:mighty_candy"
+      }
+    },
+	"use_tough_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:tough_candy"
+      }
+    },
+	"use_smart_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:smart_candy"
+      }
+    },
+	"use_courage_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:courage_candy"
+      }
+    },
+	"use_quick_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:quick_candy"
+      }
+    },
+    "use_sickly_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:sickly_candy"
+      }
+    },
+	"use_weak_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:weak_candy"
+      }
+    },
+	"use_brittle_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:brittle_candy"
+      }
+    },
+	"use_numb_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:numb_candy"
+      }
+    },
+	"use_coward_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:coward_candy"
+      }
+    },
+	"use_slow_candy": {
+      "trigger": "cobblemon:pokemon_interact",
+      "conditions": {
+        "item": "cobblemon:slow_candy"
+      }
+    }
+  },
+  "requirements": [[ "use_health_candy", "use_mighty_candy", "use_tough_candy", "use_smart_candy", "use_courage_candy", "use_quick_candy", "use_sickly_candy", "use_weak_candy", "use_brittle_candy", "use_numb_candy", "use_coward_candy", "use_slow_candy" ]],
+  "sends_telemetry_event": false
+}

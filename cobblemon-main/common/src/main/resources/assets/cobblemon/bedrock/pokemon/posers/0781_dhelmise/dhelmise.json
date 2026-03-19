@@ -1,0 +1,70 @@
+{
+  "portraitScale": 1.1,
+  "portraitTranslation": [-0.5, 2.7, 0],
+  "profileScale": 0.35,
+  "profileTranslation": [0, 1.35, 0],
+  "rootBone": "dhelmise",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, -0.4]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('dhelmise', 'faint', q.curve('one'))"
+  },
+  "poses": {
+    "jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.bedrock('dhelmise', 'water_swim')"
+      ],
+      "transformTicks": 3,
+      "transformToTicks": 3
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('dhelmise', 'ground_idle')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "animations": ["q.bedrock('dhelmise', 'ground_walk')"]
+    },
+    "surface-floating": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": ["q.bedrock('dhelmise', 'water_idle')"]
+    },
+    "surface-swimming": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isTouchingWater": true,
+      "isUnderWater": false,
+      "animations": ["q.bedrock('dhelmise', 'water_swim')"]
+    },
+    "floating": {
+      "poseTypes": ["FLOAT"],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": ["q.bedrock('dhelmise', 'water_idle')"]
+    },
+    "swimming": {
+      "poseTypes": ["SWIM"],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "animations": ["q.bedrock('dhelmise', 'water_swim')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('dhelmise', 'sleep')"]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:pikachu",
+  "speciesId": "cobblemon:pikachu",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Partner",
+      "unlockForms": [
+        "Partner"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

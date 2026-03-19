@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:rufflet-hisuibias",
+  "speciesId": "cobblemon:rufflet",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui-Bias",
+      "unlockForms": [
+        "Hisui-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

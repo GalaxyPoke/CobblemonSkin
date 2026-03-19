@@ -1,0 +1,5 @@
+{
+  "texture": "cobblemon:textures/gui/pc/wallpaper/biome/wallpaper_biome_nether.png",
+  "displayName": "advancements.nether.root.title",
+  "enabled": true
+}

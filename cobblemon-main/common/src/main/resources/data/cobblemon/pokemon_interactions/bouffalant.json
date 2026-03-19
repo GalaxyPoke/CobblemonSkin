@@ -1,0 +1,33 @@
+{
+  "requirements": [
+    {
+      "variant": "properties",
+      "target": "bouffalant gender=female"
+    }
+  ],
+  "interactions": [
+    {
+      "grouping": "cobblemon:bucket",
+      "cooldown": "0",
+      "requirements": [
+        {
+          "variant": "owner_held_item",
+          "itemCondition": "minecraft:bucket"
+        }
+      ],
+      "effects": [
+        {
+          "variant": "shrink_item"
+        },
+        {
+          "variant": "give_item",
+          "item": "minecraft:milk_bucket"
+        },
+        {
+          "variant": "play_sound",
+          "sound": "minecraft:item.bucket.fill"
+        }
+      ]
+    }
+  ]
+}

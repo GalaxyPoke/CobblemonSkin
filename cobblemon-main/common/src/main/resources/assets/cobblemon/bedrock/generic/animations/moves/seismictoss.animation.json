@@ -1,0 +1,117 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.seismictoss.actor": {
+			"animation_length": 4,
+			"bones": {
+				"root_part": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.125": [0, 0, -3],
+						"0.25": [0, 0, -14],
+						"0.375": [0, 0, -30],
+						"0.5": [0, 0, -30],
+						"3.375": [0, 0, -10],
+						"3.4583": [0, 0, -4],
+						"3.5833": [0, 0, 0]
+					},
+					"scale": {
+						"0.1667": [1, 1, 1],
+						"0.2083": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						},
+						"0.25": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						},
+						"0.2917": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						},
+						"0.3333": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						},
+						"0.375": {
+							"pre": [1, 1, 1],
+							"post": [0, 0, 0]
+						},
+						"3.375": {
+							"pre": [0, 0, 0],
+							"post": [1, 1, 1]
+						}
+					}
+				}
+			},
+			"particle_effects": {
+				"0.5": [
+					{
+						"effect": "cobblemon:quickattack_dashlines",
+						"locator": "middle"
+					},
+					{
+						"effect": "cobblemon:quickattack_dust"
+					}
+				]
+			}
+		},
+		"animation.seismictoss.target": {
+			"animation_length": 3,
+			"bones": {
+				"root_part": {
+					"position": {
+						"0.0": ["math.sin(q.anim_time*90*360)*1", 0, 0],
+						"0.2917": [0, 0, 0],
+						"0.4167": [0, 0, 0],
+						"0.5833": [0, 200, 0],
+						"0.6667": [0, 250, 0],
+						"2.0": [0, 250, 0],
+						"2.0833": [0, 200, 0],
+						"2.25": [0, 0, 0],
+						"2.2917": [0, -1, 0],
+						"2.3333": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.4167": [1, 1, 1],
+						"0.4583": [0.5, 2, 0.5],
+						"0.5417": [0.5, 2, 0.5],
+						"0.625": [0.00001, 2.5, 0.00001],
+						"0.6667": [0, 4, 0],
+						"1.9167": [0.00001, 4, 0.00001],
+						"2.0": [0.00001, 2, 0.00001],
+						"2.0833": [0.5, 2.5, 0.5],
+						"2.25": [0.75, 2, 0.75],
+						"2.2917": ["1-math.sin(q.anim_time*90*60)*0.7", "1+math.sin(q.anim_time*90*60)*0.4", "1-math.sin(q.anim_time*90*60)*0.7"],
+						"2.9583": [1, 1, 1]
+					}
+				}
+			},
+			"particle_effects": {
+				"0.375": {
+					"effect": "seismictoss_target",
+					"locator": "middle"
+				},
+				"1.125": {
+					"effect": "seismictoss_ding",
+					"locator": "root"
+				},
+				"1.9167": {
+					"effect": "seismictoss_target",
+					"locator": "middle"
+				},
+				"2.25": [
+					{
+						"effect": "seismictoss_targetrocks",
+						"locator": "root"
+					},
+					{
+						"effect": "seismictoss_targetdust",
+						"locator": "root"
+					}
+				]
+			}
+		}
+	}
+}

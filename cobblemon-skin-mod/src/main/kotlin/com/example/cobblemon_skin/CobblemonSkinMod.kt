@@ -43,16 +43,22 @@ object CobblemonSkinMod : ModInitializer {
     override fun onInitialize() {
         LOGGER.info("CobblemonSkin mod initializing...")
 
+        // v2.0: Server manages skin packs, client receives via packets
+        SkinPackets.registerCommon()
+
+        // Server-side: scan skin packs and register packet handlers
+        com.example.cobblemon_skin.server.SkinManager.loadAll()
+        com.example.cobblemon_skin.server.ServerPacketHandler.register()
+
+        // Legacy resource pack generation for Cobblemon resolver loading
         SkinPackLoader.loadAll()
         SkinConfig.load()
-        UiConfig.load()
-        SkinPackets.registerCommon()
 
         CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
             SkinCommand.register(dispatcher)
         }
 
-        LOGGER.info("CobblemonSkin mod initialized. Registered skins: ${registeredSkins.joinToString()}")
+        LOGGER.info("CobblemonSkin mod initialized. ${registeredSkins.size} skins registered.")
     }
 
     fun registerSkin(skinId: String) {

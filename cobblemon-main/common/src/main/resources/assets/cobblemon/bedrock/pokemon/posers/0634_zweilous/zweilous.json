@@ -1,0 +1,56 @@
+{
+  "portraitScale": 1.82,
+  "portraitTranslation": [-1.55, -0.04, 0],
+  "profileScale": 0.51,
+  "profileTranslation": [0, 0.86, 0],
+  "rootBone": "zweilous",
+  "animations": {
+    "cry": "q.bedrock_stateful('zweilous', 'cry')"
+  },
+  "poses": {
+    "portrait": {
+      "poseTypes": ["PORTRAIT"],
+      "animations": ["q.bedrock('zweilous', 'battle_idle')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "PROFILE", "NONE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_left')",
+        "q.look('head_right')",
+        "q.bedrock('zweilous', 'ground_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('zweilous', 'hold_item')"
+        }
+      ]
+    },
+    "battle_standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_left')",
+        "q.look('head_right')",
+        "q.bedrock('zweilous', 'battle_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('zweilous', 'hold_item')"
+        }
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head_left')",
+        "q.look('head_right')",
+        "q.bedrock('zweilous', 'ground_idle')",
+        "q.quadruped_walk(1, 1, 'leg_front_left', 'leg_front_right', 'leg_back_left', 'leg_back_right')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('zweilous', 'hold_item')"
+        }
+      ]
+    }
+  }
+}

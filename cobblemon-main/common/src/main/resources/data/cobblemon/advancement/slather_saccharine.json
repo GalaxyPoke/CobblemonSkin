@@ -1,0 +1,43 @@
+{
+  "parent": "cobblemon:any_plant",
+  "display": {
+    "icon": {
+      "id": "cobblemon:saccharine_sapling"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.slather_saccharine"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.slather_saccharine.description"
+    }
+  },
+  "criteria": {
+    "slather_honey": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:match_tool",
+                "predicate": {
+                  "items": "minecraft:honey_bottle"
+                }
+              },
+              {
+                "condition": "minecraft:block_state_property",
+                "block": "cobblemon:saccharine_log_slathered"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "slather_honey"
+    ]
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "feature": "cobblemon:white_apricorn_tree",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "cobblemon:white_apricorn_sapling"
+        }
+      }
+    }
+  ]
+}

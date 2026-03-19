@@ -1,0 +1,133 @@
+{
+  "pokemon": ["conkeldurr"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:white_concrete",
+      "aspects": ["color-white", "colour-white"]
+    },
+    {
+      "consumedItem": "minecraft:orange_concrete",
+      "aspects": ["color-orange", "colour-orange"]
+    },
+    {
+      "consumedItem": "minecraft:magenta_concrete",
+      "aspects": ["color-magenta", "colour-magenta"]
+    },
+    {
+      "consumedItem": "minecraft:light_blue_concrete",
+      "aspects": ["color-light_blue", "colour-light_blue"]
+    },
+    {
+      "consumedItem": "minecraft:yellow_concrete",
+      "aspects": ["color-yellow", "colour-yellow"]
+    },
+    {
+      "consumedItem": "minecraft:lime_concrete",
+      "aspects": ["color-lime", "colour-lime"]
+    },
+    {
+      "consumedItem": "minecraft:pink_concrete",
+      "aspects": ["color-pink", "colour-pink"]
+    },
+    {
+      "consumedItem": "minecraft:gray_concrete",
+      "aspects": ["color-gray", "colour-gray"]
+    },
+    {
+      "consumedItem": "minecraft:light_gray_concrete",
+      "aspects": ["color-light_gray", "colour-light_gray"]
+    },
+    {
+      "consumedItem": "minecraft:cyan_concrete",
+      "aspects": ["color-cyan", "colour-cyan"]
+    },
+    {
+      "consumedItem": "minecraft:purple_concrete",
+      "aspects": ["color-purple", "colour-purple"]
+    },
+    {
+      "consumedItem": "minecraft:blue_concrete",
+      "aspects": ["color-blue", "colour-blue"]
+    },
+    {
+      "consumedItem": "minecraft:brown_concrete",
+      "aspects": ["color-brown", "colour-brown"]
+    },
+    {
+      "consumedItem": "minecraft:green_concrete",
+      "aspects": ["color-green", "colour-green"]
+    },
+    {
+      "consumedItem": "minecraft:red_concrete",
+      "aspects": ["color-red", "colour-red"]
+    },
+    {
+      "consumedItem": "minecraft:black_concrete",
+      "aspects": ["color-black", "colour-black"]
+    },
+    {
+      "consumedItem": "minecraft:white_concrete_powder",
+      "aspects": ["color-white", "colour-white"]
+    },
+    {
+      "consumedItem": "minecraft:orange_concrete_powder",
+      "aspects": ["color-orange", "colour-orange"]
+    },
+    {
+      "consumedItem": "minecraft:magenta_concrete_powder",
+      "aspects": ["color-magenta", "colour-magenta"]
+    },
+    {
+      "consumedItem": "minecraft:light_blue_concrete_powder",
+      "aspects": ["color-light_blue", "colour-light_blue"]
+    },
+    {
+      "consumedItem": "minecraft:yellow_concrete_powder",
+      "aspects": ["color-yellow", "colour-yellow"]
+    },
+    {
+      "consumedItem": "minecraft:lime_concrete_powder",
+      "aspects": ["color-lime", "colour-lime"]
+    },
+    {
+      "consumedItem": "minecraft:pink_concrete_powder",
+      "aspects": ["color-pink", "colour-pink"]
+    },
+    {
+      "consumedItem": "minecraft:gray_concrete_powder",
+      "aspects": ["color-gray", "colour-gray"]
+    },
+    {
+      "consumedItem": "minecraft:light_gray_concrete_powder",
+      "aspects": ["color-light_gray", "colour-light_gray"]
+    },
+    {
+      "consumedItem": "minecraft:cyan_concrete_powder",
+      "aspects": ["color-cyan", "colour-cyan"]
+    },
+    {
+      "consumedItem": "minecraft:purple_concrete_powder",
+      "aspects": ["color-purple", "colour-purple"]
+    },
+    {
+      "consumedItem": "minecraft:blue_concrete_powder",
+      "aspects": ["color-blue", "colour-blue"]
+    },
+    {
+      "consumedItem": "minecraft:brown_concrete_powder",
+      "aspects": ["color-brown", "colour-brown"]
+    },
+    {
+      "consumedItem": "minecraft:green_concrete_powder",
+      "aspects": ["color-green", "colour-green"]
+    },
+    {
+      "consumedItem": "minecraft:red_concrete_powder",
+      "aspects": ["color-red", "colour-red"]
+    },
+    {
+      "consumedItem": "minecraft:black_concrete_powder",
+      "aspects": ["color-black", "colour-black"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "cobblemon:ruins/waystone_stone",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:ruins/decorations/waystone_stone",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "minecraft:empty",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "category": "equipment",
+    "key": {
+        "A": {
+            "item": "cobblemon:black_augurite"
+        },
+        "S": {
+            "tag": "c:rods/wooden"
+        }
+    },
+    "pattern": [
+        " A",
+        " S",
+        " S"
+    ],
+    "result": {
+        "id": "minecraft:stone_axe"
+    },
+    "show_notification": true
+}

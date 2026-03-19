@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_day_downcast",
+	"title": "cobblemon.mark.ribbon_day_downcast.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.ribbon_day_downcast.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_day_downcast.png",
+	"indexNumber": 10
+}

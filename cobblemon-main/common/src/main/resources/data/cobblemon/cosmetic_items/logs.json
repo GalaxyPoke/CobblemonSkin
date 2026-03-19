@@ -1,0 +1,53 @@
+{
+  "pokemon": ["timburr", "komala"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "#cobblemon:apricorn_logs",
+      "aspects": ["tree-apricorn"]
+    },
+    {
+      "consumedItem": "#cobblemon:saccharine_logs",
+      "aspects": ["tree-saccharine"]
+    },
+    {
+      "consumedItem": "#minecraft:oak_logs",
+      "aspects": ["tree-oak"]
+    },
+    {
+      "consumedItem": "#minecraft:spruce_logs",
+      "aspects": ["tree-spruce"]
+    },
+    {
+      "consumedItem": "#minecraft:birch_logs",
+      "aspects": ["tree-birch"]
+    },
+    {
+      "consumedItem": "#minecraft:jungle_logs",
+      "aspects": ["tree-jungle"]
+    },
+    {
+      "consumedItem": "#minecraft:acacia_logs",
+      "aspects": ["tree-acacia"]
+    },
+    {
+      "consumedItem": "#minecraft:dark_oak_logs",
+      "aspects": ["tree-darkoak"]
+    },
+    {
+      "consumedItem": "#minecraft:mangrove_logs",
+      "aspects": ["tree-mangrove"]
+    },
+    {
+      "consumedItem": "#minecraft:crimson_stems",
+      "aspects": ["tree-crimson"]
+    },
+    {
+      "consumedItem": "#minecraft:warped_stems",
+      "aspects": ["tree-warped"]
+    },
+    {
+      "consumedItem": "#minecraft:cherry_logs",
+      "aspects": ["tree-cherry"]
+    }
+  ]
+}

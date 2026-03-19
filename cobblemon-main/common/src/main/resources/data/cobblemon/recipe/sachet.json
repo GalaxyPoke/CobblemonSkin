@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "S S",
+        "HPH",
+        "AHA"
+    ],
+    "key": {
+        "P": {
+            "item": "minecraft:pink_petals"
+        },
+        "S": {
+            "tag": "c:strings"
+        },
+        "H": {
+            "item": "minecraft:rabbit_hide"
+        },
+        "A": {
+            "tag": "c:gems/amethyst"
+        }
+    },
+    "result": {
+        "id": "cobblemon:sachet"
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:sinistea",
+  "speciesId": "cobblemon:sinistea",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Antique",
+      "unlockForms": [
+        "Antique"
+      ]
+    }
+  ],
+  "variations": []
+}

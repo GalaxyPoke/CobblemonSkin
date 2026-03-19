@@ -1,0 +1,7 @@
+{
+  "asset_id": "cobblemon:automaton",
+  "description": {
+    "translate": "trim_pattern.cobblemon.automaton"
+  },
+  "template_item": "cobblemon:automaton_armor_trim_smithing_template"
+}

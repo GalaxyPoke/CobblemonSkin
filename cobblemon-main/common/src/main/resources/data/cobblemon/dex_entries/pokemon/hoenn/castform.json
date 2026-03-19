@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:castform",
+  "speciesId": "cobblemon:castform",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Sunny",
+      "unlockForms": [
+        "Sunny"
+      ]
+    },
+    {
+      "displayForm": "Rainy",
+      "unlockForms": [
+        "Rainy"
+      ]
+    },
+    {
+      "displayForm": "Snowy",
+      "unlockForms": [
+        "Snowy"
+      ]
+    }
+  ],
+  "variations": []
+}

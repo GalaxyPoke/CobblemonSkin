@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:ursaring",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ursaring",
+      "model": "cobblemon:ursaring.geo",
+      "texture": "cobblemon:textures/pokemon/0217_ursaring/ursaring.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0217_ursaring/ursaring_shiny.png"
+    }
+  ]
+}

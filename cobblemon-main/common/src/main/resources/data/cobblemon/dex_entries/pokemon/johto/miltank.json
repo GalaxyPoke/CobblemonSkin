@@ -1,0 +1,25 @@
+{
+  "id": "cobblemon:miltank",
+  "speciesId": "cobblemon:miltank",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "displayName": "cobblemon.pokedex.variation.color",
+      "icon": "cobblemon:textures/gui/pokedex/variation/color.png",
+      "aspects": [
+        "mooshtank-false",
+        "mooshtank-red",
+        "mooshtank-brown"
+      ]
+    }
+  ]
+}

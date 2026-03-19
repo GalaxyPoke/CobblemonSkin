@@ -1,0 +1,36 @@
+{
+  "portraitScale": 2.30,
+  "portraitTranslation": [-0.09, 2.09, 0],
+  "profileScale": 0.47,
+  "profileTranslation": [0, 1.08, 0],
+  "rootBone": "arboliva",
+  "poses": {
+    "battle-idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')", 
+        "q.bedrock('arboliva', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('arboliva', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')", 
+        "q.bedrock('arboliva', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('arboliva', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')", 
+        "q.bedrock('arboliva', 'ground_idle')",
+        "q.biped_walk(0.66, 0.6, 'leg_left', 'leg_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('arboliva', 'blink')"]
+    }
+  }
+}

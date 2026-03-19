@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cobblemon:block/evolution/deepslate_thunder_stone_ore"
+  }
+}

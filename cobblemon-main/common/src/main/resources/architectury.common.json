@@ -1,0 +1,6 @@
+{
+  "accessWidener": "cobblemon-common.accesswidener",
+  "injected_interfaces": {
+    "net/minecraft/class_630": ["com/cobblemon/mod/common/client/render/models/blockbench/pose/Bone"]
+  }
+}

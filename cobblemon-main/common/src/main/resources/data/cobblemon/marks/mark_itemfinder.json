@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_itemfinder",
+	"title": "cobblemon.mark.mark_itemfinder.title",
+	"titleColor": "BFC240",
+	"description": "cobblemon.mark.mark_itemfinder.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_itemfinder.png",
+	"indexNumber": 103
+}

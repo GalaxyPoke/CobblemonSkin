@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "cobblemon:medicinal_leek",
+    "cobblemon:big_root",
+    "cobblemon:energy_root",
+    "cobblemon:vivichoke",
+    "cobblemon:hearty_grains",
+    "#cobblemon:mint_leaves",
+    "cobblemon:revival_herb",
+    "#cobblemon:berries"
+  ]
+}

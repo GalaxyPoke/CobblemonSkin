@@ -1,0 +1,42 @@
+{
+    "timeline": [
+      {
+        "type": "add_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "animation",
+        "animation": ["scaryface", "status"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.35
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:leer_gleam",
+        "locators": ["eye", "target"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.1
+      },
+      {
+        "type": "entity_molang",
+        "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+        "expressions": ["q.play_animation(q.bedrock_stateful('growl', 'target'))"]
+      },
+      {
+        "type": "pause",
+        "pause": 1
+      },
+      {
+        "type": "remove_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.75
+      }
+    ]
+  }

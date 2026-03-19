@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable",
+  "textures": {
+    "front": "cobblemon:block/building_blocks/relic_coin_sack_front",
+    "side": "cobblemon:block/building_blocks/relic_coin_sack_side",
+    "top": "cobblemon:block/building_blocks/relic_coin_sack_top",
+    "bottom": "cobblemon:block/building_blocks/relic_coin_sack_bottom"
+  }
+}

@@ -1,0 +1,179 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 16],
+	"textures": {
+		"0": "cobblemon:block/crops/vivichoke_seed_stage_7",
+		"particle": "cobblemon:block/crops/vivichoke_seed_stage_7"
+	},
+	"elements": [
+		{
+			"name": "ns",
+			"from": [0, -1, 8],
+			"to": [16, 10, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 8, 16], "texture": "#0"},
+				"south": {"uv": [0, 5, 8, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "ew",
+			"from": [8, -1, 0],
+			"to": [8, 10, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"faces": {
+				"east": {"uv": [0, 5, 8, 16], "texture": "#0"},
+				"west": {"uv": [0, 5, 8, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bud",
+			"from": [5.5, 10, 5.5],
+			"to": [10.5, 14, 10.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [8, 5, 10.5, 9], "texture": "#0"},
+				"east": {"uv": [10.5, 5, 8, 9], "texture": "#0"},
+				"south": {"uv": [8, 5, 10.5, 9], "texture": "#0"},
+				"west": {"uv": [10.5, 5, 8, 9], "texture": "#0"},
+				"up": {"uv": [10.5, 5, 8, 0], "texture": "#0"},
+				"down": {"uv": [10.5, 9, 8, 14], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 8.54594, 1.98959],
+			"to": [10.5, 13.54594, 1.98959],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [13, 4, 15.5, 9], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [10.5, 4, 13, 9], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [0, 5, 0, 0], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [14.01041, 8.54594, 5.5],
+			"to": [14.01041, 13.54594, 10.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"east": {"uv": [13, 4, 15.5, 9], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"west": {"uv": [10.5, 4, 13, 9], "texture": "#0"},
+				"up": {"uv": [0, 5, 0, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 8.54594, 14.01041],
+			"to": [10.5, 13.54594, 14.01041],
+			"rotation": {"angle": -45, "axis": "x", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [10.5, 4, 13, 9], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [13, 4, 15.5, 9], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [0, 5, 0, 0], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"from": [1.98959, 8.54594, 5.5],
+			"to": [1.98959, 13.54594, 10.5],
+			"rotation": {"angle": -45, "axis": "z", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"east": {"uv": [10.5, 4, 13, 9], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"west": {"uv": [13, 4, 15.5, 9], "texture": "#0"},
+				"up": {"uv": [0, 5, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 9.98, 2],
+			"to": [11, 9.98, 7],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"east": {"uv": [13, 16, 15.5, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"west": {"uv": [10.5, 16, 13, 16], "texture": "#0"},
+				"up": {"uv": [13, 9, 15.5, 4], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [10.5, 4, 13, 9], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [2, 9.99, 5],
+			"to": [7, 9.99, 11],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [13, 16, 15.5, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [10.5, 16, 13, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [13, 9, 15.5, 4], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [10.5, 4, 13, 9], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 9.98, 9],
+			"to": [11, 9.98, 14],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"east": {"uv": [10.5, 16, 13, 16], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"west": {"uv": [13, 16, 15.5, 16], "texture": "#0"},
+				"up": {"uv": [13, 9, 15.5, 4], "texture": "#0"},
+				"down": {"uv": [10.5, 4, 13, 9], "texture": "#0"}
+			}
+		},
+		{
+			"from": [9, 9.99, 5],
+			"to": [14, 9.99, 11],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 10, 8]},
+			"faces": {
+				"north": {"uv": [10.5, 16, 13, 16], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"south": {"uv": [13, 16, 15.5, 16], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 3], "texture": "#0"},
+				"up": {"uv": [13, 9, 15.5, 4], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [10.5, 4, 13, 9], "rotation": 90, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "cobblemon:block/vivichoke_seed_stage_7",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				0,
+				1,
+				{
+					"name": "head",
+					"origin": [8, -1, 8],
+					"color": 0,
+					"children": [
+						2,
+						{
+							"name": "upper_petals",
+							"origin": [8, -1, 8],
+							"color": 0,
+							"children": [3, 4, 5, 6]
+						},
+						{
+							"name": "lower_petals",
+							"origin": [8, 10, 8],
+							"color": 0,
+							"children": [7, 8, 9, 10]
+						}
+					]
+				}
+			]
+		}
+	]
+}

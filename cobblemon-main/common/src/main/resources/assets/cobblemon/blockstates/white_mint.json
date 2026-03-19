@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "cobblemon:block/white_mint_stage_0"
+    },
+    "age=1": {
+      "model": "cobblemon:block/white_mint_stage_1"
+    },
+    "age=2": {
+      "model": "cobblemon:block/white_mint_stage_2"
+    },
+    "age=3": {
+      "model": "cobblemon:block/white_mint_stage_3"
+    },
+    "age=4": {
+      "model": "cobblemon:block/white_mint_stage_4"
+    },
+    "age=5": {
+      "model": "cobblemon:block/white_mint_stage_5"
+    },
+    "age=6": {
+      "model": "cobblemon:block/white_mint_stage_6"
+    },
+    "age=7": {
+      "model": "cobblemon:block/white_mint_stage_7"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_humble",
+	"title": "cobblemon.mark.mark_personality_humble.title",
+	"titleColor": "B4BBCE",
+	"description": "cobblemon.mark.mark_personality_humble.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_humble.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 94
+}

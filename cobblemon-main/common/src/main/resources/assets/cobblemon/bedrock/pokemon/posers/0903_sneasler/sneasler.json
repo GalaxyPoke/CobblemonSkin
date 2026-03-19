@@ -1,0 +1,125 @@
+{
+  "portraitScale": 2.03,
+  "portraitTranslation": [-0.44, 2.41, 0],
+  "profileScale": 0.52,
+  "profileTranslation": [0, 0.94, 0],
+  "rootBone": "sneasler",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('sneasler', 'cry')",
+    "recoil": "q.bedrock_stateful('sneasler', 'recoil')"
+  },
+  "poses": {
+    "portrait": {
+      "poseName": "portrait",
+      "poseTypes": ["PORTRAIT"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.bedrock('sneasler', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "battle-idle": {
+      "poseName": "battle-idle",
+      "isBattle": true,
+      "poseTypes": ["STAND"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'battle_idle')"
+
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "poseTypes": ["STAND", "PROFILE", "NONE"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')",
+        "q.bedrock_quirk('sneasler', 'quirk_ground', 20, 40, 1)"
+      ]
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_walk')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('sneasler', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_run')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('sneasler', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "ride-jump": {
+      "poseName": "ride-jump",
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.is_ridden && q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ride_jump')",
+        "q.bedrock('sneasler', 'ride_ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "isBattle": false,
+      "animations": ["q.bedrock('sneasler', 'sleep')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "battle-sleep": {
+      "poseName": "battle-sleep",
+      "poseTypes": ["SLEEP"],
+      "isBattle": true,
+      "animations": ["q.bedrock('sneasler', 'battle_sleep')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "cobblemon:big_root",
+              "Properties": {}
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:would_survive",
+            "state": {
+              "Name": "cobblemon:big_root",
+              "Properties": {}
+            }
+          }
+        }
+      ]
+    },
+    "tries": 3,
+    "xz_spread": 1,
+    "y_spread": 1
+  }
+}

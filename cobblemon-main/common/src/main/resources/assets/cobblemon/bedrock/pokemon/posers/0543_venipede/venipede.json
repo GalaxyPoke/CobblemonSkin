@@ -1,0 +1,49 @@
+{
+  "portraitScale": 1.77,
+  "portraitTranslation": [ -0.4, -1.02, 0],
+  "profileScale": 0.79,
+  "profileTranslation": [ 0.02, 0.6, 0],
+  "rootBone": "venipede",
+  "animations": {
+    "cry": "q.bedrock_stateful('venipede', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 10, -10)",
+        "q.bedrock('venipede', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('venipede', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('venipede', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head', 1, 1, 5, -5, 10, -10)",
+        "q.bedrock('venipede', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('venipede', 'blink')"
+      ],
+      "transformTicks": 5
+    }
+  }
+}

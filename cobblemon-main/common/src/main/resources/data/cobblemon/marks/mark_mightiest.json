@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_mightiest",
+	"title": "cobblemon.mark.mark_mightiest.title",
+	"titleColor": "B061D5",
+	"description": "cobblemon.mark.mark_mightiest.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_mightiest.png",
+	"indexNumber": 108
+}

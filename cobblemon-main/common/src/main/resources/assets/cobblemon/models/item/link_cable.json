@@ -1,0 +1,50 @@
+{
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "cobblemon:item/evolution/link_cable"
+	},
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "cobblemon:item/cobblemon"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "cobblemon:item/cobblemon_blue"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "cobblemon:item/cobblemon_green"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 4
+      },
+      "model": "cobblemon:item/cobblemon_purple"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 5
+      },
+      "model": "cobblemon:item/cobblemon_yellow"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 6
+      },
+      "model": "cobblemon:item/shiny_marker"
+    },
+	{
+      "predicate": {
+        "custom_model_data": 7
+      },
+      "model": "cobblemon:item/link_cable"
+    }
+  ]
+}

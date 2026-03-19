@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_battle_tower_master",
+	"title": "cobblemon.mark.ribbon_battle_tower_master.title",
+	"titleColor": "A373DE",
+	"description": "cobblemon.mark.ribbon_battle_tower_master.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_battle_tower_master.png",
+	"indexNumber": 51
+}

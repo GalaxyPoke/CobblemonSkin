@@ -1,0 +1,14 @@
+{
+  "ingredient": "minecraft:pink_petals",
+  "colour": "pink",
+  "mobEffects": [
+    {
+      "effect": "minecraft:regeneration",
+      "duration": 140,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "pokemon": ["pikachu", "raichu", "pichu"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:lava_cookie",
+      "aspects": ["cosmetic_item-lava_cookie"]
+    }
+  ]
+}

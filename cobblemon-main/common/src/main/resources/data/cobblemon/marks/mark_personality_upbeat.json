@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_upbeat",
+	"title": "cobblemon.mark.mark_personality_upbeat.title",
+	"titleColor": "A6DB60",
+	"description": "cobblemon.mark.mark_personality_upbeat.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_upbeat.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 82
+}

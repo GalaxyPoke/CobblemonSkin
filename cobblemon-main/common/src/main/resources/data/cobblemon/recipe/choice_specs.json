@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "B B",
+        "GWG",
+        "RGR"
+    ],
+    "key": {
+        "G": {
+            "tag": "c:ingots/gold"
+        },
+        "B": {
+            "tag": "c:rods/blaze"
+        },
+        "W": {
+            "item": "cobblemon:wise_glasses"
+        },
+        "R": {
+            "tag": "c:dusts/redstone"
+        }
+    },
+    "result": {
+        "id": "cobblemon:choice_specs"
+    }
+}

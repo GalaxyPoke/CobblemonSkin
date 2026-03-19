@@ -1,0 +1,67 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+        "animation": ["bulldoze"]
+    },
+    { 
+    "type": "entity_molang",
+    "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+    "expressions": ["q.play_animation(q.bedrock_stateful('bulldoze', 'actor'))"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.2
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.bulldoze.actor');"
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.2
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:bulldoze_targetfloor",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "locators": ["root"],
+      "targetLocators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.25
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": ["q.play_animation(q.bedrock_stateful('bulldoze', 'target'))"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.bulldoze.target');"
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.75
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    }
+  ]
+}

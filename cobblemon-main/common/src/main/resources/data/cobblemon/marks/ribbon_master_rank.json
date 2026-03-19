@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_master_rank",
+	"title": "cobblemon.mark.ribbon_master_rank.title",
+	"titleColor": "49CA92",
+	"description": "cobblemon.mark.ribbon_master_rank.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_master_rank.png",
+	"indexNumber": 52
+}

@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:litwick",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:litwick",
+      "model": "cobblemon:litwick.geo",
+      "texture": "cobblemon:textures/pokemon/0607_litwick/litwick.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0607_litwick/litwick_emissive.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0607_litwick/litwick_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0607_litwick/litwick_emissive_shiny.png",
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

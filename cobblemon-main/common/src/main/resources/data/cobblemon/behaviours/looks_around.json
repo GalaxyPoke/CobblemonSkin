@@ -1,0 +1,22 @@
+{
+  "name": "cobblemon.behaviour.looks_around.name",
+  "description": "cobblemon.behaviour.looks_around.desc",
+  "configurations": [
+    {
+      "type": "cobblemon:add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "tasksByPriority": {
+        "0": [
+          {
+            "type": "cobblemon:look_at_entities",
+            "condition": true
+          },
+          {
+            "type": "cobblemon:look_at_speaker",
+            "condition": "q.entity.is_npc"
+          }
+        ]
+      }
+    }
+  ]
+}

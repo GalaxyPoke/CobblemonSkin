@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_unsure",
+	"title": "cobblemon.mark.mark_personality_unsure.title",
+	"titleColor": "4E75C4",
+	"description": "cobblemon.mark.mark_personality_unsure.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_unsure.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 93
+}

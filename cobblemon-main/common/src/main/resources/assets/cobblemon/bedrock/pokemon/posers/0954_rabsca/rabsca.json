@@ -1,0 +1,34 @@
+{
+  "portraitScale": 2.67,
+  "portraitTranslation": [ -0.3, -1.3, 0],
+  "profileScale": 0.48,
+  "profileTranslation": [ 0, 1.07, 0],
+  "rootBone": "rabsca",
+  "animations": {
+    "cry": "q.bedrock_stateful('rabsca', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('rabsca', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('rabsca', 'ground_idle')"
+      ]
+    }
+  }
+}

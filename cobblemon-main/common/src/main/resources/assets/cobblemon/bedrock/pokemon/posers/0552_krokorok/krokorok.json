@@ -1,0 +1,155 @@
+{
+  "portraitScale": 1.86,
+  "portraitTranslation": [-0.43, 0.98, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [0.05, 0.93, 0],
+  "rootBone": "krokorok",
+  "animations": {
+    "faint": "q.bedrock_primary('krokorok', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('krokorok', 'cry')",
+    "recoil": "q.bedrock_stateful('krokorok', 'recoil')",
+    "physical": "q.bedrock_primary('krokorok', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('krokorok', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('krokorok', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "portrait": {
+      "poseName": "standing",
+      "poseTypes": ["PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('krokorok', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('krokorok', 'blink')",
+        "q.bedrock_quirk('krokorok', 'look_quirk',20, 60, 1)"
+      ]
+    },
+    "battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "isBattle": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('krokorok', 'battle_cry', q.curve('symmetrical_wide'))",
+        "faint": "q.bedrock_primary('krokorok', 'battle_faint', q.curve('symmetrical_wide'))"
+      },
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('krokorok', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('krokorok', 'blink')",
+        "q.bedrock_quirk('krokorok', 'look_quirk',20, 60, 1)"
+      ]
+    },
+    "sand-battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "condition": "q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "isBattle": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('krokorok', 'sand_cry', q.curve('symmetrical_wide'))",
+        "recoil": "q.bedrock_stateful('krokorok', 'sand_recoil', q.curve('symmetrical_wide'))"
+      },
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('krokorok', 'sand_battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('krokorok', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "NONE", "FLOAT"],
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('krokorok', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('krokorok', 'blink')",
+        "q.bedrock_quirk('krokorok', 'look_quirk',20, 60, 1)"
+      ]
+    },
+    "sand-standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "NONE"],
+      "condition": "q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "isBattle": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('krokorok', 'sand_cry', q.curve('symmetrical_wide'))"
+      },
+      "animations": [
+        "q.bedrock('krokorok', 'sand_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('krokorok', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('krokorok', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('krokorok', 'blink')"]
+    },
+    "sand-walking": {
+      "poseName": "walking",
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('krokorok', 'sand_cry', q.curve('symmetrical_wide'))"
+      },
+      "animations": [
+        "q.bedrock('krokorok', 'sand_swim')"
+      ],
+      "quirks": ["q.bedrock_quirk('krokorok', 'blink')"]
+    },
+    "sleeping": {
+      "poseName": "sleeping",
+      "poseTypes": ["SLEEP"],
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "isBattle": false,
+      "animations": ["q.bedrock('krokorok', 'sleep')"]
+    },
+    "sand-sleeping": {
+      "poseName": "sleeping",
+      "poseTypes": ["SLEEP"],
+      "condition": "q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "isBattle": false,
+      "animations": ["q.bedrock('krokorok', 'sand_sleep')"]
+    },
+    "battle-sleeping": {
+      "poseName": "sleeping",
+      "poseTypes": ["SLEEP"],
+      "condition": "!q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "isBattle": true,
+      "animations": ["q.bedrock('krokorok', 'battle_sleep')"]
+    },
+    "sand-battle-sleeping": {
+      "poseName": "sleeping",
+      "poseTypes": ["SLEEP"],
+      "condition": "q.is_standing_on_blocks(2, 'minecraft:sand', 'minecraft:red_sand')",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "isBattle": true,
+      "animations": ["q.bedrock('krokorok', 'sand_battle_sleep')"]
+    }
+  }
+}

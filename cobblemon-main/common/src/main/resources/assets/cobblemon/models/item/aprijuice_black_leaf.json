@@ -1,0 +1,6 @@
+{
+  "parent": "cobblemon:item/aprijuice_black",
+  "textures": {
+    "layer2": "cobblemon:item/aprijuice/aprijuice_overlay1"
+  }
+}

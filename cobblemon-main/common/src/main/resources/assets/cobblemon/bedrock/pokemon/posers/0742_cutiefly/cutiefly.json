@@ -1,0 +1,70 @@
+{
+  "portraitScale": 2.5,
+  "portraitTranslation": [-0.38, -0.8, 0],
+  "profileScale": 0.65,
+  "profileTranslation": [0, 0.71, 0],
+  "rootBone": "cutiefly",
+  "animations": {
+    "faint": "q.bedrock_primary('cutiefly', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('cutiefly', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('cutiefly', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('cutiefly', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER", "FLOAT"],
+      "animations": [
+        "q.pitch_tilt('body', 0.22)",
+        "q.bedrock('cutiefly', 'ground_idle')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY", "SWIM"],
+      "animations": [
+        "q.pitch_tilt('body', 0.22)",
+        "q.bedrock('cutiefly', 'ground_walk')"
+      ]
+    },
+    "shoulder-left": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": [
+        "q.bedrock('cutiefly', 'ground_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [6, 0, 0]
+        }
+      ]
+    },
+    "shoulder-right": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": [
+        "q.bedrock('cutiefly', 'ground_idle')"
+      ],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [-6, 0, 0]
+        }
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('cutiefly', 'sleep')"]
+    }
+  }
+}

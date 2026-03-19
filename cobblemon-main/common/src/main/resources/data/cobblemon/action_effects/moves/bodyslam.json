@@ -1,0 +1,67 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+        "animation": ["bodyslam", "blunt", "physical"]
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+          "expressions": ["q.play_animation(q.bedrock_stateful('bodyslam', 'actor'))"]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+          "expressions": ["q.sound('move.bodyslam.actor_1');"]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 1.2
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:bodyslam_impactfloor",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "locators": ["root"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.bodyslam.actor_2');"
+      ]
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "expressions": ["q.play_animation(q.bedrock_stateful('squish', 'actor'))"]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "expressions": ["q.sound('move.bodyslam.target');"]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 1
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    }
+  ]
+}

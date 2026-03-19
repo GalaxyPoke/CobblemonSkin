@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:pidgeot",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:pidgeot",
+      "model": "cobblemon:pidgeot.geo",
+      "texture": "cobblemon:textures/pokemon/0018_pidgeot/pidgeot.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0018_pidgeot/pidgeot_shiny.png"
+    }
+  ]
+}

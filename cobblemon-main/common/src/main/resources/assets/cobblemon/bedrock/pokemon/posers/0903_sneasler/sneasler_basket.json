@@ -1,0 +1,145 @@
+{
+  "portraitScale": 2.03,
+  "portraitTranslation": [-0.44, 2.41, 0],
+  "profileScale": 0.52,
+  "profileTranslation": [0, 0.94, 0],
+  "rootBone": "sneasler",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, -1, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.75, 0],
+    "seat_1_reverse": [0, 0.75, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.75, 0],
+    "seat_1_reverse": [0, 0.75, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('sneasler', 'cry')"
+  },
+  "poses": {
+    "portrait": {
+      "poseName": "portrait",
+      "poseTypes": ["PORTRAIT"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.bedrock('sneasler', 'ground_idle_basket')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "battle-idle": {
+      "poseName": "battle-idle",
+      "isBattle": true,
+      "poseTypes": ["STAND"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'battle_idle_basket')"
+
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "poseTypes": ["STAND", "PROFILE", "NONE"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_idle_basket')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('sneasler', 'ride_basket')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')",
+        "q.bedrock_quirk('sneasler', 'quirk_ground', 20, 40, 1)"
+      ],
+      "transformTicks": 5
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "condition": "!q.is_sprinting && !q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_walk_basket')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('sneasler', 'ride_ground_walk')"
+        },
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('sneasler', 'ride_basket')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting && !q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ground_run_basket')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('sneasler', 'ride_ground_run')"
+        },
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('sneasler', 'ride_basket')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "ride-jump": {
+      "poseName": "ride-jump",
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.is_ridden && q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('sneasler', 'ride_jump_basket')",
+        "q.bedrock('sneasler', 'ride_ground_run')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('sneasler', 'ride_basket')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('sneasler', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "isBattle": false,
+      "animations": ["q.bedrock('sneasler', 'sleep_basket')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "battle-sleep": {
+      "poseName": "battle-sleep",
+      "poseTypes": ["SLEEP"],
+      "isBattle": true,
+      "animations": ["q.bedrock('sneasler', 'battle_sleep_basket')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

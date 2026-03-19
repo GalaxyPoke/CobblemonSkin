@@ -1,0 +1,8 @@
+{
+  "ingredient": "minecraft:golden_carrot",
+  "colour": "yellow",
+  "food": {
+    "hunger": 3,
+    "saturation": 7.2
+  }
+}

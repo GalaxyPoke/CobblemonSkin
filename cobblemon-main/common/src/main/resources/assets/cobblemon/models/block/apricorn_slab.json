@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "cobblemon:block/wood/apricorn_planks",
+    "top": "cobblemon:block/wood/apricorn_planks",
+    "side": "cobblemon:block/wood/apricorn_planks"
+  }
+}

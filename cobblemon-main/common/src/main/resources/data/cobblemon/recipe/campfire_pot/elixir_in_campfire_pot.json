@@ -1,0 +1,17 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "cobblemon:medicinal_brew"
+        },
+        {
+            "item": "cobblemon:hopo_berry"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:elixir"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

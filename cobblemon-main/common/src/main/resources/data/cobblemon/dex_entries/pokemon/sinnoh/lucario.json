@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:lucario",
+  "speciesId": "cobblemon:lucario",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Mega",
+      "unlockForms": [
+        "Mega"
+      ]
+    }
+  ],
+  "variations": []
+}

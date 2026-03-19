@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:solosis",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:solosis",
+      "model": "cobblemon:solosis.geo",
+      "texture": "cobblemon:textures/pokemon/0577_solosis/solosis.png",
+      "layers": [      
+        {
+        "name": "liquid",
+        "texture": "cobblemon:textures/pokemon/0577_solosis/solosis_liquid.png",
+        "translucent": true,
+        "translucent_cull": true
+      }]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0577_solosis/solosis_shiny.png",
+      "layers": [
+        {
+          "name": "liquid",
+          "texture": "cobblemon:textures/pokemon/0577_solosis/solosis_liquid_shiny.png",
+          "translucent": true,
+          "translucent_cull": true
+        }]
+    }
+  ]
+}

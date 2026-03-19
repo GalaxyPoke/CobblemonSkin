@@ -1,0 +1,38 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:amethyst_block",
+    "minecraft:budding_amethyst",
+    "#minecraft:crystal_sound_blocks",
+    "#minecraft:diamond_ores",
+    "#minecraft:emerald_ores",
+	{
+      "id": "#c:amethyst_ores",
+      "required": false
+    },
+	{
+      "id": "#c:diamond_ores",
+      "required": false
+    },
+	{
+      "id": "#c:emerald_ores",
+      "required": false
+    },
+	{
+      "id": "#c:peridot_ores",
+      "required": false
+    },
+	{
+      "id": "#c:ruby_ores",
+      "required": false
+    },
+	{
+      "id": "#c:sapphire_ores",
+      "required": false
+    },
+	{
+      "id": "#c:topaz_ores",
+      "required": false
+    }
+  ]
+}

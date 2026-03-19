@@ -1,0 +1,50 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_blue_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:blue_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_yellow_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:yellow_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:quick_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_apricorn",
+      "has_the_recipe"
+    ],
+	[
+      "has_yellow_apricorn",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:quick_ball"
+    ]
+  }
+}

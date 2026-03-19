@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "cobblemon:block/apricorn_slab"
+    },
+    "type=double": {
+      "model": "cobblemon:block/apricorn_planks"
+    },
+    "type=top": {
+      "model": "cobblemon:block/apricorn_slab_top"
+    }
+  }
+}

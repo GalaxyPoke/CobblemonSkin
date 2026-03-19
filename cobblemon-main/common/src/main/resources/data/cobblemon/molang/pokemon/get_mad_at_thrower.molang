@@ -1,0 +1,5 @@
+t.thrower = q.pokeball.thrower;
+t.thrower != 0 ? {
+  'Set the entity memory to be mad at the thrower for 30 seconds';
+  q.entity.set_uuid_memory('minecraft:angry_at', t.thrower.uuid, 20 * 30);
+};

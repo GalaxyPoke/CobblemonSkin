@@ -1,0 +1,38 @@
+{
+  "portraitScale": 2.14,
+  "portraitTranslation": [ -0.38, -0.64, 0],
+  "profileScale": 0.47,
+  "profileTranslation": [ 0, 1.04, 0],
+  "rootBone": "morpeko",
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('morpeko', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('morpeko', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('morpeko', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('morpeko', 'blink')"
+      ]
+    }
+  }
+}

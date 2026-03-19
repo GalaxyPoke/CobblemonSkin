@@ -1,0 +1,33 @@
+{
+  "timeline": [
+    {
+      "type": "sequence",
+      "condition": "q.do_effect_walks",
+      "keyframes": [
+        "save_position",
+        "move_to_target",
+        "pause"
+      ]
+    },
+    {
+      "type": "animation",
+      "animation": ["scratch", "physical"],
+      "variables": [
+        "v.animation='cobblemon:scratch'"
+      ],
+      "delay": "q.do_effect_walks ? 3 : 1"
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["damage"]
+    },
+    {
+      "type": "sequence",
+      "condition": "q.do_effect_walks",
+      "keyframes": [
+        "return_to_position",
+        "pause"
+      ]
+    }
+  ]
+}

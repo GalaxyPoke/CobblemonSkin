@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:vanillish",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:vanillish",
+      "model": "cobblemon:vanillish.geo",
+      "texture": "cobblemon:textures/pokemon/0583_vanillish/vanillish.png"
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0583_vanillish/vanillish_shiny.png"
+    }
+  ]
+}

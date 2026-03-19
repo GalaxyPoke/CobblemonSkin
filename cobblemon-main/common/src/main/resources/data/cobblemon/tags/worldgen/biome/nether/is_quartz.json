@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "cinderscapes:quartz_cavern",
+      "required": false
+    },
+    {
+      "id": "incendium:quartz_flats",
+      "required": false
+    }
+  ]
+}

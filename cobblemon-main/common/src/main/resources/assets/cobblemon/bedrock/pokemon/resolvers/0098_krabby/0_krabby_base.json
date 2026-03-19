@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:krabby",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:krabby",
+      "model": "cobblemon:krabby.geo",
+      "texture": "cobblemon:textures/pokemon/0098_krabby/krabby.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0098_krabby/krabby_shiny.png"
+    }
+  ]
+}

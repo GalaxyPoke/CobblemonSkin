@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:tyrogue",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:tyrogue",
+      "model": "cobblemon:tyrogue.geo",
+      "texture": "cobblemon:textures/pokemon/0236_tyrogue/tyrogue.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0236_tyrogue/tyrogue_shiny.png"
+    }
+  ]
+}

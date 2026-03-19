@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:sneasler",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["cosmetic_item-composter"],
+      "poser": "cobblemon:sneasler_basket",
+      "model": "cobblemon:sneasler.geo",
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0903_sneasler/sneasler_basket.png"
+        }
+      ]
+    }
+  ]
+}

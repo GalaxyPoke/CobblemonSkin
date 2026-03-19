@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:sharpedo",
+  "speciesId": "cobblemon:sharpedo",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Mega",
+      "unlockForms": [
+        "Mega"
+      ]
+    }
+  ],
+  "variations": []
+}

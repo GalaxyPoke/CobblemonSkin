@@ -1,0 +1,522 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:razz_berry"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.use_all_berry_bait"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.use_all_berry_bait.description"
+    },
+    "frame": "challenge"
+  },
+  "parent": "cobblemon:craft_rod",
+  "criteria": {
+    "use_cheri_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:cheri_berry"
+      }
+    },
+    "use_chesto_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:chesto_berry"
+      }
+    },
+    "use_pecha_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:pecha_berry"
+      }
+    },
+    "use_rawst_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:rawst_berry"
+      }
+    },
+    "use_aspear_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:aspear_berry"
+      }
+    },
+    "use_oran_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:oran_berry"
+      }
+    },
+    "use_persim_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:persim_berry"
+      }
+    },
+    "use_razz_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:razz_berry"
+      }
+    },
+    "use_bluk_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:bluk_berry"
+      }
+    },
+    "use_nanab_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:nanab_berry"
+      }
+    },
+    "use_wepear_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:wepear_berry"
+      }
+    },
+    "use_pinap_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:pinap_berry"
+      }
+    },
+
+    "use_leppa_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:leppa_berry"
+      }
+    },
+    "use_lum_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:lum_berry"
+      }
+    },
+    "use_figy_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:figy_berry"
+      }
+    },
+    "use_wiki_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:wiki_berry"
+      }
+    },
+    "use_mago_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:mago_berry"
+      }
+    },
+    "use_aguav_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:aguav_berry"
+      }
+    },
+    "use_iapapa_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:iapapa_berry"
+      }
+    },
+
+    "use_sitrus_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:sitrus_berry"
+      }
+    },
+      "use_touga_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:touga_berry"
+        }
+      },
+      "use_cornn_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:cornn_berry"
+        }
+      },
+      "use_magost_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:magost_berry"
+        }
+      },
+      "use_rabuta_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:rabuta_berry"
+        }
+      },
+      "use_nomel_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:nomel_berry"
+        }
+      },
+    "use_enigma_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:enigma_berry"
+      }
+    },
+
+    "use_pomeg_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:pomeg_berry"
+      }
+    },
+    "use_kelpsy_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:kelpsy_berry"
+      }
+    },
+    "use_qualot_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:qualot_berry"
+      }
+    },
+    "use_hondew_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:hondew_berry"
+      }
+    },
+    "use_grepa_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:grepa_berry"
+      }
+    },
+    "use_tamato_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:tamato_berry"
+      }
+    },
+      "use_spelon_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:spelon_berry"
+        }
+      },
+      "use_pamtre_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:pamtre_berry"
+        }
+      },
+      "use_watmel_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:watmel_berry"
+        }
+      },
+      "use_durin_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:durin_berry"
+        }
+      },
+      "use_belue_berry": {
+        "trigger": "cobblemon:reel_in_pokemon",
+        "conditions": {
+          "baitId": "cobblemon:belue_berry"
+        }
+      },
+    "use_kee_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:kee_berry"
+      }
+    },
+    "use_maranga_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:maranga_berry"
+      }
+    },
+    "use_hopo_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:hopo_berry"
+      }
+    },
+
+    "use_liechi_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:liechi_berry"
+      }
+    },
+    "use_ganlon_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:ganlon_berry"
+      }
+    },
+    "use_salac_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:salac_berry"
+      }
+    },
+    "use_petaya_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:petaya_berry"
+      }
+    },
+    "use_apicot_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:apicot_berry"
+      }
+    },
+    "use_lansat_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:lansat_berry"
+      }
+    },
+    "use_starf_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:starf_berry"
+      }
+    },
+    "use_micle_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:micle_berry"
+      }
+    },
+    "use_custap_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:custap_berry"
+      }
+    },
+    "use_jaboca_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:jaboca_berry"
+      }
+    },
+    "use_rowap_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:rowap_berry"
+      }
+    },
+
+    "use_babiri_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:babiri_berry"
+      }
+    },
+    "use_charti_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:charti_berry"
+      }
+    },
+    "use_chilan_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:chilan_berry"
+      }
+    },
+    "use_chople_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:chople_berry"
+      }
+    },
+    "use_coba_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:coba_berry"
+      }
+    },
+    "use_colbur_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:colbur_berry"
+      }
+    },
+    "use_haban_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:haban_berry"
+      }
+    },
+    "use_kasib_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:kasib_berry"
+      }
+    },
+    "use_kebia_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:kebia_berry"
+      }
+    },
+    "use_occa_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:occa_berry"
+      }
+    },
+    "use_passho_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:passho_berry"
+      }
+    },
+    "use_payapa_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:payapa_berry"
+      }
+    },
+    "use_rindo_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:rindo_berry"
+      }
+    },
+    "use_roseli_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:roseli_berry"
+      }
+    },
+    "use_shuca_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:shuca_berry"
+      }
+    },
+    "use_tanga_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:tanga_berry"
+      }
+    },
+    "use_wacan_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:wacan_berry"
+      }
+    },
+    "use_yache_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:yache_berry"
+      }
+    },
+    "use_eggant_berry": {
+      "trigger": "cobblemon:reel_in_pokemon",
+      "conditions": {
+        "baitId": "cobblemon:eggant_berry"
+      }
+    }
+  },
+  "requirements": [
+    ["use_cheri_berry"],
+    ["use_chesto_berry"],
+    ["use_pecha_berry"],
+    ["use_rawst_berry"],
+    ["use_aspear_berry"],
+    ["use_oran_berry"],
+    ["use_persim_berry"],
+    ["use_razz_berry"],
+    ["use_bluk_berry"],
+    ["use_nanab_berry"],
+    ["use_wepear_berry"],
+    ["use_pinap_berry"],
+
+    ["use_leppa_berry"],
+    ["use_lum_berry"],
+    ["use_figy_berry"],
+    ["use_wiki_berry"],
+    ["use_mago_berry"],
+    ["use_aguav_berry"],
+    ["use_iapapa_berry"],
+
+    ["use_sitrus_berry"],
+      ["use_touga_berry"],
+      ["use_cornn_berry"],
+      ["use_magost_berry"],
+      ["use_rabuta_berry"],
+      ["use_nomel_berry"],
+    ["use_enigma_berry"],
+
+    ["use_pomeg_berry"],
+    ["use_kelpsy_berry"],
+    ["use_qualot_berry"],
+    ["use_hondew_berry"],
+    ["use_grepa_berry"],
+    ["use_tamato_berry"],
+      ["use_spelon_berry"],
+      ["use_pamtre_berry"],
+      ["use_watmel_berry"],
+      ["use_durin_berry"],
+      ["use_belue_berry"],
+    ["use_kee_berry"],
+    ["use_maranga_berry"],
+    ["use_hopo_berry"],
+
+    ["use_liechi_berry"],
+    ["use_ganlon_berry"],
+    ["use_salac_berry"],
+    ["use_petaya_berry"],
+    ["use_apicot_berry"],
+    ["use_lansat_berry"],
+    ["use_starf_berry"],
+    ["use_micle_berry"],
+    ["use_custap_berry"],
+    ["use_jaboca_berry"],
+    ["use_rowap_berry"],
+
+    ["use_babiri_berry"],
+    ["use_charti_berry"],
+    ["use_chilan_berry"],
+    ["use_chople_berry"],
+    ["use_coba_berry"],
+    ["use_colbur_berry"],
+    ["use_haban_berry"],
+    ["use_kasib_berry"],
+    ["use_kebia_berry"],
+    ["use_occa_berry"],
+    ["use_passho_berry"],
+    ["use_payapa_berry"],
+    ["use_rindo_berry"],
+    ["use_roseli_berry"],
+    ["use_shuca_berry"],
+    ["use_tanga_berry"],
+    ["use_wacan_berry"],
+    ["use_yache_berry"],
+    ["use_eggant_berry"]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

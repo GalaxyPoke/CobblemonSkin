@@ -1,0 +1,94 @@
+{
+    "timeline": [
+      {
+        "type": "add_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "animation",
+        "animation": ["infestation","special"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.5
+      },
+      {
+        "type": "sequence",
+        "keyframes": [
+          {
+            "type": "entity_molang",
+            "entityCondition": "q.entity.is_user == true",
+            "expressions": [
+              "q.sound('move.infestation.actor');"
+            ]
+          },
+          {
+            "type": "entity_particles",
+            "effect": "cobblemon:infestation_actorground",
+            "locators": ["root"]
+          },
+          {
+            "type": "entity_particles",
+            "effect": "cobblemon:infestation_actorflydisperse",
+            "locators": ["middle"]
+          }
+        ]
+      },
+      {
+        "type": "pause",
+        "pause": 1.0
+      },
+      {
+        "type":"sequence",
+        "keyframes":[
+          {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "effect": "cobblemon:infestation_targetground",
+            "locators": ["root"]
+          },
+          {
+            "type": "entity_particles",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "effect": "cobblemon:infestation_targetflyengulf",
+            "locators": ["middle"]
+          },
+          {
+            "type": "entity_molang",
+            "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+            "expressions": [
+              "q.sound('move.infestation.target');"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "pause",
+        "pause": 0.3
+      },
+      {
+        "type": "entity_particles",
+        "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+        "effect": "cobblemon:infestation_targetswarm",
+        "locators": ["middle"]
+      },
+      {
+        "type": "entity_particles",
+        "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+        "effect": "cobblemon:infestation_targetsmallhits",
+        "locators": ["middle"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.2
+      },
+      {
+        "type": "remove_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.5
+      }
+    ]
+  }

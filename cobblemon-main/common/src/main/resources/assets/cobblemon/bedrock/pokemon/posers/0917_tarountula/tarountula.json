@@ -1,0 +1,33 @@
+{
+  "portraitScale": 1.97,
+  "portraitTranslation": [-0.49, -0.60, 0],
+  "profileScale": 0.47,
+  "profileTranslation": [0.00, 1.06, 0],
+  "rootBone": "tarountula",
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+		"q.look('head_ai')",
+        "q.bedrock('tarountula', 'ground_idle')"
+      ],
+	  "quirks": [
+        "q.bedrock_quirk('tarountula', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('tarountula', 'ground_idle')"
+      ],
+	  "quirks": ["q.bedrock_quirk('tarountula', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+	  "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('tarountula', 'sleep')"]
+    }
+  }
+ }

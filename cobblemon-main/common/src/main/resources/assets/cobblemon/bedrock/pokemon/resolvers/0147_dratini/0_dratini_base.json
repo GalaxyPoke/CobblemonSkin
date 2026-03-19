@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:dratini",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:dratini",
+      "model": "cobblemon:dratini.geo",
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0147_dratini/dratini_shiny.png"
+    }
+  ]
+}

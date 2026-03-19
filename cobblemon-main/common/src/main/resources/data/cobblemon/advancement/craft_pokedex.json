@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:pokedex_yellow"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.craft_pokedex"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.craft_pokedex.description"
+    }
+  },
+  "parent": "cobblemon:harvest_apricorn",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#cobblemon:pokedex"
+          }
+        ]
+      }
+    }
+  },
+  "sends_telemetry_event": false
+}

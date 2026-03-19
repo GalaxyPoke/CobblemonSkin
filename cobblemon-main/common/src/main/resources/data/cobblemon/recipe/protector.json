@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " B ",
+        "SCS",
+        "B B"
+    ],
+    "key": {
+        "B": {
+            "tag": "c:bricks/normal"
+        },
+        "S": {
+            "item": "minecraft:armadillo_scute"
+        },
+        "C": {
+            "tag": "c:ingots/copper"
+        }
+    },
+    "result": {
+        "id": "cobblemon:protector"
+    }
+}

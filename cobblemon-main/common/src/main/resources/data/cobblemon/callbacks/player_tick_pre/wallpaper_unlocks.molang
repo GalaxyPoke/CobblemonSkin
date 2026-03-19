@@ -1,0 +1,38 @@
+'Only run checks once per second, no need to be super accurate';
+math.mod(q.player.world.game_time, 20) != 0 ? {
+    return 0;
+};
+
+t.pc = q.player.pc;
+
+t.pc.has_unlocked_wallpaper('cobblemon:biome_cave') == 0 ? {
+    q.player.biome.is_in('#cobblemon:is_cave') ? {
+        t.pc.unlock_wallpaper('cobblemon:biome_cave', 1);
+    };
+};
+
+t.pc.has_unlocked_wallpaper('cobblemon:biome_forest') == 0 ? {
+    q.player.biome.is_in('#cobblemon:is_forest') ? {
+        t.pc.unlock_wallpaper('cobblemon:biome_forest', 1);
+    };
+};
+
+t.pc.has_unlocked_wallpaper('cobblemon:biome_ocean') == 0 ? {
+    q.player.biome.is_in('#cobblemon:is_ocean') ? {
+        t.pc.unlock_wallpaper('cobblemon:biome_ocean', 1);
+    };
+};
+
+t.pc.has_unlocked_wallpaper('cobblemon:biome_nether') == 0 ? {
+    q.player.biome.is_in('#minecraft:is_nether') ? {
+        t.pc.unlock_wallpaper('cobblemon:biome_nether', 1);
+    };
+};
+
+t.pc.has_unlocked_wallpaper('cobblemon:biome_the_end') == 0 ? {
+    q.player.biome.is_in('#cobblemon:is_end') ? {
+        t.pc.unlock_wallpaper('cobblemon:biome_the_end', 1);
+    };
+};
+
+

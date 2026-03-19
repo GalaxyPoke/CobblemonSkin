@@ -1,0 +1,72 @@
+{
+  "species": "cobblemon:squawkabilly",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:squawkabilly",
+      "model": "cobblemon:squawkabilly.geo",
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_green.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-blue"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_blue.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-gray"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_gray.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-green"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_green.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-yellow"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_yellow.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_green_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-blue",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_blue_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-gray",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_gray_shiny.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "squawkabilly-color-yellow",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0931_squawkabilly/squawkabilly_yellow_shiny.png",
+      "layers": []
+    }
+  ]
+}

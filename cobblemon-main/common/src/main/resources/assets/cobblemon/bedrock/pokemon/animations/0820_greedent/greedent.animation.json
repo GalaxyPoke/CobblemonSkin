@@ -1,0 +1,136 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.greedent.ground_idle": {
+			"loop": true,
+			"bones": {
+				"arm_right": {
+					"rotation": [59.6, -70, -61.2]
+				},
+				"hand_right": {
+					"rotation": [0, -35, 0]
+				},
+				"arm_left": {
+					"rotation": [59.6, 70, 61.2]
+				},
+				"hand_left": {
+					"rotation": [0, 35, 0]
+				},
+				"berries": {
+					"scale": 0.01
+				}
+			}
+		},
+		"animation.greedent.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eye_right": {
+					"position": {
+						"0.0": [0, 0, 0.1],
+						"0.125": [0, 0, 0.1],
+						"0.1667": {"pre": [0, 0, 0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eye_left": {
+					"position": {
+						"0.0": [0, 0, 0.1],
+						"0.125": [0, 0, 0.1],
+						"0.1667": {"pre": [0, 0, 0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eyelid_right": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": {"pre": [0, 0, -0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": {"pre": [0, 0, -0.1], "post": [0, 0, 0]}
+					}
+				}
+			}
+		},
+		"animation.greedent.hurt": {
+			"loop": true,
+			"bones": {
+				"eye_right": {
+					"position": [0, 0, 0.1]
+				},
+				"eye_left": {
+					"position": [0, 0, 0.1]
+				},
+				"eyelid_hurt_right": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_hurt_left": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.greedent.happy": {
+			"loop": true,
+			"bones": {
+				"mouth_open_happy": {
+					"position": [0, 0, -0.1]
+				},
+				"eye_right": {
+					"position": [0, 0, 0.1]
+				},
+				"eye_left": {
+					"position": [0, 0, 0.1]
+				},
+				"eyelid_happy_left": {
+					"position": [0.1, 0, -0.1]
+				},
+				"eyelid_happy_right": {
+					"position": [-0.1, 0, -0.1]
+				}
+			}
+		},
+		"animation.greedent.sad": {
+			"loop": true,
+			"bones": {
+				"mouth_open": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_emote_right": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_emote_left": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.greedent.angry": {
+			"loop": true,
+			"bones": {
+				"mouth_open": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_emote_right": {
+					"position": [1, 0, -0.1]
+				},
+				"eyelid_emote_left": {
+					"position": [-1, 0, -0.1]
+				}
+			}
+		},
+		"animation.greedent.disinterested": {
+			"loop": true,
+			"bones": {
+				"eyelid_emote_right": {
+					"position": [0.5, 0, -0.1],
+					"scale": [2, 1, 1]
+				},
+				"eyelid_emote_left": {
+					"position": [-0.5, 0, -0.1],
+					"scale": [2, 1, 1]
+				}
+			}
+		}
+	}
+}

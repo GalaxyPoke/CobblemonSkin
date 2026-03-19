@@ -1,0 +1,18 @@
+{
+  "name": "cobblemon.behaviour.avoids_water.name",
+  "description": "cobblemon.behaviour.avoids_water.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "4": [
+          "find_air"
+        ],
+        "5": [
+          "go_to_land"
+        ]
+      }
+    }
+  ]
+}

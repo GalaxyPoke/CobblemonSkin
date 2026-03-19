@@ -1,0 +1,35 @@
+{
+  "species": "cobblemon:poltchageist",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["artisan"],
+      "poser": "cobblemon:poltchageist",
+      "model": "cobblemon:poltchageist_artisan.geo",
+      "texture": "cobblemon:textures/pokemon/1012_poltchageist/poltchageist.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/1012_poltchageist/poltchageist_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "artisan",
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/1012_poltchageist/poltchageist_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/1012_poltchageist/poltchageist_emissive_shiny.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

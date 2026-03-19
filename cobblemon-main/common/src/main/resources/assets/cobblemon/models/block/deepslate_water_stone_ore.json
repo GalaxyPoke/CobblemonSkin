@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "cobblemon:block/evolution/deepslate_water_stone_ore"
+  }
+}

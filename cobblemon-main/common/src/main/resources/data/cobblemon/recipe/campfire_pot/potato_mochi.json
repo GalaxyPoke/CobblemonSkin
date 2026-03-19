@@ -1,0 +1,21 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "foods",
+    "ingredients": [
+        {
+            "item": "cobblemon:hearty_grains"
+        },
+        {
+            "item": "minecraft:honey_bottle"
+        },
+        {
+            "item": "minecraft:potato"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:potato_mochi",
+        "count": 4
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

@@ -1,0 +1,41 @@
+{
+  "species": "cobblemon:bellibolt",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bellibolt",
+      "model": "cobblemon:bellibolt.geo",
+      "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt_emissive.png",
+          "translucent": true
+        },
+        {
+          "name": "transparent",
+          "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt_transparency.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt_emissive_shiny.png"
+        },
+        {
+          "name": "transparent",
+          "texture": "cobblemon:textures/pokemon/0939_bellibolt/bellibolt_transparency_shiny.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

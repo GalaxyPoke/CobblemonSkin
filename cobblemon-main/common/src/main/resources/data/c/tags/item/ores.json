@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "#cobblemon:fire_stone_ores",
+    "#cobblemon:water_stone_ores",
+    "#cobblemon:thunder_stone_ores",
+    "#cobblemon:leaf_stone_ores",
+    "#cobblemon:moon_stone_ores",
+    "#cobblemon:sun_stone_ores",
+    "#cobblemon:shiny_stone_ores",
+    "#cobblemon:dawn_stone_ores",
+    "#cobblemon:dusk_stone_ores",
+    "#cobblemon:ice_stone_ores"
+  ]
+}

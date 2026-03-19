@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:grimer",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:grimer",
+      "model": "cobblemon:grimer.geo",
+      "texture": "cobblemon:textures/pokemon/0088_grimer/grimer.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0088_grimer/grimer_shiny.png"
+    }
+  ]
+}

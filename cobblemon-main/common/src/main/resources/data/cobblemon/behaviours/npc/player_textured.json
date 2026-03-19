@@ -1,0 +1,30 @@
+{
+  "name": "cobblemon.behaviour.player_textured.name",
+  "description": "cobblemon.behaviour.player_textured.desc",
+  "entityType": "cobblemon:npc",
+  "onAdd": [
+    "!q.is_blank(q.entity.config.player_texture) ? q.entity.set_player_texture(q.entity.config.player_texture);",
+    "!q.is_blank(q.entity.config.player_texture) ? q.entity.set_resource_identifier('cobblemon:standard');",
+    "q.is_blank(q.entity.config.player_texture) ? q.entity.unset_resource_identifier();",
+    "q.is_blank(q.entity.config.player_texture) ? q.entity.unset_player_texture();"
+  ],
+  "onRemove": [
+    "q.entity.unset_player_texture();",
+    "q.entity.unset_resource_identifier();"
+  ],
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "player_texture",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.player_texture.name",
+          "description": "cobblemon.entity.variable.player_texture.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

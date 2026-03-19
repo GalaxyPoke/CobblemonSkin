@@ -1,0 +1,42 @@
+{
+    "timeline": [
+      {
+        "type": "add_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "animation",
+        "animation": ["protect", "status"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.55
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:protect-shine",
+        "locators": ["target"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.6
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:protect-sparkle",
+        "locators": ["middle"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.65
+      },
+      {
+        "type": "remove_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.3
+      }
+    ]
+  }

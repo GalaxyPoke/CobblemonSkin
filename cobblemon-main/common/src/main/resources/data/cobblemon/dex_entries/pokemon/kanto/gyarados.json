@@ -1,0 +1,60 @@
+{
+  "id": "cobblemon:gyarados",
+  "speciesId": "cobblemon:gyarados",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Mega",
+      "unlockForms": [
+        "Mega"
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "displayName": "cobblemon.pokedex.variation.pattern",
+      "icon": "cobblemon:textures/gui/pokedex/variation/pattern.png",
+      "aspects": [
+        "magikarp-jump-standard",
+        "magikarp-jump-apricot-stripes",
+        "magikarp-jump-apricot-tiger",
+        "magikarp-jump-apricot-zebra",
+        "magikarp-jump-black-forehead",
+        "magikarp-jump-black-masked",
+        "magikarp-jump-blue-raindrops",
+        "magikarp-jump-blue-saucy",
+        "magikarp-jump-brown-stripes",
+        "magikarp-jump-brown-tiger",
+        "magikarp-jump-brown-zebra",
+        "magikarp-jump-calico-orange-white",
+        "magikarp-jump-calico-orange-white-black",
+        "magikarp-jump-calico-white-orange",
+        "magikarp-jump-calico-orange-gold",
+        "magikarp-jump-orange-dapples",
+        "magikarp-jump-gray-bubbles",
+        "magikarp-jump-gray-diamonds",
+        "magikarp-jump-gray-patches",
+        "magikarp-jump-orange-forehead",
+        "magikarp-jump-orange-masked",
+        "magikarp-jump-orange-orca",
+        "magikarp-jump-pink-dapples",
+        "magikarp-jump-pink-orca",
+        "magikarp-jump-pink-two-tone",
+        "magikarp-jump-purple-bubbles",
+        "magikarp-jump-purple-diamonds",
+        "magikarp-jump-purple-patches",
+        "magikarp-jump-skelly",
+        "magikarp-jump-orange-two-tone",
+        "magikarp-jump-violet-raindrops",
+        "magikarp-jump-violet-saucy"
+      ]
+    }
+  ]
+}

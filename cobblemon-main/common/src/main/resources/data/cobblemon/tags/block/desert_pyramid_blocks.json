@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:chiseled_sandstone",
+	"minecraft:cut_sandstone",
+	"minecraft:orange_terracotta",
+	"minecraft:sandstone",
+	"minecraft:sandstone_slab",
+	"minecraft:sandstone_stairs"
+  ]
+}

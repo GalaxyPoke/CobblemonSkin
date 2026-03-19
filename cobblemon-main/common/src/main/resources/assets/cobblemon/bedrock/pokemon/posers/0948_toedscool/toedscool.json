@@ -1,0 +1,34 @@
+{
+  "portraitScale": 1.26,
+  "portraitTranslation": [0.08, 0.74, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [0.0, 0.92, 0],
+  "poses": {
+	"battle-standing": {
+     "poseTypes": ["STAND"],
+     "isBattle": true,
+     "animations": [
+        "q.bedrock('toedscool', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('toedscool', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+	  "isBattle": false,
+      "animations": [
+        "q.bedrock('toedscool', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('toedscool', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('toedscool', 'blink')"
+      ]
+    }
+  }
+ }

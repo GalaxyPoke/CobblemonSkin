@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:aerodactyl_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:aerodactyl_fetus",
+      "model": "cobblemon:aerodactyl_fetus.geo",
+      "texture": "cobblemon:textures/fossils/aerodactyl.png",
+      "layers": []
+    }
+  ]
+}

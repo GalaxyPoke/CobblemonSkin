@@ -1,0 +1,208 @@
+{
+  "baseYield": {
+    "min": 2,
+    "max": 3
+  },
+  "preferredBiomeTags": [
+    "cobblemon:is_arid"
+  ],
+  "growthTime": {
+    "min": 36,
+    "max": 44
+  },
+  "refreshRate": {
+    "min": 18,
+    "max": 22
+  },
+  "favoriteMulches": [
+    "sandy"
+  ],
+  "growthFactors": [
+    {
+      "variant": "cobblemon:preferred_biome",
+      "bonusYield": {
+        "min": 0,
+        "max": 1
+      }
+    }
+  ],
+  "randomizedGrowthPoints": true,
+  "spawnConditions": [
+    {
+      "variant": "cobblemon:all_biome",
+      "minGroveSize": 3,
+      "maxGroveSize": 5
+    }
+  ],
+  "growthPoints": [
+    {
+      "position": {
+        "x": 1.5,
+        "y": 12.25,
+        "z": 6
+      },
+      "rotation": {
+        "x": 5,
+        "y": -15,
+        "z": -5
+      }
+    },
+    {
+      "position": {
+        "x": 2,
+        "y": 11.25,
+        "z": 11
+      },
+      "rotation": {
+        "x": 0,
+        "y": 17.5,
+        "z": -2.5
+      }
+    },
+    {
+      "position": {
+        "x": 6.25,
+        "y": 12.5,
+        "z": 14.75
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 11.5,
+        "y": 11.5,
+        "z": 14.25
+      },
+      "rotation": {
+        "x": 2.5,
+        "y": 17.5,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 14.75,
+        "y": 12.5,
+        "z": 10
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": -22.5,
+        "z": 2.5
+      }
+    },
+    {
+      "position": {
+        "x": 14.25,
+        "y": 12,
+        "z": 5
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": 12.5,
+        "z": 5
+      }
+    },
+    {
+      "position": {
+        "x": 5.5,
+        "y": 12.5,
+        "z": 1.75
+      },
+      "rotation": {
+        "x": 10,
+        "y": 30,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 10.25,
+        "y": 11.5,
+        "z": 1.75
+      },
+      "rotation": {
+        "x": 2.5,
+        "y": -7.5,
+        "z": 0
+      }
+    }
+  ],
+  "stageOnePositioning": {
+    "position": {
+      "x": 8.15,
+      "y": 3,
+      "z": 8.1
+    },
+    "rotation": {
+      "x": 5,
+      "y": -10,
+      "z": -7.5
+    }
+  },
+  "pokeSnackPositionings": [
+    {
+      "position": {
+        "x": 8,
+        "y": 11.15,
+        "z": 4.3
+      },
+      "rotation": {
+        "x": 155,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 11.4,
+        "y": 11.15,
+        "z": 10.25
+      },
+      "rotation": {
+        "x": -25,
+        "y": -60,
+        "z": 180
+      }
+    },
+    {
+      "position": {
+        "x": 4.6,
+        "y": 11.15,
+        "z": 10.25
+      },
+      "rotation": {
+        "x": -25,
+        "y": 60,
+        "z": 180
+      }
+    }
+  ],
+  "mutations": {
+    "cobblemon:cheri_berry": "cobblemon:figy_berry",
+    "cobblemon:chesto_berry": "cobblemon:wiki_berry",
+    "cobblemon:pecha_berry": "cobblemon:mago_berry",
+    "cobblemon:rawst_berry": "cobblemon:aguav_berry",
+    "cobblemon:aspear_berry": "cobblemon:iapapa_berry"
+  },
+  "sproutShape": "short-sprout",
+  "matureShape": "short-mature",
+  "weight": 20,
+  "tintIndexes": [],
+  "flowerModel": "cobblemon:flower.geo",
+  "flowerTexture": "cobblemon:flower",
+  "fruitModel": "cobblemon:persim_berry.geo",
+  "fruitTexture": "cobblemon:persim",
+  "boneMealChance": 0.56,
+  "colour": "PINK",
+  "flavours": {
+    "SPICY": 10,
+    "DRY": 10,
+    "SWEET": 10,
+    "SOUR": 10
+  }
+}

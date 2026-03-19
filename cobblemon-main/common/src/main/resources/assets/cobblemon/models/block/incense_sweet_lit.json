@@ -1,0 +1,7 @@
+{
+	"parent": "cobblemon:block/incense_sweet_unlit",
+	"textures": {
+		"0": "cobblemon:block/incense_sweet_lit",
+		"particle": "cobblemon:block/incense_sweet_lit"
+	}
+}

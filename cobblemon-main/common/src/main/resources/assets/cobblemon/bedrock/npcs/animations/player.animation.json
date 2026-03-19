@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.test_riding_pose": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"body": {
+					"rotation": [22.5, 0, 0],
+					"position": [0, 6, 0]
+				},
+				"arm_right": {
+					"rotation": [-145.18392, -14.90835, "-20.3017894552"]
+				},
+				"leg_right": {
+					"rotation": [47.48933, -18.97397, 16.56855]
+				},
+				"arm_left": {
+					"rotation": [-145.18392, -14.90835, 20.30179]
+				},
+				"leg_left": {
+					"rotation": [48.65802, 13.31791, -11.45696]
+				}
+			}
+		},
+		"animation.player.default_ride_pose": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"body": {
+					"position": [0, -10, 0]
+				},
+				"head": {
+					"rotation": ["v.head_pitch", "v.head_yaw", 0]
+				},
+				"arm_right": {
+					"rotation": [-40, 0, 0]
+				},
+				"arm_left": {
+					"rotation": [-40, 0, 0]
+				},
+				"leg_right": {
+					"rotation": [-81, 18, 4.5]
+				},
+				"leg_left": {
+					"rotation": [-81, -18, -4.5]
+				}
+			}
+		}
+	}
+}

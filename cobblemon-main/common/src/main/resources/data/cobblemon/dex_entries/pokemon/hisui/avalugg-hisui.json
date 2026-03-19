@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:avalugg-hisui",
+  "speciesId": "cobblemon:avalugg",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui",
+      "unlockForms": [
+        "Hisui"
+      ]
+    }
+  ],
+  "variations": []
+}

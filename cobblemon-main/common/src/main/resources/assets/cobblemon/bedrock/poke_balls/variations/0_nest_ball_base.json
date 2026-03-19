@@ -1,0 +1,13 @@
+{
+  "pokeball": "cobblemon:nest_ball",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:poke_ball",
+      "model": "cobblemon:poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/nest_ball.png",
+      "layers": []
+    }
+  ]
+}

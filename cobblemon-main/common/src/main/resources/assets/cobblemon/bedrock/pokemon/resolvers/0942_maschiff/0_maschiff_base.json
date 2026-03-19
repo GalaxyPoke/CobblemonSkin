@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:maschiff",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:maschiff",
+      "model": "cobblemon:maschiff.geo",
+      "texture": "cobblemon:textures/pokemon/0942_maschiff/maschiff.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0942_maschiff/maschiff_shiny.png"
+    }
+  ]
+}

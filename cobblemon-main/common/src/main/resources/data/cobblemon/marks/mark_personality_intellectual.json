@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_intellectual",
+	"title": "cobblemon.mark.mark_personality_intellectual.title",
+	"titleColor": "79A24E",
+	"description": "cobblemon.mark.mark_personality_intellectual.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_intellectual.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 84
+}

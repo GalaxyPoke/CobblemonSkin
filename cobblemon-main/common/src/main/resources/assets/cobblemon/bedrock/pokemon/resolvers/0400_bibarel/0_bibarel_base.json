@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:bibarel",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bibarel",
+      "model": "cobblemon:bibarel_male.geo",
+      "texture": "cobblemon:textures/pokemon/0400_bibarel/bibarel.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0400_bibarel/bibarel_shiny.png"
+    }
+  ]
+}

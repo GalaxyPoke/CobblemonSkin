@@ -1,0 +1,58 @@
+{
+  "name": "cobblemon.behaviour.stationary.name",
+  "description": "cobblemon.behaviour.stationary.desc",
+  "configurations": [
+    {
+      "type": "add_memories_and_sensors",
+      "memories": [
+        "minecraft:walk_target"
+      ]
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "tasksByPriority": {
+        "1": [
+          {
+            "type": "run_script",
+            "script": "cobblemon:home_walk_task",
+            "variables": [
+              {
+                "variableName": "home_x",
+                "category": "cobblemon.entity.variable.category.movement",
+                "displayName": "cobblemon.entity.variable.home_x.name",
+                "description": "cobblemon.entity.variable.home_x.desc",
+                "type": "NUMBER",
+                "defaultValue": "0"
+              },
+              {
+                "variableName": "home_y",
+                "category": "cobblemon.entity.variable.category.movement",
+                "displayName": "cobblemon.entity.variable.home_y.name",
+                "description": "cobblemon.entity.variable.home_y.desc",
+                "type": "NUMBER",
+                "defaultValue": "0"
+              },
+              {
+                "variableName": "home_z",
+                "category": "cobblemon.entity.variable.category.movement",
+                "displayName": "cobblemon.entity.variable.home_z.name",
+                "description": "cobblemon.entity.variable.home_z.desc",
+                "type": "NUMBER",
+                "defaultValue": "0"
+              },
+              {
+                "variableName": "home_radius",
+                "category": "cobblemon.entity.variable.category.movement",
+                "displayName": "cobblemon.entity.variable.home_radius.name",
+                "description": "cobblemon.entity.variable.home_radius.desc",
+                "type": "NUMBER",
+                "defaultValue": "2"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

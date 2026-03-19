@@ -1,0 +1,57 @@
+{
+  "id": "cobblemon:ogerpon",
+  "speciesId": "cobblemon:ogerpon",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Wellspring",
+      "unlockForms": [
+        "Wellspring"
+      ]
+    },
+    {
+      "displayForm": "Hearthflame",
+      "unlockForms": [
+        "Hearthflame"
+      ]
+    },
+    {
+      "displayForm": "Cornerstone",
+      "unlockForms": [
+        "Cornerstone"
+      ]
+    },
+    {
+      "displayForm": "Teal-Tera",
+      "unlockForms": [
+        "Teal-Tera"
+      ]
+    },
+    {
+      "displayForm": "Wellspring-Tera",
+      "unlockForms": [
+        "Wellspring-Tera"
+      ]
+    },
+    {
+      "displayForm": "Hearthflame-Tera",
+      "unlockForms": [
+        "Hearthflame-Tera"
+      ]
+    },
+    {
+      "displayForm": "Cornerstone-Tera",
+      "unlockForms": [
+        "Cornerstone-Tera"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:torterra",
+  "speciesId": "cobblemon:torterra",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "displayName": "cobblemon.pokedex.variation.wood",
+      "icon": "cobblemon:textures/gui/pokedex/variation/wood.png",
+      "aspects": [
+        "tree-none",
+        "tree-oak",
+        "tree-swamp",
+        "tree-birch",
+        "tree-darkoak",
+        "tree-acacia",
+        "tree-jungle",
+        "tree-spruce",
+        "tree-mangrove",
+        "tree-azalea",
+        "tree-cherry"
+      ]
+    }
+  ]
+}

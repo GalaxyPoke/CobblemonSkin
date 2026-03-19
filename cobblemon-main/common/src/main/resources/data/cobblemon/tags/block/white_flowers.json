@@ -1,0 +1,126 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:azure_bluet",
+	"minecraft:lily_of_the_valley",
+	"minecraft:oxeye_daisy",
+	"minecraft:white_tulip",
+	"cobblemon:pep_up_flower",
+	{
+      "id": "aether:white_flower",
+      "required": false
+    },
+	{
+      "id": "aether_redux:frostbud",
+      "required": false
+    },
+	{
+      "id": "aether_redux:gilded_white_flower",
+      "required": false
+    },
+	{
+      "id": "biomemakeover:buttonbush",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:glowflower",
+      "required": false
+    },
+	{
+      "id": "blue_skies:crystal_flower",
+      "required": false
+    },
+	{
+      "id": "blue_skies:snowbloom",
+      "required": false
+    },
+	{
+      "id": "botania:floating_dandelifeon",
+      "required": false
+    },
+	{
+      "id": "botania:floating_kekimurus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_pure_daisy",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:white_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:white_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:white_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:white_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:pure_daisy",
+      "required": false
+    },
+	{
+      "id": "botania:fallen_kanade",
+      "required": false
+    },
+	{
+      "id": "botania:floating_fallen_kanade",
+      "required": false
+    },
+	{
+      "id": "botania:spectranthemum",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectranthemum",
+      "required": false
+    },
+	{
+      "id": "botania:kekimurus",
+      "required": false
+    },
+	{
+      "id": "botania:dandelifeon",
+      "required": false
+    },
+	{
+      "id": "deep_aether:enchanted_blossom",
+      "required": false
+    },
+	{
+      "id": "farmersdelight:wild_carrots",
+      "required": false
+    },
+	{
+      "id": "miners_delight:gossypium",
+      "required": false
+    },
+	{
+      "id": "miners_delight:wild_cave_carrots",
+      "required": false
+    },
+	{
+      "id": "wilderwild:alba_giany_glory_of_the_snow",
+      "required": false
+    },
+	{
+      "id": "wilderwild:datura",
+      "required": false
+    }
+  ]
+}

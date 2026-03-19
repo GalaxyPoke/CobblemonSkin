@@ -1,0 +1,10 @@
+{
+    "replace": false,
+    "values": [
+        "cobblemon:apricorn_leaves",
+        "cobblemon:saccharine_leaves",
+        "cobblemon:hearty_grain_bale",
+        "cobblemon:tatami_block",
+        "cobblemon:tatami_mat"
+    ]
+}

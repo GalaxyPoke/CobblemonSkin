@@ -1,0 +1,109 @@
+{
+  "portraitScale": 2.21,
+  "portraitTranslation": [-0.89, -1.61, 0],
+  "profileScale": 0.59,
+  "profileTranslation": [0, 0.82, 0],
+  "rootBone": "crustle",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0],
+    "seat_2": [0, 0.45, 0],
+    "seat_3": [0, 0.45, 0],
+    "seat_4": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.55, 0.5],
+    "seat_1_reverse": [0, 0.55, 0.5],
+    "seat_2": [0, 0.55, 0.5],
+    "seat_2_reverse": [0, 0.55, 0.5],
+    "seat_3": [0, 0.55, 0.5],
+    "seat_3_reverse": [0, 0.55, 0.5],
+    "seat_4": [0, 0.55, 0.5],
+    "seat_4_reverse": [0, 0.55, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.55, 0.5],
+    "seat_1_reverse": [0, 0.55, 0.5],
+    "seat_2": [0, 0.55, 0.5],
+    "seat_2_reverse": [0, 0.55, 0.5],
+    "seat_3": [0, 0.55, 0.5],
+    "seat_3_reverse": [0, 0.55, 0.5],
+    "seat_4": [0, 0.55, 0.5],
+    "seat_4_reverse": [0, 0.55, 0.5]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('crustle', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('crustle', 'cry')",
+    "recoil": "q.bedrock_stateful('crustle', 'recoil')",
+    "physical": "q.bedrock_primary('crustle', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('crustle', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('crustle', 'status', q.curve('symmetrical'))"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": ["q.look('head')", "q.bedrock('crustle', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('crustle', 'blink')",
+        "q.bedrock_quirk('crustle', 'quirk')"
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('crustle', 'battle_cry', q.curve('symmetrical'))"
+      },
+      "animations": ["q.look('head')", "q.bedrock('crustle', 'battle_idle')"],
+      "quirks": ["q.bedrock_quirk('crustle', 'blink')"]
+    },
+    "in-air": {
+      "poseTypes": ["STAND", "WALK", "NONE"],
+      "isBattle": false,
+      "condition": "q.has_entity ? q.in_air && q.is_ridden : 0.0",
+      "animations": ["q.look('head')", "q.bedrock('crustle', 'ride_jump')"],
+      "transformTicks": 4,
+      "transformToTicks": 4
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.is_sprinting : 1.0",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('crustle', 'cry_movement')"
+      },
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('crustle', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('crustle', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('crustle', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? q.is_sprinting : 0.0",
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('crustle', 'cry_movement')"
+      },
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('crustle', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('crustle', 'ride_ground_run')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('crustle', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('crustle', 'sleep')"]
+    }
+  }
+}

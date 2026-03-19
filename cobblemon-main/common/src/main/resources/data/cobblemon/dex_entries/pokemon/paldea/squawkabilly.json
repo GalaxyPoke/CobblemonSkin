@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:squawkabilly",
+  "speciesId": "cobblemon:squawkabilly",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Blue",
+      "unlockForms": [
+        "Blue"
+      ]
+    },
+    {
+      "displayForm": "Yellow",
+      "unlockForms": [
+        "Yellow"
+      ]
+    },
+    {
+      "displayForm": "White",
+      "unlockForms": [
+        "White"
+      ]
+    }
+  ],
+  "variations": []
+}

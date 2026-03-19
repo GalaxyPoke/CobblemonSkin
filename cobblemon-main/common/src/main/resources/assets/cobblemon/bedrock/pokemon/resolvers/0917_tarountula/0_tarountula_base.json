@@ -1,0 +1,16 @@
+{
+    "species": "cobblemon:tarountula",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:tarountula",
+        "model": "cobblemon:tarountula.geo",
+        "texture": "cobblemon:textures/pokemon/0917_tarountula/tarountula.png"
+        },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0917_tarountula/tarountula_shiny.png"  
+      }
+    ]
+  }

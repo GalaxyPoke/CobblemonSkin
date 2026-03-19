@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cobblemon:moon_stone_from_blasting_dripstone_moon_stone_ore"
+    ]
+  },
+  "criteria": {
+    "has_dripstone_moon_stone_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:dripstone_moon_stone_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cobblemon:moon_stone_from_blasting_dripstone_moon_stone_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dripstone_moon_stone_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

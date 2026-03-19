@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_memory_contest",
+	"title": "cobblemon.mark.ribbon_memory_contest.title",
+	"titleColor": "A6DB60",
+	"description": "cobblemon.mark.ribbon_memory_contest.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_memory_contest.png",
+	"indexNumber": 37
+}

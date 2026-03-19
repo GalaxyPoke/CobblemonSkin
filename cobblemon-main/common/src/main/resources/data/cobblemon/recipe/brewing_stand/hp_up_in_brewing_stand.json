@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:pomeg_berry"
+  },
+  "bottle": {
+    "item": "cobblemon:pp_up"
+  },
+  "result": {
+    "id": "cobblemon:hp_up"
+  }
+}

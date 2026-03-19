@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:lilligant-hisui",
+  "speciesId": "cobblemon:lilligant",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui",
+      "unlockForms": [
+        "Hisui"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon:item/aprijuice/aprijuice_green",
+    "layer1": "cobblemon:item/aprijuice/aprijuice_overlay2"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cobblemon:aprijuice_quality": 0.1
+      },
+      "model": "cobblemon:item/aprijuice_green_leaf"
+    },
+    {
+      "predicate": {
+        "cobblemon:aprijuice_quality": 0.2
+      },
+      "model": "cobblemon:item/aprijuice_green_umbrella"
+    }
+  ]
+}

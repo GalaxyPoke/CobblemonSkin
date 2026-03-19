@@ -1,0 +1,62 @@
+{
+  "name": "cobblemon.behaviour.npc_scale_configuration.name",
+  "description": "cobblemon.behaviour.npc_scale_configuration.desc",
+  "entityType": "cobblemon:npc",
+  "onAdd": [
+    "!q.is_blank(q.entity.config.npc_render_scale) ? q.entity.set_render_scale(q.entity.config.npc_render_scale);",
+    "!q.is_blank(q.entity.config.npc_box_scale) ? q.entity.set_hitbox_scale(q.entity.config.npc_box_scale);",
+    "q.entity.set_hitbox(q.entity.config.npc_box_width, q.entity.config.npc_box_height, q.entity.config.npc_box_eyes_ratio * q.entity.config.npc_box_height);"
+  ],
+  "onRemove": [
+    "q.entity.set_render_scale(1.0);",
+    "q.entity.set_hitbox_scale(1.0);",
+    "q.entity.unset_hitbox();"
+  ],
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "npc_render_scale",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.npc_render_scale.name",
+          "description": "cobblemon.entity.variable.npc_render_scale.desc",
+          "type": "NUMBER",
+          "defaultValue": "1"
+        },
+        {
+          "variableName": "npc_box_scale",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.npc_box_scale.name",
+          "description": "cobblemon.entity.variable.npc_box_scale.desc",
+          "type": "NUMBER",
+          "defaultValue": "1"
+        },
+        {
+          "variableName": "npc_box_width",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.npc_box_width.name",
+          "description": "cobblemon.entity.variable.npc_box_width.desc",
+          "type": "NUMBER",
+          "defaultValue": "0.6"
+        },
+        {
+          "variableName": "npc_box_height",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.npc_box_height.name",
+          "description": "cobblemon.entity.variable.npc_box_height.desc",
+          "type": "NUMBER",
+          "defaultValue": "1.8"
+        },
+        {
+          "variableName": "npc_box_eyes_ratio",
+          "category": "cobblemon.entity.variable.category.appearance",
+          "displayName": "cobblemon.entity.variable.npc_box_eyes_ratio.name",
+          "description": "cobblemon.entity.variable.npc_box_eyes_ratio.desc",
+          "type": "NUMBER",
+          "defaultValue": "0.85"
+        }
+      ]
+    }
+  ]
+}

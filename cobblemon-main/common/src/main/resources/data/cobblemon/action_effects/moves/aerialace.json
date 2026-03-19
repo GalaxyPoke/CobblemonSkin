@@ -1,0 +1,73 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["aerialace", "cut", "physical"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.1
+    },
+    {
+      "type": "entity_molang",
+      "expressions": ["q.play_animation(q.bedrock_stateful('aerialace', 'actor'))"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.7
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.aerialace.actor_1');"
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.45
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:aerialace_target",
+      "locators": [ "target" ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.1
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.aerialace.target');"
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.2
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.4
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": ["q.sound('move.aerialace.actor_2');"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.2
+    }
+  ]
+}

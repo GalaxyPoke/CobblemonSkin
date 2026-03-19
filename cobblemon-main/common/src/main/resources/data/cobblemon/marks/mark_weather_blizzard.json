@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_blizzard",
+	"title": "cobblemon.mark.mark_weather_blizzard.title",
+	"titleColor": "49BCF4",
+	"description": "cobblemon.mark.mark_weather_blizzard.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_blizzard.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 61
+}

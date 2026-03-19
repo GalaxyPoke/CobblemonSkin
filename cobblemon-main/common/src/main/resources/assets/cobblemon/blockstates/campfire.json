@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cobblemon:block/campfire",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "cobblemon:block/campfire",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "cobblemon:block/campfire"
+    },
+    "facing=west": {
+      "model": "cobblemon:block/campfire",
+      "y": 90
+    }
+  }
+}

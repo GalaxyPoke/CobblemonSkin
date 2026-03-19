@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "cobblemon:block/sky_tumblestone_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "cobblemon:block/sky_tumblestone_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cobblemon:block/sky_tumblestone_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "cobblemon:block/sky_tumblestone_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "cobblemon:block/sky_tumblestone_cluster"
+    },
+    "facing=west": {
+      "model": "cobblemon:block/sky_tumblestone_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

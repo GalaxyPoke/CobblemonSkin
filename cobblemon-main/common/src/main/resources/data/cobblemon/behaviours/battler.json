@@ -1,0 +1,31 @@
+{
+  "name": "cobblemon.behaviour.battler.name",
+  "description": "cobblemon.behaviour.battler.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:battling",
+      "tasksByPriority": {
+        "0": [
+          "switch_npc_from_battle",
+          {
+            "type": "look_at_target",
+            "minDurationTicks": "90",
+            "maxDurationTicks": "120"
+          },
+          "look_at_battling_pokemon",
+          "exit_battle_when_hurt"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "switch_npc_to_battle"
+        ]
+      }
+    }
+  ]
+}

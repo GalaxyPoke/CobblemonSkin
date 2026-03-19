@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:savanna_plateau",
+    {
+      "id": "#c:is_plateau",
+      "required": false
+    },
+    {
+      "id": "wythers:ayers_rock",
+      "required": false
+    }
+  ]
+}

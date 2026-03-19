@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "mystic_water",
+    "pattern": [
+        " S ",
+        "S S",
+        "WS "
+    ],
+    "key": {
+        "S": {
+            "tag": "c:strings"
+        },
+        "W": {
+                "item": "cobblemon:water_gem"
+        }
+    },
+    "result": {
+        "id": "cobblemon:mystic_water"
+    }
+}

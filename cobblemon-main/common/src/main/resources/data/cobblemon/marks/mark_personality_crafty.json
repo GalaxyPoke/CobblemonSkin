@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_crafty",
+	"title": "cobblemon.mark.mark_personality_crafty.title",
+	"titleColor": "959AAA",
+	"description": "cobblemon.mark.mark_personality_crafty.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_crafty.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 86
+}

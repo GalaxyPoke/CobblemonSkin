@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "WWW",
+        " I ",
+        " B "
+    ],
+    "key": {
+        "I": {
+            "tag": "c:ingots/iron"
+        },
+        "W": {
+            "tag": "minecraft:wool"
+        },
+        "B": {
+            "item": "minecraft:flint"
+        }
+    },
+    "result": {
+        "id": "cobblemon:utility_umbrella"
+    }
+}

@@ -1,0 +1,195 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:blue_orchid",
+	"minecraft:cornflower",
+	{
+      "id": "aether_redux:pink_prismatic_petals",
+      "required": false
+    },
+	{
+      "id": "aether_redux:mixed_prismatic_petals",
+      "required": false
+    },
+	{
+      "id": "aether_redux:teal_prismatic_petals",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:blue_hydrangea",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:blue_hydrangea_bottom",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:blue_hydrangea_top",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:icy_iris",
+      "required": false
+    },
+	{
+      "id": "blue_skies:moonlit_bloom",
+      "required": false
+    },
+	{
+      "id": "blue_skies:nightcress",
+      "required": false
+    },
+	{
+      "id": "botania:blue_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:blue_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:blue_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:blue_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:cyan_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:cyan_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:cyan_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:cyan_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:floating_hydroangeas",
+      "required": false
+    },
+	{
+      "id": "botania:floating_labellia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_manastar",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_tangleberrie",
+      "required": false
+    },
+	{
+      "id": "botania:floating_tangleberrie_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:hydroangeas",
+      "required": false
+    },
+	{
+      "id": "botania:hydroangeas_motif",
+      "required": false
+    },
+	{
+      "id": "botania:labellia",
+      "required": false
+    },
+	{
+      "id": "botania:light_blue_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:light_blue_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:light_blue_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:light_blue_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:manastar",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:tangleberrie",
+      "required": false
+    },
+	{
+      "id": "botania:tangleberrie_chibi",
+      "required": false
+    },
+	{
+      "id": "etcetera:bouquet",
+      "required": false
+    },
+	{
+      "id": "goodending:pastel_wildflowers",
+      "required": false
+    },
+	{
+      "id": "goodending:twilight_wildflowers",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:aquapanthus",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:aquapanthus_floating",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:raindeletia",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:raindeletia_floating",
+      "required": false
+    },
+	{
+      "id": "outer_end:azure_bud",
+      "required": false
+    },
+	{
+      "id": "wilderwild:blue_giany_glory_of_the_snow",
+      "required": false
+    }
+  ]
+}

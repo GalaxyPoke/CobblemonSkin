@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cobblemon:tatami_block"
+    ]
+  },
+  "criteria": {
+    "has_rice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:hearty_grains"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cobblemon:tatami_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rice",
+      "has_the_recipe"
+    ]
+  ]
+}

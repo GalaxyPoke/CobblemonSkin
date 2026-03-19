@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_event_champion_regional",
+	"title": "cobblemon.mark.ribbon_event_champion_regional.title",
+	"titleColor": "F2D23F",
+	"description": "cobblemon.mark.ribbon_event_champion_regional.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_event_champion_regional.png",
+	"indexNumber": 34
+}

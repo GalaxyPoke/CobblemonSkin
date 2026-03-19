@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "cobblemon:block/tumblestone/polished_tumblestone",
+    "side": "cobblemon:block/tumblestone/polished_tumblestone_slab"
+  }
+}

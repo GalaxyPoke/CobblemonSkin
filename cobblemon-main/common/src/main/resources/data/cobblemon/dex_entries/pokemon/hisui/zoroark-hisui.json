@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:zoroark-hisui",
+  "speciesId": "cobblemon:zoroark",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui",
+      "unlockForms": [
+        "Hisui"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:gabite",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gabite",
+      "model": "cobblemon:gabite_male.geo",
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0444_gabite/gabite_shiny.png"
+    }
+  ]
+}

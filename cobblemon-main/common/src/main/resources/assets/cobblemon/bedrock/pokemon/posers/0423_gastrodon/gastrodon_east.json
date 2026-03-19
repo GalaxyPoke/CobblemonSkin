@@ -1,0 +1,94 @@
+{
+  "portraitScale": 1.41,
+  "portraitTranslation": [-0.56, 1.1, 0],
+  "profileScale": 0.56,
+  "profileTranslation": [0, 0.85, 0],
+  "rootBone": "gastrodon_east",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('gastrodon_east', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('gastrodon_east', 'cry')",
+    "recoil": "q.bedrock_stateful('gastrodon_east', 'recoil')",
+    "physical": "q.bedrock_primary('gastrodon_east', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('gastrodon_east', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('gastrodon_east', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gastrodon_east', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('gastrodon_east', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gastrodon_east', 'ride_jump')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gastrodon_east', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('gastrodon_east', 'ride_ground_run')"
+        }
+      ],
+      "transformToTicks": 2
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gastrodon_east', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('gastrodon_east', 'quirk')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gastrodon_east', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('gastrodon_east', 'ride_ground_walk')"
+        }
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('gastrodon_east', 'sleep')"]
+    }
+  }
+}

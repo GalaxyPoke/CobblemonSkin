@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:sandaconda",
+  "speciesId": "cobblemon:sandaconda",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

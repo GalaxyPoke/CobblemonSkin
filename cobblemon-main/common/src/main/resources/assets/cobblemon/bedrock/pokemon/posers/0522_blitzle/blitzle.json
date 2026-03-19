@@ -1,0 +1,58 @@
+{
+ "portraitScale": 2.32,
+ "portraitTranslation": [-0.56, 0.25, 0],
+ "profileScale": 0.69,
+ "profileTranslation": [0, 0.72, 0],
+  "animations": {
+    "cry": "q.bedrock_stateful('blitzle', 'cry')",
+    "recoil": "q.bedrock_stateful('blitzle', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('blitzle', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('blitzle', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('blitzle', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('blitzle', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.is_sprinting : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('blitzle', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('blitzle', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? q.is_sprinting : 0.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('blitzle', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('blitzle', 'blink')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('blitzle', 'sleep')"
+      ]
+    }
+  }
+}

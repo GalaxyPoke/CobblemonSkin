@@ -1,0 +1,76 @@
+'The v.npc and v.player bits are from before q.set_query existed and are only there for backwards compatibility.';
+
+for_each(t.loser, c.scriptable_losers, {
+  t.loser.is_npc ? {
+    v.npc = t.loser;
+    q.set_query('npc', t.loser);
+  };
+  t.loser.is_pokemon ? {
+    q.set_query('pokemon', t.loser);
+  };
+  q.set_query('entity', t.loser);
+  !q.is_blank(t.loser.config.on_defeat) ? {
+    q.run_molang(t.loser.config.on_defeat);
+  };
+  !q.is_blank(t.loser.config.on_player_wins) ? {
+    for_each(t.player_winner, c.player_winners, {
+      v.player = t.player_winner.player;
+      q.set_query('player', t.player_winner.player);
+      q.run_molang(t.loser.config.on_player_wins);
+    });
+  };
+  !q.is_blank(t.loser.config.player_win_command) ? {
+    for_each(t.player_winner, c.player_winners, {
+      t.cmd = q.replace(t.loser.config.player_win_command, '{{player}}', t.player_winner.player.username);
+      t.cmd = q.replace(t.cmd, '{{player_id}}', t.player_winner.player.uuid);
+      t.cmd = q.replace(t.cmd, '{{npc}}', t.loser.name);
+      t.cmd = q.replace(t.cmd, '{{npc_id}}', t.loser.uuid);
+      q.run_command(t.cmd);
+    });
+  };
+});
+
+for_each(t.winner, c.scriptable_winners, {
+  t.winner.is_npc ? {
+    v.npc = t.winner;
+    q.set_query('npc', t.winner);
+  };
+  t.winner.is_pokemon ? {
+    q.set_query('pokemon', t.winner);
+  };
+  q.set_query('entity', t.winner);
+  !q.is_blank(t.winner.config.on_victory) ? {
+    q.run_molang(t.winner.config.on_victory);
+  };
+  !q.is_blank(t.winner.config.on_player_loses) ? {
+    for_each(t.player_loser, c.player_losers, {
+      v.player = t.player_loser.player;
+      q.set_query('player', t.player_loser.player);
+      q.run_molang(t.winner.config.on_player_loses);
+    });
+  };
+  !q.is_blank(t.winner.config.player_lose_command) ? {
+    for_each(t.player_loser, c.player_losers, {
+      t.cmd = q.replace(t.winner.config.player_lose_command, '{{player}}', t.player_loser.player.username);
+      t.cmd = q.replace(t.cmd, '{{player_id}}', t.player_loser.player.uuid);
+      t.winner.is_npc ? {
+        t.cmd = q.replace(t.cmd, '{{npc}}', t.winner.name);
+        t.cmd = q.replace(t.cmd, '{{npc_id}}', t.winner.uuid);
+      };
+      t.winner.is_pokemon ? {
+        t.cmd = q.replace(t.cmd, '{{pokemon_id}}', t.winner.uuid);
+      };
+      q.run_command(t.cmd);
+    });
+  };
+});
+
+for_each(t.npc_actor, c.npcs, {
+  t.npc_actor.npc.config.challenge_cooldown != 0 ? {
+    for_each(t.player_actor, c.players, {
+      t.data = t.player_actor.player.get_npc_data(t.npc_actor.npc.uuid);
+      t.data.last_challenged_time = t.player_actor.player.world.game_time;
+      t.player_actor.player.save_data();
+    });
+  };
+});

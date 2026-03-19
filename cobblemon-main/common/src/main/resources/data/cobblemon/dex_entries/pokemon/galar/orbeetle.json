@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:orbeetle",
+  "speciesId": "cobblemon:orbeetle",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

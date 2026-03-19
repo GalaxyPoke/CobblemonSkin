@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:psyduck",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:psyduck",
+      "model": "cobblemon:psyduck.geo",
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0054_psyduck/psyduck_shiny.png"
+    }
+  ]
+}

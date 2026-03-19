@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_champion_paldea",
+	"title": "cobblemon.mark.ribbon_champion_paldea.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.ribbon_champion_paldea.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_champion_paldea.png",
+	"indexNumber": 100
+}

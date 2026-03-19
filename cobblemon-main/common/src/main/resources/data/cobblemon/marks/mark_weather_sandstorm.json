@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_sandstorm",
+	"title": "cobblemon.mark.mark_weather_sandstorm.title",
+	"titleColor": "9F7F4F",
+	"description": "cobblemon.mark.mark_weather_sandstorm.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_sandstorm.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 63
+}

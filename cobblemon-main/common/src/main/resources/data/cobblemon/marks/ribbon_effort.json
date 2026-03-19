@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_effort",
+	"title": "cobblemon.mark.ribbon_effort.title",
+	"titleColor": "F09365",
+	"description": "cobblemon.mark.ribbon_effort.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_effort.png",
+	"indexNumber": 7
+}

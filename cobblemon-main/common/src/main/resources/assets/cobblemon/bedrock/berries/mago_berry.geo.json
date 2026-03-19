@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.mago_berry",
+				"texture_width": 16,
+				"texture_height": 8,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Mago",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, -2.75, -1], "size": [2, 2, 2], "inflate": 0.01, "uv": [0, 0]},
+						{"origin": [-1, -4.75, -1], "size": [2, 2, 2], "pivot": [0, -2.75, 1], "rotation": [-22.5, 0, 0], "uv": [8, 0]},
+						{"origin": [0, -4.59776, -2.76537], "size": [0, 2, 3], "pivot": [0, -4.59776, 0.23463], "rotation": [22.5, 0, 0], "uv": [0, 1]},
+						{"origin": [-0.5, -1, -0.5], "size": [1, 1, 1], "uv": [6, 0]}
+					]
+				}
+			]
+		}
+	]
+}

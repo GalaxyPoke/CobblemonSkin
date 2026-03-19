@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:metang",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:metang",
+      "model": "cobblemon:metang.geo",
+      "texture": "cobblemon:textures/pokemon/0375_metang/metang.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0375_metang/metang_shiny.png"
+    }
+  ]
+}

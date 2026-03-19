@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:kabuto_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:kabuto_fetus",
+      "model": "cobblemon:kabuto_fetus.geo",
+      "texture": "cobblemon:textures/fossils/kabuto.png",
+      "layers": []
+    }
+  ]
+}

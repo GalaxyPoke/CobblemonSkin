@@ -1,0 +1,35 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "cobblemon:block/crops/vivichoke_seed_stage_3",
+		"particle": "cobblemon:block/crops/vivichoke_seed_stage_3"
+	},
+	"elements": [
+		{
+			"from": [0, -1, 8],
+			"to": [16, 10, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 5, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, -1, 0],
+			"to": [8, 10, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [0, 5, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 5, 16, 16], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "cobblemon:block/vivichoke_seed_stage_3",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1]
+		}
+	]
+}

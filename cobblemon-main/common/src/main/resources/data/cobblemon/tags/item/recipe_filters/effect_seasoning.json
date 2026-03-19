@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:small_flowers",
+    "#minecraft:tall_flowers",
+    "minecraft:chorus_flower",
+    "minecraft:dead_bush",
+    "minecraft:honey_bottle",
+    "minecraft:pink_petals",
+    "minecraft:spore_blossom",
+    "minecraft:chorus_flower",
+    "minecraft:poisonous_potato",
+    "minecraft:rotten_flesh",
+    "minecraft:spore_blossom",
+    "minecraft:sugar",
+    "#cobblemon:mint_leaves",
+    "cobblemon:big_root",
+    "cobblemon:energy_root",
+    "cobblemon:galarica_nuts",
+    "#cobblemon:herbs",
+    "cobblemon:pep_up_flower",
+    "minecraft:milk_bucket",
+    "cobblemon:moomoo_milk"
+  ]
+}

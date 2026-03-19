@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:terracotta",
+	"#cobblemon:glazed_terracotta_blocks",
+	"minecraft:bricks",
+	"minecraft:mud_bricks",
+	"minecraft:suspicious_gravel"
+  ]
+}

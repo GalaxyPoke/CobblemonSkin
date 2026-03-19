@@ -1,0 +1,14 @@
+{
+  "match": {
+    "items": [
+      "cobblemon:fire_stone_block",
+      "cobblemon:thunder_stone_block",
+      "cobblemon:sun_stone_block",
+      "cobblemon:shiny_stone_block",
+      "cobblemon:dawn_stone_block"
+    ]
+  },
+  "luminance": {
+    "type": "block_self"
+  }
+}

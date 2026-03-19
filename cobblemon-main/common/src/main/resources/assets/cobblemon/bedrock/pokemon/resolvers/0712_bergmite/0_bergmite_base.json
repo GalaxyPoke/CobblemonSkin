@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:bergmite",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bergmite",
+      "model": "cobblemon:bergmite.geo",
+      "texture": "cobblemon:textures/pokemon/0712_bergmite/bergmite.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0712_bergmite/bergmite_shiny.png"
+    }
+  ]
+}

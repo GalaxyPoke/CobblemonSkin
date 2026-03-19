@@ -1,0 +1,118 @@
+{
+  "portraitScale": 1.4,
+  "portraitTranslation": [-0.93, 2.1, 0],
+  "profileScale": 0.32,
+  "profileTranslation": [0.07, 1.21, -6.0],
+  "rootBone": "flygon",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 1, 1],
+    "seat_1_reverse": [0, 1, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 1, 1],
+    "seat_1_reverse": [0, 1, 0.5]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('flygon', 'cry')"
+  },
+  "poses": {
+    "jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.bedrock('flygon', 'ride_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flygon', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flygon', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air && !q.is_sprinting : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('flygon', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('flygon', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air q.is_sprinting : 0.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('flygon', 'ride_ground_run')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('flygon', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'air_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flygon', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "condition": "!q.is_gliding",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'air_fly')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('flygon', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flygon', 'blink')"
+      ]
+    },
+    "glide": {
+      "poseTypes": ["FLY"],
+      "condition": "q.is_gliding",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('flygon', 'air_glide')",
+        "q.bedrock('flygon', 'ride_dive')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('flygon', 'ride_air_fly')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('flygon', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('flygon', 'sleep')"]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "pokemon": ["pikachu", "raichu", "pichu"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:sinister_tea",
+      "aspects": ["cosmetic_item-sinister_tea"]
+    }
+  ]
+}

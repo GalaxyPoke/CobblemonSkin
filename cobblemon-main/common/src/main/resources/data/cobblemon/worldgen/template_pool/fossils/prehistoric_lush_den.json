@@ -1,0 +1,16 @@
+{
+    "name": "cobblemon:prehistoric_lush_den",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/lush_den",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_lush_den",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

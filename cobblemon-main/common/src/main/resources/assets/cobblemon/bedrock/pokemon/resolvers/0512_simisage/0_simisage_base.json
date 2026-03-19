@@ -1,0 +1,16 @@
+{
+    "species": "cobblemon:simisage",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:simisage",
+        "model": "cobblemon:simisage.geo",
+        "texture": "cobblemon:textures/pokemon/0512_simisage/simisage.png"
+        },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0512_simisage/simisage_shiny.png"  
+      }
+    ]
+  }

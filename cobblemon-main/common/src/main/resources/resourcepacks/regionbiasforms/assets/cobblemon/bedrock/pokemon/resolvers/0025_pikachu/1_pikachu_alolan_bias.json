@@ -1,0 +1,306 @@
+{
+  "species": "cobblemon:pikachu",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["region-bias-alola"],
+      "poser": "cobblemon:pikachu_alolan",
+      "model": "cobblemon:pikachu_alola_bias_male.geo",
+      "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_emissive.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_emissive_shiny.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "female"],
+      "poser": "cobblemon:pikachu_alolan",
+      "model": "cobblemon:pikachu_alola_bias_female.geo",
+      "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_emissive.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "female", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_emissive_shiny.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-rage_candy_bar"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "original",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_original.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-pewter_crunchies"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "partner",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_partner.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lava_cookie"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "hoenn",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_hoenn.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-old_gateau"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "sinnoh",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_sinnoh.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-casteliacone"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "unova",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_unova.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lumiose_galette"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "kalos",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_kalos.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-big_malasada"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "alola",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_alola.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-smoked_tail_curry"],
+      "model": "cobblemon:pikachu_cap_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "world",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_world.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-compass"],
+      "model": "cobblemon:pikachu_captain_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "captain",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_captain.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-shears"],
+      "model": "cobblemon:pikachu_fluff_alola_bias_male.geo"
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-leather_helmet"],
+      "model": "cobblemon:pikachu_detective_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-sinister_tea"],
+      "model": "cobblemon:pikachu_detective_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-cocoa_beans"],
+      "model": "cobblemon:pikachu_detective_alola_bias_male.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-rage_candy_bar", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "original",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_original.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-pewter_crunchies", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "partner",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_partner.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lava_cookie", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "hoenn",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_hoenn.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-old_gateau", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "sinnoh",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_sinnoh.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-casteliacone", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "unova",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_unova.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lumiose_galette", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "kalos",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_kalos.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-big_malasada", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "alola",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_alola.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-smoked_tail_curry", "female"],
+      "model": "cobblemon:pikachu_cap_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "world",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_cap_world.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-compass", "female"],
+      "model": "cobblemon:pikachu_captain_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "captain",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_captain.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-shears", "female"],
+      "model": "cobblemon:pikachu_fluff_alola_bias_female.geo"
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-leather_helmet", "female"],
+      "model": "cobblemon:pikachu_detective_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-sinister_tea", "female"],
+      "model": "cobblemon:pikachu_detective_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-cocoa_beans", "female"],
+      "model": "cobblemon:pikachu_detective_alola_bias_female.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0025_pikachu/pikachu_detective.png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cobblemon.behaviour.floats.name",
+  "description": "cobblemon.behaviour.floats.desc",
+  "onAdd": [
+    "q.entity.data.original_water_malus = q.entity.get_pathfinding_malus('WATER');",
+    "q.entity.set_can_float(true);",
+    "q.entity.set_pathfinding_malus('WATER', 16.0);"
+  ],
+  "onRemove": [
+    "q.entity.set_can_float(false);",
+    "q.entity.set_pathfinding_malus('WATER', q.entity.data.original_water_malus);"
+  ],
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "0": [
+          "stay_afloat"
+        ]
+      }
+    }
+  ]
+}

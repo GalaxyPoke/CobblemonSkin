@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:bunnelby",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bunnelby",
+      "model": "cobblemon:bunnelby.geo",
+      "texture": "cobblemon:textures/pokemon/0659_bunnelby/bunnelby.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0659_bunnelby/bunnelby_shiny.png"
+    }
+  ]
+}

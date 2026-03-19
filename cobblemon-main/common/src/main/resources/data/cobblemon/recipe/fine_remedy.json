@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "cobblemon:remedy"
+        },
+        {
+            "tag": "cobblemon:remedy_berries"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:fine_remedy"
+    }
+}

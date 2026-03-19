@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:igglybuff",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:igglybuff",
+      "model": "cobblemon:igglybuff.geo",
+      "texture": "cobblemon:textures/pokemon/0174_igglybuff/igglybuff.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0174_igglybuff/igglybuff_shiny.png"
+    }
+  ]
+}

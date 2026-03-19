@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:sawsbuck",
+  "speciesId": "cobblemon:sawsbuck",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Summer",
+      "unlockForms": [
+        "Summer"
+      ]
+    },
+    {
+      "displayForm": "Autumn",
+      "unlockForms": [
+        "Autumn"
+      ]
+    },
+    {
+      "displayForm": "Winter",
+      "unlockForms": [
+        "Winter"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,24 @@
+{
+  "name": "cobblemon.behaviour.core.name",
+  "description": "cobblemon.behaviour.core.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "0": [
+          "follow_walk_target"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "look_at_target"
+        ]
+      }
+    }
+  ]
+}

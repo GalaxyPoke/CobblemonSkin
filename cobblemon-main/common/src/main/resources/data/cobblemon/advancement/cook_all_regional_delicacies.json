@@ -1,0 +1,129 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:smoked_tail_curry"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.cook_all_regional_delicacies"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.cook_all_regional_delicacies.description"
+    }
+  },
+  "parent": "cobblemon:place_campfire_pot",
+  "criteria": {
+    "pewter_crunchies": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:pewter_crunchies"]
+          }
+        ]
+      }
+    },
+    "rage_candy_bar": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:rage_candy_bar"]
+          }
+        ]
+      }
+    },
+    "lava_cookie": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:lava_cookie"]
+          }
+        ]
+      }
+    },
+    "jubilife_muffin": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:jubilife_muffin"]
+          }
+        ]
+      }
+    },
+    "old_gateau": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:old_gateau"]
+          }
+        ]
+      }
+    },
+    "casteliacone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:casteliacone"]
+          }
+        ]
+      }
+    },
+    "lumiose_galette": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:lumiose_galette"]
+          }
+        ]
+      }
+    },
+    "big_malasada": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:big_malasada"]
+          }
+        ]
+      }
+    },
+    "smoked_tail_curry": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:smoked_tail_curry"]
+          }
+        ]
+      }
+    },
+    "open_faced_sandwich": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:open_faced_sandwich"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["pewter_crunchies"],
+    ["rage_candy_bar"],
+    ["lava_cookie"],
+    ["jubilife_muffin"],
+    ["old_gateau"],
+    ["casteliacone"],
+    ["lumiose_galette"],
+    ["big_malasada"],
+    ["smoked_tail_curry"],
+    ["open_faced_sandwich"]
+  ],
+  "sends_telemetry_event": false
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_record",
+	"title": "cobblemon.mark.ribbon_record.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.ribbon_record.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_record.png",
+	"indexNumber": 20
+}

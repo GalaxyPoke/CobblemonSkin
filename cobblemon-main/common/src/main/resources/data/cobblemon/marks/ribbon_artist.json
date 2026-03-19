@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_artist",
+	"title": "cobblemon.mark.ribbon_artist.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.ribbon_artist.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_artist.png",
+	"indexNumber": 18
+}

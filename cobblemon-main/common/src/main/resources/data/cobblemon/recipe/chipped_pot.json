@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CN ",
+        "CPG",
+        "GG "
+    ],
+    "key": {
+        "G": {
+            "tag": "c:ingots/gold"
+        },
+        "N": {
+            "tag": "c:nuggets/gold"
+        },
+        "C": {
+            "item": "minecraft:clay_ball"
+        },
+        "P": {
+            "item": "cobblemon:chipped_pot"
+        }
+    },
+    "result": {
+        "id": "cobblemon:chipped_pot",
+        "count": 2
+    }
+}

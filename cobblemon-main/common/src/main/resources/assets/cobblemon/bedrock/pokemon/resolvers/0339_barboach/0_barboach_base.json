@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:barboach",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:barboach",
+      "model": "cobblemon:barboach.geo",
+      "texture": "cobblemon:textures/pokemon/0339_barboach/barboach.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0339_barboach/barboach_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+ "portraitScale": 2.04,
+ "portraitTranslation": [-0.97, 1.29, 0],
+ "profileScale": 0.62,
+ "profileTranslation": [0.02, 0.84, 0],
+ "rootBone": "zebstrika",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('zebstrika', 'cry')",
+    "recoil": "q.bedrock_stateful('zebstrika', 'recoil')",
+    "physical": "q.bedrock_primary('zebstrika', 'physical', 'look', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('zebstrika', 'special', 'look', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('zebstrika', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "FLOAT"],
+      "isBattle": true,
+      "condition": "!q.in_air",
+      "namedAnimations": {
+      "cry": "q.bedrock_primary('zebstrika', 'battle_cry', q.curve('symmetrical'))"
+      },
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('zebstrika', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('zebstrika', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "FLOAT"],
+      "isBattle": false,
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head_ai')", 
+        "q.bedrock('zebstrika', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('zebstrika', 'blink')",
+        "q.bedrock_quirk('zebstrika', 'look_quirk')"
+      ]
+    },
+    "in_air": {
+      "poseTypes": ["WALK","STAND", "NONE"],
+      "isBattle": false,
+      "condition": "q.has_entity ? q.in_air && q.is_ridden : 0.0",
+      "animations": [
+        "q.look('head_ai')", 
+        "q.bedrock('zebstrika', 'ride_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('zebstrika', 'blink')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air && !q.is_sprinting : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('zebstrika', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('zebstrika', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('zebstrika', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air && q.is_sprinting : 0.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('zebstrika', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('zebstrika', 'ride_ground_run')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('zebstrika', 'blink')"]
+    },
+      "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('zebstrika', 'sleep')"
+      ]
+    }
+  }
+}

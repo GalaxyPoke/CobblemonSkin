@@ -1,0 +1,43 @@
+{
+  "name": "cobblemon.behaviour.battle_scripts.name",
+  "description": "cobblemon.behaviour.battle_scripts.desc",
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "on_defeat",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.on_defeat.name",
+          "description": "cobblemon.entity.variable.on_defeat.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "on_victory",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.on_victory.name",
+          "description": "cobblemon.entity.variable.on_victory.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "on_player_wins",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.on_player_wins.name",
+          "description": "cobblemon.entity.variable.on_player_wins.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "on_player_loses",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.on_player_loses.name",
+          "description": "cobblemon.entity.variable.on_player_loses.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

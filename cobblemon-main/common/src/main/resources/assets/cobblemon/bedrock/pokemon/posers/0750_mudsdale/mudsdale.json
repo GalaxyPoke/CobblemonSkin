@@ -1,0 +1,89 @@
+{
+    "portraitScale": 1.5,
+    "portraitTranslation": [-1.0, 1.76, 0.0],
+    "profileScale": 0.5,
+    "profileTranslation": [0.0, 1.0, 0.0],
+    "rootBone": "mudsdale",
+    "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+    },
+    "thirdPersonCameraOffset": {
+      "seat_1": [0, 0.35, 0],
+      "seat_1_reverse": [0, 0.35, 0]
+    },
+    "thirdPersonCameraOffsetNoViewBobbing": {
+      "seat_1": [0, 0.35, 0],
+      "seat_1_reverse": [0, 0.35, 0]
+    },
+    "animations": {
+      "cry": "q.bedrock_stateful('mudsdale', 'cry')"
+    },
+    "poses": {
+      "in-air": {
+        "poseTypes": ["STAND", "WALK"],
+        "condition": "q.in_air",
+        "animations": [
+          "q.look('neck', 0.5, 0.5, 15, -15, 30, -30)",
+          "q.look('neck2', 0.5, 0.5, 10, -10, 25, -25)",
+          "q.look('head', 0.4, 0.25, 5, -5, 10, -10)",
+          "q.bedrock('mudsdale', 'ride_jump')",
+          "q.bedrock('mudsdale', 'ride_ground_run')",
+          "q.bedrock_stateful('mudsdale', 'blink')"
+        ],
+        "transformTicks": 5,
+        "transformToTicks": 5
+      },
+      "standing": {
+        "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+        "condition": "!q.in_air",
+        "animations": [
+          "q.look('neck', 0.5, 0.5, 15, -15, 30, -30)",
+          "q.look('neck2', 0.5, 0.5, 10, -10, 25, -25)",
+          "q.look('head', 0.4, 0.25, 5, -5, 10, -10)",
+          "q.bedrock('mudsdale', 'ground_idle')",
+          "q.bedrock_stateful('mudsdale', 'blink')"
+        ],
+        "transformTicks": 5
+      },
+      "run": {
+        "poseTypes": ["WALK", "SWIM"],
+        "condition": "!q.in_air && q.is_sprinting",
+        "animations": [
+          "q.look('neck', 0.5, 0.5, 15, -15, 30, -30)",
+          "q.look('neck2', 0.5, 0.5, 10, -10, 25, -25)",
+          "q.look('head', 0.4, 0.25, 5, -5, 10, -10)",
+          "q.bedrock('mudsdale', 'ground_run')",
+          "q.bedrock_stateful('mudsdale', 'blink')",
+          {
+            "condition": "q.is_ridden && q.has_entity && !q.in_air",
+            "animation": "q.bedrock('mudsdale', 'ride_ground_run')"
+          }
+        ],
+        "transformTicks": 5
+      },
+      "walk": {
+        "poseTypes": ["WALK", "SWIM"],
+        "condition": "!q.in_air && !q.is_sprinting",
+        "animations": [
+          "q.look('neck', 0.5, 0.5, 15, -15, 30, -30)",
+          "q.look('neck2', 0.5, 0.5, 10, -10, 25, -25)",
+          "q.look('head', 0.4, 0.25, 5, -5, 10, -10)",
+          "q.bedrock('mudsdale', 'ground_walk')",
+          "q.bedrock_stateful('mudsdale', 'blink')",
+          {
+            "condition": "q.is_ridden && q.has_entity && !q.in_air",
+            "animation": "q.bedrock('mudsdale', 'ride_ground_walk')"
+          }
+        ],
+        "transformTicks": 5
+      },
+      "sleep": {
+        "poseTypes": ["SLEEP"],
+        "namedAnimations": {
+          "cry": "q.bedrock_stateful('dummy', 'cry')"
+        },
+        "animations": ["q.bedrock('mudsdale', 'sleep')"]
+      }
+    }
+  }
+  

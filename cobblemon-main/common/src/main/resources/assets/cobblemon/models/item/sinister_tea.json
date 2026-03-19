@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/bowl",
+    "layer1": "cobblemon:item/food/sinister_tea/sinister_tea_overlay"
+  },
+  "overrides": [
+    {
+      "predicate": { "minecraft:custom_model_data": 2 },
+      "model": "cobblemon:item/sinister_masterpiece_tea"
+    },
+    {
+      "predicate": { "minecraft:custom_model_data": 3 },
+      "model": "cobblemon:item/sinister_unremarkable_tea"
+    }
+  ]
+}

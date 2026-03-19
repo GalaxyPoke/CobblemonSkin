@@ -1,0 +1,61 @@
+{
+  "portraitScale": 1.53,
+  "portraitTranslation": [-0.32,0.48,0],
+  "profileScale": 0.57,
+  "profileTranslation": [0,0.99,0],
+  "rootBone": "chandelure",
+  "animations": {
+    "cry": "q.bedrock_stateful('chandelure', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "isBattle": false,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('body')",
+        "q.bedrock('chandelure', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('chandelure', 'blink')"]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.bedrock('chandelure', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('chandelure', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('body')",
+        "q.bedrock('chandelure', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('chandelure', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('chandelure', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('chandelure', 'blink')"]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "HOVER"],
+      "isBattle": true,
+      "animations": [
+        "q.look('body')",
+        "q.bedrock('chandelure', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('chandelure', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('chandelure', 'sleep')"
+      ]
+    }
+  }
+}

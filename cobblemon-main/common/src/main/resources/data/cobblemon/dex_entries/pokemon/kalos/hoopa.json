@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:hoopa",
+  "speciesId": "cobblemon:hoopa",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Unbound",
+      "unlockForms": [
+        "Unbound"
+      ]
+    }
+  ],
+  "variations": []
+}

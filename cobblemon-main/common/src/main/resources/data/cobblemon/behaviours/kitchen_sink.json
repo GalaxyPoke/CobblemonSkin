@@ -1,0 +1,60 @@
+{
+  "name": "Kitchen Sink",
+  "description": "It has EVERYTHING just to check variables",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "wander",
+          "look_at_target",
+          "follow_walk_target",
+          "stay_afloat",
+          "look_at_entities",
+          "get_angry_at_attacker",
+          "stop_being_angry_if_attacker_dead",
+          "switch_npc_to_battle",
+          "look_at_battling_pokemon",
+          "switch_npc_from_battle",
+          "go_to_healing_machine",
+          "heal_using_healing_machine",
+          "attack_angry_at",
+          "move_to_attack_target",
+          "melee_attack",
+          "switch_from_fight",
+          "switch_to_fight",
+          "switch_to_chatting",
+          "switch_from_chatting",
+          "look_at_speaker",
+          "switch_to_action_effect",
+          "switch_from_action_effect",
+          "exit_battle_when_hurt",
+          "switch_to_panic_when_hurt",
+          "switch_to_panic_when_hostiles_nearby",
+          "calm_down",
+          "flee_attacker",
+          "flee_nearest_hostile",
+          "run_script",
+          "look_in_direction",
+          "path_to_hive",
+          "place_honey_in_hive",
+          {
+            "type": "wander",
+            "speedMultiplier": {
+              "variableName": "flee_speed_multiplier",
+              "category": "cobblemon.entity.variable.category.fear",
+              "defaultValue": 0.5,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.flee_speed_multiplier.name",
+              "description": "cobblemon.entity.variable.flee_speed_multiplier.desc"
+            },
+            "horizontalRange": 4,
+            "verticalRange": 4,
+            "shouldWander": true
+          }
+        ]
+      }
+    }
+  ]
+}

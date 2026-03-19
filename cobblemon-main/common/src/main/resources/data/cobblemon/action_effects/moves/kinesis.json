@@ -1,0 +1,36 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["kinesis", "status"],
+      "delay": 0.1
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:kinesis_actor",
+      "locator": "root",
+      "delay": 0.1
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:kinesis_actorspiral",
+      "locator": "target"
+    },
+    {
+      "type": "pause",
+      "pause": 2
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.9
+    }
+  ]
+}

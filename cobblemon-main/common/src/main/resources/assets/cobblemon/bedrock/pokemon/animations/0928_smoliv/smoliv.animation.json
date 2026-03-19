@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.smoliv.ground_idle": {
+			"loop": true,
+			"bones": {
+				"torso": {
+					"rotation": [-2.5, 0, 0]
+				},
+				"olive": {
+					"rotation": [15, 0, 0]
+				},
+				"stem": {
+					"rotation": [12.5, 0, 0]
+				},
+				"stem3": {
+					"rotation": [35, 0, 0]
+				},
+				"leaf_front_right": {
+					"rotation": [-25, 0, 0]
+				},
+				"leaf_front_right_tip": {
+					"rotation": [-15, 0, 0]
+				},
+				"leaf_back_right": {
+					"rotation": [25, 0, 0]
+				},
+				"leaf_back_right_tip": {
+					"rotation": [10, 0, 0]
+				},
+				"leaf_front_left": {
+					"rotation": [-25, 0, 0]
+				},
+				"leaf_front_left_tip": {
+					"rotation": [-15, 0, 0]
+				},
+				"leaf_back_left": {
+					"rotation": [25, 0, 0]
+				},
+				"leaf_back_left_tip": {
+					"rotation": [10, 0, 0]
+				},
+				"stem2": {
+					"rotation": [45, 0, 0]
+				}
+			}
+		},
+		"animation.smoliv.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eyelid_left": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_right": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

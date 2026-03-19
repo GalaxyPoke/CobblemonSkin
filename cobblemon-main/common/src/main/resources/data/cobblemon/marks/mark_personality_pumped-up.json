@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_pumped-up",
+	"title": "cobblemon.mark.mark_personality_pumped-up.title",
+	"titleColor": "FF8327",
+	"description": "cobblemon.mark.mark_personality_pumped-up.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_pumped-up.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 90
+}

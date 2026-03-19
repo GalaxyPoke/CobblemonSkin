@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:shroomish",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:shroomish",
+      "model": "cobblemon:shroomish.geo",
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0285_shroomish/shroomish_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_day_snooze",
+	"title": "cobblemon.mark.ribbon_day_snooze.title",
+	"titleColor": "A373DE",
+	"description": "cobblemon.mark.ribbon_day_snooze.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_day_snooze.png",
+	"indexNumber": 13
+}

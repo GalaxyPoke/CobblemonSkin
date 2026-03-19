@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:deerling",
+  "speciesId": "cobblemon:deerling",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Summer",
+      "unlockForms": [
+        "Summer"
+      ]
+    },
+    {
+      "displayForm": "Autumn",
+      "unlockForms": [
+        "Autumn"
+      ]
+    },
+    {
+      "displayForm": "Winter",
+      "unlockForms": [
+        "Winter"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:popplio",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:popplio",
+      "model": "cobblemon:popplio.geo",
+      "texture": "cobblemon:textures/pokemon/0728_popplio/popplio.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0728_popplio/popplio_shiny.png"
+    }
+  ]
+}

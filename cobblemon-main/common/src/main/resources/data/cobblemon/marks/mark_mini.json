@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_mini",
+	"title": "cobblemon.mark.mark_mini.title",
+	"titleColor": "808594",
+	"description": "cobblemon.mark.mark_mini.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_mini.png",
+	"indexNumber": 102
+}

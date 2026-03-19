@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:hypno",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:hypno",
+      "model": "cobblemon:hypno_male.geo",
+      "texture": "cobblemon:textures/pokemon/0097_hypno/hypno.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0097_hypno/hypno_shiny.png"
+    }
+  ]
+}

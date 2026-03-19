@@ -1,0 +1,131 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "cobblemon:block/crops/vivichoke_seed_stage_5",
+		"particle": "cobblemon:block/crops/vivichoke_seed_stage_5"
+	},
+	"elements": [
+		{
+			"name": "ns",
+			"from": [0, -1, 8],
+			"to": [16, 10, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"faces": {
+				"north": {"uv": [0, 5, 16, 16], "texture": "#0"},
+				"south": {"uv": [0, 5, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"name": "ew",
+			"from": [8, -1, 0],
+			"to": [8, 10, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, -1, 8]},
+			"faces": {
+				"east": {"uv": [0, 5, 16, 16], "texture": "#0"},
+				"west": {"uv": [0, 5, 16, 16], "texture": "#0"}
+			}
+		},
+		{
+			"from": [10.5, 8, 5.5],
+			"to": [10.5, 13, 10.5],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [10.5, 8, 8]},
+			"faces": {
+				"east": {"uv": [3, 0, 8, 5], "texture": "#0"},
+				"west": {"uv": [8, 0, 13, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 8, 5.5],
+			"to": [10.5, 13, 5.5],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 8, 5.5]},
+			"faces": {
+				"north": {"uv": [3, 0, 8, 5], "texture": "#0"},
+				"south": {"uv": [8, 0, 13, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 8, 10.5],
+			"to": [10.5, 13, 10.5],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, 8, 10.5]},
+			"faces": {
+				"north": {"uv": [8, 0, 13, 5], "texture": "#0"},
+				"south": {"uv": [3, 0, 8, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5.5, 8, 5.5],
+			"to": [5.5, 13, 10.5],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [5.5, 8, 8]},
+			"faces": {
+				"east": {"uv": [8, 0, 13, 5], "texture": "#0"},
+				"west": {"uv": [3, 0, 8, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 7.98, 3],
+			"to": [11, 7.98, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"up": {"uv": [8, 5, 13, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [3, 0, 8, 5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"from": [3, 7.99, 5],
+			"to": [8, 7.99, 11],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"up": {"uv": [13, 0, 8, 5], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [8, 0, 3, 5], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 7.98, 8],
+			"to": [11, 7.98, 13],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"up": {"uv": [8, 5, 13, 0], "texture": "#0"},
+				"down": {"uv": [3, 0, 8, 5], "texture": "#0"}
+			}
+		},
+		{
+			"from": [8, 7.99, 5],
+			"to": [13, 7.99, 11],
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"up": {"uv": [13, 0, 8, 5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [8, 0, 3, 5], "rotation": 90, "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "cobblemon:block/vivichoke_seed_stage_5",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [
+				0,
+				1,
+				{
+					"name": "head",
+					"origin": [5.5, 9, 8],
+					"color": 0,
+					"children": [
+						{
+							"name": "upper_petals",
+							"origin": [5.5, 9, 8],
+							"color": 0,
+							"children": [2, 3, 4, 5]
+						},
+						{
+							"name": "lower_petals",
+							"origin": [8, 9, 8],
+							"color": 0,
+							"children": [6, 7, 8, 9]
+						}
+					]
+				}
+			]
+		}
+	]
+}

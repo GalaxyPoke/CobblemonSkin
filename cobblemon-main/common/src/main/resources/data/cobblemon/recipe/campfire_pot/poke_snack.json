@@ -1,0 +1,32 @@
+{
+    "type": "cobblemon:cooking_pot",
+    "category": "complex_dishes",
+    "key": {
+        "M": {
+            "tag": "c:drinks/milk"
+        },
+        "H": {
+            "item": "minecraft:honey_bottle"
+        },
+        "V": {
+            "item": "cobblemon:vivichoke"
+        },
+        "G": {
+            "item": "cobblemon:hearty_grains"
+        }
+    },
+    "pattern": [
+        "MMM",
+        "HVH",
+        "GGG"
+    ],
+    "result": {
+        "id": "cobblemon:poke_snack"
+    },
+    "seasoningTag": "cobblemon:recipe_filters/bait_seasoning",
+    "seasoningProcessors": [
+        "food_colour",
+        "ingredient",
+        "spawn_bait"
+    ]
+}

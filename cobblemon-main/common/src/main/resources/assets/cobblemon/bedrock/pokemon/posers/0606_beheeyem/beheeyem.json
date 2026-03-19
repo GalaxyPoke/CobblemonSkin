@@ -1,0 +1,48 @@
+{
+  "portraitScale": 2.32,
+  "portraitTranslation": [-0.52, 0.04, 0],
+  "profileScale": 0.71,
+  "profileTranslation": [0, 0.7, 0],
+  "rootBone": "beheeyem",
+  "animations": {
+    "cry": "q.bedrock_stateful('beheeyem', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head_ai')", "q.bedrock('beheeyem', 'battle_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('beheeyem', 'blink')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk1')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk2')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk3')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('beheeyem', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('beheeyem', 'blink')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk1')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk2')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk3')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": ["q.look('head_ai')", "q.bedrock('beheeyem', 'ground_walk')"],
+      "quirks": [
+        "q.bedrock_quirk('beheeyem', 'blink')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk1')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk2')",
+        "q.bedrock_quirk('beheeyem', 'lights_quirk3')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('beheeyem', 'sleep')"]
+    }
+  }
+}

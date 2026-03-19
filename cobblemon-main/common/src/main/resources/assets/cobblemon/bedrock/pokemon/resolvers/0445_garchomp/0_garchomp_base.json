@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:garchomp",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:garchomp",
+      "model": "cobblemon:garchomp_male.geo",
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0445_garchomp/garchomp_shiny.png"
+    }
+  ]
+}

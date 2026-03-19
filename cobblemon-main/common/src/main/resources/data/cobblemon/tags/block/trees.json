@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:leaves",
+	"#minecraft:logs",
+	"#minecraft:overworld_natural_logs",
+	{
+      "id": "#c:leaves",
+      "required": false
+    },
+	{
+      "id": "#c:logs",
+      "required": false
+    }
+  ]
+}

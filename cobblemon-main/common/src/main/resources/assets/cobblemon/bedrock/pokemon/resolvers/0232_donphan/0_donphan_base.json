@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:donphan",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:donphan",
+      "model": "cobblemon:donphan_male.geo",
+      "texture": "cobblemon:textures/pokemon/0232_donphan/donphan.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0232_donphan/donphan_shiny.png"
+    }
+  ]
+}

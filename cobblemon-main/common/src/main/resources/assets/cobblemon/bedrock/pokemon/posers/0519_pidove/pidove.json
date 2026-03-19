@@ -1,0 +1,230 @@
+{
+  "portraitScale": 2.4,
+  "portraitTranslation": [ -0.2, -1.0, 0 ],
+  "profileScale": 1.0,
+  "profileTranslation": [ 0, 0.3, 0 ],
+  "animations": {
+    "cry": "q.bedrock_stateful('pidove', 'cry')",
+    "recoil": "q.bedrock_stateful('pidove', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "FLOAT"],
+      "isBattle": false,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('pidove', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('pidove', 'blink', 3, 8, 1)",
+        "q.bedrock_quirk('pidove', 'look_quirk', 20, 48, 1)",
+        "q.bedrock_quirk('pidove', 'on_grass_quirk', 20, 48, 1)"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "FLOAT"],
+      "isBattle": true,
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('pidove', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('pidove', 'blink')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "shoulderleft": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": [
+        "q.bedrock('pidove', 'shoulder_left')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('pidove', 'blink')",
+        "q.bedrock_quirk('pidove', 'look_quirk')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "shoulderright": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": [
+        "q.bedrock('pidove', 'shoulder_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('pidove', 'blink')",
+        "q.bedrock_quirk('pidove', 'look_quirk')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('pidove', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('pidove', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('pidove', 'sleep')"
+      ],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": true
+        }
+      ]
+    },
+    "hovering": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('pidove', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('pidove', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": false
+        }
+      ]
+    },
+    "flying": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.look('neck')",
+        "q.bedrock('pidove', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('pidove', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "wing_open_right",
+          "isVisible": true
+        },
+        {
+          "part": "wing_open_left",
+          "isVisible": true
+        },
+        {
+          "part": "wing_closed_right",
+          "isVisible": false
+        },
+        {
+          "part": "wing_closed_left",
+          "isVisible": false
+        }
+      ]
+    }
+  }
+}

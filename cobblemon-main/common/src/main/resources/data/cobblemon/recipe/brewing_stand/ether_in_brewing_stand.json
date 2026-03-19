@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:leppa_berry"
+  },
+  "bottle": {
+    "item": "cobblemon:medicinal_brew"
+  },
+  "result": {
+    "id": "cobblemon:ether"
+  }
+}

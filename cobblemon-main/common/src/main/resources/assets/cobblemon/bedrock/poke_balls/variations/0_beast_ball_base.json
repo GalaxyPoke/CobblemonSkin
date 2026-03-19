@@ -1,0 +1,13 @@
+{
+  "pokeball": "cobblemon:beast_ball",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:beast_ball",
+      "model": "cobblemon:poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/beast_ball.png",
+      "layers": []
+    }
+  ]
+}

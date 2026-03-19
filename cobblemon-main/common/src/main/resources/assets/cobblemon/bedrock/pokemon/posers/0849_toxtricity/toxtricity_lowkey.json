@@ -1,0 +1,36 @@
+{
+  "portraitScale": 1.9,
+  "portraitTranslation": [ -0.41, 2.3, 0],
+  "profileScale": 0.53,
+  "profileTranslation": [ 0, 0.99, 0],
+  "rootBone": "toxtricity",
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head')", "q.bedrock('toxtricity_lowkey', 'battle_idle')"]
+    },
+    "standing": {
+      "poseTypes": [        
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": ["q.look('head')", "q.bedrock('toxtricity_lowkey', 'ground_idle')"]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('toxtricity_lowkey', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')",
+        "q.bimanual_swing(1, 1, 'arm_left1', 'arm_right1')"
+      ]
+    }
+  }
+}

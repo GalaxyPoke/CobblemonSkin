@@ -1,0 +1,107 @@
+{
+  "parent": "cobblemon:harvest_apricorn",
+  "display": {
+    "icon": {
+      "id": "cobblemon:campfire_pot_black"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.place_campfire_pot"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.place_campfire_pot.description"
+    }
+  },
+  "criteria": {
+    "place_pot": {
+      "trigger": "minecraft:item_used_on_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_red"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_yellow"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_green"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_blue"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_pink"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_black"
+                      ]
+                    }
+                  },
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "items": [
+                        "cobblemon:campfire_pot_white"
+                      ]
+                    }
+                  }
+                ]
+              },
+              {
+                "condition": "minecraft:any_of",
+                "terms": [
+                  {
+                    "condition": "minecraft:block_state_property",
+                    "block": "cobblemon:campfire"
+                  },
+                  {
+                    "condition": "minecraft:block_state_property",
+                    "block": "cobblemon:soul_campfire"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "place_pot"
+    ]
+  ]
+}

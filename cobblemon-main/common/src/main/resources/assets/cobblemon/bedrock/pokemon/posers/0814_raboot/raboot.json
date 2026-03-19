@@ -1,0 +1,58 @@
+{
+  "portraitScale": 1.89,
+  "portraitTranslation": [-0.14, 0.41, 0],
+  "profileScale": 0.66,
+  "profileTranslation": [0, 0.78, 0],
+  "rootBone": "raboot",
+  "animations": {
+    "cry": "q.bedrock_stateful('raboot', 'cry')"
+  },
+  "poses": {
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('raboot', 'sleep')"],
+      "quirks": ["q.bedrock_quirk('raboot', 'sleep_ear_quirk')"]
+    },
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": [
+          "STAND",
+          "NONE",
+          "PORTRAIT",
+          "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raboot', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('raboot', 'blink')",
+        "q.bedrock_quirk('raboot', 'hip_quirk')"
+      ]
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raboot', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('raboot', 'blink')"]
+    },
+    "battle-idle": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('raboot', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('raboot', 'blink')"]
+    }
+  }
+}

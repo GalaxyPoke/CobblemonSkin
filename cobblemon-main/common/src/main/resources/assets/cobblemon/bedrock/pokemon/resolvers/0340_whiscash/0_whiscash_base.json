@@ -1,0 +1,27 @@
+{
+  "species": "cobblemon:whiscash",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:whiscash",
+      "model": "cobblemon:whiscash.geo",
+      "texture": "cobblemon:textures/pokemon/0340_whiscash/whiscash.png",
+      "layers": []
+    },
+    {
+      "aspects": ["whiscash_nero"],
+      "model": "cobblemon:whiscash_nero.geo",
+      "texture": "cobblemon:textures/pokemon/0340_whiscash/whiscash_nero.png"
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0340_whiscash/whiscash_shiny.png"
+    },
+    {
+      "aspects": ["whiscash_nero", "shiny"],
+      "model": "cobblemon:whiscash_nero.geo",
+      "texture": "cobblemon:textures/pokemon/0340_whiscash/whiscash_nero_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_thorny",
+	"title": "cobblemon.mark.mark_personality_thorny.title",
+	"titleColor": "D957A7",
+	"description": "cobblemon.mark.mark_personality_thorny.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_thorny.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 95
+}

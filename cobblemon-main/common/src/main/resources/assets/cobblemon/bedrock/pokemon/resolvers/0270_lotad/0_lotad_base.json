@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:lotad",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:lotad",
+      "model": "cobblemon:lotad.geo",
+      "texture": "cobblemon:textures/pokemon/0270_lotad/lotad.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0270_lotad/lotad_shiny.png"
+    }
+  ]
+}

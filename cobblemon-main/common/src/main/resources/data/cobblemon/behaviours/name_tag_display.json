@@ -1,0 +1,25 @@
+{
+    "name": "cobblemon.behaviour.name_tag_display.name",
+    "description": "cobblemon.behaviour.name_tag_display.desc",
+    "entityType": "cobblemon:npc",
+    "undo": [
+      "q.entity.set_name_tag_visible(true);q.entity.delete_variable('name_tag_display');"
+    ],
+    "configurations": [
+      {
+        "type": "script",
+        "variables": [
+          {
+            "variableName": "name_tag_display",
+            "displayName": "cobblemon.entity.variable.display_name_tag.name",
+            "description": "cobblemon.entity.variable.display_name_tag.desc",
+            "type": "BOOLEAN",
+            "defaultValue": "true"
+          }
+        ],
+        "script": [
+           "q.entity.set_name_tag_visible(q.entity.config.name_tag_display)"
+        ]
+      }
+    ]
+  }

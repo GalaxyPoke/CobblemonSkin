@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:terapagos",
+  "speciesId": "cobblemon:terapagos",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Terastal",
+      "unlockForms": [
+        "Terastal"
+      ]
+    },
+    {
+      "displayForm": "Stellar",
+      "unlockForms": [
+        "Stellar"
+      ]
+    }
+  ],
+  "variations": []
+}

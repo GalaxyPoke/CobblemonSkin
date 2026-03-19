@@ -1,0 +1,17 @@
+'This script adds all sorts of things from the Pokemon (the species file) to the config struct';
+
+
+'Applies the pickup items from the Pokemon species file to the entity config';
+t.poke = q.entity;
+t.index = 0;
+t.pickup_items = q.array();
+for_each(t.item, t.poke.behaviour.item_interact.pickup_items, {
+    t.pickup_items[t.index] = t.item;
+    t.index = t.index + 1;
+});
+t.poke.config.pickup_items = t.pickup_items;
+
+'Applies the block behaviours from the Pokemon species file to the entity config';
+q.entity.config.immune_to_sweet_berry_bush_block = q.entity.behaviour.block_interact.immune_to_sweet_berry_bush_block;
+q.entity.config.can_stand_on_powder_snow = q.entity.behaviour.block_interact.can_stand_on_powder_snow;
+q.entity.config.can_path_through_sacc_leaves = q.entity.behaviour.block_interact.can_path_through_sacc_leaves;

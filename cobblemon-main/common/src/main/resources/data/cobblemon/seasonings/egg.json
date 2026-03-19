@@ -1,0 +1,8 @@
+{
+  "ingredient": "minecraft:egg",
+  "colour": "white",
+  "food": {
+    "hunger": 2,
+    "saturation": 1.2
+  }
+}

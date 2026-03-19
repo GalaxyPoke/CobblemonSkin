@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#cobblemon:crops",
+    "#cobblemon:apricorns",
+    "#cobblemon:saccharine_leaves",
+	"cobblemon:galarica_nut_bush"
+  ]
+}

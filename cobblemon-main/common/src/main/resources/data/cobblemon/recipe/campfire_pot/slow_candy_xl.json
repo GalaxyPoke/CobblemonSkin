@@ -1,0 +1,27 @@
+{
+  "type": "cobblemon:cooking_pot",
+  "group": "iv_candy_bad",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "cobblemon:tamato_berry"
+    },
+    "B": {
+      "item": "cobblemon:enigma_berry"
+    },
+    "E": {
+      "item": "cobblemon:exp_candy_xl"
+    }
+  },
+  "pattern": [
+    "TBT",
+    "BEB",
+    "TBT"
+  ],
+  "result": {
+    "count": 3,
+    "id": "cobblemon:slow_candy"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

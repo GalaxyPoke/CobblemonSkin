@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:beheeyem",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:beheeyem",
+      "model": "cobblemon:beheeyem.geo",
+      "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0606_beheeyem/beheeyem_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

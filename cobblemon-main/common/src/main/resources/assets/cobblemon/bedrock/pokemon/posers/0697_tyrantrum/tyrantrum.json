@@ -1,0 +1,99 @@
+{
+  "rootBone": "tyrantrum",
+  "portraitScale": 0.59,
+  "portraitTranslation": [-0.86, 2, 5],
+  "profileScale": 0.29,
+  "profileTranslation": [0.02, 1.28, -10],
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0],
+    "seat_2": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.4, 0.5],
+    "seat_1_reverse": [0, 0.4, 0.5],
+    "seat_2": [0, 0.4, 0.5],
+    "seat_2_reverse": [0, 0.4, 0.5]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.4, 0.5],
+    "seat_1_reverse": [0, 0.4, 0.5],
+    "seat_2": [0, 0.4, 0.5],
+    "seat_2_reverse": [0, 0.4, 0.5]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('tyrantrum', 'cry')",
+    "recoil": "q.bedrock_stateful('tyrantrum', 'recoil')",
+    "physical": "q.bedrock_primary('tyrantrum', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('tyrantrum', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('tyrantrum', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "isBattle": true,
+      "poseTypes": [
+        "STAND"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tyrantrum', 'battle_idle')"
+      ],
+      "namedAnimations": {
+      "cry": "q.bedrock_primary('tyrantrum', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "standing": {
+      "isBattle": false,
+      "poseTypes": [
+        "STAND","PORTRAIT","PROFILE","NONE"
+      ],
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tyrantrum', 'ground_idle')"
+      ]
+    },
+      "in-air": {
+        "poseTypes": ["STAND", "WALK", "NONE"],
+        "isBattle": false,
+        "condition": "q.in_air && q.is_ridden",
+        "animations": ["q.look('head')", "q.bedrock('tyrantrum', 'ride_jump')"],
+        "transformTicks": 5,
+        "transformToTicks": 5
+      },
+    "walk": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "condition": "!q.in_air&& !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tyrantrum', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('tyrantrum', 'ride_ground_run')"
+        }
+      ]
+    },
+      "run": {
+        "poseTypes": ["STAND","WALK"],
+        "isBattle": false,
+        "condition": "!q.in_air && q.is_sprinting",
+        "animations": [
+          "q.look('head')",
+          "q.bedrock('tyrantrum', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('tyrantrum', 'ride_ground_run')"
+        }
+        ]
+      },
+        "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('tyrantrum', 'ground_idle')"
+      ]
+    }
+  }
+}

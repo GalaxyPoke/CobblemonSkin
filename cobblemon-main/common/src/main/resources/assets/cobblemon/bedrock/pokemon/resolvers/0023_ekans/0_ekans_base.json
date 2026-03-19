@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:ekans",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ekans",
+      "model": "cobblemon:ekans.geo",
+      "texture": "cobblemon:textures/pokemon/0023_ekans/ekans.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0023_ekans/ekans_shiny.png"
+    }
+  ]
+}

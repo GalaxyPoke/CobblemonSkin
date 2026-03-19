@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "cobblemon:block/tatami_block_alt",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "cobblemon:block/tatami_block_alt",
+      "y": 0
+    },
+    "facing=south": {
+      "model": "cobblemon:block/tatami_block",
+	  "y": 180
+    },
+    "facing=west": {
+      "model": "cobblemon:block/tatami_block",
+      "y": 270
+    }
+  }
+}

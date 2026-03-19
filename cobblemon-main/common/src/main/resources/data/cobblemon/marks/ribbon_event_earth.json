@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_event_earth",
+	"title": "cobblemon.mark.ribbon_event_earth.title",
+	"titleColor": "F2D23F",
+	"description": "cobblemon.mark.ribbon_event_earth.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_event_earth.png",
+	"indexNumber": 24
+}

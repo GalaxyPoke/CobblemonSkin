@@ -1,0 +1,14 @@
+{
+  "type": "choice",
+  "keys": ["metals"],
+  "default": "none",
+  "choices": [
+    "none",
+    "copper",
+    "iron",
+    "gold",
+    "netherite"
+  ],
+  "isAspect": true,
+  "aspectFormat": "metals-{{choice}}"
+}

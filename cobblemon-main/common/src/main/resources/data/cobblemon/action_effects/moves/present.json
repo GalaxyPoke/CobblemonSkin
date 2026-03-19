@@ -1,0 +1,31 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["present", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:present_actor",
+      "locators": ["target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 1
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

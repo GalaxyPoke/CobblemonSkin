@@ -1,0 +1,81 @@
+{
+  "portraitScale": 1.83,
+  "portraitTranslation": [-0.38,-0.49,0],
+  "profileScale": 0.75,
+  "profileTranslation": [0,0.61,0],
+  "animations": {},
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('torso', 0.4, 0.6)",
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('togedemaru', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('torso', 0.4, 0.6)",
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('togedemaru', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('torso', 0.4, 0.6)",
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('togedemaru', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ]
+    },
+    "shoulder_left": {
+      "poseTypes": [
+        "SHOULDER_LEFT"
+      ],
+      "animations": [
+        
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('togedemaru', 'blink')"
+      ]
+    },
+    "shoulder_right": {
+      "poseTypes": [
+        "SHOULDER_RIGHT"
+      ],
+      "animations": [
+        "q.bedrock('togedemaru', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('togedemaru', 'blink')"
+      ]
+    }
+  }
+}

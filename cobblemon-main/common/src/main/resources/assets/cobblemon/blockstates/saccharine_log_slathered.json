@@ -1,0 +1,94 @@
+{
+  "variants": {
+    "facing=east,honey_type=0": {
+      "model": "cobblemon:block/saccharine_log_slathered_0",
+      "y": 90
+    },
+    "facing=north,honey_type=0": {
+      "model": "cobblemon:block/saccharine_log_slathered_0"
+    },
+    "facing=south,honey_type=0": {
+      "model": "cobblemon:block/saccharine_log_slathered_0",
+      "y": 180
+    },
+    "facing=west,honey_type=0": {
+      "model": "cobblemon:block/saccharine_log_slathered_0",
+      "y": 270
+    },
+    "facing=east,honey_type=1": {
+      "model": "cobblemon:block/saccharine_log_slathered_1",
+      "y": 90
+    },
+    "facing=north,honey_type=1": {
+      "model": "cobblemon:block/saccharine_log_slathered_1"
+    },
+    "facing=south,honey_type=1": {
+      "model": "cobblemon:block/saccharine_log_slathered_1",
+      "y": 180
+    },
+    "facing=west,honey_type=1": {
+      "model": "cobblemon:block/saccharine_log_slathered_1",
+      "y": 270
+    },
+    "facing=east,honey_type=2": {
+      "model": "cobblemon:block/saccharine_log_slathered_2",
+      "y": 90
+    },
+    "facing=north,honey_type=2": {
+      "model": "cobblemon:block/saccharine_log_slathered_2"
+    },
+    "facing=south,honey_type=2": {
+      "model": "cobblemon:block/saccharine_log_slathered_2",
+      "y": 180
+    },
+    "facing=west,honey_type=2": {
+      "model": "cobblemon:block/saccharine_log_slathered_2",
+      "y": 270
+    },
+    "facing=east,honey_type=3": {
+      "model": "cobblemon:block/saccharine_log_slathered_3",
+      "y": 90
+    },
+    "facing=north,honey_type=3": {
+      "model": "cobblemon:block/saccharine_log_slathered_3"
+    },
+    "facing=south,honey_type=3": {
+      "model": "cobblemon:block/saccharine_log_slathered_3",
+      "y": 180
+    },
+    "facing=west,honey_type=3": {
+      "model": "cobblemon:block/saccharine_log_slathered_3",
+      "y": 270
+    },
+    "facing=east,honey_type=4": {
+      "model": "cobblemon:block/saccharine_log_slathered_4",
+      "y": 90
+    },
+    "facing=north,honey_type=4": {
+      "model": "cobblemon:block/saccharine_log_slathered_4"
+    },
+    "facing=south,honey_type=4": {
+      "model": "cobblemon:block/saccharine_log_slathered_4",
+      "y": 180
+    },
+    "facing=west,honey_type=4": {
+      "model": "cobblemon:block/saccharine_log_slathered_4",
+      "y": 270
+    },
+    "facing=east,honey_type=5": {
+      "model": "cobblemon:block/saccharine_log_slathered_5",
+      "y": 90
+    },
+    "facing=north,honey_type=5": {
+      "model": "cobblemon:block/saccharine_log_slathered_5"
+    },
+    "facing=south,honey_type=5": {
+      "model": "cobblemon:block/saccharine_log_slathered_5",
+      "y": 180
+    },
+    "facing=west,honey_type=5": {
+      "model": "cobblemon:block/saccharine_log_slathered_5",
+      "y": 270
+    }
+  }
+}

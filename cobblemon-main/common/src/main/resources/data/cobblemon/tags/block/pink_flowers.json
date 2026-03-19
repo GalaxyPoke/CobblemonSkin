@@ -1,0 +1,185 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:allium",
+	"minecraft:lilac",
+	"minecraft:peony",
+	"minecraft:pink_tulip",
+	{
+      "id": "aether_redux:iridia",
+      "required": false
+    },
+	{
+      "id": "aether_redux:pink_prismatic_petals",
+      "required": false
+    },
+	{
+      "id": "aether_redux:mixed_prismatic_petals",
+      "required": false
+    },
+	{
+      "id": "aether_redux:sweet_blossom",
+      "required": false
+    },
+	{
+      "id": "ancient_aether:highland_viola",
+      "required": false
+    },
+	{
+      "id": "biomemakeover:foxglove",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:pink_daffodil",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:pink_hibiscus",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:wildflower",
+      "required": false
+    },
+	{
+      "id": "blue_skies:blush_blossom",
+      "required": false
+    },
+	{
+      "id": "blue_skies:briskbloom",
+      "required": false
+    },
+	{
+      "id": "blue_skies:camellia",
+      "required": false
+    },
+	{
+      "id": "blue_skies:midday_bayhop",
+      "required": false
+    },
+	{
+      "id": "botania:floating_hyacidus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_jaded_amaranthus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_jiyuulia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_jiyuulia_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_rafflowsia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_rosa_arcana",
+      "required": false
+    },
+	{
+      "id": "botania:hyacidus",
+      "required": false
+    },
+	{
+      "id": "botania:jaded_amaranthus",
+      "required": false
+    },
+	{
+      "id": "botania:jiyuulia",
+      "required": false
+    },
+	{
+      "id": "botania:jiyuulia_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:magenta_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:magenta_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:magenta_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:magenta_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:pink_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:pink_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:pink_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:pink_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:rafflowsia",
+      "required": false
+    },
+	{
+      "id": "botania:rosa_arcana",
+      "required": false
+    },
+	{
+      "id": "deep_aether:aerlavender",
+      "required": false
+    },
+	{
+      "id": "deep_aether:radiant_orchid",
+      "required": false
+    },
+	{
+      "id": "deep_aether:tall_aerlavender",
+      "required": false
+    },
+	{
+      "id": "enlightened_end:open_odd_roots",
+      "required": false
+    },
+	{
+      "id": "etcetera:bouquet",
+      "required": false
+    },
+	{
+      "id": "farmersdelight:wild_onions",
+      "required": false
+    },
+	{
+      "id": "overweight_farming:allium_bush",
+      "required": false
+    }
+  ]
+}

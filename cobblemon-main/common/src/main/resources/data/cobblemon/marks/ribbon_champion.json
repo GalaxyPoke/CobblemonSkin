@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_champion",
+	"title": "cobblemon.mark.ribbon_champion.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.ribbon_champion.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_champion.png",
+	"indexNumber": 1
+}

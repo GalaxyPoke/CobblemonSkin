@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:morpeko",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["hangry-mode"],
+      "poser": "cobblemon:morpeko",
+      "model": "cobblemon:morpeko_hangry.geo",
+      "texture": "cobblemon:textures/pokemon/0877_morpeko/morpeko_hangry.png",
+      "layers": []
+    },
+    {
+      "aspects": ["hangry-mode","shiny"],
+      "texture": "cobblemon:textures/pokemon/0877_morpeko/morpeko_hangry_shiny.png"
+    }
+  ]
+}

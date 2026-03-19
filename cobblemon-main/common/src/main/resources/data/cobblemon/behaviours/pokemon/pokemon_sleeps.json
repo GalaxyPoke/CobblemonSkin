@@ -1,0 +1,32 @@
+{
+  "name": "cobblemon.behaviour.pokemon_sleeps.name",
+  "description": "cobblemon.behaviour.pokemon_sleeps.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "5": [
+          {
+            "type": "find_resting_place",
+            "condition": "!q.entity.is_in_party"
+          },
+          {
+            "type": "go_to_sleep",
+            "onlyFromStatus": "q.entity.is_in_party"
+          }
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:pokemon_sleeping",
+      "tasksByPriority": {
+        "0": [
+          "wake_up"
+        ]
+      }
+    }
+  ]
+}

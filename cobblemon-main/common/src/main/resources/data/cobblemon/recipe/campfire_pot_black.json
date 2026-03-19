@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CGC",
+        "A A",
+        "CCC"
+    ],
+    "key": {
+        "C": {
+            "tag": "c:ingots/copper"
+        },
+        "G": {
+            "item": "minecraft:glass"
+        },
+        "A": {
+            "item": "cobblemon:black_apricorn"
+        }
+    },
+    "result": {
+        "id": "cobblemon:campfire_pot_black"
+    }
+}

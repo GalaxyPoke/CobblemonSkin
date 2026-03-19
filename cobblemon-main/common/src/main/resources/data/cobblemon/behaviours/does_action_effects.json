@@ -1,0 +1,24 @@
+{
+  "name": "cobblemon.behaviour.does_action_effects.name",
+  "description": "cobblemon.behaviour.does_action_effects.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "0": [
+          "switch_to_action_effect"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:action_effect",
+      "tasksByPriority": {
+        "0": [
+          "switch_from_action_effect"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "interaction": {
+    "type": "dialogue",
+    "dialogue": "cobblemon:npc-example"
+  },
+  "battleConfiguration": {
+    "canChallenge": true
+  },
+  "skill": 5,
+  "party": {
+    "type": "pool",
+    "minPokemon": 4,
+    "maxPokemon": 6,
+    "isStatic": true,
+    "pool": [
+      {
+        "pokemon": "weedle",
+        "weight": 10,
+        "selectableTimes": 2,
+        "npcLevels": "1-8"
+      },
+      {
+        "pokemon": "caterpie",
+        "weight": 5,
+        "npcLevels": "1-8",
+        "selectableTimes": 2
+      },
+      {
+        "pokemon": "wurmple",
+        "weight": 8,
+        "npcLevels": "1-8",
+        "selectableTimes": 2
+      },
+      {
+        "pokemon": "kakuna",
+        "weight": 7,
+        "selectableTimes": 2,
+        "npcLevels": "8-10"
+      },
+      {
+        "pokemon": "metapod",
+        "weight": 7,
+        "npcLevels": "8-10",
+        "selectableTimes": 2
+      },
+      {
+        "pokemon": "silcoon",
+        "weight": 7,
+        "npcLevels": "8-10",
+        "selectableTimes": 2
+      },
+      {
+        "pokemon": "beedrill",
+        "weight": 5,
+        "npcLevels": "10-15",
+        "selectableTimes": 1
+      },
+      {
+        "pokemon": "butterfree",
+        "weight": 5,
+        "npcLevels": "10-15",
+        "selectableTimes": 1
+      },
+      {
+        "pokemon": "dustox",
+        "weight": 5,
+        "npcLevels": "10-15",
+        "selectableTimes": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:torterra",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:torterra",
+      "model": "cobblemon:torterra.geo",
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_shiny.png"
+    }
+  ]
+}

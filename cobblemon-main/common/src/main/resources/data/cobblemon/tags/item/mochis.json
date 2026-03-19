@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cobblemon:health_mochi",
+    "cobblemon:muscle_mochi",
+    "cobblemon:resist_mochi",
+    "cobblemon:genius_mochi",
+    "cobblemon:clever_mochi",
+    "cobblemon:swift_mochi",
+    "cobblemon:fresh_start_mochi"
+  ]
+}

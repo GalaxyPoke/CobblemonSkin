@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:gourgeist",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gourgeist",
+      "model": "cobblemon:gourgeist.geo",
+      "texture": "cobblemon:textures/pokemon/0711_gourgeist/gourgeist.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0711_gourgeist/gourgeist_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0711_gourgeist/gourgeist_shiny.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0711_gourgeist/gourgeist_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

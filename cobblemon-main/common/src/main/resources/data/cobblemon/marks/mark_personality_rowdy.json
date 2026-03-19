@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_rowdy",
+	"title": "cobblemon.mark.mark_personality_rowdy.title",
+	"titleColor": "EA5F34",
+	"description": "cobblemon.mark.mark_personality_rowdy.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_rowdy.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 70
+}

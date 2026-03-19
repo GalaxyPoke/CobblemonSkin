@@ -1,0 +1,13 @@
+{
+  "pokemon": ["pichu", "tinkatink", "tinkatuff", "tinkaton"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:jukebox",
+      "aspects": ["cosmetic_item-music"]
+    },
+    {
+      "consumedItem": "minecraft:note_block",
+      "aspects": ["cosmetic_item-music"]
+    }
+  ]
+}

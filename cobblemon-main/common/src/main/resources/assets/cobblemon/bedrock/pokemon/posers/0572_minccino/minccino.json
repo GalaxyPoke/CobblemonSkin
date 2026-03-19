@@ -1,0 +1,41 @@
+{
+  "portraitScale": 1.84,
+  "portraitTranslation": [-0.07,-0.53,0],
+  "profileScale": 0.75,
+  "profileTranslation": [0,0.59,0],
+  "rootBone": "minccino",
+  "poses": {
+    "portrait": {
+      "poseTypes": ["PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('minccino', 'pose')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('minccino', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('minccino', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('minccino', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('minccino', 'ground_idle')",
+        "q.biped_walk(0.45, 0.66, 'foot_left', 'foot_right')",
+        "q.bimanual_swing(0.45, 1, 'arm_left', 'arm_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('minccino', 'blink')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "item": "cobblemon:lum_berry",
+    "effects": [
+      {
+        "type": "cobblemon:egg_group",
+        "chance": 1.00,
+        "value": 10.0,
+        "subcategory": "dragon"
+      },
+      {
+        "type": "cobblemon:egg_group",
+        "chance": 1.00,
+        "value": 10.0,
+        "subcategory": "monster"
+      }
+    ]
+  }

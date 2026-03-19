@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_scowling",
+	"title": "cobblemon.mark.mark_personality_scowling.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.mark_personality_scowling.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_scowling.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 87
+}

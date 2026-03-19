@@ -1,0 +1,108 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["thunder", "electric", "special"],
+      "delay": 1
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.thunder.actor');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:thunderbolt_actorsparks",
+      "locators": ["middle"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:thundershock_actorbolts",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.25
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:thunder_actor",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.05
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:thunder_actorring",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.05
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:thunder_actorcloud",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.45
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:thunder_targetcloud",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.5
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.thunder.target');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:thunder_target",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.02
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false && q.entity.is_on_ground == true",
+      "effect": "cobblemon:thunder_actorfloorscorch",
+      "locators": ["middle"]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false && q.entity.is_on_ground == true",
+      "effect": "cobblemon:thunder_actorsmoke",
+      "locators": ["root"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

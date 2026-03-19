@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:beef",
+    "minecraft:beetroot",
+    "minecraft:brown_mushroom",
+    "minecraft:carrot",
+    "minecraft:chicken",
+    "minecraft:cod",
+    "minecraft:dried_kelp",
+    "minecraft:egg",
+    "minecraft:golden_carrot",
+    "minecraft:mutton",
+    "minecraft:poisonous_potato",
+    "minecraft:porkchop",
+    "minecraft:potato",
+    "minecraft:pumpkin",
+    "minecraft:rabbit",
+    "minecraft:red_mushroom",
+    "minecraft:rotten_flesh",
+    "minecraft:salmon",
+    "minecraft:sweet_berries",
+    "cobblemon:medicinal_leek",
+    "cobblemon:tasty_tail",
+    "cobblemon:vivichoke"
+  ]
+}

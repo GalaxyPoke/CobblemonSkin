@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "pokedex",
+    "pattern": [
+        "IAC",
+        "ISI",
+        "IAC"
+    ],
+    "key": {
+        "S": {
+            "tag": "cobblemon:pokedex_screen"
+        },
+        "C": {
+            "tag": "c:ingots/copper"
+        },
+        "I": {
+            "tag": "c:ingots/iron"
+        },
+        "A": {
+            "item": "cobblemon:green_apricorn"
+        }
+    },
+    "result": {
+        "id": "cobblemon:pokedex_green"
+    }
+}

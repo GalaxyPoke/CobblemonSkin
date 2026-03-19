@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.razz_berry",
+				"texture_width": 16,
+				"texture_height": 8,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Razz",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -3.25, -1.5], "size": [3, 2, 3], "uv": [0, 0]},
+						{"origin": [-1, -4.25, -1], "size": [2, 1, 2], "uv": [0, 5]},
+						{"origin": [0, -1.94291, -0.78701], "size": [0, 2, 1], "pivot": [0, -0.75, 0], "rotation": [22.5, 0, 0], "uv": [0, 4]},
+						{"origin": [0, -1.94291, -0.21299], "size": [0, 2, 1], "inflate": 0.02, "pivot": [0, -0.75, 0], "rotation": [-22.5, 0, 0], "uv": [0, 0]},
+						{"origin": [-0.21299, -1.94291, 0], "size": [1, 2, 0], "pivot": [0, -0.75, 0], "rotation": [0, 0, 22.5], "uv": [8, 5]},
+						{"origin": [-0.78701, -1.94291, 0], "size": [1, 2, 0], "inflate": 0.02, "pivot": [0, -0.75, 0], "rotation": [0, 0, -22.5], "uv": [6, 5]}
+					]
+				}
+			]
+		}
+	]
+}

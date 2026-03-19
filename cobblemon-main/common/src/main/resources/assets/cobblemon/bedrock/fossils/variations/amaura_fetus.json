@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:amaura_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:amaura_fetus",
+      "model": "cobblemon:amaura_fetus.geo",
+      "texture": "cobblemon:textures/fossils/amaura.png",
+      "layers": []
+    }
+  ]
+}

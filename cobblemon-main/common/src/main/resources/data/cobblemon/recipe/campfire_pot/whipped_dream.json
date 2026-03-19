@@ -1,0 +1,23 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "minecraft:sweet_berries"
+        },
+        {
+            "item": "minecraft:sugar"
+        },
+        {
+            "tag": "c:drinks/milk"
+        },
+        {
+            "item": "minecraft:honey_bottle"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:whipped_dream"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "cobblemon:block/tumblestone/sky_tumblestone_bricks"
+  }
+}

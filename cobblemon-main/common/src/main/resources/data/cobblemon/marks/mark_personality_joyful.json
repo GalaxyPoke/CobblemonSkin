@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_joyful",
+	"title": "cobblemon.mark.mark_personality_joyful.title",
+	"titleColor": "F8B63A",
+	"description": "cobblemon.mark.mark_personality_joyful.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_joyful.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 78
+}

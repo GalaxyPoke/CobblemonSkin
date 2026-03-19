@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:lechonk",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:lechonk",
+      "model": "cobblemon:lechonk.geo",
+      "texture": "cobblemon:textures/pokemon/0915_lechonk/lechonk.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0915_lechonk/lechonk_shiny.png"
+    }
+  ]
+}

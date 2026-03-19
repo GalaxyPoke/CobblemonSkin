@@ -1,0 +1,19 @@
+{
+  "species": "cobblemon:sinistea",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:sinistea",
+      "model": "cobblemon:sinistea_phony.geo",
+      "texture": "cobblemon:textures/pokemon/0854_sinistea/sinistea.png",
+      "layers": []
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0854_sinistea/sinistea_shiny.png"
+    }
+  ]
+}

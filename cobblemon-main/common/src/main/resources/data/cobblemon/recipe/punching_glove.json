@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " WW",
+        "GHW",
+		"WG "
+    ],
+    "key": {
+        "W": {
+            "tag": "minecraft:wool"
+        },
+        "G": {
+            "tag": "c:ingots/gold"
+        },
+        "H": {
+            "item": "minecraft:rabbit_hide"
+        }
+    },
+    "result": {
+        "id": "cobblemon:punching_glove"
+    }
+}

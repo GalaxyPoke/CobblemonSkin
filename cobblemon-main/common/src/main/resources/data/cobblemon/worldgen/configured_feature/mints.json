@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:simple_random_selector",
+  "placement": [
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "cobblemon:red_mint",
+          "Properties": {
+            "is_wild": true
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "features": [
+      {
+        "feature": "cobblemon:red_mint",
+        "placement": []
+      },
+      {
+        "feature": "cobblemon:blue_mint",
+        "placement": []
+      },
+      {
+        "feature": "cobblemon:cyan_mint",
+        "placement": []
+      },
+      {
+        "feature": "cobblemon:pink_mint",
+        "placement": []
+      },
+      {
+        "feature": "cobblemon:green_mint",
+        "placement": []
+      },
+      {
+        "feature": "cobblemon:white_mint",
+        "placement": []
+      }
+    ]
+  }
+}

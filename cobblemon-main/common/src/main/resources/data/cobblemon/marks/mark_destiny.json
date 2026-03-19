@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_destiny",
+	"title": "cobblemon.mark.mark_destiny.title",
+	"titleColor": "FCABC8",
+	"description": "cobblemon.mark.mark_destiny.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_destiny.png",
+	"indexNumber": 65
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:venomoth",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:venomoth",
+      "model": "cobblemon:venomoth.geo",
+      "texture": "cobblemon:textures/pokemon/0049_venomoth/venomoth.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0049_venomoth/venomoth_shiny.png"
+    }
+  ]
+}

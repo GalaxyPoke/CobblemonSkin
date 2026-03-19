@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_stormy",
+	"title": "cobblemon.mark.mark_weather_stormy.title",
+	"titleColor": "A373DE",
+	"description": "cobblemon.mark.mark_weather_stormy.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_stormy.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 59
+}

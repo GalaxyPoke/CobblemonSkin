@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:mrmime-galar",
+  "speciesId": "cobblemon:mrmime",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Galar",
+      "unlockForms": [
+        "Galar"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:torterra",
+  "order": 8,
+  "variations": [
+    {
+      "aspects": ["tree-azalea"],
+      "model": "cobblemon:torterra_azalea.geo",
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "tree-azalea"],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_azalea_shiny.png"
+    }
+  ]
+}

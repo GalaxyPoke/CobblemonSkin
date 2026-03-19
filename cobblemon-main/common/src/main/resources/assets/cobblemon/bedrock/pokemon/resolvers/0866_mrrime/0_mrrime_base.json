@@ -1,0 +1,18 @@
+{
+  "species": "cobblemon:mrrime",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:mr_rime",
+      "model": "cobblemon:mr_rime.geo",
+      "texture": "cobblemon:textures/pokemon/0866_mrrime/mr_rime.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0866_mrrime/mr_rime_shiny.png",
+      "layers": []
+    }
+  ]
+}

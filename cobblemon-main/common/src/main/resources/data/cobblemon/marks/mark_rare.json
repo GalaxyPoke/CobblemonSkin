@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_rare",
+	"title": "cobblemon.mark.mark_rare.title",
+	"titleColor": "42B8AB",
+	"description": "cobblemon.mark.mark_rare.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_rare.png",
+	"group": "rare",
+	"chance": 0.001,
+	"indexNumber": 69
+}

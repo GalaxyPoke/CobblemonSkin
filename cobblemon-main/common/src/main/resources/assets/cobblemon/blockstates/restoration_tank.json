@@ -1,0 +1,83 @@
+{
+  "variants": {
+    "facing=north,part=bottom,on=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 180
+    },
+    "facing=north,part=bottom,on=true,triggered=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 180
+    },
+    "facing=north,part=bottom,on=true,triggered=true": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 180
+    },
+    "facing=east,part=bottom,on=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 270
+    },
+    "facing=east,part=bottom,on=true,triggered=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 270
+    },
+    "facing=east,part=bottom,on=true,triggered=true": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 270
+    },
+    "facing=south,part=bottom,on=false": {
+      "model": "cobblemon:block/restoration_tank_lower"
+    },
+    "facing=south,part=bottom,on=true,triggered=true": {
+      "model": "cobblemon:block/restoration_tank_lower"
+    },
+    "facing=south,part=bottom,on=true,triggered=false": {
+      "model": "cobblemon:block/restoration_tank_lower"
+    },
+    "facing=west,part=bottom,on=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 90
+    },
+    "facing=west,part=bottom,on=true,triggered=false": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 90
+    },
+    "facing=west,part=bottom,on=true,triggered=true": {
+      "model": "cobblemon:block/restoration_tank_lower",
+      "y": 90
+    },
+    "facing=north,part=top,on=false": {
+      "model": "cobblemon:block/restoration_tank_upper",
+      "y": 180
+    },
+    "facing=east,part=top,on=false": {
+      "model": "cobblemon:block/restoration_tank_upper",
+      "y": 270
+    },
+    "facing=east,part=top,on=true,triggered=false": {
+      "model": "cobblemon:block/restoration_tank_upper_animated",
+      "y": 270
+    },
+    "facing=south,part=top,on=false": {
+      "model": "cobblemon:block/restoration_tank_upper"
+    },
+    "facing=west,part=top,on=false": {
+      "model": "cobblemon:block/restoration_tank_upper",
+      "y": 90
+    },
+    "facing=south,part=top,on=true": {
+      "model": "cobblemon:block/restoration_tank_upper_animated"
+    },
+    "facing=west,part=top,on=true": {
+      "model": "cobblemon:block/restoration_tank_upper_animated",
+      "y": 90
+    },
+    "facing=north,part=top,on=true": {
+      "model": "cobblemon:block/restoration_tank_upper_animated",
+      "y": 180
+    },
+    "facing=east,part=top,on=true,triggered=true": {
+      "model": "cobblemon:block/restoration_tank_upper_animated",
+      "y": 270
+    }
+  }
+}

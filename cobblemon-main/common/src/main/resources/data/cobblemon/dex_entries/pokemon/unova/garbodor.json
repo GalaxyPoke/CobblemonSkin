@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:garbodor",
+  "speciesId": "cobblemon:garbodor",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

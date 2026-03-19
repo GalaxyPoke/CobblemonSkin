@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:anorith_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:anorith_fetus",
+      "model": "cobblemon:anorith_fetus.geo",
+      "texture": "cobblemon:textures/fossils/anorith.png",
+      "layers": []
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon:item/poke_bait",
+    "layer1": "cobblemon:item/poke_bait_overlay1",
+    "layer2": "cobblemon:item/poke_bait_overlay2"
+  }
+}

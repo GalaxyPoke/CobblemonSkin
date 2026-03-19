@@ -1,0 +1,8 @@
+{
+  "ingredient": "minecraft:salmon",
+  "colour": "brown",
+  "food": {
+    "hunger": 3,
+    "saturation": 4.8
+  }
+}

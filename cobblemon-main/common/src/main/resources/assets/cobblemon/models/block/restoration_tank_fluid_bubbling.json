@@ -1,0 +1,28 @@
+{
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "cobblemon:block/functional/restoration_tank_fluid_bubbling"
+	},
+	"elements": [
+		{
+			"name": "full-bubbling",
+			"from": [1.5, 3, 1.5],
+			"to": [14.5, 28, 14.5],
+			"faces": {
+				"north": {"uv": [0, 0.5, 6.5, 13], "texture": "#1"},
+				"east": {"uv": [0, 0.5, 6.5, 13], "texture": "#1"},
+				"south": {"uv": [0, 0.5, 6.5, 13], "texture": "#1"},
+				"west": {"uv": [0, 0.5, 6.5, 13], "texture": "#1"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "restoration_tank",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

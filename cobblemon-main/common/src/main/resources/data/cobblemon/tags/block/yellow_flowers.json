@@ -1,0 +1,131 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:dandelion",
+    "minecraft:sunflower",
+	{
+      "id": "biomesoplenty:goldenrod",
+      "required": false
+    },
+	{
+      "id": "botania:daffomill",
+      "required": false
+    },
+	{
+      "id": "botania:endoflame",
+      "required": false
+    },
+	{
+      "id": "botania:floating_daffomill",
+      "required": false
+    },
+	{
+      "id": "botania:floating_endoflame",
+      "required": false
+    },
+	{
+      "id": "botania:floating_gourmaryllis",
+      "required": false
+    },
+	{
+      "id": "botania:floating_labellia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:floating_marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_rafflowsia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_solegnolia",
+      "required": false
+    },
+	{
+      "id": "botania:floating_solegnolia_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:gourmaryllis",
+      "required": false
+    },
+	{
+      "id": "botania:labellia",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis",
+      "required": false
+    },
+	{
+      "id": "botania:marimorphosis_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:rafflowsia",
+      "required": false
+    },
+	{
+      "id": "botania:solegnolia",
+      "required": false
+    },
+	{
+      "id": "botania:solegnolia_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:yellow_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:yellow_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:yellow_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:yellow_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "etcetera:bouquet",
+      "required": false
+    },
+	{
+      "id": "farmersdelight:wild_cabbages",
+      "required": false
+    },
+	{
+      "id": "goodending:balmy_wildflowers",
+      "required": false
+    },
+	{
+      "id": "goodending:pastel_wildflowers",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:feysythia",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:feysythia_floating",
+      "required": false
+    }
+  ]
+}

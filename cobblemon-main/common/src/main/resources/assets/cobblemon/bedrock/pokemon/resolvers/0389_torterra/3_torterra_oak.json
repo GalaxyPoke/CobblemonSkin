@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:torterra",
+  "order": 3,
+  "variations": [
+    {
+      "aspects": ["tree-oak"],
+      "model": "cobblemon:torterra_oak.geo",
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "tree-oak"],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_oak_shiny.png"
+    }
+  ]
+}

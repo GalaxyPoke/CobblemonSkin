@@ -1,0 +1,27 @@
+{
+  "portraitScale": 1.27,
+  "portraitTranslation": [-0.17, -0.28, 0],
+  "profileScale": 0.56,
+  "profileTranslation": [0.02, 0.93, 0],
+  "rootBone": "trubbish",
+  "animations": {
+    "cry": "q.bedrock_stateful('trubbish', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('trubbish', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('trubbish', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('trubbish', 'ground_idle')",
+        "q.biped_walk(0.66, 0.2, 'leg_left', 'leg_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('trubbish', 'blink')"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "ingredient": "minecraft:rabbit",
+  "colour": "brown",
+  "food": {
+    "hunger": 3,
+    "saturation": 3
+  }
+}

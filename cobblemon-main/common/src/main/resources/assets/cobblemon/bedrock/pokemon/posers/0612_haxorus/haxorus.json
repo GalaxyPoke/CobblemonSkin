@@ -1,0 +1,53 @@
+{
+    "portraitScale": 1.35,
+    "portraitTranslation": [-0.68,2.12,1],
+    "profileScale": 0.48,
+    "profileTranslation": [0,1.07,1],
+    "rootBone": "haxorus",
+    "animations": {
+    "cry": "q.bedrock_stateful('haxorus', 'cry_placeholder')"
+    },
+    "poses": {
+      "standing": {
+        "poseTypes": [
+          "STAND",
+          "FLOAT",
+          "HOVER",
+          "NONE",
+          "PORTRAIT",
+          "PROFILE"
+        ],
+        "animations": [
+          "q.look('neck', 1, 1, 2.5, -2, 2, -2)",
+          "q.look('neck2', 1, 1, 5, -5, 2, -2)",
+          "q.look('neck3', 1, 1, 2.5, -24.5, 2, -2)",
+          "q.look('neck4', 1, 1, 5, -5, 2, -2)",
+          "q.look('neck5', 1, 1, 5, -5, 2, -2)",
+          "q.look('head_ai', 1, 1, 1, -45, 45, -45)",
+          "q.bedrock('haxorus', 'ground_idle_placeholder')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('haxorus', 'blink')"
+        ]
+      },
+      "walking": {
+        "poseTypes": [
+          "WALK",
+          "SWIM",
+          "FLY"
+        ],
+        "animations": [
+          "q.look('neck', 1, 1, 2.5, -2, 2, -2)",
+          "q.look('neck2', 1, 1, 5, -5, 2, -2)",
+          "q.look('neck3', 1, 1, 2.5, -24.5, 2, -2)",
+          "q.look('neck4', 1, 1, 5, -5, 2, -2)",
+          "q.look('neck5', 1, 1, 5, -5, 2, -2)",
+          "q.look('head_ai', 1, 1, 1, -45, 45, -45)",
+          "q.bedrock('haxorus', 'ground_walk_placeholder')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('haxorus', 'blink')"
+        ]
+      }
+    }
+  }

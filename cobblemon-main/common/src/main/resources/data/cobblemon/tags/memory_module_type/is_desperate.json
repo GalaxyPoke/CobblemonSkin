@@ -1,0 +1,7 @@
+{
+  "values": [
+    "#cobblemon:is_combat",
+    "minecraft:hurt_by",
+    "minecraft:avoid_target"
+  ]
+}

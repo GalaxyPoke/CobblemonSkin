@@ -1,0 +1,42 @@
+{
+    "timeline": [
+      {
+        "type": "add_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "animation",
+        "animation": ["scaryface", "special"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.65
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:scaryface_gleam",
+        "locators": ["eye"]
+      },
+      {
+        "type": "pause",
+        "pause": 0.78
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:scaryface_actor",
+        "locators": ["face", "target"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.25
+      },
+      {
+        "type": "remove_holds",
+        "holds": ["effects"]
+      },
+      {
+        "type": "pause",
+        "pause": 1.75
+      }
+    ]
+  }

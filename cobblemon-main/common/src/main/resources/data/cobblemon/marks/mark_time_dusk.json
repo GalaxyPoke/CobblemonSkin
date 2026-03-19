@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_time_dusk",
+	"title": "cobblemon.mark.mark_time_dusk.title",
+	"titleColor": "FF8327",
+	"description": "cobblemon.mark.mark_time_dusk.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_time_dusk.png",
+	"group": "time",
+	"chance": 0.02,
+	"indexNumber": 55
+}

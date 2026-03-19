@@ -1,0 +1,80 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_bowl": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bowl"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_leek": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:roasted_leek"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_stew": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:leek_and_potato_stew"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_potato": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:baked_potato"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:leek_and_potato_stew"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_cooking_pot_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:cooking_pot/leek_and_potato_stew_from_cooking_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stew",
+      "has_bowl",
+      "has_leek",
+      "has_potato",
+      "has_the_recipe",
+	  "has_cooking_pot_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:leek_and_potato_stew"
+    ]
+  }
+}

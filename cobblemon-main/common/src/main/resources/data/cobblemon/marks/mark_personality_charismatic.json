@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_charismatic",
+	"title": "cobblemon.mark.mark_personality_charismatic.title",
+	"titleColor": "F8B63A",
+	"description": "cobblemon.mark.mark_personality_charismatic.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_charismatic.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 74
+}

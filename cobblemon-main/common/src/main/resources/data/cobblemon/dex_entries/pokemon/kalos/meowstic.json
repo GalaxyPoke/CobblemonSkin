@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:meowstic",
+  "speciesId": "cobblemon:meowstic",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "F",
+      "unlockForms": [
+        "F"
+      ]
+    }
+  ],
+  "variations": []
+}

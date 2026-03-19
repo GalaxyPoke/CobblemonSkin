@@ -1,0 +1,11 @@
+{
+    "item": "cobblemon:rindo_berry",
+    "effects": [
+      {
+        "type": "cobblemon:typing",
+        "subcategory": "grass",
+        "chance": 1.0,
+        "value": 10.0
+      }
+    ]
+  }

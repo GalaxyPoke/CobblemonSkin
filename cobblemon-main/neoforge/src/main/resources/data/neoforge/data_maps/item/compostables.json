@@ -1,0 +1,430 @@
+{
+  "values": {
+    "cobblemon:adamant_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:aguav_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:apicot_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:apricorn_leaves": {
+      "chance": 0.3
+    },
+    "cobblemon:aspear_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:babiri_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:belue_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:big_root": {
+      "chance": 0.4
+    },
+    "cobblemon:black_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:black_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:blue_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:blue_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:blue_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:blue_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:bluk_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:bold_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:brave_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:calm_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:careful_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:charti_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:cheri_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:chesto_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:chilan_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:chople_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:coba_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:colbur_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:cornn_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:custap_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:cyan_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:cyan_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:durin_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:energy_root": {
+      "chance": 0.6
+    },
+    "cobblemon:enigma_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:figy_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:fine_remedy": {
+      "chance": 0.75
+    },
+    "cobblemon:galarica_nuts": {
+      "chance": 0.3
+    },
+    "cobblemon:ganlon_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:gentle_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:green_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:green_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:green_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:green_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:grepa_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:haban_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:hasty_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:heal_powder": {
+      "chance": 0.75
+    },
+    "cobblemon:hearty_grain_bale": {
+      "chance": 0.85
+    },
+    "cobblemon:hearty_grains": {
+      "chance": 0.65
+    },
+    "cobblemon:hondew_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:hopo_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:iapapa_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:impish_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:jaboca_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:jolly_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:kasib_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:kebia_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:kee_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:kelpsy_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:lansat_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:lax_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:leftovers": {
+      "chance": 0.5
+    },
+    "cobblemon:leppa_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:liechi_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:lonely_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:lum_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:mago_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:magost_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:maranga_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:medicinal_leek": {
+      "chance": 0.65
+    },
+    "cobblemon:mental_herb": {
+      "chance": 1.0
+    },
+    "cobblemon:micle_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:mild_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:mirror_herb": {
+      "chance": 1.0
+    },
+    "cobblemon:modest_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:naive_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:nanab_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:naughty_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:nomel_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:occa_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:oran_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:pamtre_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:passho_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:payapa_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:pecha_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:pep_up_flower": {
+      "chance": 0.85
+    },
+    "cobblemon:persim_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:petaya_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:pinap_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:pink_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:pink_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:pink_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:pink_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:pomeg_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:power_herb": {
+      "chance": 1.0
+    },
+    "cobblemon:qualot_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:quiet_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:rabuta_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:rash_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:rawst_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:razz_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:red_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:red_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:red_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:red_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:relaxed_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:remedy": {
+      "chance": 0.65
+    },
+    "cobblemon:revival_herb": {
+      "chance": 0.65
+    },
+    "cobblemon:rindo_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:roasted_leek": {
+      "chance": 0.85
+    },
+    "cobblemon:roseli_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:rowap_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:saccharine_leaves": {
+      "chance": 0.35
+    },
+    "cobblemon:saccharine_sapling": {
+      "chance": 0.3
+    },
+    "cobblemon:salac_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:sassy_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:serious_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:shuca_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:sitrus_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:spelon_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:starf_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:superb_remedy": {
+      "chance": 0.85
+    },
+    "cobblemon:sweet_apple": {
+      "chance": 0.65
+    },
+    "cobblemon:syrupy_apple": {
+      "chance": 0.65
+    },
+    "cobblemon:tamato_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:tanga_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:tart_apple": {
+      "chance": 0.65
+    },
+    "cobblemon:timid_mint": {
+      "chance": 0.95
+    },
+    "cobblemon:touga_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:vivichoke": {
+      "chance": 0.8
+    },
+    "cobblemon:vivichoke_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:wacan_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:watmel_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:wepear_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:white_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:white_apricorn_seed": {
+      "chance": 0.3
+    },
+    "cobblemon:white_herb": {
+      "chance": 1.0
+    },
+    "cobblemon:white_mint_leaf": {
+      "chance": 0.5
+    },
+    "cobblemon:white_mint_seeds": {
+      "chance": 0.3
+    },
+    "cobblemon:wiki_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:yache_berry": {
+      "chance": 0.65
+    },
+    "cobblemon:yellow_apricorn": {
+      "chance": 0.65
+    },
+    "cobblemon:yellow_apricorn_seed": {
+      "chance": 0.3
+    }
+  }
+}

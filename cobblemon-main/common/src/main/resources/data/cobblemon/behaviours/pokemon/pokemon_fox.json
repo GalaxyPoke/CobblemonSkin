@@ -1,0 +1,24 @@
+{
+  "name": "cobblemon.behaviour.pokemon_fox.name",
+  "description": "cobblemon.behaviour.pokemon_fox.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "script",
+      "executeEarly": true,
+      "script": "cobblemon:apply_fox_properties"
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "condition": "!q.entity.is_in_party",
+      "tasksByPriority": {
+        "1": [
+          "harvest_sweet_berry_bush",
+          "move_to_sweet_berry_bush",
+          "stop_moving_to_sweet_berry_bush"
+        ]
+      }
+    }
+  ]
+}

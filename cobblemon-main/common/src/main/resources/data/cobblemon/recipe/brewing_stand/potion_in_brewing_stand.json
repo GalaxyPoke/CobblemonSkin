@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:oran_berry"
+  },
+  "bottle": {
+    "item": "cobblemon:medicinal_brew"
+  },
+  "result": {
+    "id": "cobblemon:potion"
+  }
+}

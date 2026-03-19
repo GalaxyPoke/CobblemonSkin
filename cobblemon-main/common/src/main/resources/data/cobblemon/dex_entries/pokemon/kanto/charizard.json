@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:charizard",
+  "speciesId": "cobblemon:charizard",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Mega-X",
+      "unlockForms": [
+        "Mega-X"
+      ]
+    },
+    {
+      "displayForm": "Mega-Y",
+      "unlockForms": [
+        "Mega-Y"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,26 @@
+{
+    "name": "cobblemon:prehistoric_mossy_pond",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/mossy_pond",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "apply_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_mossy_pond",
+                "projection": "rigid"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/mossy_pond2",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "apply_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_mossy_pond",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

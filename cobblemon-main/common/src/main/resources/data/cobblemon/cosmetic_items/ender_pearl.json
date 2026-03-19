@@ -1,0 +1,9 @@
+{
+  "pokemon": ["spoink"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:ender_pearl",
+      "aspects": ["cosmetic_item-ender_pearl"]
+    }
+  ]
+}

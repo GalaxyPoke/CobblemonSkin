@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:dartrix-hisuibias",
+  "speciesId": "cobblemon:dartrix",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui-Bias",
+      "unlockForms": [
+        "Hisui-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_jittery",
+	"title": "cobblemon.mark.mark_personality_jittery.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.mark_personality_jittery.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_jittery.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 72
+}

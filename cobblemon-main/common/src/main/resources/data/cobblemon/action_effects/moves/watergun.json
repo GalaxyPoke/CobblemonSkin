@@ -1,0 +1,69 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["watergun", "spray", "beam", "special"],
+      "delay": 1.2
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.watergun.actor');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:watergun_spray",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.01
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:watergun_actor",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"],
+      "delay": 0.03
+    },
+    {
+      "type": "pause",
+      "pause": 0.3
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.watergun.target');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:watergun_target",
+      "locators": ["target"],
+      "delay": 0.01
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:watergun_targetfoam",
+      "locators": ["target"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.9
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "cobblemon.behaviour.pokemon_follows_owner.name",
+  "description": "cobblemon.behaviour.pokemon_follows_owner.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "condition": "q.entity.is_in_party ? true : (math.random(0, 1) < (0.1/20) && q.entity.distance_to_owner < 40 && q.entity.can_see(q.entity.owner, 40))",
+      "activity": "idle",
+      "tasksByPriority": {
+        "4": [
+          {
+            "type": "move_to_owner",
+            "teleportDistance": "q.entity.is_in_party ? 32 : 99999" ,
+            "maxDistance": "q.entity.behaviour.moving.can_move ? (q.entity.is_in_party ? 5 : 8) : 99999"
+          }
+        ]
+      }
+    }
+  ]
+}

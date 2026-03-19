@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:emolga",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:emolga",
+      "model": "cobblemon:emolga.geo",
+      "texture": "cobblemon:textures/pokemon/0587_emolga/emolga.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0587_emolga/emolga_shiny.png"
+    }
+  ]
+}

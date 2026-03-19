@@ -1,0 +1,34 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:aprijuice_white",
+      "components": {
+        "cobblemon:ride_boosts": {"boosts":{"STAMINA":69}}
+      }
+    },
+    "title": {
+      "translate": "advancements.cobblemon.max_ride_stats"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.max_ride_stats.description"
+    },
+	"hidden": false,
+	"frame": "challenge"
+  },
+  "parent": "cobblemon:ride_pokemon",
+  "criteria": {
+    "max_stats": {
+      "trigger": "cobblemon:riding_stat_boost",
+      "conditions": {
+        "requires_owner": true,
+        "ride_stat": "all",
+        "is_max": true
+      }
+    }
+  },
+  "requirements": [[ "max_stats" ]],
+  "rewards": {
+    "experience": 100
+  },
+  "sends_telemetry_event": false
+}

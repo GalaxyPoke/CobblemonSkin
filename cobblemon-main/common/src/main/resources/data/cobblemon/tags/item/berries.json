@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#cobblemon:berries/hp_recovery",
+    "#cobblemon:berries/status_recovery",
+    "#cobblemon:berries/pp_recovery",
+    "#cobblemon:berries/friendship",
+    "#cobblemon:berries/damage_reduction",
+    "#cobblemon:berries/stat_buff",
+    "#cobblemon:berries/damaging",
+    "#cobblemon:berries/non_battle"
+  ]
+}

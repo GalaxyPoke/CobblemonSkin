@@ -1,0 +1,50 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["superfang", "bite", "fang", "physical"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:superfang_actor",
+      "locator": "root"
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:superfang_actorrage",
+      "locator": "root"
+    },
+    {
+      "type": "pause",
+      "pause": 1.05
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:superfang_target",
+      "locator": "target"
+    },
+    {
+      "type": "pause",
+      "pause": 0.15
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:superfang_targetspark",
+      "locator": "target"
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

@@ -250,13 +250,13 @@ class SkinScreen(private val availableSkins: List<String>) : Screen(Component.li
 
     private fun applySkin(skinId: String) {
         if (selectedSlot < 0) return
-        minecraft?.player?.connection?.sendCommand("pokemonskin set $skinId ${selectedSlot + 1}")
+        SkinClientMod.requestApplySkin(selectedSlot + 1, skinId)
         invalidateCaches()
     }
 
     private fun clearSkin() {
         if (selectedSlot < 0) return
-        minecraft?.player?.connection?.sendCommand("pokemonskin clear ${selectedSlot + 1}")
+        SkinClientMod.requestClearSkin(selectedSlot + 1)
         invalidateCaches()
     }
 

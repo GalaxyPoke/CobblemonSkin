@@ -1,0 +1,71 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["eruption", "lava", "fire", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_particles",
+          "effect": "cobblemon:eruption_actor",
+          "locators": [
+            "middle"
+          ],
+          "targetLocators": [
+            "root"
+          ]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == true",
+          "expressions": [
+            "q.sound('move.eruption.actor');"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.85
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_particles",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "effect": "cobblemon:eruption_target",
+          "locators": [
+            "root"
+          ]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "expressions": [
+            "q.sound('move.eruption.target');"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.62
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

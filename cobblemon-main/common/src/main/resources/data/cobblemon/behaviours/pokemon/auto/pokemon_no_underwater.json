@@ -1,0 +1,20 @@
+{
+  "visible": false,
+  "configurations": [
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.behaviour.moving.swim.can_breathe_underwater && !q.entity.behaviour.moving.swim.can_walk_on_water",
+      "behaviours": [
+        "cobblemon:avoids_water",
+        "cobblemon:floats"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.behaviour.moving.swim.can_breathe_underwater && q.entity.behaviour.moving.swim.can_walk_on_water",
+      "behaviours": [
+        "cobblemon:floats"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "species": "cobblemon:pichu",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["region-bias-alola"],
+      "poser": "cobblemon:pichu_alolan",
+      "model": "cobblemon:pichu_alola_bias.geo",
+      "texture": "cobblemon:textures/pokemon/0172_pichu/pichu.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_emissive.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_emissive_shiny.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-rage_candy_bar"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "original",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_original.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-pewter_crunchies"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "partner",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_partner.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lava_cookie"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "hoenn",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_hoenn.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-old_gateau"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "sinnoh",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_sinnoh.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-casteliacone"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "unova",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_unova.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-lumiose_galette"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "kalos",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_kalos.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-big_malasada"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "alola",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_alola.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-smoked_tail_curry"],
+      "model": "cobblemon:pichu_cap_alola_bias.geo",
+      "layers": [
+        {
+          "name": "world",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_cap_world.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-compass"],
+      "model": "cobblemon:pichu_captain_alola_bias.geo",
+      "layers": [
+        {
+          "name": "captain",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_captain.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-shears"],
+      "model": "cobblemon:pichu_fluff_alola_bias.geo"
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-leather_helmet"],
+      "model": "cobblemon:pichu_detective_alola_bias.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-sinister_tea"],
+      "model": "cobblemon:pichu_detective_alola_bias.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-cocoa_beans"],
+      "model": "cobblemon:pichu_detective_alola_bias.geo",
+      "layers": [
+        {
+          "name": "detective",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_detective.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["region-bias-alola", "cosmetic_item-music"],
+      "model": "cobblemon:pichu_ukulele_alola_bias.geo",
+      "layers": [
+        {
+          "name": "ukulele",
+          "texture": "cobblemon:textures/pokemon/0172_pichu/pichu_ukulele.png"
+        }
+      ]
+    }
+  ]
+}

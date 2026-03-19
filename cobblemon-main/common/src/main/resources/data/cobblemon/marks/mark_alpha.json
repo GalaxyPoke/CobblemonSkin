@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_alpha",
+	"title": "cobblemon.mark.mark_alpha.title",
+	"titleColor": "CE3A49",
+	"description": "cobblemon.mark.mark_alpha.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_alpha.png",
+	"indexNumber": 107
+}

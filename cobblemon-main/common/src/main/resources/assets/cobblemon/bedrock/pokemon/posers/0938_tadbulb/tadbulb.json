@@ -1,0 +1,95 @@
+{
+  "portraitScale": 1.56,
+  "portraitTranslation": [-0.02, 0.52, 0],
+  "profileScale": 0.51,
+  "profileTranslation": [0.0, 1.0, 0.0],
+  "rootBone": "tadbulb",
+  "animations": {
+    "faint": "q.bedrock_primary('tadbulb', 'faint', q.curve('one'))",
+    "recoil": "q.bedrock_stateful('tadbulb', 'recoil')",
+    "physical": "q.bedrock_primary('tadbulb', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('tadbulb', 'special', q.curve('symmetrical'))",
+    "status": "q.bedrock_primary('tadbulb', 'status', q.curve('symmetrical'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND", "HOVER", "FLOAT"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tadbulb', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('tadbulb', 'blink')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('tadbulb', 'battle_cry', q.curve('symmetrical_wide'))"
+      }
+    },
+    "standing": {
+      "poseTypes": ["STAND", "HOVER", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tadbulb', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tadbulb', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tadbulb', 'ground_run')"
+      ],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["WALK", "FLY", "SWIM"],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('tadbulb', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('tadbulb', 'sleep')"]
+    },
+    "shoulder_left": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": ["q.look('head')", "q.bedrock('tadbulb', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [3, 0, 0]
+        }
+      ]
+    },
+    "shoulder_right": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": ["q.look('head')", "q.bedrock('tadbulb', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('tadbulb', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [-3, 0, 0]
+        }
+      ]
+    }
+  }
+}
+

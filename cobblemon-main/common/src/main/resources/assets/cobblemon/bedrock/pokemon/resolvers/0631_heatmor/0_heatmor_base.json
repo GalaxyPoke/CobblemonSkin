@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:heatmor",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:heatmor",
+      "model": "cobblemon:heatmor.geo",
+      "texture": "cobblemon:textures/pokemon/0631_heatmor/heatmor.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0631_heatmor/heatmor_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0631_heatmor/heatmor_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0631_heatmor/heatmor_shiny_emissive.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_jumbo",
+	"title": "cobblemon.mark.mark_jumbo.title",
+	"titleColor": "E1BDAF",
+	"description": "cobblemon.mark.mark_jumbo.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_jumbo.png",
+	"indexNumber": 101
+}

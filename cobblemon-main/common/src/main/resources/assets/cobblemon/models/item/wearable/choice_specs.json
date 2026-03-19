@@ -1,0 +1,7 @@
+{
+	"parent": "cobblemon:item/wearable/template_glasses",
+	"textures": {
+		"texture": "cobblemon:item/wearable/choice_specs",
+		"particle": "cobblemon:item/wearable/choice_specs"
+	}
+}

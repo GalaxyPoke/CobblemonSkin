@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.pinap_berry",
+				"texture_width": 16,
+				"texture_height": 8,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Pinap",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -4.5, -1.5], "size": [3, 4, 3], "uv": [0, 0]},
+						{"origin": [-1, -0.5, -1], "size": [2, 0, 2], "inflate": 0.02, "uv": [10, 0]},
+						{"origin": [0, -0.5, -1], "size": [0, 2, 1], "pivot": [0, -0.5, 0], "rotation": [10, 0, 0], "uv": [14, 4]},
+						{"origin": [0, -0.5, 0], "size": [0, 2, 1], "pivot": [0, -0.5, 0], "rotation": [-10, 0, 0], "uv": [12, 4]},
+						{"origin": [0, -0.5, 0], "size": [1, 2, 0], "pivot": [0, -0.5, 0], "rotation": [0, 0, 10], "uv": [12, 3]},
+						{"origin": [-1, -0.5, 0], "size": [1, 2, 0], "pivot": [0, -0.5, 0], "rotation": [0, 0, -10], "uv": [14, 3]}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+  "pokeball": "cobblemon:dream_ball",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:poke_ball",
+      "model": "cobblemon:poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/dream_ball.png",
+      "layers": []
+    }
+  ]
+}

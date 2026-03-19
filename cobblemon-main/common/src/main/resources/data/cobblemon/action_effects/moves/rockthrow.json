@@ -1,0 +1,31 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["rockthrow", "rock", "physical"],
+      "delay": 1.25
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:rockthrow_actor",
+      "locators": ["target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.5
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

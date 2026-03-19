@@ -1,0 +1,18 @@
+{
+  "ingredient": "minecraft:poisonous_potato",
+  "colour": "brown",
+  "food": {
+    "hunger": 1,
+    "saturation": 0.6
+  },
+  "mobEffects": [
+    {
+      "effect": "minecraft:poison",
+      "duration": 100,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

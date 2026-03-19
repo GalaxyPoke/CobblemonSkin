@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_kindly",
+	"title": "cobblemon.mark.mark_personality_kindly.title",
+	"titleColor": "49BCF4",
+	"description": "cobblemon.mark.mark_personality_kindly.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_kindly.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 88
+}

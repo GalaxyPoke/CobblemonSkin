@@ -1,0 +1,29 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.iapapa_berry",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Iapapa",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -4, -1.5], "size": [3, 2, 3], "uv": [0, 0]},
+						{"origin": [-1, -2.5, -1], "size": [2, 2, 2], "uv": [0, 5]},
+						{"origin": [0, -1.69291, -0.78701], "size": [0, 2, 1], "pivot": [0, -0.5, 0], "rotation": [22.5, 0, 0], "uv": [0, 4]},
+						{"origin": [0, -1.69291, -0.21299], "size": [0, 2, 1], "pivot": [0, -0.5, 0], "rotation": [-22.5, 0, 0], "uv": [0, 0]},
+						{"origin": [-0.21299, -1.69291, 0], "size": [1, 2, 0], "pivot": [0, -0.5, 0], "rotation": [0, 0, 22.5], "uv": [8, 5]},
+						{"origin": [-0.78701, -1.69291, 0], "size": [1, 2, 0], "pivot": [0, -0.5, 0], "rotation": [0, 0, -22.5], "uv": [6, 5]}
+					]
+				}
+			]
+		}
+	]
+}

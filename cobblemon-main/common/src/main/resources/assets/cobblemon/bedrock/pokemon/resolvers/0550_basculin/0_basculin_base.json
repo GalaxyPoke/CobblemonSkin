@@ -1,0 +1,47 @@
+{
+  "species": "cobblemon:basculin",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:basculin",
+      "model": "cobblemon:basculin_redstripe.geo",
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny.png"
+    },
+    {
+      "aspects": ["redstriped"],
+      "model": "cobblemon:basculin_redstripe.geo",
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "redstriped"],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_redstripe_shiny.png"
+    },
+    {
+      "aspects": ["bluestriped"],
+      "model": "cobblemon:basculin_bluestripe.geo",
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe.png"
+    },
+    {
+      "aspects": ["bluestriped", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_bluestripe_shiny.png"
+    },
+    {
+      "aspects": ["whitestriped"],
+      "poser": "cobblemon:basculin_whitestripe",
+      "model": "cobblemon:basculin_whitestripe.geo",
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_whitestripe.png"
+    },
+    {
+      "aspects": ["whitestriped", "shiny"],
+      "poser": "cobblemon:basculin_whitestripe",
+      "texture": "cobblemon:textures/pokemon/0550_basculin/basculin_whitestripe_shiny.png"
+    }
+  ]
+}

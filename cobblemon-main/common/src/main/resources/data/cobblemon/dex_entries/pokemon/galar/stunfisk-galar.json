@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:stunfisk-galar",
+  "speciesId": "cobblemon:stunfisk",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Galar",
+      "unlockForms": [
+        "Galar"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,76 @@
+{
+  "portraitScale": 1.74,
+  "portraitTranslation": [ 0.17, -0.17, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [ -0.01, 0.75, 0],
+  "rootBone": "whirlipede",
+  "animations": {
+    "cry": "q.bedrock_stateful('whirlipede', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('body', 0, 1)",
+        "q.bedrock('whirlipede', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('whirlipede', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('body', 0, 1)",
+        "q.bedrock('whirlipede', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('whirlipede', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('whirlipede', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.bedrock('whirlipede', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('whirlipede', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('body', 0, 1)",
+        "q.bedrock('whirlipede', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('whirlipede', 'blink')"
+      ],
+      "transformTicks": 5
+    }
+  }
+}

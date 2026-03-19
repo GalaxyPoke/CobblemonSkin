@@ -1,0 +1,11 @@
+{
+    "item": "cobblemon:passho_berry",
+    "effects": [
+      {
+        "type": "cobblemon:typing",
+        "subcategory": "water",
+        "chance": 1.0,
+        "value": 10.0
+      }
+    ]
+  }

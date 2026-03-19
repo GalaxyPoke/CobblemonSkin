@@ -1,0 +1,59 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["eggbomb", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_sound",
+          "entityCondition": "q.entity.is_user == true",
+          "sound": "minecraft:entity.egg.throw"
+        },
+        {
+        "type": "entity_particles",
+        "effect": "cobblemon:eggbomb_actoregg",
+        "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+        "locators": ["special", "target"],
+        "targetLocators": ["target"]
+      },
+      {
+        "type": "entity_particles",
+        "effect": "cobblemon:eggbomb_actoreggmiss",
+        "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == true",
+        "locators": ["special", "target"],
+        "targetLocators": ["target"]
+      }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.55
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_sound",
+          "entityCondition": "q.entity.is_user == false",
+          "sound": "minecraft:entity.generic.explode"
+        }
+      ]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.75
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:pineco",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:pineco",
+      "model": "cobblemon:pineco.geo",
+      "texture": "cobblemon:textures/pokemon/0204_pineco/pineco.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0204_pineco/pineco_shiny.png"
+    }
+  ]
+}

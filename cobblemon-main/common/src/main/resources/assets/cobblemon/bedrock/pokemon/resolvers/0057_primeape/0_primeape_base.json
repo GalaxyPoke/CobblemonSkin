@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:primeape",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:primeape",
+      "model": "cobblemon:primeape.geo",
+      "texture": "cobblemon:textures/pokemon/0057_primeape/primeape.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0057_primeape/primeape_shiny.png"
+    }
+  ]
+}

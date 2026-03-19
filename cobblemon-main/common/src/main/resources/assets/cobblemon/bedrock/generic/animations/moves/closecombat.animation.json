@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.closecombat.actor": {
+			"animation_length": 3,
+			"bones": {
+				"root_part": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.0417": [0, 0, -3],
+						"0.0833": [0, 0, -6],
+						"0.125": [0, 0, -16],
+						"0.2917": [0, 0, -26],
+						"2.2917": [0, 0, -10],
+						"2.375": [0, 0, -4],
+						"2.5": [0, 0, 0]
+					},
+					"scale": {
+						"0.0": [1, 1, 1],
+						"0.0417": [1, 1, 1.05],
+						"0.0833": [1, 1, 1.2],
+						"0.125": {"pre": [0.9841, 0.9841, 1.6], "post": [0, 0, 0]},
+						"2.2917": {"pre": [0, 0, 0], "post": [1, 1, 1]}
+					}
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "closecombat_actor",
+					"locator": "middle"
+				},
+				"0.0417": {
+					"effect": "closecombat_dashlines",
+					"locator": "middle"
+				}
+			}
+		}
+	}
+}

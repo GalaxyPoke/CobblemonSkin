@@ -1,0 +1,19 @@
+{
+  "name": "cobblemon.behaviour.moves_to_water.name",
+  "description": "cobblemon.behaviour.moves_to_water.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "3": [
+          {
+            "type": "cobblemon:move_into_fluid",
+            "movesIntoWater": true,
+            "movesIntoLava": false
+          }
+        ]
+      }
+    }
+  ]
+}

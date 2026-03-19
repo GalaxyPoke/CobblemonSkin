@@ -1,0 +1,43 @@
+{
+  "visible": false,
+  "configurations": [
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.is_wild",
+      "behaviours": [
+        "cobblemon:pokemon_follows_owner"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.is_wild && q.entity.behaviour.resting.will_sleep_on_bed",
+      "behaviours": [
+        "cobblemon:pokemon_sleeps_on_trainer_bed"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.is_wild && (q.entity.is_pastured && q.entity.pasture_conflict_enabled == 1)",
+      "behaviours": [
+        "cobblemon:attack_hostile_mobs"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "!q.entity.is_wild && q.entity.is_in_party && q.entity.behaviour.combat.will_defend_owner",
+      "behaviours": [
+        "cobblemon:defend_owner"
+      ]
+    },
+    {
+      "type": "add_memories_and_sensors",
+      "condition": "!q.entity.is_wild && q.entity.is_in_party && q.entity.behaviour.combat.will_defend_owner",
+      "memories": [
+        "cobblemon:nearest_visible_attacker"
+      ],
+      "sensors": [
+        "cobblemon:pokemon_owner_under_attack"
+      ]
+    }
+  ]
+}

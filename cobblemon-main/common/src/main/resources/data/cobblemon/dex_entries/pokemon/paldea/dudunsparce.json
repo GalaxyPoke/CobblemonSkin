@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:dudunsparce",
+  "speciesId": "cobblemon:dudunsparce",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Three-Segment",
+      "unlockForms": [
+        "Three-Segment"
+      ]
+    }
+  ],
+  "variations": []
+}

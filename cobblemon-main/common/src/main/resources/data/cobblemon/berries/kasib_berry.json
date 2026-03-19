@@ -1,0 +1,172 @@
+{
+  "baseYield": {
+    "min": 1,
+    "max": 3
+  },
+  "preferredBiomeTags": [
+    "cobblemon:is_dripstone",
+    "cobblemon:is_lush",
+    "cobblemon:is_spooky",
+    "cobblemon:is_swamp",
+    "cobblemon:is_taiga"
+  ],
+  "growthTime": {
+    "min": 45,
+    "max": 55
+  },
+  "refreshRate": {
+    "min": 23,
+    "max": 27
+  },
+  "favoriteMulches": [
+    "coarse",
+    "humid"
+  ],
+  "growthFactors": [
+    {
+      "variant": "cobblemon:preferred_biome",
+      "bonusYield": {
+        "min": 0,
+        "max": 1
+      }
+    }
+  ],
+  "randomizedGrowthPoints": true,
+  "spawnConditions": [
+    {
+      "variant": "cobblemon:preferred_biome",
+      "minGroveSize": 3,
+      "maxGroveSize": 5
+    }
+  ],
+  "growthPoints": [
+    {
+      "position": {
+        "x": 7.75,
+        "y": 22,
+        "z": 10
+      },
+      "rotation": {
+        "x": -147.5,
+        "y": -10,
+        "z": 180
+      }
+    },
+    {
+      "position": {
+        "x": 8.75,
+        "y": 22,
+        "z": 7.25
+      },
+      "rotation": {
+        "x": 35,
+        "y": -35,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 10.75,
+        "y": 7.5,
+        "z": 9.25
+      },
+      "rotation": {
+        "x": -150,
+        "y": -55,
+        "z": -180
+      }
+    },
+    {
+      "position": {
+        "x": 6,
+        "y": 15.5,
+        "z": 8.5
+      },
+      "rotation": {
+        "x": -150,
+        "y": 87.5,
+        "z": -180
+      }
+    },
+    {
+      "position": {
+        "x": 8,
+        "y": 11.5,
+        "z": 6
+      },
+      "rotation": {
+        "x": 32.5,
+        "y": 0,
+        "z": 0
+      }
+    }
+  ],
+  "stageOnePositioning": {
+    "position": {
+      "x": 8.15,
+      "y": 3.25,
+      "z": 8.1
+    },
+    "rotation": {
+      "x": 5,
+      "y": -10,
+      "z": -7.5
+    }
+  },
+  "pokeSnackPositionings": [
+    {
+      "position": {
+        "x": 8,
+        "y": 11.65,
+        "z": 4.1
+      },
+      "rotation": {
+        "x": 155,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 11.7,
+        "y": 11.65,
+        "z": 10.65
+      },
+      "rotation": {
+        "x": -25,
+        "y": -60,
+        "z": 180
+      }
+    },
+    {
+      "position": {
+        "x": 4.3,
+        "y": 11.65,
+        "z": 10.65
+      },
+      "rotation": {
+        "x": -25,
+        "y": 60,
+        "z": 180
+      }
+    }
+  ],
+  "mutations": {
+    "cobblemon:hopo_berry": "cobblemon:enigma_berry",
+    "cobblemon:enigma_berry": "cobblemon:kee_berry"
+  },
+  "sproutShape": "platform-sprout",
+  "matureShape": "platform-mature",
+  "weight": 2,
+  "tintIndexes": [],
+  "flowerModel": "cobblemon:flower.geo",
+  "flowerTexture": "cobblemon:flower",
+  "fruitModel": "cobblemon:kasib_berry.geo",
+  "fruitTexture": "cobblemon:kasib",
+  "boneMealChance": 0.4,
+  "colour": "PURPLE",
+  "flavours": {
+    "DRY": 10,
+    "SWEET": 20
+  }
+}

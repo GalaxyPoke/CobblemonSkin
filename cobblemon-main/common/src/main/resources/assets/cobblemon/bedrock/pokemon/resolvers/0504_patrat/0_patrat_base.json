@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:patrat",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:patrat",
+      "model": "cobblemon:patrat.geo",
+      "texture": "cobblemon:textures/pokemon/0504_patrat/patrat.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0504_patrat/patrat_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0504_patrat/patrat_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0504_patrat/patrat_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

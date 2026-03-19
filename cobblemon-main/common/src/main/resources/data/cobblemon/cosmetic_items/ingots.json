@@ -1,0 +1,21 @@
+{
+  "pokemon": ["gurdurr"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:copper_ingot",
+      "aspects": ["metals-copper"]
+    },
+    {
+      "consumedItem": "minecraft:iron_ingot",
+      "aspects": ["metals-iron"]
+    },
+    {
+      "consumedItem": "minecraft:gold_ingot",
+      "aspects": ["metals-gold"]
+    },
+    {
+      "consumedItem": "minecraft:netherite_ingot",
+      "aspects": ["metals-netherite"]
+    }
+  ]
+}

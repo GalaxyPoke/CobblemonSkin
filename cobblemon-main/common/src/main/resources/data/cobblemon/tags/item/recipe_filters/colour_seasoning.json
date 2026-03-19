@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#cobblemon:recipe_filters/bait_seasoning",
+    "#cobblemon:recipe_filters/effect_seasoning",
+    "#cobblemon:recipe_filters/flavour_seasoning",
+    "#cobblemon:recipe_filters/nutrition_seasoning",
+    "#cobblemon:recipe_filters/poke_puff_seasoning"
+  ]
+}

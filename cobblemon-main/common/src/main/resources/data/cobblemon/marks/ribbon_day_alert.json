@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_day_alert",
+	"title": "cobblemon.mark.ribbon_day_alert.title",
+	"titleColor": "E9AA4A",
+	"description": "cobblemon.mark.ribbon_day_alert.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_day_alert.png",
+	"indexNumber": 8
+}

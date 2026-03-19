@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:pumpkaboo",
+  "speciesId": "cobblemon:pumpkaboo",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Small",
+      "unlockForms": [
+        "Small"
+      ]
+    },
+    {
+      "displayForm": "Large",
+      "unlockForms": [
+        "Large"
+      ]
+    },
+    {
+      "displayForm": "Super",
+      "unlockForms": [
+        "Super"
+      ]
+    }
+  ],
+  "variations": []
+}

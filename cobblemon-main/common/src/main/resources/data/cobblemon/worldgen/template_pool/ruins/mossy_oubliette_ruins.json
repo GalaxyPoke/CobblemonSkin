@@ -1,0 +1,16 @@
+{
+    "name": "cobblemon:mossy_oubliette_ruins",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:ruins/mossy_oubliette",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:ruins/mossy_oubliette_ruins",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

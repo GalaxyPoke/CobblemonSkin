@@ -1,0 +1,10 @@
+t.should_run = math.mod(q.entity.world.game_time, 20) == 0 && q.entity.is_doing_activity('idle') && !q.entity.has_walk_target;
+t.home_x = q.entity.config.home_x;
+t.home_y = q.entity.config.home_y;
+t.home_z = q.entity.config.home_z;
+t.home_radius = q.entity.config.home_radius;
+
+t.is_too_far_from_home = q.entity.distance_to_pos(t.home_x, t.home_y, t.home_z) > t.home_radius && !(t.home_x == 0 && t.home_y == 0 && t.home_z == 0);
+t.should_run && t.is_too_far_from_home ? {
+    q.entity.walk_to(t.home_x, t.home_y, t.home_z);
+};

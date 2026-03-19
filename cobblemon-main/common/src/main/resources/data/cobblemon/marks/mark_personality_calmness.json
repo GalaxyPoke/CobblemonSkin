@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_calmness",
+	"title": "cobblemon.mark.mark_personality_calmness.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.mark_personality_calmness.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_calmness.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 75
+}

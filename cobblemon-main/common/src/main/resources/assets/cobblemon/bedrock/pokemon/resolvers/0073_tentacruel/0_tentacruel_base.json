@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:tentacruel",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:tentacruel",
+      "model": "cobblemon:tentacruel.geo",
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0073_tentacruel/tentacruel_shiny_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

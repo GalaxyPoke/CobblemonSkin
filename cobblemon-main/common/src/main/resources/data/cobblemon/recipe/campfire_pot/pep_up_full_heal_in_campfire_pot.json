@@ -1,0 +1,18 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "group": "full_heal",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "cobblemon:pep_up_flower"
+        },
+        {
+            "tag": "cobblemon:full_heal_ingredients"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:full_heal"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

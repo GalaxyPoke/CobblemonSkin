@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "cobblemon:block/tumblestone/smooth_sky_tumblestone",
+    "side": "cobblemon:block/tumblestone/smooth_sky_tumblestone",
+    "top": "cobblemon:block/tumblestone/smooth_sky_tumblestone"
+  }
+}

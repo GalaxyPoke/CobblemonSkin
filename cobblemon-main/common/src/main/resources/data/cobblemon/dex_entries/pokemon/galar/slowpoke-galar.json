@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:slowpoke-galar",
+  "speciesId": "cobblemon:slowpoke",
+  "displayAspects": ["regrown-tail-1", "regrown-tail-2","regrown-tail-3"],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Galar",
+      "unlockForms": [
+        "Galar"
+      ]
+    }
+  ],
+  "variations": []
+}

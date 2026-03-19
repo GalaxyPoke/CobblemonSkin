@@ -1,0 +1,32 @@
+{
+    "species": "cobblemon:duosion",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:duosion",
+        "model": "cobblemon:duosion.geo",
+        "texture": "cobblemon:textures/pokemon/0578_duosion/duosion.png",
+        "layers": [      
+          {
+          "name": "liquid",
+          "texture": "cobblemon:textures/pokemon/0578_duosion/duosion_liquid.png",
+          "translucent": true,
+          "translucent_cull": true
+        }]
+      },
+      {
+        "aspects": [
+          "shiny"
+        ],
+        "texture": "cobblemon:textures/pokemon/0578_duosion/duosion_shiny.png",
+        "layers": [
+          {
+            "name": "liquid",
+            "texture": "cobblemon:textures/pokemon/0578_duosion/duosion_liquid_shiny.png",
+            "translucent": true,
+            "translucent_cull": true
+          }]
+      }
+    ]
+  }

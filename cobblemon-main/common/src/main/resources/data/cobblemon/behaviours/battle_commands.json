@@ -1,0 +1,27 @@
+{
+  "name": "cobblemon.behaviour.battle_commands.name",
+  "description": "cobblemon.behaviour.battle_commands.desc",
+  "configurations": [
+    {
+      "type": "add_variables",
+      "variables": [
+        {
+          "variableName": "player_win_command",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.player_win_command.name",
+          "description": "cobblemon.entity.variable.player_win_command.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "player_lose_command",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "cobblemon.entity.variable.player_lose_command.name",
+          "description": "cobblemon.entity.variable.player_lose_command.desc",
+          "type": "TEXT",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

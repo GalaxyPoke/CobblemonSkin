@@ -1,0 +1,24 @@
+{
+  "species": "cobblemon:walkingwake",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:walkingwake",
+      "model": "cobblemon:walkingwake.geo",
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_emissive.png",
+          "emissive": true,
+          "translucent": false
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/1009_walkingwake/walkingwake_shiny.png"
+    }
+  ]
+}

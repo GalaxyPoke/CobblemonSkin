@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:warped_forest",
+    {
+      "id": "betternether:nether_jungle",
+      "required": false
+    },
+    {
+      "id": "betternether:old_warped_woods",
+      "required": false
+    },
+    {
+      "id": "netherdescent:wailing_garth",
+      "required": false
+    }
+  ]
+}

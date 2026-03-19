@@ -1,0 +1,40 @@
+{
+  "portraitScale": 2.17,
+  "portraitTranslation": [ -1.26, -1.38, 0],
+  "profileScale": 0.63,
+  "profileTranslation": [ 0.03, 0.77, 0],
+  "rootBone": "yungoos",
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('yungoos', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('yungoos', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('yungoos', 'ground_idle')",
+        "q.quadruped_walk(1, 1, 'leg_front_left', 'leg_front_right', 'leg_back_left', 'leg_back_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('yungoos', 'blink')"
+      ]
+    }
+  }
+}

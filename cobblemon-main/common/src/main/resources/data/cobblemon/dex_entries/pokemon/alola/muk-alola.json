@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:muk-alola",
+  "speciesId": "cobblemon:muk",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Alola",
+      "unlockForms": [
+        "Alola"
+      ]
+    }
+  ],
+  "variations": []
+}

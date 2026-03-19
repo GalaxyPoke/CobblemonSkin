@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "miracle_seed",
+    "pattern": [
+        " S ",
+        "SLS",
+        " S "
+    ],
+    "key": {
+        "S": {
+            "tag": "c:seeds"
+        },
+        "L": {
+                "item": "cobblemon:grass_gem"
+        }
+    },
+    "result": {
+        "id": "cobblemon:miracle_seed"
+    }
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:oshawott",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:oshawott",
+      "model": "cobblemon:oshawott.geo",
+      "texture": "cobblemon:textures/pokemon/0501_oshawott/oshawott.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0501_oshawott/oshawott_shiny.png"
+    }
+  ]
+}

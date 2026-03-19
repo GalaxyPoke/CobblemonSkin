@@ -1,0 +1,32 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/smoked_tail_curry"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tail": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:tasty_tail"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tail"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/smoked_tail_curry"
+    ]
+  }
+}

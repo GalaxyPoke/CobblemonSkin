@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "N N",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "cobblemon:galarica_nuts"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "cobblemon:galarica_wreath"
+  }
+}

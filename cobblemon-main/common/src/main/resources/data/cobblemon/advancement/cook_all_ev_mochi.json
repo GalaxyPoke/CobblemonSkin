@@ -1,0 +1,96 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:resist_mochi"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.cook_all_ev_mochi"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.cook_all_ev_mochi.description"
+    }
+  },
+  "parent": "cobblemon:place_campfire_pot",
+  "criteria": {
+    "health_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:health_mochi"]
+          }
+        ]
+      }
+    },
+    "muscle_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:muscle_mochi"]
+          }
+        ]
+      }
+    },
+    "resist_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:resist_mochi"]
+          }
+        ]
+      }
+    },
+    "genius_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:genius_mochi"]
+          }
+        ]
+      }
+    },
+    "clever_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:clever_mochi"]
+          }
+        ]
+      }
+    },
+    "swift_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:swift_mochi"]
+          }
+        ]
+      }
+    },
+    "fresh_start_mochi": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": ["cobblemon:fresh_start_mochi"]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    ["health_mochi"],
+    ["muscle_mochi"],
+    ["resist_mochi"],
+    ["genius_mochi"],
+    ["clever_mochi"],
+    ["swift_mochi"],
+    ["fresh_start_mochi"]
+  ],
+  "sends_telemetry_event": false
+}

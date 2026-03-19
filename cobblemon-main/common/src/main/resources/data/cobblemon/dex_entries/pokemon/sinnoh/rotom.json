@@ -1,0 +1,45 @@
+{
+  "id": "cobblemon:rotom",
+  "speciesId": "cobblemon:rotom",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Heat",
+      "unlockForms": [
+        "Heat"
+      ]
+    },
+    {
+      "displayForm": "Wash",
+      "unlockForms": [
+        "Wash"
+      ]
+    },
+    {
+      "displayForm": "Frost",
+      "unlockForms": [
+        "Frost"
+      ]
+    },
+    {
+      "displayForm": "Fan",
+      "unlockForms": [
+        "Fan"
+      ]
+    },
+    {
+      "displayForm": "Mow",
+      "unlockForms": [
+        "Mow"
+      ]
+    }
+  ],
+  "variations": []
+}

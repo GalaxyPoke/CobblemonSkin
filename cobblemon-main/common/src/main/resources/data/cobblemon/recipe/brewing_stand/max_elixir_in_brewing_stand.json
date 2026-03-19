@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:pep_up_flower"
+  },
+  "bottle": {
+    "item": "cobblemon:elixir"
+  },
+  "result": {
+    "id": "cobblemon:max_elixir"
+  }
+}

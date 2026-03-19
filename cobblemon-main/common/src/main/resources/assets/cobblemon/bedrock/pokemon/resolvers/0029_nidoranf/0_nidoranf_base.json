@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:nidoranf",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:nidoranf",
+      "model": "cobblemon:nidoranf.geo",
+      "texture": "cobblemon:textures/pokemon/0029_nidoranf/nidoranf.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0029_nidoranf/nidoranf_shiny.png"
+    }
+  ]
+}

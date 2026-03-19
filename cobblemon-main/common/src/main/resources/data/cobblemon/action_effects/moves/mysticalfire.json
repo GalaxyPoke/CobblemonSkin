@@ -1,0 +1,37 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["mysticalfire", "fire", "special"],
+      "delay": 0.7
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:mysticalfire_actor",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:mysticalfire_target",
+      "locators": ["target"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    }
+  ]
+}

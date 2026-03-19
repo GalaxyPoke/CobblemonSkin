@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "cobblemon:razor_fang"
+        },
+        {
+            "item": "cobblemon:dragon_gem"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:dragon_fang"
+    }
+}

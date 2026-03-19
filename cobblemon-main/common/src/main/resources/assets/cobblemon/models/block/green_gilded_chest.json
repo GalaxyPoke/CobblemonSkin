@@ -1,0 +1,7 @@
+{
+	"parent": "cobblemon:block/gilded_chest",
+	"textures": {
+		"2": "cobblemon:block/functional/green_gilded_chest",
+		"particle": "cobblemon:block/functional/gilded_chest_particle"
+	}
+}

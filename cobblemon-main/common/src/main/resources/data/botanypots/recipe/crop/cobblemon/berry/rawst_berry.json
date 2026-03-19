@@ -1,0 +1,39 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["botanypots"]
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botanypots"
+    }
+  ],
+  "type": "botanypots:crop",
+  "grow_time": 1200,
+  "input": {
+    "item": "cobblemon:rawst_berry"
+  },
+  "soil": {
+    "tag": "botanypots:soil/dirt"
+  },
+  "drops": [
+    {
+      "type": "botanypots:items",
+      "items": [
+        {
+          "result": {
+            "id": "cobblemon:rawst_berry"
+          },
+          "chance": 1.00
+        }
+      ]
+    }
+  ],
+  "display": {
+    "type": "botanypots:aging",
+    "block": "cobblemon:rawst_berry"
+  }
+}

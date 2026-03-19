@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:forretress",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:forretress",
+      "model": "cobblemon:forretress.geo",
+      "texture": "cobblemon:textures/pokemon/0205_forretress/forretress.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0205_forretress/forretress_shiny.png"
+    }
+  ]
+}

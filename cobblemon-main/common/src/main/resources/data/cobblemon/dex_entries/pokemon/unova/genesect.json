@@ -1,0 +1,39 @@
+{
+  "id": "cobblemon:genesect",
+  "speciesId": "cobblemon:genesect",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Water",
+      "unlockForms": [
+        "Water"
+      ]
+    },
+    {
+      "displayForm": "Electric",
+      "unlockForms": [
+        "Electric"
+      ]
+    },
+    {
+      "displayForm": "Fire",
+      "unlockForms": [
+        "Fire"
+      ]
+    },
+    {
+      "displayForm": "Ice",
+      "unlockForms": [
+        "Ice"
+      ]
+    }
+  ],
+  "variations": []
+}

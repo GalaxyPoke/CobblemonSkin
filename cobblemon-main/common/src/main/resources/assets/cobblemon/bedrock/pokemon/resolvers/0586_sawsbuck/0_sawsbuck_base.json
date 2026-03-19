@@ -1,0 +1,48 @@
+{
+  "species": "cobblemon:sawsbuck",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:sawsbuck",
+      "model": "cobblemon:sawsbuck_spring.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "model": "cobblemon:sawsbuck_spring.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_spring_shiny.png"
+    },
+    {
+      "aspects": ["autumn"],
+      "model": "cobblemon:sawsbuck_autumn.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn.png"
+    },
+    {
+      "aspects": ["summer"],
+      "model": "cobblemon:sawsbuck_summer.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer.png"
+    },
+    {
+      "aspects": ["winter"],
+      "model": "cobblemon:sawsbuck_winter.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter.png"
+    },
+    {
+      "aspects": ["autumn", "shiny"],
+      "model": "cobblemon:sawsbuck_autumn.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_autumn_shiny.png"
+    },
+    {
+      "aspects": ["summer", "shiny"],
+      "model": "cobblemon:sawsbuck_summer.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_summer_shiny.png"
+    },
+    {
+      "aspects": ["winter", "shiny"],
+      "model": "cobblemon:sawsbuck_winter.geo",
+      "texture": "cobblemon:textures/pokemon/0586_sawsbuck/sawsbuck_winter_shiny.png"
+    }
+  ]
+}

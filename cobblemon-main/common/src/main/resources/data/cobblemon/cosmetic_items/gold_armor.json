@@ -1,0 +1,21 @@
+{
+  "pokemon": ["sudowoodo"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:golden_helmet",
+      "aspects": ["cosmetic_item-gold_armor"]
+    },
+    {
+      "consumedItem": "minecraft:golden_chestplate",
+      "aspects": ["cosmetic_item-gold_armor"]
+    },
+    {
+      "consumedItem": "minecraft:golden_leggings",
+      "aspects": ["cosmetic_item-gold_armor"]
+    },
+    {
+      "consumedItem": "minecraft:golden_boots",
+      "aspects": ["cosmetic_item-gold_armor"]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+    "pokemon.pichu_alolan.cry": {
+    "sounds": [ {  "name": "cobblemon:pokemon/pichu/pichu_alolan_cry", "volume": 0.8 } ]
+  },
+  "pokemon.pikachu_alolan.cry": {
+    "sounds": [ {  "name": "cobblemon:pokemon/pikachu/pikachu_alolan_cry", "volume": 0.8 } ]
+  }
+}

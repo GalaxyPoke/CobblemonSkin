@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:minior",
+  "speciesId": "cobblemon:minior",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Meteor",
+      "unlockForms": [
+        "Meteor"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " S ",
+        "SsS",
+        " S "
+    ],
+    "key": {
+        "S": {
+            "tag": "c:strings"
+        },
+        "s": {
+            "tag": "c:slime_balls"
+        }
+    },
+    "result": {
+        "id": "cobblemon:binding_band"
+    }
+}

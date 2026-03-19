@@ -1,0 +1,26 @@
+{
+  "name": "cobblemon.behaviour.pokemon_sleeps_on_trainer_bed.name",
+  "description": "cobblemon.behaviour.pokemon_sleeps_on_trainer_bed.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "6": [
+          "switch_to_sleep_on_trainer_bed"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:pokemon_sleep_on_trainer_bed",
+      "tasksByPriority": {
+        "0": [
+          "switch_from_sleep_on_trainer_bed",
+          "sleep_if_on_trainer_bed"
+        ]
+      }
+    }
+  ]
+}

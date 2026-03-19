@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:lileep_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:lileep_fetus",
+      "model": "cobblemon:lileep_fetus.geo",
+      "texture": "cobblemon:textures/fossils/lileep.png",
+      "layers": []
+    }
+  ]
+}

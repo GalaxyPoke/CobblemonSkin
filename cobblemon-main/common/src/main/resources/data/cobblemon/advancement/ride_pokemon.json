@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:pokemon_model",
+      "components": {
+        "cobblemon:pokemon_item": {"species":"cobblemon:mudsdale","aspects":["male"]}
+      }
+    },
+    "title": {
+      "translate": "advancements.cobblemon.ride_pokemon"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.ride_pokemon.description"
+    }
+  },
+  "parent": "cobblemon:first_catch",
+  "criteria": {
+    "check_inv": {
+      "trigger": "minecraft:started_riding",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "vehicle": {
+                "type": "cobblemon:pokemon"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

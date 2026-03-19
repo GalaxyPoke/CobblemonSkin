@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:goomy-hisuibias",
+  "speciesId": "cobblemon:goomy",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui-Bias",
+      "unlockForms": [
+        "Hisui-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

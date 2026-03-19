@@ -1,0 +1,31 @@
+{
+  "requirements": [
+    {
+      "variant": "properties",
+      "target": "furfrou"
+    }
+  ],
+  "interactions": [
+    {
+      "grouping": "cobblemon:shears",
+      "cooldown": "1",
+      "requirements": [
+        {
+          "variant": "owner_held_item",
+          "itemCondition": "#c:tools/shear"
+        }
+      ],
+      "effects": [
+        {
+          "variant": "shrink_item",
+          "amount": 8
+        },
+        {
+          "variant": "script",
+          "script":
+          "q.pokemon.run_action_effect('cobblemon:furfrou_trim');"
+        }
+      ]
+    }
+  ]
+}

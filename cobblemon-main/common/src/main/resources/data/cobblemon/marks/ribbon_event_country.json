@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_event_country",
+	"title": "cobblemon.mark.ribbon_event_country.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.ribbon_event_country.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_event_country.png",
+	"indexNumber": 22
+}

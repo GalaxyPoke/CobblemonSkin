@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_time_lunchtime",
+	"title": "cobblemon.mark.mark_time_lunchtime.title",
+	"titleColor": "B4BBCE",
+	"description": "cobblemon.mark.mark_time_lunchtime.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_time_lunchtime.png",
+	"group": "time",
+	"chance": 0.02,
+	"indexNumber": 53
+}

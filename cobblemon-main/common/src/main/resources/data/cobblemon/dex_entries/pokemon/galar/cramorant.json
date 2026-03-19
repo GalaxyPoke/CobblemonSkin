@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:cramorant",
+  "speciesId": "cobblemon:cramorant",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Gulping",
+      "unlockForms": [
+        "Gulping"
+      ]
+    },
+    {
+      "displayForm": "Gorging",
+      "unlockForms": [
+        "Gorging"
+      ]
+    }
+  ],
+  "variations": []
+}

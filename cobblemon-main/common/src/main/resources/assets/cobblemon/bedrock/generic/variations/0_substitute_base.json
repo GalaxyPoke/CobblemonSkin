@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:substitute",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:substitute",
+      "model": "cobblemon:substitute.geo",
+      "texture": "cobblemon:textures/pokemon/substitute.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/substitute_shiny.png"
+    }
+  ]
+}

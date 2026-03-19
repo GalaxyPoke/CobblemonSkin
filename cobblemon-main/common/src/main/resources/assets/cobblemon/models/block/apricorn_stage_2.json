@@ -1,0 +1,53 @@
+{
+	"textures": {
+		"apricorn": "cobblemon:block/crops/apricorn_stage_2",
+		"particle": "#apricorn"
+	},
+	"elements": [
+		{
+			"name": "stem1",
+			"from": [8, 10, 12.5],
+			"to": [8, 14, 16.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [6, 10, 8, 14], "texture": "#apricorn"},
+				"west": {"uv": [8, 10, 10, 14], "texture": "#apricorn"}
+			}
+		},
+		{
+			"name": "stem2",
+			"from": [6, 9.5, 11.5],
+			"to": [10, 10.5, 15.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [2, 14, 4, 15], "texture": "#apricorn"},
+				"east": {"uv": [0, 14, 2, 15], "texture": "#apricorn"},
+				"south": {"uv": [6, 14, 8, 15], "texture": "#apricorn"},
+				"west": {"uv": [4, 14, 6, 15], "texture": "#apricorn"},
+				"up": {"uv": [4, 14, 2, 10], "texture": "#apricorn"}
+			}
+		},
+		{
+			"name": "apricorn1",
+			"from": [5.5, 4.75, 11],
+			"to": [10.5, 9.75, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [2.5, 5, 5, 10], "texture": "#apricorn"},
+				"east": {"uv": [0, 5, 2.5, 10], "texture": "#apricorn"},
+				"south": {"uv": [7.5, 5, 10, 10], "texture": "#apricorn"},
+				"west": {"uv": [5, 5, 7.5, 10], "texture": "#apricorn"},
+				"up": {"uv": [5, 5, 2.5, 0], "texture": "#apricorn"},
+				"down": {"uv": [7.5, 0, 5, 5], "texture": "#apricorn"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "apricorn_stage_3",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2]
+		}
+	]
+}

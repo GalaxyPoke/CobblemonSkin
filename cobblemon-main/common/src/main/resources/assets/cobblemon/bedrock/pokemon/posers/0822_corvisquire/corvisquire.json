@@ -1,0 +1,82 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [-0.26, -0.29, 0],
+  "profileScale": 1.1,
+  "profileTranslation": [0, 0.12, 0],
+  "rootBone": "corvisquire",
+  "animations": {
+    "cry": "q.bedrock_stateful('corvisquire', 'cry')",
+    "recoil": "q.bedrock_stateful('corvisquire', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('neck', 0.75, 0.5)",
+        "q.look('head', 1, 0)",
+        "q.bedrock('corvisquire', 'ground_idle')",
+        "q.bedrock('corvisquire', 'closed_wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('corvisquire', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "hover": {
+      "poseTypes": ["HOVER", "FLOAT"],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('neck', 0.75, 0.5)",
+        "q.look('head', 1, 0)",
+        "q.bedrock('corvisquire', 'air_idle')",
+        "q.bedrock('corvisquire', 'wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('corvisquire', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "fly": {
+      "poseTypes": ["FLY", "SWIM"],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('neck', 0.75, 0.5)",
+        "q.look('head', 1, 0)",
+        "q.bedrock('corvisquire', 'air_fly')",
+        "q.bedrock('corvisquire', 'wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('corvisquire', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('neck', 0.75, 0.5)",
+        "q.look('head', 1, 0)",
+        "q.bedrock('corvisquire', 'ground_walk')",
+        "q.bedrock('corvisquire', 'closed_wangs')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('corvisquire', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('corvisquire', 'sleep')",
+        "q.bedrock('corvisquire', 'closed_wangs')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "transformTicks": 10
+    }
+  }
+}

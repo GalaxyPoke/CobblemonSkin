@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_zoned-out",
+	"title": "cobblemon.mark.mark_personality_zoned-out.title",
+	"titleColor": "FCABC8",
+	"description": "cobblemon.mark.mark_personality_zoned-out.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_zoned-out.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 77
+}

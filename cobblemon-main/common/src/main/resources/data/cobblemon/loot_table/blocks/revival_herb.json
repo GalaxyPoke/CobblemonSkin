@@ -1,0 +1,162 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:revival_herb"
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:revival_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "age": "8"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 2,
+                    "max": 3
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:revival_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "age": "7"
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:set_count",
+                  "count": {
+                    "min": 1,
+                    "max": 2
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "cobblemon:pep_up_flower",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "cobblemon:revival_herb",
+              "properties": {
+                "age": "8"
+              }
+            }
+          ],
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:mental_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "mutation": "mental"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:mirror_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "mutation": "mirror"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:power_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "mutation": "power"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "minecraft:item",
+              "name": "cobblemon:white_herb",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "cobblemon:revival_herb",
+                  "properties": {
+                    "mutation": "white"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "function": "minecraft:explosion_decay"
+    }
+  ]
+}

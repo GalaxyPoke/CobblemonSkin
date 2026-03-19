@@ -1,0 +1,70 @@
+{
+  "portraitScale": 2.48,
+  "portraitTranslation": [-0.33, -0.93, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0.02, 0.76, 0],
+  "rootBone": "rufflet",
+  "animations": {
+    "cry": "q.bedrock_stateful('rufflet', 'cry')",
+    "recoil": "q.bedrock_stateful('rufflet', 'recoil')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('rufflet', 'ground_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('rufflet', 'blink')",
+        "q.bedrock_quirk('rufflet', 'quirk_ground_idle1')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('rufflet', 'ground_walk')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('rufflet', 'blink')",
+        "q.bedrock_quirk('rufflet', 'quirk_ground_idle1')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head')",
+        "q.bedrock('rufflet', 'air_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('rufflet', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.pitch_tilt('body', 1)",
+        "q.look('head')",
+        "q.bedrock('rufflet', 'air_fly')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('rufflet', 'blink')",
+        "q.bedrock_quirk('rufflet', 'quirk_ground_idle1')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('rufflet', 'sleep')"],
+      "transformTicks": 10
+    }
+  }
+}

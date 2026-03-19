@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:torterra",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": ["tree-darkoak"],
+      "model": "cobblemon:torterra_darkoak.geo",
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "tree-darkoak"],
+      "texture": "cobblemon:textures/pokemon/0389_torterra/torterra_darkoak_shiny.png"
+    }
+  ]
+}

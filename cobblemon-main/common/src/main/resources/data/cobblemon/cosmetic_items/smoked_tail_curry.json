@@ -1,0 +1,9 @@
+{
+  "pokemon": ["pikachu", "raichu", "pichu"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:smoked_tail_curry",
+      "aspects": ["cosmetic_item-smoked_tail_curry"]
+    }
+  ]
+}

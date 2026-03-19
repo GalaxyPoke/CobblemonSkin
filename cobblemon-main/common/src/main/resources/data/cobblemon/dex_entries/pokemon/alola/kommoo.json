@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:kommoo",
+  "speciesId": "cobblemon:kommoo",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    }
+  ],
+  "variations": []
+}

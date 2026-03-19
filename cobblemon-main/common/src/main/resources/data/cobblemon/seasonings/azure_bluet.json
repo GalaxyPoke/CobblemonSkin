@@ -1,0 +1,14 @@
+{
+  "ingredient": "minecraft:azure_bluet",
+  "colour": "light_gray",
+  "mobEffects": [
+    {
+      "effect": "minecraft:blindness",
+      "duration": 220,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

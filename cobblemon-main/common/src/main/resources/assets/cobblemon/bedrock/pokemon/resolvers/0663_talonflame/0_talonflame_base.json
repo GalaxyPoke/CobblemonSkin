@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:talonflame",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:talonflame",
+      "model": "cobblemon:talonflame.geo",
+      "texture": "cobblemon:textures/pokemon/0663_talonflame/talonflame.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0663_talonflame/talonflame_shiny.png"
+    }
+  ]
+}

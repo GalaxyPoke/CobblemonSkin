@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:elgyem",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:elgyem",
+      "model": "cobblemon:elgyem.geo",
+      "texture": "cobblemon:textures/pokemon/0605_elgyem/elgyem.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0605_elgyem/elgyem_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0605_elgyem/elgyem_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0605_elgyem/elgyem_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

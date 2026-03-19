@@ -1,0 +1,107 @@
+{
+  "credit": "Made with Blockbench",
+  "texture_size": [32, 32],
+  "textures": {
+    "texture": "cobblemon:item/wearable/rocky_helmet",
+    "particle": "cobblemon:item/wearable/rocky_helmet"
+  },
+  "elements": [
+    {
+      "name": "helmet",
+      "from": [4, 6, 4],
+      "to": [12, 10, 12],
+      "rotation": {"angle": 0, "axis": "y", "origin": [8, 6, 8]},
+      "faces": {
+        "north": {"uv": [4, 0, 8, 2], "texture": "#texture"},
+        "east": {"uv": [0, 0, 4, 2], "texture": "#texture"},
+        "south": {"uv": [12, 0, 16, 2], "texture": "#texture"},
+        "west": {"uv": [8, 0, 12, 2], "texture": "#texture"},
+        "up": {"uv": [4, 6, 0, 2], "texture": "#texture"},
+        "down": {"uv": [8, 2, 12, 6], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "bottom",
+      "from": [3.5, 5.5, 3.5],
+      "to": [12.5, 5.5, 12.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [15.25, 14.5, 15.25]},
+      "faces": {
+        "up": {"uv": [4, 2, 8, 6], "rotation": 180, "texture": "#texture"},
+        "down": {"uv": [8, 2, 4, 6], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "bottom",
+      "from": [3.5, 10.5, 3.5],
+      "to": [12.5, 10.5, 12.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [15.25, 19.5, 15.25]},
+      "faces": {
+        "up": {"uv": [12, 2, 16, 6], "rotation": 180, "texture": "#texture"},
+        "down": {"uv": [16, 2, 12, 6], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "front",
+      "from": [3.5, 5.5, 3.5],
+      "to": [12.5, 10.5, 3.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [15.25, 19, 15.5]},
+      "faces": {
+        "north": {"uv": [4, 7, 8, 9], "texture": "#texture"},
+        "south": {"uv": [8, 7, 4, 9], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "left",
+      "from": [3.5, 5.5, 3.5],
+      "to": [3.5, 10.5, 12.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [15.5, 19, 15.25]},
+      "faces": {
+        "east": {"uv": [12, 7, 8, 9], "texture": "#texture"},
+        "west": {"uv": [8, 7, 12, 9], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "right",
+      "from": [12.5, 5.5, 3.5],
+      "to": [12.5, 10.5, 12.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [24.5, 19, 15.25]},
+      "faces": {
+        "east": {"uv": [0, 7, 4, 9], "texture": "#texture"},
+        "west": {"uv": [4, 7, 0, 9], "texture": "#texture"}
+      }
+    },
+    {
+      "name": "back",
+      "from": [3.5, 5.5, 12.5],
+      "to": [12.5, 10.5, 12.5],
+      "rotation": {"angle": 0, "axis": "y", "origin": [15.25, 19, 24.5]},
+      "faces": {
+        "north": {"uv": [16, 7, 12, 9], "texture": "#texture"},
+        "south": {"uv": [12, 7, 16, 9], "texture": "#texture"}
+      }
+    }
+  ],
+  "gui_light": "front",
+  "display": {
+    "head": {
+      "translation": [0, 5, 0],
+      "scale": [1.825, 1.825, 1.825]
+    }
+  },
+  "groups": [
+    {
+      "name": "helmet",
+      "origin": [8, 8, 8],
+      "color": 1,
+      "children": [
+        0,
+        {
+          "name": "hat",
+          "origin": [8.25, 8, 8.25],
+          "color": 1,
+          "children": [1, 2, 3, 4, 5, 6]
+        }
+      ]
+    }
+  ]
+}

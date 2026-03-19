@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:zamazenta",
+  "speciesId": "cobblemon:zamazenta",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Crowned",
+      "unlockForms": [
+        "Crowned"
+      ]
+    }
+  ],
+  "variations": []
+}

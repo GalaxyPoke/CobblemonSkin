@@ -1,0 +1,49 @@
+{
+  "species": "cobblemon:gurdurr",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gurdurr",
+      "model": "cobblemon:gurdurr.geo",
+      "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr_shiny.png"
+    },
+    {
+      "aspects": ["metals-copper"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr_copper.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["metals-iron"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr_iron.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["metals-gold"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr_gold.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["metals-netherite"],
+      "layers": [
+        {
+          "texture": "cobblemon:textures/pokemon/0533_gurdurr/gurdurr_netherite.png"
+        }
+      ]
+    }
+  ]
+}

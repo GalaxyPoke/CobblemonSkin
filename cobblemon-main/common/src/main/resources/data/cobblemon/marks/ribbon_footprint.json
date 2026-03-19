@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_footprint",
+	"title": "cobblemon.mark.ribbon_footprint.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.ribbon_footprint.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_footprint.png",
+	"indexNumber": 19
+}

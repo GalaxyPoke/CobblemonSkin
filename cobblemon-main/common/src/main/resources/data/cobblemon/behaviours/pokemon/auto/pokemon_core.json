@@ -1,0 +1,38 @@
+{
+  "visible": false,
+  "configurations": [
+    {
+      "type": "script",
+      "executeEarly": true,
+      "script": "cobblemon:apply_species_properties"
+    },
+    {
+      "type": "apply_behaviours",
+      "behaviours": [
+        "cobblemon:core",
+        "cobblemon:pokemon_battles"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "q.entity.behaviour.moving.can_look",
+      "behaviours": [
+        "cobblemon:looks_around"
+      ]
+    },
+    {
+      "type": "apply_behaviours",
+      "condition": "q.entity.behaviour.resting.can_sleep",
+      "behaviours": [
+        "cobblemon:pokemon_sleeps"
+      ]
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "tasksByPriority": {
+        "0": [ "pokemon_wander_control" ]
+      }
+    }
+  ]
+}

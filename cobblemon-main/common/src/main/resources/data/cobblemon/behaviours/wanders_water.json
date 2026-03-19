@@ -1,0 +1,46 @@
+{
+  "name": "cobblemon.behaviour.wanders_water.name",
+  "description": "cobblemon.behaviour.wanders_water.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "7": [
+          "water_wander"
+        ],
+        "9": [
+          {
+            "type": "cobblemon:fly_in_circles",
+            "poseTypes": ["SWIM", "FLOAT"],
+            "speed": {
+              "variableName": "swim_circling_speed",
+              "category": "cobblemon.entity.variable.category.wander",
+              "defaultValue": 2.3,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.swim_circling_speed.name",
+              "description": "cobblemon.entity.variable.swim_circling_speed.desc"
+            },
+            "minAngularVelocityDegrees": {
+              "variableName": "min_swim_circling_angular_velocity",
+              "category": "cobblemon.entity.variable.category.wander",
+              "defaultValue": 0.0,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.min_swim_circling_angular_velocity.name",
+              "description": "cobblemon.entity.variable.min_swim_circling_angular_velocity.desc"
+            },
+            "maxAngularVelocityDegrees": {
+              "variableName": "max_swim_circling_angular_velocity",
+              "category": "cobblemon.entity.variable.category.wander",
+              "defaultValue": 1.0,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.max_swim_circling_angular_velocity.name",
+              "description": "cobblemon.entity.variable.max_swim_circling_angular_velocity.desc"
+            },
+            "verticalSpeed": 0
+          }
+        ]
+      }
+    }
+  ]
+}

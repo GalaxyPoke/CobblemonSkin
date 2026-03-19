@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:shiinotic",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:shiinotic",
+      "model": "cobblemon:shiinotic.geo",
+      "texture": "cobblemon:textures/pokemon/0756_shiinotic/shiinotic.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0756_shiinotic/shiinotic_shiny.png"
+    }
+  ]
+}

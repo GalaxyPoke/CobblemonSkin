@@ -1,0 +1,55 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == true && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:anger",
+      "locators": ["top"]
+    },
+    {
+      "type": "animation",
+      "animation": ["frustration2", "frustration", "blunt", "normal", "physical"]
+    },
+    {
+    "type": "sequence",
+    "keyframes": [
+        {
+        "type": "entity_particles",
+        "effect": "cobblemon:anger_steaming",
+        "locators": ["hat", "top"],
+        "delay": 0.2
+        },
+        {
+        "type": "entity_particles",
+        "effect": "cobblemon:anger_steaming",
+        "locators": ["hat", "top"],
+        "delay": 1
+        }
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:frustration_target_1",
+      "locators": ["target"]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:frustration_target_2",
+      "locators": ["target"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.1
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:protect-block",
+      "locators": ["target"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.5
+    }
+  ]
+}

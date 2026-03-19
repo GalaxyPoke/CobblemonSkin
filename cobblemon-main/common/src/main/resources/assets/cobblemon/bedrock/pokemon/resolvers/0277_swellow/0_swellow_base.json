@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:swellow",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:swellow",
+      "model": "cobblemon:swellow.geo",
+      "texture": "cobblemon:textures/pokemon/0277_swellow/swellow.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0277_swellow/swellow_shiny.png"
+    }
+  ]
+}

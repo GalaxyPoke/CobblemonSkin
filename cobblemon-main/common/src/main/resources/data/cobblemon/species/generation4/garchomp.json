@@ -1,0 +1,462 @@
+{
+  "implemented": true,
+  "nationalPokedexNumber": 445,
+  "name": "Garchomp",
+  "primaryType": "dragon",
+  "secondaryType": "ground",
+  "maleRatio": 0.5,
+  "height": 19,
+  "weight": 950,
+  "pokedex": [
+    "cobblemon.species.garchomp.desc"
+  ],
+  "labels": [
+    "gen4",
+    "powerhouse"
+  ],
+  "aspects": [],
+  "abilities": [
+    "sandveil",
+    "h:roughskin"
+  ],
+  "eggGroups": [
+    "monster",
+    "dragon"
+  ],
+  "baseStats": {
+    "hp": 108,
+    "attack": 130,
+    "defence": 95,
+    "special_attack": 80,
+    "special_defence": 85,
+    "speed": 102
+  },
+  "evYield": {
+    "hp": 0,
+    "attack": 3,
+    "defence": 0,
+    "special_attack": 0,
+    "special_defence": 0,
+    "speed": 0
+  },
+  "baseExperienceYield": 300,
+  "experienceGroup": "slow",
+  "catchRate": 45,
+  "eggCycles": 40,
+  "baseFriendship": 50,
+  "baseScale": 1.1,
+  "hitbox": {
+    "height": 2.3,
+    "fixed": false,
+    "width": 1.3
+  },
+  "riding": {
+    "behaviours": {
+      "AIR": {
+        "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+        "key": "cobblemon:air/jet",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.wind.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.wind.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+        "jumpVector": [
+          0,
+          "0.3*q.jump_strength/50",
+          0
+        ],
+        "stats": {
+          "ACCELERATION": "50-70",
+          "JUMP": "20-70",
+          "SKILL": "50-60",
+          "SPEED": "70-80",
+          "STAMINA": "30-50"
+        }
+      },
+      "LAND": {
+        "speed": "Math.clamp(q.entity.velocity.horizontal_magnitude + 0.33, 0, 1)",
+        "key": "cobblemon:land/horse",
+        "rideSounds": [],
+        "gravity": "q.gravity * (0.1 + (q.passenger_count - 1) * 0.1)",
+        "jumpVector": [
+          0,
+          "0.3*q.jump_strength/50",
+          "-1 * 0.5*q.jump_strength/50"
+        ],
+        "stats": {
+          "ACCELERATION": "65-75",
+          "JUMP": "30-50",
+          "SKILL": "40-70",
+          "SPEED": "40-55",
+          "STAMINA": "30-45"
+        }
+      },
+      "LIQUID": {
+        "key": "cobblemon:liquid/boat",
+        "rideSounds": [
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": false,
+            "playForPassengers": true,
+            "soundLocation": "cobblemon:ride.loop.water_sufrace.stereo",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          },
+          {
+            "muffleEnabled": true,
+            "pitchExpr": "math.max(1.0 ,0.2 + math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2))",
+            "playForNonPassengers": true,
+            "playForPassengers": false,
+            "soundLocation": "cobblemon:ride.loop.water_surface.mono",
+            "volumeExpr": "math.pow(math.min(q.ride_velocity() / 1.5, 1.0),2)"
+          }
+        ],
+        "stats": {
+          "ACCELERATION": "75-85",
+          "JUMP": "40-80",
+          "SKILL": "10-25",
+          "SPEED": "35-60",
+          "STAMINA": "5-10"
+        },
+        "surfaceLevelOffset": -1.7
+      }
+    },
+    "seats": [
+      {
+        "offset": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "poseOffsets": [
+          {
+            "offset": {
+              "x": 0.0,
+              "y": -2.1011124,
+              "z": 0.16987759
+            },
+            "poseTypes": [
+              "STAND"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.01469376,
+              "y": -1.9109085,
+              "z": -0.45310298
+            },
+            "poseTypes": [
+              "WALK"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.05311563,
+              "y": -1.1318469,
+              "z": -0.39360297
+            },
+            "poseTypes": [
+              "HOVER"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.05311563,
+              "y": -1.1318469,
+              "z": -0.39360297
+            },
+            "poseTypes": [
+              "FLY"
+            ]
+          },
+          {
+            "offset": {
+              "x": 6.860052E-4,
+              "y": -2.1426969,
+              "z": -0.23987202
+            },
+            "poseTypes": [
+              "FLOAT"
+            ]
+          },
+          {
+            "offset": {
+              "x": 0.14164889,
+              "y": -1.6177647,
+              "z": -0.14327948
+            },
+            "poseTypes": [
+              "SWIM"
+            ]
+          },
+          {
+            "offset": {
+              "x": 8.643751E-4,
+              "y": -2.4092257,
+              "z": -0.33146888
+            },
+            "poseTypes": [
+              "GLIDE"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "behaviour": {
+    "combat": {
+      "willDefendOwner": true,
+      "willDefendSelf": true,
+      "willFlee": false
+    },
+    "herd": {
+      "maxSize": "7"
+    },
+    "moving": {
+      "fly": {
+        "canFly": true
+      },
+      "swim": {
+        "avoidsWater": true,
+        "canSwim": true,
+        "canWalkOnWater": true
+      },
+      "walk": {
+        "walkSpeed": 0.55
+      }
+    },
+    "resting": {
+      "canSleep": true,
+      "drowsyChance": 0.0333,
+      "light": "0-4",
+      "rouseChance": 0.0042
+    }
+  },
+  "drops": {
+    "amount": 2,
+    "entries": [
+      {
+        "item": "cobblemon:dragon_fang",
+        "percentage": 10.0
+      },
+      {
+        "item": "cobblemon:haban_berry",
+        "percentage": 10.0
+      }
+    ]
+  },
+  "moves": [
+    "1:tackle",
+    "1:sandattack",
+    "1:dragonrage",
+    "1:sandtomb",
+    "1:crunch",
+    "1:dualchop",
+    "1:dragonbreath",
+    "18:bulldoze",
+    "27:bite",
+    "34:slash",
+    "42:dragonclaw",
+    "52:dig",
+    "62:sandstorm",
+    "72:takedown",
+    "82:dragonrush",
+    "egg:doubleedge",
+    "egg:metalclaw",
+    "egg:thrash",
+    "egg:twister",
+    "tm:aerialace",
+    "tm:aquatail",
+    "tm:bodyslam",
+    "tm:breakingswipe",
+    "tm:brickbreak",
+    "tm:brutalswing",
+    "tm:bulldoze",
+    "tm:crunch",
+    "tm:cut",
+    "tm:dig",
+    "tm:doubleedge",
+    "tm:dracometeor",
+    "tm:dragoncheer",
+    "tm:dragonclaw",
+    "tm:dragonpulse",
+    "tm:dragontail",
+    "tm:dualchop",
+    "tm:earthpower",
+    "tm:earthquake",
+    "tm:endure",
+    "tm:facade",
+    "tm:falseswipe",
+    "tm:fireblast",
+    "tm:firefang",
+    "tm:flamethrower",
+    "tm:fling",
+    "tm:furycutter",
+    "tm:gigaimpact",
+    "tm:headbutt",
+    "tm:helpinghand",
+    "tm:honeclaws",
+    "tm:hyperbeam",
+    "tm:incinerate",
+    "tm:ironhead",
+    "tm:irontail",
+    "tm:laserfocus",
+    "tm:liquidation",
+    "tm:metalclaw",
+    "tm:mudshot",
+    "tm:outrage",
+    "tm:poisonjab",
+    "tm:powergem",
+    "tm:protect",
+    "tm:raindance",
+    "tm:rest",
+    "tm:rockclimb",
+    "tm:rockslide",
+    "tm:rocksmash",
+    "tm:rocktomb",
+    "tm:sandstorm",
+    "tm:sandtomb",
+    "tm:scaleshot",
+    "tm:scaryface",
+    "tm:scorchingsands",
+    "tm:shadowclaw",
+    "tm:sleeptalk",
+    "tm:spikes",
+    "tm:stealthrock",
+    "tm:stompingtantrum",
+    "tm:stoneedge",
+    "tm:strength",
+    "tm:substitute",
+    "tm:sunnyday",
+    "tm:surf",
+    "tm:swift",
+    "tm:swordsdance",
+    "tm:takedown",
+    "tm:terablast",
+    "tm:thunderfang",
+    "tm:twister",
+    "tutor:aquatail",
+    "tutor:bulldoze",
+    "tutor:dracometeor",
+    "tutor:dragonpulse",
+    "tutor:dualchop",
+    "tutor:earthpower",
+    "tutor:falseswipe",
+    "tutor:firefang",
+    "tutor:flamethrower",
+    "tutor:furycutter",
+    "tutor:gigaimpact",
+    "tutor:helpinghand",
+    "tutor:hyperbeam",
+    "tutor:ironhead",
+    "tutor:irontail",
+    "tutor:laserfocus",
+    "tutor:liquidation",
+    "tutor:outrage",
+    "tutor:poisonjab",
+    "tutor:rest",
+    "tutor:rockslide",
+    "tutor:rocksmash",
+    "tutor:scaleshot",
+    "tutor:scorchingsands",
+    "tutor:shadowclaw",
+    "tutor:sleeptalk",
+    "tutor:spikes",
+    "tutor:stealthrock",
+    "tutor:stompingtantrum",
+    "tutor:stoneedge",
+    "tutor:swift",
+    "tutor:thunderfang",
+    "tutor:twister",
+    "legacy:attract",
+    "legacy:captivate",
+    "legacy:confide",
+    "legacy:doubleteam",
+    "legacy:frustration",
+    "legacy:hiddenpower",
+    "legacy:mudslap",
+    "legacy:naturalgift",
+    "legacy:return",
+    "legacy:roar",
+    "legacy:round",
+    "legacy:secretpower",
+    "legacy:snore",
+    "legacy:swagger",
+    "legacy:toxic",
+    "legacy:whirlpool"
+  ],
+  "preEvolution": "gabite",
+  "evolutions": [],
+  "forms": [
+    {
+      "name": "Mega",
+      "primaryType": "dragon",
+      "secondaryType": "ground",
+      "maleRatio": 0.5,
+      "height": 19,
+      "weight": 950,
+      "pokedex": [
+        "cobblemon.species.garchomp-mega.desc"
+      ],
+      "labels": [
+        "gen6",
+        "mega"
+      ],
+      "aspects": [
+        "mega"
+      ],
+      "abilities": [
+        "sandforce",
+        "h:sandforce"
+      ],
+      "baseStats": {
+        "hp": 108,
+        "attack": 170,
+        "defence": 115,
+        "special_attack": 120,
+        "special_defence": 95,
+        "speed": 92
+      },
+      "baseExperienceYield": 350,
+      "behaviour": {
+        "combat": {
+          "willDefendOwner": true,
+          "willDefendSelf": true,
+          "willFlee": false
+        },
+        "herd": {
+          "maxSize": "8"
+        },
+        "moving": {
+          "fly": {
+            "canFly": true
+          },
+          "swim": {
+            "avoidsWater": true
+          }
+        },
+        "resting": {
+          "drowsyChance": 0.0333,
+          "rouseChance": 0.0042
+        }
+      },
+      "evolutions": [],
+      "battleOnly": true,
+      "dynamaxBlocked": true
+    }
+  ]
+}

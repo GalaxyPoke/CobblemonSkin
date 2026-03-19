@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:centiskorch",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:centiskorch",
+      "model": "cobblemon:centiskorch.geo",
+      "texture": "cobblemon:textures/pokemon/0851_centiskorch/centiskorch.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0851_centiskorch/centiskorch_emissive.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0851_centiskorch/centiskorch_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "emissive": true,
+          "texture": "cobblemon:textures/pokemon/0851_centiskorch/centiskorch_emissive_shiny.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

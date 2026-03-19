@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:polteageist",
+  "speciesId": "cobblemon:polteageist",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Antique",
+      "unlockForms": [
+        "Antique"
+      ]
+    }
+  ],
+  "variations": []
+}

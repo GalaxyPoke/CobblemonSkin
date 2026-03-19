@@ -1,0 +1,18 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "cobblemon:heal_powder"
+        },
+        {
+            "item": "minecraft:honey_bottle"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:revive",
+        "count": 1
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

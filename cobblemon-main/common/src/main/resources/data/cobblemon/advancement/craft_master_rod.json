@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:master_rod"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.craft_master_rod"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.craft_master_rod.description"
+    },
+    "frame": "challenge",
+    "hidden": true
+  },
+  "parent": "cobblemon:craft_rod",
+  "criteria": {
+    "craft_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:master_rod"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

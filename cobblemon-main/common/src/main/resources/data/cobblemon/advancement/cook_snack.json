@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:poke_snack"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.cook_snack"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.cook_snack.description"
+    }
+  },
+  "parent": "cobblemon:slather_saccharine",
+  "criteria": {
+    "cook_snack": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:poke_snack"
+          }
+        ]
+      }
+    }
+  }
+}

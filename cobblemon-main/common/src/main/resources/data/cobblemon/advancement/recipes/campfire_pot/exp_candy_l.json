@@ -1,0 +1,32 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/exp_candy_l"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_candy": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:exp_candy_m"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_candy"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/exp_candy_l"
+    ]
+  }
+}

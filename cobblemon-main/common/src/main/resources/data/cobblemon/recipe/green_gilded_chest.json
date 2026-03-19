@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "gilded_chest",
+    "pattern": [
+        "GKG",
+        "#C#",
+        "GKG"
+    ],
+    "key": {
+        "G": {
+            "tag": "c:ingots/gold"
+        },
+        "K": {
+            "item": "minecraft:dried_kelp"
+        },
+        "C": {
+            "tag": "c:chests/wooden"
+        },
+        "#": {
+            "item": "cobblemon:green_apricorn"
+        }
+    },
+    "result": {
+        "id": "cobblemon:green_gilded_chest"
+    }
+}

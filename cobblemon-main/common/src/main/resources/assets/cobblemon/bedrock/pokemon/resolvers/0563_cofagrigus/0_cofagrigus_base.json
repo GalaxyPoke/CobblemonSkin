@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:cofagrigus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cofagrigus",
+      "model": "cobblemon:cofagrigus.geo",
+      "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0563_cofagrigus/cofagrigus_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

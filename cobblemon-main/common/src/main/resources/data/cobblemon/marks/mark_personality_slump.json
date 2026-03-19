@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_slump",
+	"title": "cobblemon.mark.mark_personality_slump.title",
+	"titleColor": "42B8AB",
+	"description": "cobblemon.mark.mark_personality_slump.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_slump.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 97
+}

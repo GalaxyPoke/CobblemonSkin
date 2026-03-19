@@ -1,0 +1,96 @@
+{
+  "portraitScale": 0.96,
+  "portraitTranslation": [-0.35, 0.71, 0.0],
+  "profileScale": 0.57,
+  "profileTranslation": [-0.11, 0.73, 0.0],
+  "rootBone": "darmanitan",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.4, 0],
+    "seat_1_reverse": [0, 0.4, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('darmanitan', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('darmanitan', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('darmanitan', 'blink')",
+        "q.bedrock_quirk('darmanitan', 'quirk')"
+      ]
+    },
+    "jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.bedrock('darmanitan', 'ride_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('darmanitan', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "running": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.bedrock('darmanitan', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('darmanitan', 'ride_ground_run')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('darmanitan', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('darmanitan', 'ground_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('darmanitan', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('darmanitan', 'blink')",
+        "q.bedrock_quirk('darmanitan', 'quirk')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "FLOAT", "SWIM"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('darmanitan', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('darmanitan', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('darmanitan', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('darmanitan', 'sleep')"]
+    }
+  }
+}

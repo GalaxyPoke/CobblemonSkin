@@ -1,0 +1,73 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [-0.77,-0.46,0],
+  "profileScale": 0.95,
+  "profileTranslation": [0,0.28,0],
+  "animations": {
+    "cry": "q.bedrock_stateful('oinkologne_male', 'cry')",
+    "recoil": "q.bedrock_stateful('oinkologne_male', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head', 1, 1, 20, -15, 5, -5)",
+        "q.bedrock('oinkologne_male', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('oinkologne_male', 'blink')",
+        "q.bedrock_quirk('oinkologne_male', 'snort_quirk', 8, 20, 1)",
+        "q.bedrock_quirk('oinkologne_male', 'look_quirk', 15, 30, 1)"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head', 1, 1, 20, -15, 5, -5)",
+        "q.bedrock('oinkologne_male', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('oinkologne_male', 'blink')",
+        "q.bedrock_quirk('oinkologne_male', 'snort_quirk', 8, 20, 1)",
+        "q.bedrock_quirk('oinkologne_male', 'look_quirk', 15, 30, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head', 1, 1, 20, -15, 5, -5)",
+        "q.bedrock('oinkologne_male', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('oinkologne_male', 'blink')",
+        "q.bedrock_quirk('oinkologne_male', 'snort_quirk', 8, 20, 1)",
+        "q.bedrock_quirk('oinkologne_male', 'look_quirk', 15, 30, 1)"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+      "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('oinkologne_male', 'sleep')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('oinkologne_male', 'snort_quirk', 10, 30, 1)"
+      ]
+    }
+  }
+}

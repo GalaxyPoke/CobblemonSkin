@@ -1,0 +1,11 @@
+{
+    "item": "cobblemon:yache_berry",
+    "effects": [
+      {
+        "type": "cobblemon:typing",
+        "subcategory": "ice",
+        "chance": 1.0,
+        "value": 10.0
+      }
+    ]
+  }

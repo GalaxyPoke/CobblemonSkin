@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cobblemon:augurite_block"
+    ]
+  },
+  "criteria": {
+    "has_augurite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:black_augurite"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cobblemon:augurite_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_augurite",
+      "has_the_recipe"
+    ]
+  ]
+}

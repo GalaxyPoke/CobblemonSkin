@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:bouffalant",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bouffalant",
+      "model": "cobblemon:bouffalant.geo",
+      "texture": "cobblemon:textures/pokemon/0626_bouffalant/bouffalant.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0626_bouffalant/bouffalant_shiny.png"
+    }
+  ]
+}

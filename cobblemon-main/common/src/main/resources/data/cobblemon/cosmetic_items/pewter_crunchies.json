@@ -1,0 +1,9 @@
+{
+  "pokemon": ["pikachu", "raichu", "pichu"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:pewter_crunchies",
+      "aspects": ["cosmetic_item-pewter_crunchies"]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "cobblemon:block/hearty_grain_bale",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "cobblemon:block/hearty_grain_bale"
+    },
+    "axis=z": {
+      "model": "cobblemon:block/hearty_grain_bale",
+      "x": 90
+    }
+  }
+}

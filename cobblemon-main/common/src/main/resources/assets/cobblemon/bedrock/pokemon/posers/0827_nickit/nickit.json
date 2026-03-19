@@ -1,0 +1,78 @@
+{
+  "portraitScale": 1.8,
+  "portraitTranslation": [-0.3, -0.1, 0],
+  "profileScale": 0.61,
+  "profileTranslation": [0.0, 0.81, 0.0],
+  "rootBone": "nickit",
+  "animations": {
+    "faint": "q.bedrock_primary('nickit', math.random(0, 1) < 0.25 ? 'faint_alt' : 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('nickit', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('nickit', 'battle_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('nickit', 'item_hold')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('nickit', 'blink')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_right')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_left')",
+        "q.bedrock_quirk('nickit', q.array('quirk_shiftyglance_right', 'quirk_shiftyglance_left'), 20, 40, 1)"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('nickit', 'ground_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('nickit', 'item_hold')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('nickit', 'blink')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_right')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_left')",
+        "q.bedrock_quirk('nickit', q.array('quirk_shiftyglance_right', 'quirk_shiftyglance_left'), 20, 40, 1)"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('nickit', 'ground_walk')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('nickit', 'item_hold')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('nickit', 'blink')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_right')",
+        "q.bedrock_quirk('nickit', 'quirk_eartwitch_left')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('nickit', 'sleep')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('nickit', 'item_hold')"
+        }
+      ]
+    }
+  }
+}

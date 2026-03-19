@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:koffing",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["region-bias-galar"],
+      "model": "cobblemon:koffing_galar_bias.geo",
+      "texture": "cobblemon:textures/pokemon/0109_koffing/koffing_galar_bias.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "region-bias-galar"],
+      "texture": "cobblemon:textures/pokemon/0109_koffing/koffing_galar_bias_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_day_shock",
+	"title": "cobblemon.mark.ribbon_day_shock.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.ribbon_day_shock.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_day_shock.png",
+	"indexNumber": 9
+}

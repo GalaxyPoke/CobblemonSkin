@@ -1,0 +1,16 @@
+{
+    "name": "cobblemon:prehistoric_sandy_den",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/sandy_den",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_sandy_den",
+                "projection": "terrain_matching"
+            }
+        }
+    ]
+}

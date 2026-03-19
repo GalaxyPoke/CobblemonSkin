@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:tirtouga_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:tirtouga_fetus",
+      "model": "cobblemon:tirtouga_fetus.geo",
+      "texture": "cobblemon:textures/fossils/tirtouga.png",
+      "layers": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:embryo_stage3",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:embryo_stage3",
+      "model": "cobblemon:embryo_stage3.geo",
+      "texture": "cobblemon:textures/fossils/embryo.png",
+      "layers": []
+    }
+  ]
+}

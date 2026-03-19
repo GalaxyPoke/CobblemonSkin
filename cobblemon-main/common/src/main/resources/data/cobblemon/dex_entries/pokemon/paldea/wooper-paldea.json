@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:wooper-paldea",
+  "speciesId": "cobblemon:wooper",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Paldea",
+      "unlockForms": [
+        "Paldea"
+      ]
+    }
+  ],
+  "variations": []
+}

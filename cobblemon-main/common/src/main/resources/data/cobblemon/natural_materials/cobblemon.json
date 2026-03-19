@@ -1,0 +1,173 @@
+[
+  {
+    "content": 1,
+    "item": "cobblemon:roasted_leek"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:leek_and_potato_stew",
+    "returnItem": "minecraft:bowl"
+  },
+  {
+    "content": 2,
+    "tag": "#cobblemon:berries"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:medicinal_leek"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:big_root"
+  },
+  {
+    "content": 1,
+    "tag": "#cobblemon:mint_seeds"
+  },
+  {
+    "content": 2,
+    "tag": "#cobblemon:mint_leaves"
+  },
+  {
+    "content": 2,
+    "tag": "#cobblemon:apricorns"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:remedy"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:berry_juice",
+    "returnItem": "minecraft:bowl"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:energy_root"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:pep_up_flower"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:vivichoke_seeds"
+  },
+  {
+    "content": 2,
+    "tag": "#cobblemon:apricorn_sprouts"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:hearty_grains"
+  },
+  {
+    "content": 16,
+    "item": "cobblemon:hearty_grain_bale"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:galarica_nuts"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:sweet_apple"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:tart_apple"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:syrupy_apple"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:fine_remedy"
+  },
+  {
+    "content": 8,
+    "tag": "#cobblemon:herbs"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:vivichoke"
+  },
+  {
+    "content": 2,
+    "tag": "#cobblemon:mints"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:superb_remedy"
+  },
+  {
+    "content": 32,
+    "item": "cobblemon:revive"
+  },
+  {
+    "content": 32,
+    "item": "cobblemon:miracle_seed"
+  },
+  {
+    "content": 64,
+    "item": "cobblemon:max_revive"
+  },
+  {
+    "content": 8,
+    "tag": "#cobblemon:mochis"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:ponigiri"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:potato_mochi"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:pewter_crunchies"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:rage_candy_bar"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:lava_cookie"
+  },
+  {
+    "content": 4,
+    "item": "cobblemon:jubilife_muffin"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:old_gateau"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:casteliacone"
+  },
+  {
+    "content": 2,
+    "item": "cobblemon:lumiose_galette"
+  },
+  {
+    "content": 12,
+    "item": "cobblemon:big_malasada"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:smoked_tail_curry"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:open_faced_sandwich"
+  },
+  {
+    "content": 8,
+    "item": "cobblemon:moomoo_milk",
+    "returnItem": "minecraft:glass_bottle"
+  }
+]

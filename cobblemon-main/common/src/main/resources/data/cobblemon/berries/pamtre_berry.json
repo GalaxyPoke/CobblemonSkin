@@ -1,0 +1,198 @@
+{
+  "baseYield": {
+    "min": 1,
+    "max": 2
+  },
+  "preferredBiomeTags": [
+    "cobblemon:is_jungle",
+    "cobblemon:is_swamp"
+  ],
+  "growthTime": {
+    "min": 50,
+    "max": 60
+  },
+  "refreshRate": {
+    "min": 25,
+    "max": 29
+  },
+  "favoriteMulches": [
+    "humid"
+  ],
+  "growthFactors": [
+    {
+      "variant": "cobblemon:preferred_biome",
+      "bonusYield": {
+        "min": 0,
+        "max": 1
+      }
+    }
+  ],
+  "randomizedGrowthPoints": true,
+  "spawnConditions": [],
+  "growthPoints": [
+    {
+      "position": {
+        "x": 10.5,
+        "y": 28,
+        "z": 1.5
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": -10,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 5.5,
+        "y": 28,
+        "z": 1.5
+      },
+      "rotation": {
+        "x": 2.5,
+        "y": 70,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 1.5,
+        "y": 28,
+        "z": 5.5
+      },
+      "rotation": {
+        "x": 2.5,
+        "y": 30,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 1.5,
+        "y": 28,
+        "z": 10.5
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": 82.5,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 5.5,
+        "y": 28,
+        "z": 14.5
+      },
+      "rotation": {
+        "x": 5,
+        "y": 55,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 10.5,
+        "y": 28,
+        "z": 14.5
+      },
+      "rotation": {
+        "x": -2.5,
+        "y": 155,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 14.5,
+        "y": 28,
+        "z": 10.5
+      },
+      "rotation": {
+        "x": 2.5,
+        "y": 65,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 14.5,
+        "y": 28,
+        "z": 5.5
+      },
+      "rotation": {
+        "x": 5,
+        "y": 25,
+        "z": 0
+      }
+    }
+  ],
+  "stageOnePositioning": {
+    "position": {
+      "x": 8.15,
+      "y": 3.5,
+      "z": 8.1
+    },
+    "rotation": {
+      "x": 5,
+      "y": -10,
+      "z": -7.5
+    }
+  },
+  "pokeSnackPositionings": [
+    {
+      "position": {
+        "x": 8,
+        "y": 11.65,
+        "z": 4.2
+      },
+      "rotation": {
+        "x": 155,
+        "y": 0,
+        "z": 0
+      }
+    },
+    {
+      "position": {
+        "x": 11.7,
+        "y": 11.65,
+        "z": 10.65
+      },
+      "rotation": {
+        "x": -25,
+        "y": -60,
+        "z": 180
+      }
+    },
+    {
+      "position": {
+        "x": 4.3,
+        "y": 11.65,
+        "z": 10.65
+      },
+      "rotation": {
+        "x": -25,
+        "y": 60,
+        "z": 180
+      }
+    }
+  ],
+  "mutations": {
+    "cobblemon:kelpsy_berry": "cobblemon:liechi_berry",
+    "cobblemon:kebia_berry": "cobblemon:micle_berry"
+  },
+  "sproutShape": "lantern-sprout",
+  "matureShape": "lantern-mature",
+  "weight": 1,
+  "tintIndexes": [],
+  "flowerModel": "cobblemon:flower.geo",
+  "flowerTexture": "cobblemon:flower",
+  "fruitModel": "cobblemon:pamtre_berry.geo",
+  "fruitTexture": "cobblemon:pamtre",
+  "boneMealChance": 0.32,
+  "colour": "PURPLE",
+  "flavours": {
+    "DRY": 30,
+    "SWEET": 10
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "portraitScale": 2.35,
+  "portraitTranslation": [-0.09, -0.55, 0],
+  "profileScale": 0.72,
+  "profileTranslation": [0, 0.73, 0],
+  "rootBone": "elgyem",
+  "animations": {
+    "cry": "q.bedrock_stateful('elgyem', 'cry')",
+    "recoil": "q.bedrock_stateful('elgyem', 'recoil')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": ["q.look('head_ai')", "q.bedrock('elgyem', 'battle_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('elgyem', 'blink')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk1')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk2')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk3')"
+      ]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": ["q.look('head_ai')", "q.bedrock('elgyem', 'ground_idle')"],
+      "quirks": [
+        "q.bedrock_quirk('elgyem', 'blink')",
+        "q.bedrock_quirk('elgyem', 'look_quirk')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk1')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk2')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk3')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": ["q.look('head_ai')", "q.bedrock('elgyem', 'ground_walk')"],
+      "quirks": [
+        "q.bedrock_quirk('elgyem', 'blink')",
+        "q.bedrock_quirk('elgyem', 'look_quirk')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk1')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk2')",
+        "q.bedrock_quirk('elgyem', 'lights_quirk3')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('elgyem', 'sleep')"]
+    }
+  }
+}

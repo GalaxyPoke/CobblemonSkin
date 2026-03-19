@@ -1,0 +1,42 @@
+{
+  "portraitScale": 2.5,
+  "portraitTranslation": [0, -2.3, 0],
+  "profileScale": 0.9,
+  "profileTranslation": [0, 0.4, 0],
+  "rootBone": "shroodle",
+  "animations": {
+    "cry": "q.bedrock_stateful('shroodle', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('shroodle', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('shroodle', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.bedrock('shroodle', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('shroodle', 'blink')"]
+    },
+    "battle-sleep": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('shroodle', 'sleep')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "isBattle": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('shroodle', 'sleep2')"]
+    }
+  }
+}

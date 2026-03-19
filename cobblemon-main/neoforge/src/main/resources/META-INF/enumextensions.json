@@ -1,0 +1,55 @@
+{
+  "entries": [
+    {
+      "enum": "net/minecraft/world/inventory/RecipeBookType",
+      "name": "COBBLEMON_COOKING_POT",
+      "constructor": "()V",
+      "parameters": []
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "COBBLEMON_COOKING_POT_SEARCH",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "com/cobblemon/mod/neoforge/CobblemonEnumExtensions",
+        "field": "COOKING_POT_SEARCH"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "COBBLEMON_COOKING_POT_FOODS",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "com/cobblemon/mod/neoforge/CobblemonEnumExtensions",
+        "field": "COOKING_POT_FOODS"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "COBBLEMON_COOKING_POT_MEDICINES",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "com/cobblemon/mod/neoforge/CobblemonEnumExtensions",
+        "field": "COOKING_POT_MEDICINES"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "COBBLEMON_COOKING_POT_COMPLEX_DISHES",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "com/cobblemon/mod/neoforge/CobblemonEnumExtensions",
+        "field": "COOKING_POT_COMPLEX_DISHES"
+      }
+    },
+    {
+      "enum": "net/minecraft/client/RecipeBookCategories",
+      "name": "COBBLEMON_COOKING_POT_MISC",
+      "constructor": "(Ljava/util/function/Supplier;)V",
+      "parameters": {
+        "class": "com/cobblemon/mod/neoforge/CobblemonEnumExtensions",
+        "field": "COOKING_POT_MISC"
+      }
+    }
+  ]
+}

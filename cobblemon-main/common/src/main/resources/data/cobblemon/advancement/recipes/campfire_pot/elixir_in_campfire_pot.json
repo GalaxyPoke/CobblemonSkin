@@ -1,0 +1,43 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/elixir_in_campfire_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:hopo_berry"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_brew": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:medicinal_brew"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_berry",
+      "has_brew"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/elixir_in_campfire_pot"
+    ]
+  }
+}

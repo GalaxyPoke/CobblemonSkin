@@ -1,0 +1,48 @@
+{
+  "parent": "cobblemon:resurrect_pokemon",
+  "display": {
+    "icon": {
+      "id": "cobblemon:fossilized_fish"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.resurrect_galar_fossil"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.resurrect_galar_fossil.description"
+    }
+  },
+  "criteria": {
+    "resurrected_dracozolt": {
+      "trigger": "cobblemon:resurrect_pokemon",
+			"conditions": {
+				"species": "cobblemon:dracozolt"
+			}
+    },
+    "resurrected_dracovish": {
+      "trigger": "cobblemon:resurrect_pokemon",
+			"conditions": {
+				"species": "cobblemon:dracovish"
+			}
+    },
+	"resurrected_arctozolt": {
+      "trigger": "cobblemon:resurrect_pokemon",
+			"conditions": {
+				"species": "cobblemon:arctozolt"
+			}
+    },
+    "resurrected_arctovish": {
+      "trigger": "cobblemon:resurrect_pokemon",
+			"conditions": {
+				"species": "cobblemon:arctovish"
+			}
+    }
+  },
+  "requirements": [
+    [
+      "resurrected_arctovish",
+      "resurrected_arctozolt",
+      "resurrected_dracovish",
+      "resurrected_dracozolt"
+    ]
+  ]
+}

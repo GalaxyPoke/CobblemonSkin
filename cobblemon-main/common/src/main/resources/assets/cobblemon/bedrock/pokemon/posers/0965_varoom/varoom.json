@@ -1,0 +1,47 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [0.05, -0.71, 0],
+  "profileScale": 1,
+  "profileTranslation": [0, 0.1, 0],
+  "rootBone": "varoom",
+  "animations": {
+    "cry": "q.bedrock_stateful('varoom', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('varoom', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('varoom', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.is_sprinting",
+      "animations": [
+        "q.bedrock('varoom', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('varoom', 'blink')"
+      ]
+    },
+    "run": {
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.bedrock('varoom', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('varoom', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('varoom', 'sleep')"
+      ]
+    }
+  }
+}

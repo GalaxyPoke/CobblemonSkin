@@ -1,0 +1,136 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:poppy",
+	"minecraft:red_tulip",
+	"minecraft:rose_bush",
+	{
+      "id": "ancient_aether:sakura_blossoms",
+      "required": false
+    },
+	{
+      "id": "ancient_aether:trapped_sakura_blossoms",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:rose",
+      "required": false
+    },
+	{
+      "id": "blue_skies:flare_floret",
+      "required": false
+    },
+	{
+      "id": "botania:bellethorn",
+      "required": false
+    },
+	{
+      "id": "botania:bellethorn_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:exoflame",
+      "required": false
+    },
+	{
+      "id": "botania:floating_bellethorn",
+      "required": false
+    },
+	{
+      "id": "botania:floating_bellethorn_chibi",
+      "required": false
+    },
+	{
+      "id": "botania:floating_exoflame",
+      "required": false
+    },
+	{
+      "id": "botania:floating_kekimurus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_manastar",
+      "required": false
+    },
+	{
+      "id": "botania:floating_munchdew",
+      "required": false
+    },
+	{
+      "id": "botania:floating_orechid_ignem",
+      "required": false
+    },
+	{
+      "id": "botania:floating_pollidisiac",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:kekimurus",
+      "required": false
+    },
+	{
+      "id": "botania:manastar",
+      "required": false
+    },
+	{
+      "id": "botania:munchdew",
+      "required": false
+    },
+	{
+      "id": "botania:orechid_ignem",
+      "required": false
+    },
+	{
+      "id": "botania:pollidisiac",
+      "required": false
+    },
+	{
+      "id": "botania:red_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:red_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:red_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:red_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:spectrolus",
+      "required": false
+    },
+	{
+      "id": "etcetera:bouquet",
+      "required": false
+    },
+	{
+      "id": "goodending:balmy_wildflowers",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:petrunia",
+      "required": false
+    },
+	{
+      "id": "mythicbotany:petrunia_floating",
+      "required": false
+    },
+	{
+      "id": "twilightforest:thorn_rose",
+      "required": false
+    },
+	{
+      "id": "wilderwild:milkweed",
+      "required": false
+    }
+  ]
+}

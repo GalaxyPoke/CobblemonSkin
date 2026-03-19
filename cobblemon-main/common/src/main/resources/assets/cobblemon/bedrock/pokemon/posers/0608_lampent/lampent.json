@@ -1,0 +1,60 @@
+{
+  "portraitScale": 1.65,
+  "portraitTranslation": [-0.1,0.15,0],
+  "profileScale": 0.77,
+  "profileTranslation": [0,0.52,0],
+  "rootBone": "lampent",
+  "animations": {
+    "cry": "q.bedrock_stateful('lampent', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('body')",
+        "q.bedrock('lampent', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lampent', 'blink')"]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "animations": ["q.bedrock('lampent', 'ground_walk')"],
+      "quirks": ["q.bedrock_quirk('lampent', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "isBattle": false,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('body')",
+        "q.bedrock('lampent', 'air_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lampent', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('lampent', 'air_fly')"
+      ],
+      "quirks": ["q.bedrock_quirk('lampent', 'blink')"]
+    },
+    "battle_standing": {
+      "poseTypes": ["STAND", "HOVER"],
+      "isBattle": true,
+      "animations": [
+        "q.look('body')",
+        "q.bedrock('lampent', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('lampent', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('lampent', 'sleep')"]
+    }
+  }
+}

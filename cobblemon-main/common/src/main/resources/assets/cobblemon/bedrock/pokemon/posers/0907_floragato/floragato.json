@@ -1,0 +1,77 @@
+{
+  "portraitScale": 1.7,
+  "portraitTranslation": [-0.11, 1.03, 0],
+  "profileScale": 0.65,
+  "profileTranslation": [0, 0.8, 0],
+  "rootBone": "floragato",
+  "animations": {
+    "cry": "q.bedrock_stateful('floragato', math.random(0, 1) < 0.5 ? 'cry' : 'alt_cry')"
+  },
+  "poses": {
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('floragato', 'sleep')"
+      ]
+    },
+    "battle_idle": {
+      "poseName": "battle_idle",
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('floragato', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('floragato', 'battle_cry_merged', q.curve('symmetrical'))"
+      },
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('floragato', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('floragato', 'ground_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('floragato', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseName": "walking",
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('floragato', 'ground_walk')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('floragato', 'blink')"
+      ]
+    }
+  }
+}

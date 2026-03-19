@@ -1,0 +1,9 @@
+{
+  "pokemon": ["sneasler"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:composter",
+      "aspects": ["cosmetic_item-composter"]
+    }
+  ]
+}

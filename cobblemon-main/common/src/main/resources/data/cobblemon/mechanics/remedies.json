@@ -1,0 +1,28 @@
+{
+  "remedies": {
+    "normal": {
+      "healingAmount": "20",
+      "friendshipDrop": "5"
+    },
+    "fine": {
+      "healingAmount": "60",
+      "friendshipDrop": "5"
+    },
+    "superb": {
+      "healingAmount": "120",
+      "friendshipDrop": "5"
+    },
+    "root": {
+      "healingAmount": "80",
+      "friendshipDrop": "10"
+    },
+    "revival_herb": {
+      "healingAmount": "0",
+      "friendshipDrop": "15"
+    },
+    "heal_powder": {
+      "healingAmount": "0",
+      "friendshipDrop": "5"
+    }
+  }
+}

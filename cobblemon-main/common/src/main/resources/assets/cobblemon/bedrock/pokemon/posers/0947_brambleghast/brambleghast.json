@@ -1,0 +1,42 @@
+{
+  "portraitScale": 1.59,
+  "portraitTranslation": [ -0.27, -0.23, 0],
+  "profileScale": 0.6,
+  "profileTranslation": [ 0, 0.79, 0],
+  "rootBone": "brambleghast",
+  "animations": {
+    "cry": "q.bedrock_stateful('brambleghast', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('eyes')",
+        "q.bedrock('brambleghast', 'ground_idle_placeholder')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('brambleghast', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('eyes')",
+        "q.bedrock('brambleghast', 'ground_walk_placeholder')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('brambleghast', 'blink')"
+      ]
+    }
+  }
+}

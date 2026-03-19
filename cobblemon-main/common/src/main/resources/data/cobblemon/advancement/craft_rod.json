@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "id": "cobblemon:lure_rod"
+    },
+    "title": {
+      "translate": "advancements.cobblemon.craft_rod"
+    },
+    "description": {
+      "translate": "advancements.cobblemon.craft_rod.description"
+    }
+  },
+  "parent": "cobblemon:craft_poke_ball",
+  "criteria": {
+    "craft_rod": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#cobblemon:poke_rods"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:stufful",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:stufful",
+      "model": "cobblemon:stufful.geo",
+      "texture": "cobblemon:textures/pokemon/0759_stufful/stufful.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0759_stufful/stufful_shiny.png"
+    }
+  ]
+}

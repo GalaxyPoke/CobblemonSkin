@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:oddish",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:oddish",
+      "model": "cobblemon:oddish.geo",
+      "texture": "cobblemon:textures/pokemon/0043_oddish/oddish.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0043_oddish/oddish_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "portraitScale": 1.64,
+  "portraitTranslation": [ -0.22, -0.03, 0],
+  "profileScale": 0.54,
+  "profileTranslation": [ 0.01, 0.93, 0],
+  "rootBone": "skwovet",
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.bedrock('skwovet', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('skwovet', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_left', 'leg_right')"
+      ]
+    }
+  }
+}

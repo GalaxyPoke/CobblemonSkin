@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_teary",
+	"title": "cobblemon.mark.mark_personality_teary.title",
+	"titleColor": "4B8BE6",
+	"description": "cobblemon.mark.mark_personality_teary.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_teary.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 81
+}

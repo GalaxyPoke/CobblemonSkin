@@ -1,0 +1,69 @@
+{
+  "pokemon": ["electrode", "furfrou", "alakazam", "gengar", "jigglypuff", "smeargle"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:white_dye",
+      "aspects": ["color-white", "colour-white"]
+    },
+    {
+      "consumedItem": "minecraft:orange_dye",
+      "aspects": ["color-orange", "colour-orange"]
+    },
+    {
+      "consumedItem": "minecraft:magenta_dye",
+      "aspects": ["color-magenta", "colour-magenta"]
+    },
+    {
+      "consumedItem": "minecraft:light_blue_dye",
+      "aspects": ["color-light_blue", "colour-light_blue"]
+    },
+    {
+      "consumedItem": "minecraft:yellow_dye",
+      "aspects": ["color-yellow", "colour-yellow"]
+    },
+    {
+      "consumedItem": "minecraft:lime_dye",
+      "aspects": ["color-lime", "colour-lime"]
+    },
+    {
+      "consumedItem": "minecraft:pink_dye",
+      "aspects": ["color-pink", "colour-pink"]
+    },
+    {
+      "consumedItem": "minecraft:gray_dye",
+      "aspects": ["color-gray", "colour-gray"]
+    },
+    {
+      "consumedItem": "minecraft:light_gray_dye",
+      "aspects": ["color-light_gray", "colour-light_gray"]
+    },
+    {
+      "consumedItem": "minecraft:cyan_dye",
+      "aspects": ["color-cyan", "colour-cyan"]
+    },
+    {
+      "consumedItem": "minecraft:purple_dye",
+      "aspects": ["color-purple", "colour-purple"]
+    },
+    {
+      "consumedItem": "minecraft:blue_dye",
+      "aspects": ["color-blue", "colour-blue"]
+    },
+    {
+      "consumedItem": "minecraft:brown_dye",
+      "aspects": ["color-brown", "colour-brown"]
+    },
+    {
+      "consumedItem": "minecraft:green_dye",
+      "aspects": ["color-green", "colour-green"]
+    },
+    {
+      "consumedItem": "minecraft:red_dye",
+      "aspects": ["color-red", "colour-red"]
+    },
+    {
+      "consumedItem": "minecraft:black_dye",
+      "aspects": ["color-black", "colour-black"]
+    }
+  ]
+}

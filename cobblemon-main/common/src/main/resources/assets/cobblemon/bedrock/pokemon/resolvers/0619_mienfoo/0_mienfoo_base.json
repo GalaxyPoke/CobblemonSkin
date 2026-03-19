@@ -1,0 +1,16 @@
+{
+    "species": "cobblemon:mienfoo",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:mienfoo",
+        "model": "cobblemon:mienfoo.geo",
+        "texture": "cobblemon:textures/pokemon/0619_mienfoo/mienfoo.png"
+        },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0619_mienfoo/mienfoo_shiny.png"  
+      }
+    ]
+  }

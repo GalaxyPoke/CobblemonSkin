@@ -1,0 +1,11 @@
+{
+    "item": "cobblemon:colbur_berry",
+    "effects": [
+      {
+        "type": "cobblemon:typing",
+        "subcategory": "dark",
+        "chance": 1.0,
+        "value": 10.0
+      }
+    ]
+  }

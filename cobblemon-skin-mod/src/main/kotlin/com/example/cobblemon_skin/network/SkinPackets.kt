@@ -9,50 +9,216 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload
 import net.minecraft.resources.ResourceLocation
 import net.minecraft.server.level.ServerPlayer
 
-/** S2C packet: server pushes the list of registered skin IDs to the client. */
-data class SkinListPayload(val skins: List<String>) : CustomPacketPayload {
+// ═══════════════════════════════════════════════════════════════════════════
+//  DATA MODELS
+// ═══════════════════════════════════════════════════════════════════════════
 
+/** Lightweight skin metadata sent in the skin list (no binary data). */
+data class SkinInfo(
+    val skinId: String,
+    val species: String,       // e.g. "cobblemon:pikachu"
+    val displayName: String,   // human-readable name
+    val quality: String,       // 普通/稀有/史诗/传说
+    val description: String
+)
+
+/** Full skin resource data sent on demand. */
+data class SkinResourceData(
+    val skinId: String,
+    val resolverJson: ByteArray,
+    val modelGeo: ByteArray?,          // null = use species default model
+    val texturePng: ByteArray?,        // null = use species default texture
+    val poserJson: ByteArray?,         // null = use species default poser
+    val animationJson: ByteArray?,     // null = no custom animation
+    val extraTextures: Map<String, ByteArray>  // layer textures, emissive, shiny, etc.
+) {
+    override fun equals(other: Any?) = other is SkinResourceData && skinId == other.skinId
+    override fun hashCode() = skinId.hashCode()
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  S2C PACKETS (Server → Client)
+// ═══════════════════════════════════════════════════════════════════════════
+
+/** S2C: Server sends full skin list metadata on player join. */
+data class SkinListPayload(val skins: List<SkinInfo>) : CustomPacketPayload {
     companion object {
         val ID: CustomPacketPayload.Type<SkinListPayload> = CustomPacketPayload.Type(
             ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_list")
         )
-
         val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinListPayload> =
             object : StreamCodec<RegistryFriendlyByteBuf, SkinListPayload> {
                 override fun decode(buf: RegistryFriendlyByteBuf): SkinListPayload {
                     val count = buf.readVarInt()
-                    val skins = (0 until count).map { buf.readUtf() }
+                    val skins = (0 until count).map {
+                        SkinInfo(buf.readUtf(), buf.readUtf(), buf.readUtf(), buf.readUtf(), buf.readUtf())
+                    }
                     return SkinListPayload(skins)
                 }
                 override fun encode(buf: RegistryFriendlyByteBuf, value: SkinListPayload) {
                     buf.writeVarInt(value.skins.size)
-                    value.skins.forEach { buf.writeUtf(it) }
+                    value.skins.forEach { s ->
+                        buf.writeUtf(s.skinId); buf.writeUtf(s.species); buf.writeUtf(s.displayName)
+                        buf.writeUtf(s.quality); buf.writeUtf(s.description)
+                    }
                 }
             }
     }
-
     override fun type(): CustomPacketPayload.Type<SkinListPayload> = ID
 }
 
-object SkinPackets {
+/** S2C: Server sends skin resource data (on-demand, response to client request). */
+data class SkinResourcePayload(val data: SkinResourceData) : CustomPacketPayload {
+    companion object {
+        val ID: CustomPacketPayload.Type<SkinResourcePayload> = CustomPacketPayload.Type(
+            ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_resource")
+        )
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinResourcePayload> =
+            object : StreamCodec<RegistryFriendlyByteBuf, SkinResourcePayload> {
+                override fun decode(buf: RegistryFriendlyByteBuf): SkinResourcePayload {
+                    val skinId = buf.readUtf()
+                    val resolver = buf.readByteArray()
+                    val model = readOptionalBytes(buf)
+                    val texture = readOptionalBytes(buf)
+                    val poser = readOptionalBytes(buf)
+                    val animation = readOptionalBytes(buf)
+                    val extraCount = buf.readVarInt()
+                    val extras = (0 until extraCount).associate { buf.readUtf() to buf.readByteArray() }
+                    return SkinResourcePayload(SkinResourceData(skinId, resolver, model, texture, poser, animation, extras))
+                }
+                override fun encode(buf: RegistryFriendlyByteBuf, value: SkinResourcePayload) {
+                    val d = value.data
+                    buf.writeUtf(d.skinId)
+                    buf.writeByteArray(d.resolverJson)
+                    writeOptionalBytes(buf, d.modelGeo)
+                    writeOptionalBytes(buf, d.texturePng)
+                    writeOptionalBytes(buf, d.poserJson)
+                    writeOptionalBytes(buf, d.animationJson)
+                    buf.writeVarInt(d.extraTextures.size)
+                    d.extraTextures.forEach { (k, v) -> buf.writeUtf(k); buf.writeByteArray(v) }
+                }
+                private fun readOptionalBytes(buf: RegistryFriendlyByteBuf): ByteArray? {
+                    return if (buf.readBoolean()) buf.readByteArray() else null
+                }
+                private fun writeOptionalBytes(buf: RegistryFriendlyByteBuf, data: ByteArray?) {
+                    buf.writeBoolean(data != null)
+                    if (data != null) buf.writeByteArray(data)
+                }
+            }
+    }
+    override fun type(): CustomPacketPayload.Type<SkinResourcePayload> = ID
+}
 
-    /**
-     * Called from [CobblemonSkinMod.onInitialize] (common side).
-     * Registers the S2C payload type and the JOIN event that sends skin list on connect.
-     */
+/** S2C: Server broadcasts a skin apply/clear event to all players. */
+data class SkinApplyBroadcast(
+    val playerUUID: java.util.UUID,
+    val slot: Int,           // 1-6
+    val skinId: String       // empty = clear
+) : CustomPacketPayload {
+    companion object {
+        val ID: CustomPacketPayload.Type<SkinApplyBroadcast> = CustomPacketPayload.Type(
+            ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_apply_broadcast")
+        )
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinApplyBroadcast> =
+            object : StreamCodec<RegistryFriendlyByteBuf, SkinApplyBroadcast> {
+                override fun decode(buf: RegistryFriendlyByteBuf) =
+                    SkinApplyBroadcast(buf.readUUID(), buf.readVarInt(), buf.readUtf())
+                override fun encode(buf: RegistryFriendlyByteBuf, value: SkinApplyBroadcast) {
+                    buf.writeUUID(value.playerUUID); buf.writeVarInt(value.slot); buf.writeUtf(value.skinId)
+                }
+            }
+    }
+    override fun type(): CustomPacketPayload.Type<SkinApplyBroadcast> = ID
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  C2S PACKETS (Client → Server)
+// ═══════════════════════════════════════════════════════════════════════════
+
+/** C2S: Client requests skin resource data for a specific skin. */
+data class SkinResourceRequest(val skinId: String) : CustomPacketPayload {
+    companion object {
+        val ID: CustomPacketPayload.Type<SkinResourceRequest> = CustomPacketPayload.Type(
+            ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_resource_req")
+        )
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinResourceRequest> =
+            object : StreamCodec<RegistryFriendlyByteBuf, SkinResourceRequest> {
+                override fun decode(buf: RegistryFriendlyByteBuf) = SkinResourceRequest(buf.readUtf())
+                override fun encode(buf: RegistryFriendlyByteBuf, value: SkinResourceRequest) { buf.writeUtf(value.skinId) }
+            }
+    }
+    override fun type(): CustomPacketPayload.Type<SkinResourceRequest> = ID
+}
+
+/** C2S: Client requests to apply a skin to a party slot. */
+data class SkinApplyRequest(val slot: Int, val skinId: String) : CustomPacketPayload {
+    companion object {
+        val ID: CustomPacketPayload.Type<SkinApplyRequest> = CustomPacketPayload.Type(
+            ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_apply_req")
+        )
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinApplyRequest> =
+            object : StreamCodec<RegistryFriendlyByteBuf, SkinApplyRequest> {
+                override fun decode(buf: RegistryFriendlyByteBuf) = SkinApplyRequest(buf.readVarInt(), buf.readUtf())
+                override fun encode(buf: RegistryFriendlyByteBuf, value: SkinApplyRequest) {
+                    buf.writeVarInt(value.slot); buf.writeUtf(value.skinId)
+                }
+            }
+    }
+    override fun type(): CustomPacketPayload.Type<SkinApplyRequest> = ID
+}
+
+/** C2S: Client requests to clear skin from a party slot. */
+data class SkinClearRequest(val slot: Int) : CustomPacketPayload {
+    companion object {
+        val ID: CustomPacketPayload.Type<SkinClearRequest> = CustomPacketPayload.Type(
+            ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_clear_req")
+        )
+        val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, SkinClearRequest> =
+            object : StreamCodec<RegistryFriendlyByteBuf, SkinClearRequest> {
+                override fun decode(buf: RegistryFriendlyByteBuf) = SkinClearRequest(buf.readVarInt())
+                override fun encode(buf: RegistryFriendlyByteBuf, value: SkinClearRequest) { buf.writeVarInt(value.slot) }
+            }
+    }
+    override fun type(): CustomPacketPayload.Type<SkinClearRequest> = ID
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  REGISTRATION
+// ═══════════════════════════════════════════════════════════════════════════
+
+object SkinPackets {
     fun registerCommon() {
+        // S2C packets
         PayloadTypeRegistry.playS2C().register(SkinListPayload.ID, SkinListPayload.STREAM_CODEC)
+        PayloadTypeRegistry.playS2C().register(SkinResourcePayload.ID, SkinResourcePayload.STREAM_CODEC)
+        PayloadTypeRegistry.playS2C().register(SkinApplyBroadcast.ID, SkinApplyBroadcast.STREAM_CODEC)
+
+        // C2S packets
+        PayloadTypeRegistry.playC2S().register(SkinResourceRequest.ID, SkinResourceRequest.STREAM_CODEC)
+        PayloadTypeRegistry.playC2S().register(SkinApplyRequest.ID, SkinApplyRequest.STREAM_CODEC)
+        PayloadTypeRegistry.playC2S().register(SkinClearRequest.ID, SkinClearRequest.STREAM_CODEC)
     }
 
-    /** Manually push the skin list to a specific player (call from a command if needed). */
-    fun sendSkinList(player: ServerPlayer) {
-        val skins = CobblemonSkinMod.registeredSkins.toList()
+    fun sendSkinList(player: ServerPlayer, skins: List<SkinInfo>) {
         try {
             ServerPlayNetworking.send(player, SkinListPayload(skins))
         } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.debug(
-                "CobblemonSkin: skin list send skipped for ${player.name.string} (${e.message})"
-            )
+            CobblemonSkinMod.LOGGER.debug("Skin list send skipped for ${player.name.string}: ${e.message}")
+        }
+    }
+
+    fun sendSkinResource(player: ServerPlayer, data: SkinResourceData) {
+        try {
+            ServerPlayNetworking.send(player, SkinResourcePayload(data))
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.warn("Skin resource send failed for ${data.skinId}: ${e.message}")
+        }
+    }
+
+    fun broadcastSkinApply(server: net.minecraft.server.MinecraftServer, playerUUID: java.util.UUID, slot: Int, skinId: String) {
+        val payload = SkinApplyBroadcast(playerUUID, slot, skinId)
+        server.playerList.players.forEach { player ->
+            try { ServerPlayNetworking.send(player, payload) } catch (_: Exception) {}
         }
     }
 }

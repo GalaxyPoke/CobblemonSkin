@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_peeved",
+	"title": "cobblemon.mark.mark_personality_peeved.title",
+	"titleColor": "959AAA",
+	"description": "cobblemon.mark.mark_personality_peeved.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_peeved.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 83
+}

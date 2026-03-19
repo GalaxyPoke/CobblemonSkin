@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:cloyster",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:cloyster",
+      "model": "cobblemon:cloyster.geo",
+      "texture": "cobblemon:textures/pokemon/0091_cloyster/cloyster.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0091_cloyster/cloyster_shiny.png"
+    }
+  ]
+}

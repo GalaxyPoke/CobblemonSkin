@@ -1,0 +1,94 @@
+/*
+ * Copyright (C) 2023 Cobblemon Contributors
+ *
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
+package com.cobblemon.mod.common.client.render.models.blockbench.pokemon.gen6
+
+import com.cobblemon.mod.common.client.render.models.blockbench.PosableState
+import com.cobblemon.mod.common.client.render.models.blockbench.pokemon.CryProvider
+import com.cobblemon.mod.common.client.render.models.blockbench.pokemon.PokemonPosableModel
+import com.cobblemon.mod.common.client.render.models.blockbench.pose.Pose
+import com.cobblemon.mod.common.entity.PoseType
+import com.cobblemon.mod.common.util.isBattling
+import net.minecraft.client.model.geom.ModelPart
+import net.minecraft.world.phys.Vec3
+
+class PhantumpModel (root: ModelPart) : PokemonPosableModel(root) {
+    override val rootPart = root.registerChildWithAllChildren("phantump")
+
+    override var portraitScale = 2.0F
+    override var portraitTranslation = Vec3(-0.1, -0.2, 0.0)
+
+    override var profileScale = 0.9F
+    override var profileTranslation = Vec3(0.0, 0.5, 0.0)
+
+    lateinit var standing: Pose
+    lateinit var walk: Pose
+    lateinit var hover: Pose
+    lateinit var fly: Pose
+    lateinit var sleep: Pose
+    lateinit var battleidle: Pose
+
+    override val cryAnimation = CryProvider { bedrockStateful("phantump", "cry") }
+
+    override fun registerPoses() {
+        val blink = quirk { bedrockStateful("phantump", "blink")}
+        sleep = registerPose(
+            poseType = PoseType.SLEEP,
+            animations = arrayOf(bedrock("phantump", "sleep"))
+        )
+        standing = registerPose(
+            poseName = "stand",
+            poseTypes = PoseType.STATIONARY_POSES - PoseType.HOVER - PoseType.FLOAT + PoseType.UI_POSES,
+            condition = { !it.isBattling },
+            transformTicks = 10,
+            quirks = arrayOf(blink),
+            animations = arrayOf(
+                bedrock("phantump", "ground_idle")
+            )
+        )
+        hover = registerPose(
+            poseName = "hover",
+            poseTypes = setOf(PoseType.HOVER, PoseType.FLOAT),
+            quirks = arrayOf(blink),
+            animations = arrayOf(
+                bedrock("phantump", "air_idle")
+            )
+        )
+        fly = registerPose(
+            poseName = "fly",
+            poseTypes = setOf(PoseType.FLY, PoseType.SWIM),
+            quirks = arrayOf(blink),
+            animations = arrayOf(
+                bedrock("phantump", "air_fly")
+            )
+        )
+        walk = registerPose(
+            poseName = "walk",
+            poseTypes = PoseType.MOVING_POSES - PoseType.FLY - PoseType.SWIM,
+            transformTicks = 5,
+            quirks = arrayOf(blink),
+            animations = arrayOf(
+                bedrock("phantump", "ground_walk")
+            )
+        )
+        battleidle = registerPose(
+            poseName = "battle_idle",
+            poseTypes = PoseType.STATIONARY_POSES,
+            transformTicks = 10,
+            quirks = arrayOf(blink),
+            condition = { it.isBattling },
+            animations = arrayOf(
+                bedrock("phantump", "battle_idle")
+            )
+        )
+    }
+
+    override fun getFaintAnimation(state: PosableState) = if (state.isPosedIn(standing, walk, sleep)) bedrockStateful("phantump", "faint") else
+        if (state.isPosedIn(battleidle)) bedrockStateful("phantump", "battle_faint")
+        else null
+}

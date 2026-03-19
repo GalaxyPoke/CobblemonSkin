@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:deoxys",
+  "speciesId": "cobblemon:deoxys",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Attack",
+      "unlockForms": [
+        "Attack"
+      ]
+    },
+    {
+      "displayForm": "Defense",
+      "unlockForms": [
+        "Defense"
+      ]
+    },
+    {
+      "displayForm": "Speed",
+      "unlockForms": [
+        "Speed"
+      ]
+    }
+  ],
+  "variations": []
+}

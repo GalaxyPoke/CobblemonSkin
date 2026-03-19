@@ -1,0 +1,61 @@
+{
+    "timeline": [
+        {
+            "type": "add_holds",
+            "holds": ["effects"]
+        },  
+        {
+            "type": "entity_particles",
+            "effect": "cobblemon:nastyplot_actortrailsmall",
+            "locators": ["top"]
+        },  
+        {
+            "type": "pause",
+            "pause": 0.1
+        },
+        {
+            "type": "entity_particles",
+            "effect": "cobblemon:nastyplot_actortraillarge",
+            "locators": ["top"]
+        },  
+        {
+            "type": "pause",
+            "pause": 0.1
+        },
+        {
+            "type": "entity_particles",
+            "effect": "cobblemon:nastyplot_actorcloud",
+            "locators": ["top"]
+        },  
+        {
+            "type": "pause",
+            "pause": 1.4
+        },
+        {
+            "type": "entity_molang",
+            "expressions": ["q.play_animation(q.bedrock_stateful('nastyplot', 'actor'))"]
+        },
+        {
+            "type": "entity_particles",
+            "effect": "cobblemon:nastyplot_actorexclamation",
+            "locators": ["top"]
+        },     
+        {
+            "type": "pause",
+            "pause": 0.3
+        },
+        {
+            "type": "animation",
+            "animation": ["nastyplot", "status"],
+            "delay": 0.5
+        },      
+        {
+            "type": "remove_holds",
+            "holds": ["effects"]
+        },  
+        {
+            "type": "pause",
+            "pause": 2.5
+        }
+    ]
+}

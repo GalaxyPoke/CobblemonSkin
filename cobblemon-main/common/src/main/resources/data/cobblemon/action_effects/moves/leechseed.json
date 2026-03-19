@@ -1,0 +1,31 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["leechseed", "grass", "status"],
+      "delay": 1.25
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:leechseed_actor",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.5
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.8
+    }
+  ]
+}

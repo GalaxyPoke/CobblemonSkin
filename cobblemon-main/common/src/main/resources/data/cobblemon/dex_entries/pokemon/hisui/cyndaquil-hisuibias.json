@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:cyndaquil-hisuibias",
+  "speciesId": "cobblemon:cyndaquil",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui-Bias",
+      "unlockForms": [
+        "Hisui-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

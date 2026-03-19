@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " C ",
+        "GSG",
+        "SGS"
+    ],
+    "key": {
+        "C": {
+            "item": "minecraft:chiseled_sandstone"
+        },
+        "G": {
+            "tag": "c:raw_materials/gold"
+        },
+        "S": {
+            "item": "minecraft:sandstone"
+        }
+    },
+    "result": {
+        "id": "cobblemon:kings_rock"
+    }
+}

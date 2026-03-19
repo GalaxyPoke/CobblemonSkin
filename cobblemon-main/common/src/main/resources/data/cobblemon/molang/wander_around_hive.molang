@@ -1,0 +1,12 @@
+q.entity.has_memory_value('cobblemon:hive_location') ? {
+    t.position = q.entity.get_position_memory('cobblemon:hive_location');
+    t.wander_control = q.entity.get_wander_control_memory();
+    t.wander_control.set_center(t.position.x, t.position.y, t.position.z, 2, 32);
+    t.wander_control.set_path_cooldown_ticks(50);
+};
+q.entity.lacks_memory_value('cobblemon:hive_location') && q.entity.has_memory_value('cobblemon:nearby_sacc_leaves')  ? {
+    t.position = q.entity.get_position_memory('cobblemon:nearby_sacc_leaves');
+    t.wander_control = q.entity.get_wander_control_memory();
+    t.wander_control.set_center(t.position.x, t.position.y, t.position.z, 2, 32);
+    t.wander_control.set_path_cooldown_ticks(50);
+};

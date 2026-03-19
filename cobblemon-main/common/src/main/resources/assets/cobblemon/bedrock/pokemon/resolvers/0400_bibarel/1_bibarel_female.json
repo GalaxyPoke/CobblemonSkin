@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:bibarel",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "model": "cobblemon:bibarel_female.geo"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+	"cobblemon:red_mint_leaf",
+	"cobblemon:blue_mint_leaf",
+	"cobblemon:cyan_mint_leaf",
+	"cobblemon:pink_mint_leaf",
+	"cobblemon:green_mint_leaf",
+	"cobblemon:white_mint_leaf"
+  ]
+}

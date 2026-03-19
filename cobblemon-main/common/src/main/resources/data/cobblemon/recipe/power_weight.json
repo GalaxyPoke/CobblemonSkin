@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "MCD",
+        "C C",
+        "DCM"
+    ],
+    "key": {
+        "M": {
+            "item": "cobblemon:white_mint_leaf"
+        },
+        "C": {
+            "tag": "c:concretes"
+        },
+        "D": {
+            "tag": "c:gems/diamond"
+        }
+    },
+    "result": {
+        "id": "cobblemon:power_weight"
+    }
+}

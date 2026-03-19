@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:shinx",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "model": "cobblemon:shinx_female.geo"
+    }
+  ]
+}

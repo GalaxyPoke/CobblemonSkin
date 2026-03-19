@@ -1,0 +1,34 @@
+{
+  "name": "cobblemon.behaviour.wanders_hover.name",
+  "description": "cobblemon.behaviour.wanders_hover.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "7": [
+          {
+            "type": "cobblemon:wander",
+            "minimumHeight": {
+              "variableName": "hover_wander_minimum_height",
+              "category": "cobblemon.entity.variable.category.wander",
+              "defaultValue": 0.0,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.hover_wander_minimum_height.name",
+              "description": "cobblemon.entity.variable.hover_wander_minimum_height.desc"
+            },
+            "maximumHeight": {
+              "variableName": "hover_wander_maximum_height",
+              "category": "cobblemon.entity.variable.category.wander",
+              "defaultValue": 6.0,
+              "type": "NUMBER",
+              "displayName": "cobblemon.entity.variable.hover_wander_maximum_height.name",
+              "description": "cobblemon.entity.variable.hover_wander_maximum_height.desc"
+            },
+            "avoidTargetingAir": false
+          }
+        ]
+      }
+    }
+  ]
+}

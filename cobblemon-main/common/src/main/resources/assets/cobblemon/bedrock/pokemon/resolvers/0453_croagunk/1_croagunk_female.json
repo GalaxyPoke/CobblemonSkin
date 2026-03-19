@@ -1,0 +1,13 @@
+{
+  "species": "cobblemon:croagunk",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": [
+        "female"
+      ],
+      "model": "cobblemon:croagunk_female.geo"
+    }
+  ]
+}
+  

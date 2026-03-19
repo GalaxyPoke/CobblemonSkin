@@ -1,0 +1,68 @@
+{
+  "species": "cobblemon:armarouge",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:armarouge",
+      "model": "cobblemon:armarouge.geo",
+        "texture": {
+          "frames": [
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_1.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_2.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_3.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_4.png"
+          ],
+          "fps": 8,
+          "loop": true
+        },
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_emissive_1.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_emissive_2.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_emissive_3.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_emissive_4.png"
+            ],
+            "fps": 8,
+            "loop": true
+          },
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+        "texture": {
+          "frames": [
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_1.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_2.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_3.png",
+            "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_4.png"
+          ],
+          "fps": 8,
+          "loop": true
+        },
+      "layers": [
+        {
+          "name": "flame",
+          "texture": {
+            "frames": [
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_emissive_1.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_emissive_2.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_emissive_3.png",
+              "cobblemon:textures/pokemon/0936_armarouge/armarouge_shiny_emissive_4.png"
+            ],
+            "fps": 8,
+            "loop": true
+          },
+          "emissive": true,
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

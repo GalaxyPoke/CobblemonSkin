@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "rewards": {
+    "recipes": [
+      "cobblemon:hearty_grains_from_bale"
+    ]
+  },
+  "criteria": {
+    "has_hearty_grains": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:hearty_grain_bale"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "cobblemon:hearty_grains_from_bale"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_hearty_grains",
+      "has_the_recipe"
+    ]
+  ]
+}

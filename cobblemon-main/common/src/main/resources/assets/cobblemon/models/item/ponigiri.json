@@ -1,0 +1,98 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon:item/food/ponigiri/ponigiri_filling",
+    "layer1": "cobblemon:item/food/ponigiri/ponigiri_base",
+    "particle": "#layer1"
+  },
+  "overrides": [
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.01 },
+      "model": "cobblemon:item/ponigiri_potato"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.02 },
+      "model": "cobblemon:item/ponigiri_beetroot"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.03 },
+      "model": "cobblemon:item/ponigiri_carrot"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.04 },
+      "model": "cobblemon:item/ponigiri_dried_kelp"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.05 },
+      "model": "cobblemon:item/ponigiri_medicinal_leek"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.06 },
+      "model": "cobblemon:item/ponigiri_red_mushroom"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.07 },
+      "model": "cobblemon:item/ponigiri_brown_mushroom"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.08 },
+      "model": "cobblemon:item/ponigiri_pumpkin"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.10 },
+      "model": "cobblemon:item/ponigiri_chicken"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.11 },
+      "model": "cobblemon:item/ponigiri_cod"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.12 },
+      "model": "cobblemon:item/ponigiri_mutton"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.13 },
+      "model": "cobblemon:item/ponigiri_porkchop"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.14 },
+      "model": "cobblemon:item/ponigiri_rabbit"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.15 },
+      "model": "cobblemon:item/ponigiri_salmon"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.16 },
+      "model": "cobblemon:item/ponigiri_beef"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.17 },
+      "model": "cobblemon:item/ponigiri_egg"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.18 },
+      "model": "cobblemon:item/ponigiri_poisonous_potato"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.19 },
+      "model": "cobblemon:item/ponigiri_rotten_flesh"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.20 },
+      "model": "cobblemon:item/ponigiri_golden_carrot"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.21 },
+      "model": "cobblemon:item/ponigiri_vivichoke"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.22 },
+      "model": "cobblemon:item/ponigiri_tasty_tail"
+    },
+    {
+      "predicate": { "cobblemon:ponigiri_overlay": 0.23 },
+      "model": "cobblemon:item/ponigiri_sweet_berries"
+    }
+  ]
+}

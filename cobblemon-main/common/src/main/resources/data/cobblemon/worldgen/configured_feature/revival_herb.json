@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:random_patch",
+  "config": {
+    "feature": {
+      "feature": {
+        "type": "minecraft:simple_block",
+        "config": {
+          "to_place": {
+            "type": "minecraft:simple_state_provider",
+            "state": {
+              "Name": "cobblemon:revival_herb",
+              "Properties": {
+                "age": "8",
+                "is_wild": "true"
+              }
+            }
+          }
+        }
+      },
+      "placement": [
+        {
+          "type": "minecraft:block_predicate_filter",
+          "predicate": {
+            "type": "minecraft:any_of",
+            "predicates": [
+              {
+                "type": "minecraft:would_survive",
+                "state": {
+                  "Name": "cobblemon:revival_herb",
+                  "Properties": {
+                    "is_wild": "true"
+                  }
+                }
+              },
+              {
+                "type": "minecraft:all_of",
+                "predicates": [
+                  {
+                    "type": "minecraft:matching_blocks",
+                    "blocks": "minecraft:moss_carpet"
+                  },
+                  {
+                    "type": "minecraft:would_survive",
+                    "state": {
+                      "Name": "cobblemon:revival_herb",
+                      "Properties": {
+                        "is_wild": "true"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "tries": 5,
+    "xz_spread": 4,
+    "y_spread": 1
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "cobblemon:revive"
+        },
+        {
+            "item": "cobblemon:revive"
+        },
+        {
+            "item": "cobblemon:vivichoke"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:max_revive"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

@@ -1,0 +1,33 @@
+{
+  "requirements": [
+    {
+      "variant": "properties",
+      "target": "vespiquen"
+    }
+  ],
+  "interactions": [
+    {
+      "grouping": "cobblemon:glass_bottle",
+      "cooldown": "18000",
+      "requirements": [
+        {
+          "variant": "owner_held_item",
+          "itemCondition": "minecraft:glass_bottle"
+        }
+      ],
+      "effects": [
+        {
+          "variant": "shrink_item"
+        },
+        {
+          "variant": "give_item",
+          "item": "minecraft:honey_bottle"
+        },
+        {
+          "variant": "play_sound",
+          "sound": "minecraft:item.bottle.fill"
+        }
+      ]
+    }
+  ]
+}

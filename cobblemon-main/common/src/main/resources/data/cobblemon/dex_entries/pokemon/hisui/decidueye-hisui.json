@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:decidueye-hisui",
+  "speciesId": "cobblemon:decidueye",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui",
+      "unlockForms": [
+        "Hisui"
+      ]
+    }
+  ],
+  "variations": []
+}

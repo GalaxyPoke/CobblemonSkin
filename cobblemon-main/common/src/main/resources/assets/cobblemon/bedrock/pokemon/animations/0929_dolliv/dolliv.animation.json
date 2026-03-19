@@ -1,0 +1,143 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dolliv.ground_idle": {
+			"loop": true,
+			"bones": {
+				"dress_front_left": {
+					"rotation": [-2.5, 0, 5]
+				},
+				"collar_back_middle": {
+					"rotation": [6, 0, 0]
+				},
+				"arm_left": {
+					"rotation": [60, 25, 42]
+				},
+				"arm_left2": {
+					"rotation": [-32, 67, -33]
+				},
+				"head": {
+					"rotation": [5, 0, 0]
+				},
+				"leaf_left": {
+					"rotation": [0, 0, 12.5]
+				},
+				"dolliv": {
+					"scale": 1
+				},
+				"hand_left": {
+					"rotation": [0, 22.5, 15]
+				},
+				"leaves": {
+					"rotation": [12.5, 0, 0]
+				},
+				"hair_right": {
+					"rotation": [0, 5, 0]
+				},
+				"hair_left": {
+					"rotation": [0, -5, 0]
+				},
+				"stem": {
+					"rotation": [-45, 0, 0]
+				},
+				"stem2": {
+					"rotation": [-32.5, 0, 0]
+				},
+				"stem3": {
+					"rotation": [0, 40, 0]
+				},
+				"leaf_right": {
+					"rotation": [0, 0, -12.5]
+				},
+				"olive_left": {
+					"rotation": [0, 0, -5]
+				},
+				"arm_right": {
+					"rotation": [60, -25, -42]
+				},
+				"arm_right2": {
+					"rotation": [-32, -65, 35]
+				},
+				"hand_right": {
+					"rotation": [0, -22.5, -25]
+				},
+				"olive_right": {
+					"rotation": [0, 0, 5]
+				},
+				"dress_front_left3": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"dress_front_right": {
+					"rotation": [-2.5, 0, -5]
+				},
+				"dress_front_right2": {
+					"rotation": [-12.5, 0, 0]
+				},
+				"dress_right": {
+					"rotation": [0, 10, -75]
+				},
+				"dress_right2": {
+					"rotation": [-12.5, 0, 15]
+				},
+				"dress_right3": {
+					"rotation": [0, 0, 37.5]
+				},
+				"dress_back": {
+					"rotation": [-65, 0, 0]
+				},
+				"dress_back2": {
+					"rotation": [15, 0, 0]
+				},
+				"dress_back3": {
+					"rotation": [40, 0, 0]
+				},
+				"collar_back_left": {
+					"rotation": [0, 0, -10]
+				},
+				"collar_back_right": {
+					"rotation": [0, 0, 10]
+				},
+				"collar_front_left": {
+					"rotation": [0, 0, 0]
+				},
+				"collar_front_right": {
+					"rotation": [0, 0, 0]
+				},
+				"collar_front": {
+					"rotation": [-5, 0, 0]
+				},
+				"dress_right4": {
+					"rotation": [0, 0, 7.5]
+				},
+				"dress_left": {
+					"rotation": [0, -10, 75]
+				},
+				"dress_left2": {
+					"rotation": [-12.5, 0, -15]
+				},
+				"dress_left3": {
+					"rotation": [0, 0, -37.5]
+				}
+			}
+		},
+		"animation.dolliv.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eyelid_right": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				},
+				"eyelid_left": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": [0, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}

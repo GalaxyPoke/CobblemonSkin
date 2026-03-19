@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:bronzong",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:bronzong",
+      "model": "cobblemon:bronzong.geo",
+      "texture": "cobblemon:textures/pokemon/0437_bronzong/bronzong.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0437_bronzong/bronzong_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0437_bronzong/bronzong_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0437_bronzong/bronzong_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

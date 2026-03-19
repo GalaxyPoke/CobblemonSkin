@@ -1,0 +1,95 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:orange_tulip",
+	"minecraft:torchflower",
+	{
+      "id": "aether_redux:aurum",
+      "required": false
+    },
+	{
+      "id": "biomemakeover:marigold",
+      "required": false
+    },
+	{
+      "id": "biomemakeover:moth_blossom",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:burning_blossom",
+      "required": false
+    },
+	{
+      "id": "biomesoplenty:orange_cosmos",
+      "required": false
+    },
+	{
+      "id": "blue_skies:blaze_bud",
+      "required": false
+    },
+	{
+      "id": "botania:entropinnyum",
+      "required": false
+    },
+	{
+      "id": "botania:floating_entropinnyum",
+      "required": false
+    },
+	{
+      "id": "botania:floating_pollidisiac",
+      "required": false
+    },
+	{
+      "id": "botania:floating_spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:floating_tigerseye",
+      "required": false
+    },
+	{
+      "id": "botania:floating_thermalily",
+      "required": false
+    },
+	{
+      "id": "botania:orange_double_flower",
+      "required": false
+    },
+	{
+      "id": "botania:orange_floating_flower",
+      "required": false
+    },
+	{
+      "id": "botania:orange_mystical_flower",
+      "required": false
+    },
+	{
+      "id": "botania:orange_shiny_flower",
+      "required": false
+    },
+	{
+      "id": "botania:pollidisiac",
+      "required": false
+    },
+	{
+      "id": "botania:spectrolus",
+      "required": false
+    },
+	{
+      "id": "botania:tigerseye",
+      "required": false
+    },
+	{
+      "id": "botania:thermalily",
+      "required": false
+    },
+	{
+      "id": "deep_aether:golden_flower",
+      "required": false
+    },
+	{
+      "id": "goodending:spicy_wildflowers",
+      "required": false
+    }
+  ]
+}

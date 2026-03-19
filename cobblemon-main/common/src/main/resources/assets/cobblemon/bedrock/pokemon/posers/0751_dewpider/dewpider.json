@@ -1,0 +1,43 @@
+{
+  "portraitScale": 1.85,
+  "portraitTranslation": [-0.04, -0.53, 0],
+  "profileScale": 0.65,
+  "profileTranslation": [-0.02, 0.7, 0],
+  "rootBone": "dewpider",
+  "animations": {
+    "cry": "q.bedrock_stateful('dewpider', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": true,
+      "animations": ["q.bedrock('dewpider', 'ground_idle')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.bedrock('dewpider', 'ground_idle')",
+        "q.biped_walk(1, 1, 'leg_bottom_left', 'leg_bottom_right')"
+      ]
+    },
+    "float": {
+      "poseTypes": ["FLOAT"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('dewpider', 'water_idle')"
+      ]
+    },
+    "swim": {
+      "poseTypes": ["SWIM"],
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('dewpider', 'water_idle')",
+        "q.biped_walk(1, 1, 'leg_bottom_left', 'leg_bottom_right')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('dewpider', 'sleep')"]
+    }
+  }
+}

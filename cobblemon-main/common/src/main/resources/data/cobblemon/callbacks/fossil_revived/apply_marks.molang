@@ -1,0 +1,37 @@
+q.pokemon.add_potential_marks(
+    'cobblemon:mark_rare',
+    'cobblemon:mark_uncommon',
+    'cobblemon:mark_personality_absent-minded',
+    'cobblemon:mark_personality_angry',
+    'cobblemon:mark_personality_calmness',
+    'cobblemon:mark_personality_charismatic',
+    'cobblemon:mark_personality_crafty',
+    'cobblemon:mark_personality_excited',
+    'cobblemon:mark_personality_ferocious',
+    'cobblemon:mark_personality_flustered',
+    'cobblemon:mark_personality_jittery',
+    'cobblemon:mark_personality_joyful',
+    'cobblemon:mark_personality_intellectual',
+    'cobblemon:mark_personality_intense',
+    'cobblemon:mark_personality_kindly',
+    'cobblemon:mark_personality_scowling',
+    'cobblemon:mark_personality_rowdy',
+    'cobblemon:mark_personality_peeved',
+    'cobblemon:mark_personality_pumped-up',
+    'cobblemon:mark_personality_smiley',
+    'cobblemon:mark_personality_teary',
+    'cobblemon:mark_personality_upbeat',
+    'cobblemon:mark_personality_zoned-out',
+    'cobblemon:mark_personality_humble',
+    'cobblemon:mark_personality_prideful',
+    'cobblemon:mark_personality_slump',
+    'cobblemon:mark_personality_thorny',
+    'cobblemon:mark_personality_unsure',
+    'cobblemon:mark_personality_vigor',
+    'cobblemon:mark_personality_zero_energy',
+    'cobblemon:mark_revival'
+);
+
+q.player != 0 ? {
+    q.pokemon.apply_potential_marks;
+};

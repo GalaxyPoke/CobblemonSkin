@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon:item/food/poke_snack",
+    "layer1": "cobblemon:item/food/poke_snack_overlay"
+  }
+}

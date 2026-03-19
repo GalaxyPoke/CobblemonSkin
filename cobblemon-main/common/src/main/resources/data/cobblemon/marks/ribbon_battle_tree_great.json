@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_battle_tree_great",
+	"title": "cobblemon.mark.ribbon_battle_tree_great.title",
+	"titleColor": "F48170",
+	"description": "cobblemon.mark.ribbon_battle_tree_great.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_battle_tree_great.png",
+	"indexNumber": 48
+}

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "cobblemon:chesto_berry",
+    "cobblemon:passho_berry",
+    "cobblemon:ganlon_berry",
+    "cobblemon:apicot_berry",
+    "cobblemon:eggant_berry"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:tauros-paldea",
+  "speciesId": "cobblemon:tauros",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Paldea-Combat",
+      "unlockForms": [
+        "Paldea-Combat"
+      ]
+    },
+    {
+      "displayForm": "Paldea-Blaze",
+      "unlockForms": [
+        "Paldea-Blaze"
+      ]
+    },
+    {
+      "displayForm": "Paldea-Aqua",
+      "unlockForms": [
+        "Paldea-Aqua"
+      ]
+    }
+  ],
+  "variations": []
+}

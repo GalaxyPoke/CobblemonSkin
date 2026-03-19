@@ -1,0 +1,39 @@
+{
+  "name": "cobblemon.behaviour.pokemon_herds.name",
+  "description": "cobblemon.behaviour.pokemon_herds.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "cobblemon:add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "8": [
+          {
+            "type": "cobblemon:find_herd_leader",
+            "checkTicks": 20
+          }
+        ],
+        "9": [
+          "cobblemon:switch_to_herd",
+          {
+            "type": "cobblemon:count_followers",
+            "checkTicks": 10
+          }
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:pokemon_herd",
+      "tasksByPriority": {
+        "1": [
+          "cobblemon:switch_from_herd"
+        ],
+        "2": [
+          "cobblemon:follow_herd_leader",
+          "cobblemon:maintain_herd_leader"
+        ]
+      }
+    }
+  ]
+}

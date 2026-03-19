@@ -1,0 +1,14 @@
+{
+  "ingredient": "cobblemon:green_mint_leaf",
+  "colour": "green",
+  "mobEffects": [
+    {
+      "effect": "minecraft:luck",
+      "duration": 140,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

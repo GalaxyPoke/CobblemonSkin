@@ -1,0 +1,84 @@
+{
+  "portraitScale": 1.9,
+  "portraitTranslation": [-0.04,-1.19,0],
+  "profileScale": 0.8,
+  "profileTranslation": [0,0.49,0],
+  "rootBone": "litwick",
+  "animations": {
+    "cry": "q.bedrock_stateful('litwick', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PROFILE", "PORTRAIT"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 7, -7)",
+        "q.look('head2', 1, 1, 7, -7, 0, 0)",
+        "q.bedrock('litwick', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('litwick', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 7, -7)",
+        "q.look('head2', 1, 1, 7, -7, 0, 0)",
+        "q.bedrock('litwick', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('litwick', 'blink')"
+      ]
+    },
+    "battle_idle": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 7, -7)",
+        "q.look('head2', 1, 1, 7, -7, 0, 0)",
+        "q.bedrock('litwick', 'battle_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('litwick', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('litwick', 'sleep')"]
+    },
+    "shoulder_left": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 7, -7)",
+        "q.look('head2', 1, 1, 7, -7, 0, 0)",
+        "q.bedrock('litwick', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('litwick', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [1.5, 0, 0]
+        }
+      ]
+    },
+    "shoulder_right": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 7, -7)",
+        "q.look('head2', 1, 1, 7, -7, 0, 0)",
+        "q.bedrock('litwick', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('litwick', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [-1.5, 0, 0]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "cobblemon:silvally",
+  "speciesId": "cobblemon:silvally",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Fighting",
+      "unlockForms": [
+        "Fighting"
+      ]
+    },
+    {
+      "displayForm": "Flying",
+      "unlockForms": [
+        "Flying"
+      ]
+    },
+    {
+      "displayForm": "Poison",
+      "unlockForms": [
+        "Poison"
+      ]
+    },
+    {
+      "displayForm": "Ground",
+      "unlockForms": [
+        "Ground"
+      ]
+    },
+    {
+      "displayForm": "Rock",
+      "unlockForms": [
+        "Rock"
+      ]
+    },
+    {
+      "displayForm": "Bug",
+      "unlockForms": [
+        "Bug"
+      ]
+    },
+    {
+      "displayForm": "Ghost",
+      "unlockForms": [
+        "Ghost"
+      ]
+    },
+    {
+      "displayForm": "Steel",
+      "unlockForms": [
+        "Steel"
+      ]
+    },
+    {
+      "displayForm": "Fire",
+      "unlockForms": [
+        "Fire"
+      ]
+    },
+    {
+      "displayForm": "Water",
+      "unlockForms": [
+        "Water"
+      ]
+    },
+    {
+      "displayForm": "Grass",
+      "unlockForms": [
+        "Grass"
+      ]
+    },
+    {
+      "displayForm": "Electric",
+      "unlockForms": [
+        "Electric"
+      ]
+    },
+    {
+      "displayForm": "Psychic",
+      "unlockForms": [
+        "Psychic"
+      ]
+    },
+    {
+      "displayForm": "Ice",
+      "unlockForms": [
+        "Ice"
+      ]
+    },
+    {
+      "displayForm": "Dragon",
+      "unlockForms": [
+        "Dragon"
+      ]
+    },
+    {
+      "displayForm": "Dark",
+      "unlockForms": [
+        "Dark"
+      ]
+    },
+    {
+      "displayForm": "Fairy",
+      "unlockForms": [
+        "Fairy"
+      ]
+    }
+  ],
+  "variations": []
+}

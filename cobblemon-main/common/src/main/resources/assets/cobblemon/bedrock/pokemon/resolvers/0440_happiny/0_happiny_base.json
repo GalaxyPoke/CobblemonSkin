@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:happiny",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:happiny",
+      "model": "cobblemon:happiny.geo",
+      "texture": "cobblemon:textures/pokemon/0440_happiny/happiny.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0440_happiny/happiny_shiny.png"
+    }
+  ]
+}

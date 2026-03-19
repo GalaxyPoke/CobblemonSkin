@@ -1,0 +1,16 @@
+{
+    "name": "cobblemon:prehistoric_dripstone_cave",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/dripstone_oasis1",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "apply_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_dripstone_oasis",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+  "portraitScale": 1.32,
+  "portraitTranslation": [-0.12,-0.09,0],
+  "profileScale": 0.70,
+  "profileTranslation": [0,0.51,0],
+  "rootBone": "solosis",
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "HOVER",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('body')",
+        "q.bedrock('solosis', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('solosis', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.bedrock('solosis', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('solosis', 'blink')"
+      ]
+    },
+    "fly": {
+      "poseTypes": [
+        "SWIM",
+        "FLY"
+      ],
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('solosis', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('solosis', 'blink')"
+      ]
+    },
+    "shoulder_left": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": ["q.look('body')", "q.bedrock('solosis', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('solosis', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [10, 0, 0]
+        }
+      ]
+    },
+    "shoulder_right": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": ["q.look('body')", "q.bedrock('solosis', 'ground_idle')"],
+      "quirks": ["q.bedrock_quirk('solosis', 'blink')"],
+      "transformedParts": [
+        {
+          "part": "body",
+          "position": [-10, 0, 0]
+        }
+       ]
+      }  
+    }
+  }

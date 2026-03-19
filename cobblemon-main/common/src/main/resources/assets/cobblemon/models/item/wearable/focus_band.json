@@ -1,0 +1,7 @@
+{
+	"parent": "cobblemon:item/wearable/template_band",
+	"textures": {
+		"texture": "cobblemon:item/wearable/focus_band",
+		"particle": "cobblemon:item/wearable/focus_band"
+	}
+}

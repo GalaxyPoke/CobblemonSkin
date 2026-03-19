@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:thwackey",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:thwackey",
+      "model": "cobblemon:thwackey.geo",
+      "texture": "cobblemon:textures/pokemon/0811_thwackey/thwackey.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0811_thwackey/thwackey_shiny.png"
+    }
+  ]
+}

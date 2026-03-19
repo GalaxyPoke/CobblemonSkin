@@ -1,0 +1,25 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "group": "x_items",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "minecraft:glass_bottle"
+        },
+        {
+            "item": "cobblemon:pep_up_flower"
+        },
+        {
+            "item": "minecraft:bone_meal"
+        },
+        {
+            "item": "cobblemon:petaya_berry"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:x_special_attack",
+        "count": 4
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

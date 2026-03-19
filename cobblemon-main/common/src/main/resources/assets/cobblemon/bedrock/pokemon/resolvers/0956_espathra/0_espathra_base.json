@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:espathra",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:espathra",
+      "model": "cobblemon:espathra.geo",
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0956_espathra/espathra_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_stripped_logs": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:stripped_saccharine_log"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:saccharine_hanging_sign"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_stripped_logs",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:saccharine_hanging_sign"
+    ]
+  },
+  "sends_telemetry_event": false
+}

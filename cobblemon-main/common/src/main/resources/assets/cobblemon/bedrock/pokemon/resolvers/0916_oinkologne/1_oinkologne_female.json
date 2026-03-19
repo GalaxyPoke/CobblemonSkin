@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:oinkologne",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "poser": "cobblemon:oinkologne_female",
+      "model": "cobblemon:oinkologne_female.geo",
+      "texture": "cobblemon:textures/pokemon/0916_oinkologne/oinkologne_female.png"
+    },
+    {
+      "aspects": ["female", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0916_oinkologne/oinkologne_female_shiny.png"
+    }
+  ]
+}

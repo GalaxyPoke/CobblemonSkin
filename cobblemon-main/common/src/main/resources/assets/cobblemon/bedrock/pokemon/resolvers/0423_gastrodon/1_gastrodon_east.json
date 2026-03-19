@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:gastrodon",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["east-sea"],
+      "poser": "cobblemon:gastrodon_east",
+      "model": "cobblemon:gastrodon_east.geo",
+      "texture": "cobblemon:textures/pokemon/0423_gastrodon/gastrodon_east.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny", "east-sea"],
+      "texture": "cobblemon:textures/pokemon/0423_gastrodon/gastrodon_east_shiny.png"
+    }
+  ]
+}

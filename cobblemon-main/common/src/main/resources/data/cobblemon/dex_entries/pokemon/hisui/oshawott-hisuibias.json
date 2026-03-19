@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:oshawott-hisuibias",
+  "speciesId": "cobblemon:oshawott",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui-Bias",
+      "unlockForms": [
+        "Hisui-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

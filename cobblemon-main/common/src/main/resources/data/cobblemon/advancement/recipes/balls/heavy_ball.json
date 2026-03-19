@@ -1,0 +1,50 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_black_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:black_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_blue_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:blue_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:heavy_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_blue_apricorn",
+      "has_the_recipe"
+    ],
+	[
+      "has_black_apricorn",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:heavy_ball"
+    ]
+  }
+}

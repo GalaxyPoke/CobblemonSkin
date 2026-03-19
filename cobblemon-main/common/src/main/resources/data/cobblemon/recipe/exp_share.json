@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "GCG",
+        "LHL",
+        "I I"
+    ],
+    "key": {
+        "I": {
+            "tag": "c:ingots/iron"
+        },
+        "G": {
+            "tag": "c:gems/amethyst"
+        },
+        "C": {
+            "tag": "c:ingots/gold"
+        },
+        "L": {
+            "tag": "c:gems/lapis"
+        },
+        "H": {
+            "item": "minecraft:iron_helmet"
+        }
+    },
+    "result": {
+        "id": "cobblemon:exp_share"
+    }
+}

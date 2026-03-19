@@ -1,0 +1,33 @@
+{
+  "name": "cobblemon.behaviour.attack_hostile_mobs.name",
+  "description": "cobblemon.behaviour.attack_hostile_mobs.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "0": [
+          "attack_hostile_mobs"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "idle",
+      "tasksByPriority": {
+        "1": [
+          "switch_to_fight"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "fight",
+      "tasksByPriority": {
+        "3": [
+          "switch_from_fight"
+        ]
+      }
+    }
+  ]
+}

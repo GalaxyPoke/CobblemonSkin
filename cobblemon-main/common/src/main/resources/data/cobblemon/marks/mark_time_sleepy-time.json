@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_time_sleepy-time",
+	"title": "cobblemon.mark.mark_time_sleepy-time.title",
+	"titleColor": "B4BBCE",
+	"description": "cobblemon.mark.mark_time_sleepy-time.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_time_sleepy-time.png",
+	"group": "time",
+	"chance": 0.02,
+	"indexNumber": 54
+}

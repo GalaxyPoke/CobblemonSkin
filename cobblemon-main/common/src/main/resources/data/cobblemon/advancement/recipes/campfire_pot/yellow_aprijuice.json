@@ -1,0 +1,46 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/yellow_aprijuice"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_flower": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:pep_up_flower"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": "cobblemon:yellow_apricorn"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_flower"
+    ],
+	[
+      "has_the_recipe",
+      "has_apricorn"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/yellow_aprijuice"
+    ]
+  }
+}

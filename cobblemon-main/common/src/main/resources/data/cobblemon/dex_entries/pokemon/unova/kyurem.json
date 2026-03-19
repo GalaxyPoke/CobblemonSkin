@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:kyurem",
+  "speciesId": "cobblemon:kyurem",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "White",
+      "unlockForms": [
+        "White"
+      ]
+    },
+    {
+      "displayForm": "Black",
+      "unlockForms": [
+        "Black"
+      ]
+    }
+  ],
+  "variations": []
+}

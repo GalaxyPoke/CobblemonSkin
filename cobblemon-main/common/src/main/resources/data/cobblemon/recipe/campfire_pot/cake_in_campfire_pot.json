@@ -1,0 +1,28 @@
+{
+    "type": "cobblemon:cooking_pot",
+    "category": "foods",
+    "key": {
+        "M": {
+            "tag": "c:drinks/milk"
+        },
+        "S": {
+            "item": "minecraft:sugar"
+        },
+        "E": {
+            "item": "minecraft:egg"
+        },
+        "W": {
+            "item": "minecraft:wheat"
+        }
+    },
+    "pattern": [
+        "MMM",
+        "SES",
+        "WWW"
+    ],
+    "result": {
+        "id": "minecraft:cake"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

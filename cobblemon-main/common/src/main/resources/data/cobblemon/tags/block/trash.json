@@ -1,0 +1,66 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:composter",
+	{
+      "id": "etcetera:prickly_can",
+      "required": false
+    },
+	{
+      "id": "farmersdelight:organic_compost",
+      "required": false
+    },
+	{
+      "id": "manatrashcan:mana_trashcan",
+      "required": false
+    },
+	{
+      "id": "nethersdelight:soul_compost",
+      "required": false
+    },
+	{
+      "id": "overweight_farming:vegetable_compost",
+      "required": false
+    },
+	{
+      "id": "rats:trash_can",
+      "required": false
+    },
+	{
+      "id": "rats:garbage_pile",
+      "required": false
+    },
+	{
+      "id": "rats:cursed_garbage",
+      "required": false
+    },
+	{
+      "id": "rats:purified_garbage",
+      "required": false
+    },
+	{
+      "id": "rats:pied_garbage",
+      "required": false
+    },
+	{
+      "id": "rats:compressed_garbage",
+      "required": false
+    },
+	{
+      "id": "trashcans:item_trash_can",
+      "required": false
+    },
+	{
+      "id": "trashcans:liquid_trash_can",
+      "required": false
+    },
+	{
+      "id": "trashcans:energy_trash_can",
+      "required": false
+    },
+	{
+      "id": "trashcans:ultimate_trash_can",
+      "required": false
+    }
+  ]
+}

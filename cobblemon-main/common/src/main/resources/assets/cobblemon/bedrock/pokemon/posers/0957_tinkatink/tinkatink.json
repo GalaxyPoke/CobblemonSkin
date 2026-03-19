@@ -1,0 +1,66 @@
+{
+  "portraitScale": 2,
+  "portraitTranslation": [0, -1.01, 0.0],
+  "profileScale": 1,
+  "profileTranslation": [0.0, 0.25, 0.0],
+  "rootBone": "tinkatink",
+  "animations": {
+    "faint": "q.bedrock_primary('tinkatink', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('tinkatink', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tinkatink', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('tinkatink', 'blink')"]
+    },
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tinkatink', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('tinkatink', 'blink')"]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tinkatink', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('tinkatink', 'blink')"]
+    },
+    "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": ["q.bedrock('tinkatink', 'sleep')"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "shoulder_left": {
+      "poseTypes": ["SHOULDER_LEFT"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tinkatink', 'shoulder_left')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('tinkatink', 'blink')"
+      ]
+    },
+    "shoulder_right": {
+      "poseTypes": ["SHOULDER_RIGHT"],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('tinkatink', 'shoulder_right')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('tinkatink', 'blink')"
+      ]
+    }
+  }
+}

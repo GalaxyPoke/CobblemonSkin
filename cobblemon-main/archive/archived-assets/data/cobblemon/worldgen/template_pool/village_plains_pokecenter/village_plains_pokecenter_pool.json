@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:village_plains_pokecenter/village_plains_pokecenter_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:village_plains_pokecenter",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:gyarados",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gyarados",
+      "model": "cobblemon:gyarados_male.geo",
+      "texture": "cobblemon:textures/pokemon/0130_gyarados/gyarados.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0130_gyarados/gyarados_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "K  ",
+        "KGK",
+        "  K"
+    ],
+    "key": {
+        "G": {
+            "item": "cobblemon:fighting_gem"
+        },
+        "K": {
+            "item": "minecraft:dried_kelp"
+        }
+    },
+    "result": {
+        "id": "cobblemon:black_belt"
+    }
+}

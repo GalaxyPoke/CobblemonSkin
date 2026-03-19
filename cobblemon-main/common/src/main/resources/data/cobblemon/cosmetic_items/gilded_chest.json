@@ -1,0 +1,33 @@
+{
+  "pokemon": ["gimmighoul roaming=false", "gholdengo"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "cobblemon:gilded_chest",
+      "aspects": ["red-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:yellow_gilded_chest",
+      "aspects": ["yellow-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:green_gilded_chest",
+      "aspects": ["green-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:blue_gilded_chest",
+      "aspects": ["blue-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:pink_gilded_chest",
+      "aspects": ["pink-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:black_gilded_chest",
+      "aspects": ["black-gilded-chest"]
+    },
+    {
+      "consumedItem": "cobblemon:white_gilded_chest",
+      "aspects": ["white-gilded-chest"]
+    }
+  ]
+}

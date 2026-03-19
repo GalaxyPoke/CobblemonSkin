@@ -1,0 +1,99 @@
+{
+  "portraitScale": 1.9,
+  "portraitTranslation": [-0.5, 1.12, 0],
+  "profileScale": 0.65,
+  "profileTranslation": [0, 0.71, 0],
+  "rootBone": "carracosta",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.3, 0],
+    "seat_1_reverse": [0, 0.3, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.3, 0],
+    "seat_1_reverse": [0, 0.3, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('carracosta', 'cry')"
+  },
+  "poses": {
+    "in-air": {
+      "poseTypes": ["STAND", "WALK"],
+      "isRideStyle": ["LIQUID"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('carracosta', 'water_idle')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "battle-standing": {
+      "poseName": "battle-standing",
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('carracosta', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('carracosta', 'blink')"]
+    },
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "PORTRAIT", "PROFILE", "NONE"],
+      "isTouchingWater": false,
+      "animations": [
+        "q.bedrock('carracosta', 'ground_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('carracosta', 'blink')"]
+    },
+    "walking": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "isTouchingWater": false,
+      "animations": [
+        "q.bedrock('carracosta', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('carracosta', 'blink')"]
+    },
+    "floating": {
+      "poseName": "floating",
+      "poseTypes": ["FLOAT"],
+      "isTouchingWater": true,
+      "animations": [
+        "q.bedrock('carracosta', 'water_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('carracosta', 'blink')"]
+    },
+    "swimming": {
+      "poseName": "swimming",
+      "poseTypes": ["SWIM"],
+      "isTouchingWater": true,
+      "animations": [
+        "q.bedrock('carracosta', 'water_swim')"
+      ],
+      "quirks": ["q.bedrock_quirk('carracosta', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "isTouchingWater": false,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('carracosta', 'sleep')"]
+    },
+    "underwater-sleep": {
+      "poseTypes": ["SLEEP"],
+      "poseName": ["water-sleep"],
+      "isTouchingWater": true,
+      "isUnderWater": true,
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('carracosta', 'water_sleep')"]
+    }
+  }
+}

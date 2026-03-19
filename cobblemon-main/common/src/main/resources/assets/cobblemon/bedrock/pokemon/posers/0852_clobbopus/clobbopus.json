@@ -1,0 +1,40 @@
+{
+  "portraitScale": 1.90,
+  "portraitTranslation": [ -0.29, -0.66, 0],
+  "profileScale": 0.59,
+  "profileTranslation": [ 0, 0.84, 0],
+  "rootBone": "clobbopus",
+  "animations": {},
+  "poses": {
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('clobbopus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('clobbopus', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('clobbopus', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('clobbopus', 'blink')"
+      ]
+    }
+  }
+}

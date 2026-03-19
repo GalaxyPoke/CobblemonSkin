@@ -1,0 +1,213 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.skwovet.ground_idle": {
+			"loop": true,
+			"bones": {
+				"torso": {
+					"rotation": [20, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"torso2": {
+					"rotation": [-10, 0, 0]
+				},
+				"tail": {
+					"rotation": [-12.2386, -14.8687, -2.00307]
+				},
+				"leg_left": {
+					"rotation": [0, -10, 0]
+				},
+				"foot_left": {
+					"rotation": [0, -10, 0]
+				},
+				"cheek_left": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"tail2": {
+					"rotation": [8.78964, 30.37393, -12.16695]
+				},
+				"tail4": {
+					"rotation": [-5, 0, 0]
+				},
+				"arm_right": {
+					"rotation": [24.49253, -45.99702, -38.45912],
+					"position": [0, 0, -0.5]
+				},
+				"hand_right": {
+					"rotation": [0, -55, 0]
+				},
+				"cheek_right": {
+					"rotation": [0, 0, 0],
+					"position": [0, 0, 0]
+				},
+				"leg_right": {
+					"rotation": [0, 10, 0]
+				},
+				"foot_right": {
+					"rotation": [0, 10, 0]
+				},
+				"oran": {
+					"scale": 1.5
+				},
+				"pecha": {
+					"scale": 1.5
+				},
+				"chesto": {
+					"scale": 1.5
+				},
+				"cheri": {
+					"scale": 1.5
+				},
+				"mago": {
+					"scale": 1.5
+				},
+				"arm_left": {
+					"rotation": [24.49253, 45.997, 38.4591],
+					"position": [0, 0, -0.5]
+				},
+				"hand_left": {
+					"rotation": [0, 55, 0]
+				},
+				"tail3": {
+					"rotation": [0, 0, -12.5]
+				},
+				"berries": {
+					"scale": 0.01
+				},
+				"tail_fluff_middle": {
+					"rotation": [25, 0, 0]
+				},
+				"tail_fluff_left": {
+					"rotation": [-25.28552, 13.45415, -7.00625],
+					"position": [0, 0.5, -0.25]
+				},
+				"head": {
+					"rotation": [-10, 0, 0]
+				}
+			}
+		},
+		"animation.skwovet.blink": {
+			"animation_length": 0.1667,
+			"bones": {
+				"eyelid_left": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": {"pre": [0, 0, -0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eyelid_right": {
+					"position": {
+						"0.0": [0, 0, -0.1],
+						"0.125": [0, 0, -0.1],
+						"0.1667": {"pre": [0, 0, -0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eye_left": {
+					"position": {
+						"0.0": [0, 0, 0.1],
+						"0.125": [0, 0, 0.1],
+						"0.1667": {"pre": [0, 0, 0.1], "post": [0, 0, 0]}
+					}
+				},
+				"eye_right": {
+					"position": {
+						"0.0": [0, 0, 0.1],
+						"0.125": [0, 0, 0.1],
+						"0.1667": {"pre": [0, 0, 0.1], "post": [0, 0, 0]}
+					}
+				}
+			}
+		},
+		"animation.skwovet.mouth_open": {
+			"loop": true,
+			"bones": {
+				"mouth_open": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.skwovet.hurt": {
+			"loop": true,
+			"bones": {
+				"eye_left": {
+					"position": [0, 0, 0.1]
+				},
+				"eye_right": {
+					"position": [0, 0, 0.1]
+				},
+				"eyelid_hurt_left": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_hurt_right": {
+					"position": [0, 0, -0.1]
+				},
+				"mouth_open_small": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.skwovet.happy": {
+			"loop": true,
+			"bones": {
+				"eye_left": {
+					"position": [0, 0, 0.1]
+				},
+				"eye_right": {
+					"position": [0, 0, 0.1]
+				},
+				"eyelid_happy_right": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_happy_left": {
+					"position": [0, 0, -0.1]
+				},
+				"mouth_open_happy": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.skwovet.sad": {
+			"loop": true,
+			"bones": {
+				"eyelid_emote_left": {
+					"position": [0, 0, -0.1]
+				},
+				"eyelid_emote_right": {
+					"position": [0, 0, -0.1]
+				},
+				"mouth_open_sad": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.skwovet.angry": {
+			"loop": true,
+			"bones": {
+				"eyelid_emote_left": {
+					"position": [-1, 0, -0.1]
+				},
+				"eyelid_emote_right": {
+					"position": [1, 0, -0.1]
+				},
+				"mouth_open_sad": {
+					"position": [0, 0, -0.1]
+				}
+			}
+		},
+		"animation.skwovet.disinterested": {
+			"loop": true,
+			"bones": {
+				"eyelid_emote_left": {
+					"position": [-0.5, 0, -0.1],
+					"scale": [2, 1, 1]
+				},
+				"eyelid_emote_right": {
+					"position": [0.5, 0, -0.1],
+					"scale": [2, 1, 1]
+				}
+			}
+		}
+	}
+}

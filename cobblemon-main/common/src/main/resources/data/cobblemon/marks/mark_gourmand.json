@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.mark_gourmand",
+	"title": "cobblemon.mark.mark_gourmand.title",
+	"titleColor": "FF8327",
+	"description": "cobblemon.mark.mark_gourmand.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_gourmand.png",
+	"indexNumber": 105
+}

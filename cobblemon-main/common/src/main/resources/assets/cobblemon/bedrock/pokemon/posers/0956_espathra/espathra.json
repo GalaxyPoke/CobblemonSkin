@@ -1,0 +1,80 @@
+ {
+ "portraitScale": 2.0,
+ "portraitTranslation": [-1.1, 2.4, 0],
+ "profileScale": 0.5,
+ "profileTranslation": [0.0, 1.0, 0],
+ "rootBone": "espathra",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('espathra', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('espathra', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "FLOAT"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head_ai')", 
+        "q.bedrock('espathra', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espathra', 'blink')"
+      ]
+    },
+    "in_air": {
+      "poseTypes": ["WALK","STAND", "NONE"],
+      "condition": "q.has_entity ? q.in_air && q.is_ridden : 0.0",
+      "animations": [
+        "q.look('head_ai')", 
+        "q.bedrock('espathra', 'ride_jump')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('espathra', 'blink')"
+      ],
+      "transformTicks": 1,
+      "transformToTicks": 1
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air && !q.is_sprinting : 1.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('espathra', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('espathra', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('espathra', 'blink')"]
+    },
+    "running": {
+      "poseTypes": ["WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.in_air && q.is_sprinting : 0.0",
+      "animations": [
+        "q.look('head_ai')",
+        "q.bedrock('espathra', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('espathra', 'ride_ground_run')"
+        }
+      ],
+      "quirks": ["q.bedrock_quirk('espathra', 'blink')"]
+    },
+      "sleeping": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('espathra', 'sleep')"
+      ]
+    }
+  }
+}

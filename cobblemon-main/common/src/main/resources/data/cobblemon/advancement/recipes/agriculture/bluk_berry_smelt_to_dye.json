@@ -1,0 +1,34 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:bluk_berry"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:bluk_berry_smelt_to_dye"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_berry",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:bluk_berry_smelt_to_dye"
+    ]
+  }
+}

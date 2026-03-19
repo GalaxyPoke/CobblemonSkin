@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:milcery",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:milcery",
+      "model": "cobblemon:milcery.geo",
+      "texture": "cobblemon:textures/pokemon/0868_milcery/milcery.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0868_milcery/milcery_shiny.png"
+    }
+  ]
+}

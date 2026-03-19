@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_dry",
+	"title": "cobblemon.mark.mark_weather_dry.title",
+	"titleColor": "FF8327",
+	"description": "cobblemon.mark.mark_weather_dry.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_dry.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 62
+}

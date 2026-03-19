@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:drifloon",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:drifloon",
+      "model": "cobblemon:drifloon.geo",
+      "texture": "cobblemon:textures/pokemon/0425_drifloon/drifloon.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0425_drifloon/drifloon_shiny.png"
+    }
+  ]
+}

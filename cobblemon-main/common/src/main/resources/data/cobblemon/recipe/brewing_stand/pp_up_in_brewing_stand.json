@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:vivichoke"
+  },
+  "bottle": {
+    "item": "cobblemon:medicinal_brew"
+  },
+  "result": {
+    "id": "cobblemon:pp_up"
+  }
+}

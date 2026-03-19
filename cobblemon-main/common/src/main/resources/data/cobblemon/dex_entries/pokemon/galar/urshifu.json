@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:urshifu",
+  "speciesId": "cobblemon:urshifu",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Rapid-Strike",
+      "unlockForms": [
+        "Rapid-Strike"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    },
+    {
+      "displayForm": "Rapid-Strike-Gmax",
+      "unlockForms": [
+        "Rapid-Strike-Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

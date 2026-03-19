@@ -1,0 +1,17 @@
+{
+  "item": "cobblemon:cheri_berry",
+  "effects": [
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "fairy"
+    },
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "grass"
+    }
+  ]
+}

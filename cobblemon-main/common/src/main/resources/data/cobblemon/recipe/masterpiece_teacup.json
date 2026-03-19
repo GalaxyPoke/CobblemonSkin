@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "CTC",
+        "QCQ"
+    ],
+    "key": {
+        "Q": {
+            "tag": "c:gems/quartz"
+        },
+        "C": {
+            "item": "minecraft:clay_ball"
+        },
+        "T": {
+            "item": "cobblemon:masterpiece_teacup"
+        }
+    },
+    "result": {
+        "id": "cobblemon:masterpiece_teacup",
+        "count": 2
+    }
+}

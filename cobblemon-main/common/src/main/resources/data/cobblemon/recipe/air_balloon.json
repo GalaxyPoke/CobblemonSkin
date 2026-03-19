@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " WW",
+        " PW",
+        "S  "
+    ],
+    "key": {
+        "W": {
+            "tag": "minecraft:wool"
+        },
+        "P": {
+            "item": "minecraft:phantom_membrane"
+        },
+        "S": {
+            "tag": "c:strings"
+        }
+    },
+    "result": {
+        "id": "cobblemon:air_balloon"
+    }
+}

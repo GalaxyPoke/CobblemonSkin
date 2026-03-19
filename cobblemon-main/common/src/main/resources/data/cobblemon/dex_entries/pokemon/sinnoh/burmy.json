@@ -1,0 +1,27 @@
+{
+  "id": "cobblemon:burmy",
+  "speciesId": "cobblemon:burmy",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Sandy",
+      "unlockForms": [
+        "Sandy"
+      ]
+    },
+    {
+      "displayForm": "Trash",
+      "unlockForms": [
+        "Trash"
+      ]
+    }
+  ],
+  "variations": []
+}

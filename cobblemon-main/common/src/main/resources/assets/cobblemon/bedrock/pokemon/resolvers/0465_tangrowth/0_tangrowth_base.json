@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:tangrowth",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:tangrowth",
+      "model": "cobblemon:tangrowth.geo",
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0465_tangrowth/tangrowth_shiny.png"
+    }
+  ]
+}

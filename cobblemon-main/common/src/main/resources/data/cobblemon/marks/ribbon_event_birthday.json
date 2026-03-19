@@ -1,0 +1,8 @@
+{
+	"name": "cobblemon.mark.ribbon_event_birthday",
+	"title": "cobblemon.mark.ribbon_event_birthday.title",
+	"titleColor": "F09365",
+	"description": "cobblemon.mark.ribbon_event_birthday.desc",
+	"texture": "cobblemon:textures/gui/mark/ribbon_event_birthday.png",
+	"indexNumber": 29
+}

@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:joltik",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:joltik",
+      "model": "cobblemon:joltik.geo",
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0595_joltik/joltik_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

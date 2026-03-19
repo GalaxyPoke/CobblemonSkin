@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "cobblemon:item/food/sinister_tea/sinister_tea_unremarkable_base",
+    "layer1": "cobblemon:item/food/sinister_tea/sinister_tea_unremarkable_overlay"
+  }
+}

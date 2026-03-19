@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:growlithe-hisui",
+  "speciesId": "cobblemon:growlithe",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Hisui",
+      "unlockForms": [
+        "Hisui"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,68 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:big_dripleaf",
+    "minecraft:lily_pad",
+    "minecraft:moss_block",
+    "minecraft:moss_carpet",
+    "minecraft:sculk",
+    "minecraft:snow_block",
+    "#minecraft:animals_spawnable_on",
+    "#minecraft:crystal_sound_blocks",
+    "#minecraft:base_stone_nether",
+    "#minecraft:base_stone_overworld",
+    "#minecraft:coal_ores",
+    "#minecraft:copper_ores",
+    "#minecraft:coral_blocks",
+    "#minecraft:diamond_ores",
+    "#minecraft:dirt",
+    "#minecraft:emerald_ores",
+    "#minecraft:sculk_replaceable",
+    "#minecraft:gold_ores",
+    "#minecraft:ice",
+    "#minecraft:iron_ores",
+    "#minecraft:lapis_ores",
+    "#minecraft:nylium",
+    "#minecraft:redstone_ores",
+    "#minecraft:sand",
+    "#minecraft:snow",
+    "#minecraft:terracotta",
+    "#minecraft:valid_spawn",
+    {
+      "id": "#c:coral_blocks",
+      "required": false
+    },
+    {
+      "id": "#c:dirts",
+      "required": false
+    },
+    {
+      "id": "#c:end_stones",
+      "required": false
+    },
+    {
+      "id": "#c:gems",
+      "required": false
+    },
+    {
+      "id": "#c:gravels",
+      "required": false
+    },
+    {
+      "id": "#c:netherracks",
+      "required": false
+    },
+    {
+      "id": "#c:ores",
+      "required": false
+    },
+    {
+      "id": "#c:sands",
+      "required": false
+    },
+    {
+      "id": "#c:stones",
+      "required": false
+    }
+  ]
+}

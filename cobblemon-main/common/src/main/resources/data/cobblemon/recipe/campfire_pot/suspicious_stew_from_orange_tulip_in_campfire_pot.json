@@ -1,0 +1,25 @@
+{
+  "type": "cobblemon:cooking_pot_shapeless",
+  "category": "misc",
+  "group": "suspicious_stew",
+  "ingredients": [
+    {"item": "minecraft:bowl"},
+    {"item": "minecraft:brown_mushroom"},
+    {"item": "minecraft:red_mushroom"},
+    {"item": "minecraft:orange_tulip"}
+  ],
+  "result": {
+    "components": {
+      "minecraft:suspicious_stew_effects": [
+        {
+          "duration": 180,
+          "id": "minecraft:weakness"
+        }
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:suspicious_stew"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

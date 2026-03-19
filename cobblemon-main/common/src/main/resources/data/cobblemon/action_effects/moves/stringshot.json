@@ -1,0 +1,59 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["stringshot", "bug", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:stringshot_actorspray",
+      "locators": ["special", "target"],
+      "targetLocators": ["middle"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:stringshot_actor",
+      "locators": ["special", "target"],
+      "targetLocators": ["middle"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.3
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:stringshot_target1",
+      "locators": ["middle"],
+      "delay": 0.05
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:stringshot_target2",
+      "locators": ["middle"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": ["q.play_animation(q.bedrock_stateful('stringshot', 'target'))"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.6
+    }
+  ]
+}

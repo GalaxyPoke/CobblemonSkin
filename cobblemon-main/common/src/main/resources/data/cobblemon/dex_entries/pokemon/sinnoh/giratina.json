@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:giratina",
+  "speciesId": "cobblemon:giratina",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Origin",
+      "unlockForms": [
+        "Origin"
+      ]
+    }
+  ],
+  "variations": []
+}

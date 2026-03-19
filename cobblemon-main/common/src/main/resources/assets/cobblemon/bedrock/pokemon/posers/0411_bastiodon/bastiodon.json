@@ -1,0 +1,138 @@
+{
+  "portraitScale": 1.4,
+  "portraitTranslation": [-0.75, -0.2, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0, 0.6, 0],
+  "rootBone": "bastiodon",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0],
+    "seat_2": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.5, 0],
+    "seat_1_reverse": [0, 0.5, 0],
+    "seat_2": [0, 0.5, 0],
+    "seat_2_reverse": [0, 0.5, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.5, 0],
+    "seat_1_reverse": [0, 0.5, 0],
+    "seat_2": [0, 0.5, 0],
+    "seat_2_reverse": [0, 0.5, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('bastiodon', 'faint')",
+    "cry": "q.bedrock_stateful('bastiodon', 'cry')"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('bastiodon', 'battle_idle')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bastiodon', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "isBattle": false,
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "condition": "q.has_entity ? !q.in_air : 1.0",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('bastiodon', 'ground_idle')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('bastiodon', 'ride_ground_walk')"
+        },
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bastiodon', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "ride-jump": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.is_ridden && q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('bastiodon', 'ride_jump')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bastiodon', 'blink')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('bastiodon', 'ground_walk')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('bastiodon', 'ride_ground_walk')"
+        },
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bastiodon', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('bastiodon', 'ground_run')",
+        {
+          "condition": "q.has_entity && q.is_ridden",
+          "animation": "q.bedrock('bastiodon', 'ride_ground_walk')"
+        },
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('bastiodon', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": [
+        "q.bedrock('bastiodon', 'sleep')",
+        {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('bastiodon', 'hold_item')"
+        }
+      ],
+      "quirks": ["q.bedrock_primary_quirk('bastiodon', 'sleep_snore_quirk', 10, 25, 1, q.curve('symmetrical_wide'))"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "choice",
+    "keys": ["gilded_chest"],
+    "default": "none",
+    "choices": [
+      "red",
+      "yellow",
+      "green",
+      "blue",
+      "pink",
+      "black",
+      "white"
+    ],
+    "isAspect": true,
+    "aspectFormat": "{{choice}}-gilded-chest"
+}

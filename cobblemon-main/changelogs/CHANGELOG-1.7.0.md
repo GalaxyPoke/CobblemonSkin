@@ -1,0 +1,1011 @@
+# Changelog
+## [1.7.0 - The Set Course Update (November 22nd, 2025)](#1-7-0)
+#### "We're now a cooking mod. No wait, a riding mod. No wait, a Noivern mod."
+
+### Additions
+
+#### Riding
+- Added the ability to ride Pokémon by shift-right clicking and selecting the ride option. We are now a riding mod :D
+  - If you get motion sickness, go to the configuration and "Disable Roll"!
+- Your preferred camera mode per riding style is saved and restored when you mount/dismount.
+- While many Pokémon can be ridden right now, many more will be added in future updates.
+
+#### Cooking
+- Added the Campfire Pot as well as loads of new food items (Poké Puffs, Ponigiri, Sinister Tea, etc).
+    - Pots are made from apricorns and placed onto campfires.
+    - The pot can be used to make bait for fishing, Poké Cakes, Poké Snacks, local specialties, and potions (less efficiently than a brewing stand), Exp. Candies, and more!
+    - There is a different pot for each apricorn colour. These devs may have an addiction to apricorn colour varieties.
+- Added Aprijuice, made from the Campfire Pot using apricorns with seasoning to give flavours.
+    - Aprijuice can be fed to ride-able Pokémon to improve their riding characteristics, depending on the flavour and the Pokémon's nature.
+- Added Poké Snacks, made from the Campfire Pot using honey and berries.
+    - Poké Snacks can be used to spawn Pokémon in the wild.
+    - Hidden Abilities can be obtained by using specific berries.
+    - Poké Cakes can be made using the same recipe, but with sugar replacing the honey ingredient slots. These are decorative variants that do not spawn Pokémon and can be consumed by the player.
+- Added Hearty Grains, a crop that grows in plains and swamps and can be used in cooking.
+- Added Tasty Tail, which you can get from Slowpoke... if you have a pair of shears. They don't mind, we asked.
+- Redstone can close and open the lid of a campfire pot.
+- Hoppers can be used to insert items into a campfire pot.
+    - Top = Seasoning row
+    - Sides = Crafting grid
+    - Bottom = Extracts the result
+- Observers will recognize when a campfire pot is closed or opened.
+- Comparator calculates a signal strength depending on the items inside the campfire pot.
+
+#### Visible Items and Cosmetics
+- Pokémon's held items can now be seen being held by the Pokémon, which can be toggled by clicking the held item slot in the Summary screen. This might be the cutest thing we've ever done.
+- Pokémon now follow the mouse cursor on the Summary screen. There is an option to disable this in the settings. Why would you disable this?
+- Added cosmetic item functionality for Pokémon. Certain cosmetic items can be given to their respective Pokémon via the interact menu. This is in addition to the held item.
+  - Added the various log blocks as cosmetic items for Timburr and Komala.
+  - Added cosmetics for Spoink, Gurdurr, Conkeldurr, Squirtle Line, Sneasler, Sandile line, Treecko line, Braixen, Delphox, and Dragonite. I wonder what items each of these Pokémon can be given?
+  - Added Gilded Chest cosmetics for Chest Gimmighoul and Gholdengo.
+
+#### AI and Behaviours
+- Pokémon can now spawn and move in herds.
+- Rebuilt Pokémon AI to use Minecraft's Brain system, allowing for more complex behaviours and interactions.
+    - Pastured Pokémon will now sleep when appropriate, and may come up to you when they see you.
+    - Dog Pokémon (Growlithe, Arcanine, etc.) intimidate Skeletons.
+    - Cat Pokémon (Meowth, Persian, etc.) intimidate Creepers and Phantoms.
+    - Sleep-related Pokémon (Munsharna, Komala, etc.) intimidate Phantoms.
+    - Some Pokémon naturally hunt each other.
+    - Some Pokémon herd together.
+    - Some of your Pokémon will defend you.
+    - Combees are now capable of gathering nectar from flowers and delivering it to either Saccharine leaves or beehives (beehive interactions are restricted to wild Combees).
+    - Probably also added a lot of bugs.
+    - Pastured Pokémon can be set to attack hostile mobs they see using the Pasture Block GUI.
+- Some Pokémon now pitch their bodies in the direction they're moving, so fish swimming looks really cool.
+- Added a Behaviour Editor screen to the NPC editing GUI.
+- Added `/behaviouredit` for opening the Behaviour Editor on Pokémon and NPCs.
+    - Editing variables for Pokémon is not yet supported.
+- Lightning is now affected by a Pokémon's ability/typing.
+    - Pokémon with the ability Lightning Rod draw in lightning similar to a lightning rod block.
+      - This has a lower priority and range than lightning rod blocks.
+      - Struck Pokémon gain an immunity to lightning damage, and receive a temporary damage buff.
+    - Pokémon with the ability Motor Drive are immune to lightning damage and receive a temporary speed buff when struck by lightning.
+    - Pokémon with the ability Volt Absorb are immune to lightning damage and receive Instant Health for a short duration.
+    - Ground type Pokémon are immune to lightning damage.
+
+#### PC Improvements
+- Added the ability to rename PC Boxes by clicking on the name of a box.
+- Added box options buttons for PC boxes, toggleable by clicking the right icon button in the bottom bar.
+    - The option buttons on the left side allow for sorting the box by name, level, Pokédex number, gender, and type. Shift clicking allows for sorting in reverse order.
+    - The button on the right allows for changing the box wallpaper.
+    - 10 additional color-based wallpapers have been added.
+        - 5 unlockable biome-based wallpapers have been added, which can be unlocked by visiting:
+            - Forest biomes
+            - Ocean biomes
+            - Cave Biomes
+            - The End
+            - The Nether
+    - You can very easily add your own wallpapers, including with custom unlock conditions, using resource and datapacks!
+- Added filter functionality in PC UI, which supports `PokemonProperties` (e.g. `shiny=yes` shows all shiny Pokémon).
+    - Names can be filtered by exact or partial matches, e.g. entering "cha" will show Charmander, Charmeleon, etc.
+- Added `/changewallpaper <player> <boxNumber> <wallpaper>` command to change a box wallpaper through commands.
+- Added `/renamebox <player> <boxNumber> <name>` command to rename a PC box through commands.
+- Added `/pcsearch <player> <pokemonProperties>` command that searches for a specific Pokémon within a player's PC.
+- Added `/pctake <player> <box> <slot>` command that takes a specific Pokémon from a player's PC. The Pokémon is deleted if the target is self or is run from the server.
+- Added IVs and EVs stat displays in PC.
+    - The displays can be cycled through by scrolling when the display is hovered over.
+- Added ability to cycle through boxes by scrolling the mouse wheel when the box is hovered over.
+- The PC will now open to the last box viewed within a session.
+
+#### Marks
+- Added data for all marks and ribbons from the mainline Pokémon games.
+- Implemented fishing, personality, weather, and time related marks, which can (rarely) be granted to a wild-spawned Pokémon.
+- Added `/givemark <player> <slot> <mark>` command to give a mark to a party Pokémon.
+- Added `/takemark <player> <slot> <mark>` command to remove a mark from a party Pokémon.
+- Added `/giveallmarks <player> <slot>` command to give all available marks to a Pokémon.
+
+#### Other Additions
+- Added Pokémon [markings](https://bulbapedia.bulbagarden.net/wiki/Marking), toggleable within the summary menu.
+- Added an in-game configuration screen, allowing all settings from `main.json` to be edited directly in-game.
+- Added level-up animations to the party overlay to replace the archaic and out of style chat messages.
+- Added [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) support for items held by Pokémon, evolution stone blocks, evolution stone items, Pokédex, Luminous Moss, Flame Orb, and Magmarizer.
+- Added the Clear Amulet, Grip Claw, Lagging Tail, Luminous Moss, Metal Alloy, Scroll of Darkness, Scroll of Waters.
+- Added Hearty Grains, a new crop used in the new cooking mechanic.
+- Added Tatami blocks and Tatami Mat blocks, made from Hearty Grain, for decorating builds.
+- Added the Saccharine Tree, which can be found in the wild and is used to obtain Honey Bottles.
+    - The leaves of the tree can be harvested to obtain honey, which can be used in the Campfire Pot to make Poké Snacks.
+    - The log of the tree can be interacted with using a honey bottle to create a Honey-Slathered Saccharine Log, which increase the chances of spawning a Pokémon with a Hidden Ability.
+    - Pokémon spawned from this that have a Hidden Ability can be identified because they're dripping honey onto the ground. Messy eaters.
+- Added Hyper Training items (IV Modification) as well as some additional candy items to do so (Health Candy, Sickly Candy). You can cook 'em.
+- Added Galarica Nut Bushes which generate on beaches.
+- Added a new 69th berry, Eggant. We're moving on.
+- Berries can now be smelted into dyes.
+- Smeargle spawns with differing tail colour depending on its [Characteristic](https://bulbapedia.bulbagarden.net/wiki/Characteristic) stat.
+- Added functionality to the Everstone when held by a Pokémon; suppresses evolution notification and hides evolve button in summary interface.
+- Added crafting recipes for Masterpiece Cup, Eject Pack.
+- Added modification to Minecraft Creative Inventory search to account for item names that contain `poké` when input contains `poke`. It's a small change, but man.
+- Mooshtanks will switch between their red and brown variant when struck by lightning.
+- Added Statistics for battles won, fled, and total, Pokémon captured (shiny and total), Pokémon released, dex entries added, trades completed, Pokémon levels gained, Pokémon evolved, fossils revived, PokéRod casts and reel-ins and Pokémon times ridden.
+- Added new advancements: Didn't Stop To Think, We Need To Cook, Pokémon Jockey!, Souped-Up Stats, Culinary World Tour, Mochi Mochi!, A Luring Aroma, That's Bait, Star Pokéathlete, Home on the Range, and Just a Smackerel.
+- Added bubble quirk to Kingler; like Krabby, Kingler will blows bubbles during dusk.
+- Added a new gamerule, `healerHealsPC`. When set to true, a successful use of a healer will also heal all the Pokémon in that player's PC.
+- Added `min_perfect_ivs` property to `PokemonProperties` to specify the minimum number of perfect IVs of the Pokémon.
+- Added `scale_modifier` property to `PokemonProperties` to modify the scale of the Pokémon.
+- Added `defaultKeyItems` config option to specify which key items players always have.
+- Added `blacklisted_items_to_hold` and `whitelisted_items_to_hold` tags to allow for controlling which items players can give to their Pokémon. If the whitelist is empty, it will consider all item as allowed (unless they are in the blacklist).
+- Added `/transformmodelpart (position|rotation|scale) <modelPart> <transform: x y z>` that can add transformations to a Pokémon's model part which can be used for good or for comedy.
+  - The player executing the command must be facing the target Pokémon entity. Transformations are not persistent and will revert when resources are reloaded.
+- Added `/runmolang <molang> [<npc>|<player>|<pokemon>]` that executes a Molang expression with the provided options as environment variables, as well as the entity (as `q.entity`) that executed the command.
+- Added `/changejointscale` to change the scale of a joint in a model. Unbelievably funny to play around with but exists for testing purposes.
+- Added `/calculateseatpositions` command for approximating hitbox locations for riding configurations. Good for when you're adding riding to your custom Pokémon!
+- Added `/npcdelete` UUID parameter support and made it usable from console.
+- Added `/spectatebattle <player>` to spectate battles without having to manually walk up to the target.
+- Added `/cobblemonconfig reload` to reload the `main.json` configuration. **Note:** Some settings require a server restart to take effect; use this command cautiously.
+- Added `/boxcount` to change the number of PC boxes a player has.
+
+### Pokémon Added
+
+#### Gen 2
+- Marill
+- Azumarill
+- Hoppip
+- Skiploom
+- Jumpluff
+- Dunsparce
+- Togepi
+- Togetic
+- Unown
+- Houndour
+- Houndoom
+- Ho-Oh
+- Lugia
+- Alola Bias Pichu (built-in resourcepack)
+
+#### Gen 3
+- Azurill
+- Meditite
+- Medicham
+- Electrike
+- Manectric
+- Spoink
+- Grumpig
+- Swablu
+- Altaria
+- Snorunt
+- Glalie
+- Shuppet
+- Banette
+- Latias
+- Latios
+
+#### Gen 4
+- Bronzor
+- Bronzong
+- Croagunk
+- Toxicroak
+- Froslass
+- Glameow
+- Purugly
+- Skorupi
+- Drapion
+- Togekiss
+
+#### Gen 5
+- Pansage
+- Simisage
+- Pansear
+- Simisear
+- Panpour
+- Simipour
+- Munna
+- Musharna
+- Blitzle
+- Zebstrika
+- Drilbur
+- Excadrill
+- Trubbish
+- Garbodor
+- Gothita
+- Gothorita
+- Gothitelle
+- Solosis
+- Duosion
+- Reuniclus
+- Tynamo
+- Eelektrik
+- Eelektross
+- Axew
+- Fraxure
+- Haxorus
+- Mienfoo
+- Mienshao
+- Sewaddle
+- Swadloon
+- Leavanny
+- Druddigon
+- Minccino
+- Cinccino
+- Vanillite
+- Vanillish
+- Vanilluxe
+
+#### Gen 6
+- Skiddo
+- Gogoat
+- Espurr
+- Meowstic
+- Inkay
+- Malamar
+- Hawlucha
+- Dedenne
+- Noibat
+- Noivern
+- Furfrou
+  - You can change Furfrou's form by using shears on it while it holds a certain dye in its cosmetic slot.
+
+#### Gen 7
+- Yungoos
+- Gumshoos
+- Drampa
+- Alolan Grimer
+- Alolan Muk
+- Togedemaru
+
+#### Gen 8
+- Skwovet
+- Greedent
+- Chewtle
+- Drednaw
+- Toxel
+- Toxtricity
+- Morpeko
+- Silicobra
+- Sandaconda
+- Sinistea
+- Polteageist
+- Galarian Corsola
+- Cursola
+- Mr. Rime
+- Galarian Mr. Mime
+- Clobbopus
+- Grapploct
+- Galarian Weezing
+
+#### Gen 9
+- Smoliv
+- Dolliv
+- Arboliva
+- Tarountula
+- Spidops
+- Orthworm
+- Dudunsparce
+- Cyclizar
+- Poltchageist
+- Sinistcha
+- Capsakid
+- Scovillain
+- Tadbulb
+- Bellibolt
+- Toedscool
+- Toedscruel
+- Rellor
+- Rabsca
+- Bramblin
+- Brambleghast
+
+### Animation updates for the following Pokémon
+- Garchomp
+- Tropius
+- Nosepass
+- Probopass
+- Sneasel
+- Weavile
+- Sneasler
+- Braixen
+- Delphox
+- Cinderace
+- Kangaskhan
+- Gossifleur
+- Eldegoss
+- Stonjourner
+- Wailmer
+- Lechonk
+- Oinkologne
+- Dratini
+- Dragonair
+- Dragonite
+- G. Corsola
+- Cursola
+- Dunsparce
+- Dudunsparce (both forms)
+- Porygon
+- Porygon2
+- Porygon-Z
+- Wattrel
+- Kilowattrel
+- Golurk
+- Spinarak
+- Ariados
+- Wyrdeer
+- Tyrantrum
+- Pidove
+- Tranquill
+- Unfezant
+- Beldum
+- Metang
+- Metagross
+- Plusle
+- Minun
+- Murkrow
+- Honchkrow
+- Larvesta
+- Volcarona
+- Dwebble
+- Crustle
+- Mr. Mime
+- Flygon
+- Pichu
+- Pikachu
+- Raichu
+- Alolan Raichu
+- Espathra
+- Abra
+- Kadabra
+- Alakazam
+- Deino
+- Zweilous
+- Hydreigon
+- Slaking
+- Klink
+- Klang
+- Klinklang
+- Baltoy
+- Claydol
+- Mamoswine
+- Rufflet
+- Braviary
+- Girafarig
+- Farigiraf
+- Rookidee
+- Corvisquire
+- Corviknight
+- Venipede
+- Whirlipede
+- Scolipede
+- Venusaur
+- Parasect
+- Bastiodon
+- Amaura
+- Varoom
+- Revavroom
+- Bouffalant
+- Lickilicky
+- Blaziken
+- Rhyhorn
+- Rhydon
+- Rhyperior
+- Tauros
+- Tauros - Paldea Aqua
+- Tauros - Paldea Blaze
+- Tauros - Paldea Combat
+- Dewgong
+- Corphish (updated placeholders for crustaceous tripod gait legs)
+- Crawdaunt (updated placeholders for crustaceous bipedal legs)
+- Dragapult
+- Camerupt
+- Relicanth
+- Heracross
+- Salamence
+- Staraptor
+- Dusknoir
+- Arcanine
+- Carvanha
+- Sharpedo
+- Mimikyu
+- Dewgong
+- Mime Jr.
+- Gyarados
+- Lapras
+
+### Model updates for the following Pokémon
+- Cleffa
+- Clefairy
+- Clefable
+- Gyarados
+- Dragonite
+- Eevee
+- Vaporeon
+- Jolteon
+- Flareon
+- Espeon
+- Umbreon
+- Leafeon
+- Glaceon
+- Sylveon
+- Treecko
+- Grovyle
+- Sceptile
+- Honchkrow
+- Gible
+- Gabite
+- Garchomp
+- Pidgeot
+- Nosepass
+- Probopass
+- Kangaskhan
+- Scorbunny
+- Raboot
+- Cinderace
+- Magnemite
+- Magneton
+- Magnezone
+- Beldum
+- Metang
+- Metagross
+- Hoothoot
+- Noctowl
+- Teddiursa
+- Ursaring
+- Ursaluna
+- Heatmor
+- Bouffalant
+- Sigilyph
+- Sharpedo
+- Maractus
+- Clodsire
+- Scyther
+- Scizor
+- Cacturne
+- Taillow
+- Swellow
+- Seel
+- Dewgong
+- Honedge
+- Doublade
+- Aegislash
+- Drowzee
+- Hypno
+- Mudkip
+- Marshtomp
+- Swampert
+- Shelmet
+- Escavalier
+- Klink
+- Klank
+- Klinklang
+- Spinarak
+- Ariados
+- Pidove
+- Tranquill
+- Unfezant
+- Sobble
+- Drizzile
+- Inteleon
+- Plusle
+- Minun
+- Murkrow
+- Zorua
+- Zoroark
+- Mime Jr.
+- Mr. Mime
+- Pichu
+- Pikachu
+- Raichu
+- Alolan Raichu
+- Dusknoir
+- Deino
+- Zweilous
+- Hydreigon
+- Dreepy
+- Drakloak
+- Dragapult
+- Mamoswine
+- Rookidee
+- Corvisquire
+- Corviknight
+- Venipede
+- Whirlipede
+- Scolipede
+- Farigiraf
+- Staryu
+- Starmie
+- Gimmighoul
+- Gholdengo
+- Starly
+- Staravia
+- Staraptor
+- Varoom
+- Revavroom
+- Nickit
+- Thievul
+- Litwick
+- Lampent
+- Chandelure
+- Rayquaza
+- Aerodactyl
+- Basculin
+- Basculegion
+- Shroodle
+- Grafaiai
+- Steelix
+- Dratini
+- Dragonair
+- Dragonite
+- Cutiefly
+- Ribombee
+
+### Changes
+- Made Blocks of Gold count as Big Nuggets when held by a Pokémon (for Fling functionality).
+- Players can now eat Sweet and Tart Apples, Whipped Dreams, and the Alcremie Sweets.
+- Updated Sweet and Tart Apple sprites.
+- Removed Shulker shell Forretress in favour of it being an addon.
+- Updated the following recipes: Air Balloon, Assault Vest, Binding Band, Black Belt, Blunder Policy, Choice Band, Choice Scarf, Cleanse Tag, Covert Cloak, Destiny Knot, Eject Button, Expert Belt, Focus Band, Focus Sash, Magnet, Metronome, Muscle Band, Power Anklet, Power Band, Power Belt, Power Bracer, Power Lens, Power Weight, Protective Pads, Protein, Punching Glove, Reaper Cloth, Rocky Helmet, Room Service, Sachet, Safety Goggles, Silk Scarf, Spell Tag, Utility Umbrella, Weakness Policy, Zinc, Chipped Pot, Cracked Pot, Unremarkable Cup, Loaded Dice, Charcoal Stick, Dragon Fang, Miracle Seed, Mystic Water, Never Melt Ice, Twisted Spoon, Black Glasses, Fairy Feather, Hard Stone, Silver Powder, Soft Sand
+- Added alternate ingredient options to the following recipes: Cell Battery, Damp Rock, Heat Rock, Icy Rock, and Smooth Rock.
+- Substantially optimized spawning, allowing far higher spawning frequency for the same cost.
+- Changed Pokémon caught and seen count to update based on the current Pokédex being looked at.
+- A critical capture with a single shake will always play for successful captures when you've already registered the Pokémon as caught in your Pokédex.
+- Grouped together some recipes within the Recipe Book. Groups include: the seven basic Poké Balls, the seven basic Ancient Poké Balls, Gilded Chests, Pokedexes, and the Weather Rocks.
+- Improved the performance of saving Pokédex and player data.
+- Updated `doPokemonSpawning` gamerule to support per-dimension configurations.
+- The Pokédex now displays a form name of a "normal" Pokémon for when the base form is still a named form.
+- Made lecterns that hold a Pokédex emit light when open.
+- Added a subtle rotation effect to the Pokédex scanner's wheel when zooming.
+- Improved the zoom functionality of the Pokédex scanner by giving the levels logarithmic scaling. Sounds complicated. Something about logs.
+- Updated some item tags to better integrate behaviours between Cobblemon, vanilla Minecraft, and other mods:
+  - Removed Cooked Meat, Raw Meat, Protein Ingredients, and Zinc Ingredient. The first two are now using `c` namespace tags and the latter have better integrated use of tags within their recipes which removes need for custom tags.
+  - Added our seeds tag into `#c:seeds`, which is now made use of for the Miracle Seed recipe.
+  - Updated the `#cobblemon:berries` tag to use subtags located in `data/cobblemon/tags/item/berries`, such as `#cobblemon:berries/hp_recovery`, for sorting purposes.
+  - Moved the tag `#cobblemon:mutated_berries` to `#cobblemon:berries/mutation_result`
+- Added herbs and snowballs to the consumable in PvE and Wild battle tags.
+- Tweaked the Natural Materials vanilla file to fit with the changes to tags.
+- Pokémon hitbox now scales with entity attribute `generic.scale`.
+- Improved parity with vanilla mobs' drop behavior; loot and XP drop on death instead of after the entire death sequence finishes.
+- Quirk animations no longer play in the battle GUI, since they were pretty distracting.
+- A number of Pokémon that float above the ground visually (Gastly, Klingklang, etc.) are no longer considered to be touching the ground and therefore aren't hurt by ground hazards.
+- Changed the recipes for Level, Lure, and Moon Balls to be cleaner.
+- Renamed `pokemonId` and `type` to `species`, and `evolved` to `has_evolved`, in relevant Advancement triggers.
+- Added a separate `species` argument to the `pick_starter`, `pasture_use` and `resurrect_pokemon` Advancement triggers.
+- Made despawning behaviour configurable via the config.
+- Tweaked Berry flavor data to balance cooking pot mechanics. It's not using canon values any more!? That's it, I'm going back to [redacted]!
+- Made apricorn sprouts and saccharine saplings able to be placed into flower pots so you can make your cottage cuter.
+- Added all Potted Apricorn Sprouts, Potted Saccharine Saplings, and Potted Pep-Up Flowers to the `#minecraft:flower_pots` block tag.
+- Corrected the healing values of the remedies and energy root, and reintroduced the friendship lowering mechanics for those as well as the Revival Herb and Heal Powder.
+- Improved grammatical consistency in battles by making side effects use position-specific formats for language keys.
+- Reworked some compost chances.
+- Removed Braised Vivichoke. Gone. Reduced to atoms.
+- Vivichokes now always drop one seed when harvested. Converting a fully grown Vivichoke to seeds via crafting now only results in 1 seed to compensate.
+- Updated interaction interface to include 4 more option spaces because we're going to keep adding more interactions.
+- Updated light levels for an active PC, Pasture, Healing Machine, and Data Monitor.
+- Healing Machine recipe rebalanced to not require a Ghast Tear after extensive lobbying from the Nether Gastly union. The Revive has been replaced with a Max Revive.
+- Not specifying a dex in `/pokedex printcalculations {player} {dex}` will now print the National Pokédex statistics instead of showing all Pokédex. `/pokedex printcalculations {player} all` is how to view all dex statistics in one command.
+- Updated Pokémon state icons shown in the party overlay. Those are the icons for whether they're sent out or on your shoulder. You know the ones.
+- Refactored dynamic lights compat to be more future proof. The dynamic light support is only tested with *LambDynamicLights*, on NeoForged use that mod in combination with *Sinytra Connector*.
+- Renamed Masterful Dedication advancement to This will affect the Whiscash Population.
+- Changed icon for the following advancements: New Angles for Angling, Researcher Recruit, Doing my Part, Reapriforestation.
+- Disabled advancement Mother Nature's Bounty from appearing in chat when obtained, now only appears as a toast and in the advancements menu.
+- Removed Oki-Doki Vivichokey advancement.
+- Shulker Boxes and Traveler's Backpacks AND Packed Up backpacks can no longer be held by Pokémon. Thanks Monocle ;) You can re-enable this with the Cobblemon Held Containers datapack but don't do that on a public server.
+- Moomoo Milk now clears Pokémon stat changes when used in battle.
+- Updated Evolution Stone Block light levels.
+- Added light levels to Evolution Stone Ores. These levels are reduced versions of the full blocks light levels.
+- Added a steps counter to the summary screen for Pokémon that require walking a certain number of steps to evolve.
+- Reordered berries in the creative tab.
+- Slots in pastures will now have darker backgrounds and italicized Pokémon names if the Pokémon is not owned by the player.
+- The pasture slot will show the name of the Pokémon's owner when hovered if the Pokémon is not owned by the player.
+- Increased the default PC box count from 30 to 40 to accommodate the fact that we have way more Pokémon now. If you've changed this config option then you'll need to edit it again after starting up with 1.7!
+
+### Fixes
+- Fixed a crash when removing national Pokédex using datapacks.
+- Fixed particles sometimes facing the wrong direction (looking at you, Swords Dance).
+- Fixed not being able to do complex item requirements aside from NBT with evolution conditions, requirements, and fossil items.
+- Fixed the usage `hiddenability` in `pokegive` and other spawn commands resulting in a forced hidden ability.
+- Fixed instantly breaking and replacing a fossil analyzer with any block entity crashing the game in a complete multi-structure.
+- Fixed players getting disconnected when sidemods update a Pokémon's Tera Type.
+- Fixed Fling not using item names for Minecraft held items that substitute Pokémon items.
+- Fixed evolutions sometimes preventing players from logging in to servers.
+- Fixed Roseli berry trees not generating in their preferred biomes.
+- Fixed rendering of shoulder-mounted Pokémon desyncing between different players.
+- Fixed apricorn chest boats forgetting their inventories when being unloaded.
+- Fixed moves not updating correctly between form changes resulting in illegal movesets with minimum 2 year jail sentences.
+- Fixed occasional crash with the *Oritech* mod.
+- Fixed crashes due to an incorrect Java version handing out an obscure crash.
+- Fixed some berry trees being able to get too many berries and cause a crash.
+- Fixed the consumption of friendship berries (or EV berries) not making any noise.
+- Fixed status curing berries not playing the berry eating sound, same for healing berries, when used mid-battle.
+- Fixed owned Pokémon sometimes being un-interactable after the player relogs quickly.
+- Fixed field name in evolution requirements for Spewpa Poké Ball.
+- Fixed `LevelUpCriterion` logic to correctly check that the Pokémon is a pre-evolution.
+- Fixed `hide_additional_tooltip` vanilla flag not properly hiding tooltips on Poké Rod and bait items
+- Removed a number of scenarios in which a Pokémon battle may send out a Pokémon into walls.
+- Fixed NPCs using Pokémon outside their pool when a Pokémon name had a typo.
+- Fixed an issue with datapacked species features not being applied properly when relogging.
+- Fixed Pokémon marked as silent still playing shiny sounds and effects.
+- Fixed an issue with newer versions of Fabric API where underground Pokémon were spawning in The End. "Hey wait a minute, where's the ceiling?"
+- Fixed spawning not working well when you're at high points surrounded by lower altitude spawning areas, such as when you're flying.
+- Fixed some Pokémon having erroneous tutor moves if another move included a valid tutor move as a substring. Whatever that means.
+- Fixed certain Pokémon with forms not having appropriate stock Pokédex entries.
+- Fixed issue with Pokédex scanner that caused the open/close overlay to have the wrong opacity values.
+- Fixed dragon's breath not being usable on the restoration tank when it should be.
+- Fixed Moon Stones not interacting properly with dripstone blocks.
+- Fixed some effects like particles from fishing rods appearing for players in the same coordinates in another dimension. Lowkey hilarious.
+- Fixed an issue with Sketch where the Pokémon using Sketch would not properly learn moves with special characters in their name (e.g. King's Shield, Baby-Doll Eyes, etc.).
+- Fixed wild Pokémon sometimes spawning with incorrect friendship values.
+- Fixed typo while saving/loading NPCEntity causing data loss.
+- Fixed an issue where catching a Pokémon while it was leashed to a fence would not update the fence.
+- Fixed the `dimensions` spawning condition using the incorrect `ResourceLocation`, causing it not to function properly.
+- Fixed issue where locator X axis was not aligned with Blockbench.
+- Fixed issue where particle effects that play on frame 1 on sendout would never play (so, Gastly).
+- Fixed Wiglett line not sinking in water.
+- Fixed the Sprigatito line's portraits being zoomed in too far.
+- Fixed Floragato's battle cry animation breaking.
+- Fixed issue where the restoration tank would not accept valid items from a hopper.
+- Fixed energy root not being shearable.
+- Fixed Pokédex scanner not respecting the "Invert Mouse" option.
+- Fixed energy root always spreading into more energy roots instead of by chance (same as big root).
+- Fixed issue where Pokémon spawned by the `/spawnallpokemon` command potentially received a raft.
+- Fixed logging spam on NeoForge when Adorn is not installed.
+- Fixed crashing from trying to load a Bedrock format model that was not meant for Cobblemon, such as from *Qlipoth Awakening*.
+- Fixed berries (and thus mulches) not being plantable on Farmer's Delight rich soil farmland.
+- Fixed wild Pokémon vanishing when third party mods try to tame them the "vanilla" way.
+- Fixed Pokémon not being able to path over skulk veins, pressure plates, fence gates, signs, lanterns, chains, and many other short blocks.
+- Fixed some cases in which Pokémon could not path over fence posts.
+- Fixed flyers not being able to do a vertical take-off if surrounded by blocks.
+- Fixed swimming Pokémon attempting to swim up through solid blocks.
+- Fixed surface swimming Pokémon diving downward a block for the duration of the swim.
+- Improved flyers getting stuck on fence posts.
+- Fixed Air Balloon battle text not correctly displaying the Pokémon or item name.
+- Fixed global species features... not working. Broken ever since they were created. Oops.
+- Fixed an issue where items retrieved from a Display Case would disappear if a player's inventory was full.
+- Fixed recoil eyes on Shellder and Cloyster.
+- Fixed Shroomish spinning at lightning speed when fainting. No longer allowed to let it rip, it's just not fair.
+- Fixed Quaxly's animations showing hidden wing sets
+- Fixed Pokédex scanner not respecting the "Invert Mouse" option.
+- Fixed a crash due to a `ConcurrentModificationException` that could occur during world generation.
+- Fixed Moon Ball moon phase logic not actually working.
+- Fixed `/pokedex printcalculations` to now show the correct percentage completed of the Pokédex.
+- Fixed mod incompatibility with the `Raised` mod.
+- Fixed a vulnerability that could cause party and PC rollbacks under specific circumstances.
+- Fixed a rare edge case where sorting your PC could be rolled back later.
+- Fixed *BotanyPots* built-in integration.
+- Fixed shading of berries on berry trees.
+- Fixed static text cursor for nickname input in summary.
+- Fixed Cobblemon brewing recipes placing result into all slots, and not just slots with correct ingredients inside the brewing stand.
+- Fixed an issue where hoppers and brewing stands were not recognizing Cobblemon brewing recipes.
+- Fixed Pokémon with alternate forms being created with an incorrect 'forced' tag on their ability.
+- Fixed busted abilities and moves in Pokémon data due to removed datapacks etc. causing storage corruption. It now just rerolls their ability / uses Tackle.
+- Fixed singular Pokémon corruption causing entire storage corruption. Storages will now skip corrupted Pokémon and print an error to the console.
+- Fixed species additions not being able to properly mark a species as implemented.
+- Fixed Pokémon item models not showing a glint when enchanted.
+- Fixed the missing Terracotta Sun Stone Ore smelting and blasting recipes.
+- Improved experience gain from smelting evolution stone ores to better match other ore types.
+- Fixed some specific bag items not being consumed when used in battle.
+- The Corphish line will now sink in water.
+- Fixed the "use all berry bait" achievement not being progressed.
+- Fixed bobber hook and berry sprouts texture sizes causing mipmap issues.
+- Fixed Ally Switch not updating party positions. 
+- Fixed head locator not taking scale into account for positioning.
+- Fixed Pokémon step counts not being saved when recalling them to a Pokéball or reentering the world.
+- Fixed NPC pokémon not being linked to their NPC, which previously caused NPC pokémon to be catchable.
+- Fixed an uncommon error caused by scanning a Pokémon on a player's shoulder.
+- Fixed Alcremie and Eevee clipping into the player head when shoulder mounted.
+- Fixed a case where spawning could fail and log warnings when nothing wrong was happening.
+- Fixed Pokémon with a moving walk target frequently spinning in place as they re-calculate their path.
+- Fixed Whiscash Nero and Wooper Heart being fishable with all rods.
+- Fixed the "enabled" property in spawn files not actually being respected. Where do they even find these devs?
+- Fixed Terralith's shrubland not counting as plains for spawning purposes the way it was intended to.
+
+### Developer
+- A finished battle now has winners and losers set inside of `PokemonBattle` instead of them always being empty.
+- Dialogues are correctly removed from memory when they are stopped.
+- Dialogues with variably-set initial pages now properly start timeout tracking.
+- Deprecated `EVs#add(Stat, Int)` in favour of `EVs#add(Stat, Int, EvSource)`. You most likely want to use `SidemodEvSource` but please check other implementations or make your own.
+- Removed the `NbtItemPredicate` class, all the mod usages now use the vanilla item predicate solution. This causes breaking changes on `Fossil`, `HeldItemRequirement` and `ItemInteractionEvolution`.
+- Renamed Cobblemon's creative tabs to start with "Cobblemon: " to distinguish Cobblemon's tabs from tabs for other mods.
+- Various items now have a rarity value.
+- Removed all VaryingModelRepository subclasses and collapsed them into the parent class.
+- Refactored the following events to `.Pre` and `.Post` for consistency:
+  - `PokemonSentEvent`
+  - `ExperienceGainedEvent`
+  - `BattleStartedEvent`
+- Updated `PokemonSentEvent` parameters to include the position and world of the Pokémon being sent out.
+- Updated `EvolutionCompleteEvent` parameters to include the source Pokémon that evolved.
+- Updated `HatchEggEvent.Post` to include the Pokémon that hatched.
+- Reworked observable handling in `Pokemon.kt` to cut down on RAM usage and clarify the file.
+  - Note: This will break mods that used our observable functionality there or in `MoveSet`, `IVs`, `EVs`, or `BenchedMoves`.
+  - Using `Pokemon#onChange()` is now the way to mark a Pokémon as needing a save.
+- Updated `NPCEntity` beam positioning to properly account for the `baseScale` property.
+- Updated `NPCEntity` pokeball throw positioning to properly account for the `baseScale` property.
+- Fixed `[Pokemon].copyFrom` error causing forms, IVs, and EVs to not be applied properly when using `[Pokemon].loadFromJSON` or `[Pokemon].loadFromNBT`.
+- Added new item class, `WearableItem`. Instances of this class should have a corresponding 3D model. These models render when the items display context is `HEAD`.
+- Added new `LearnsetQuery` types:
+  - `LEGAL` for moves that are innately compatible and learnable by the Pokémon.
+  - `LEGACY` for moves that were once officially learnable by the Pokémon but aren't due to GameFreak's re-balancing.
+  - `SPECIAL` for moves that are not learnable by the Pokémon but may have appeared in a special event or distribution.
+- Pokémon species and forms can be configured to be immune to fire, lava, and magma blocks.
+- The IVs class has now been extended to include Hyper Trained values.
+- Added `Pokemon#hyperTrainIV()` and `IVs#setHyperTrainedIV(Stat, Int)`.
+- Added `HyperTrainedIvEvent.Pre` and `HyperTrainedIvEvent.Post`.
+- Added `Pokemon#validateMoveSet()` to validate an existing Pokémon's moveset, clearing illegal moves.
+- Added a `hoverText` option to `PartySelectCallback`, to display a tooltip on hovering over a Pokémon in the selection screen.
+- `PokemonEntity` instances spawned into the world now appropriately finalize the spawn for mod compatibility.
+- Added `PokedexManager.obtain` as a replacement for `.catch` which is not a friendly function name in Java.
+- Added `Pokemon#hyperTrainIV()` and `IVs#setHyperTrainedIV(Stat, Int)`.
+- `ElementalType` now implements `ShowdownIdentifiable` to ensure the communcation with showdown stays consistent (also in regards to TeraTypes).
+- Pokémon no longer have a change observable.
+- Pokémon can now have a behaviour changing the value of a species feature on lightning hit: 
+  ```JSON
+  { 
+    "behaviour": {
+      "lightningHit": {
+        "rotateFeatures": [
+          {
+            "key": "mooshtank",
+            "chain": ["red", "brown"]
+          }
+        ]
+      }
+    }
+  }
+  ```
+- Removed Npc interface from `NPCEntity`. The interface is unused and in vanilla is only implemented by `VillagerEntity` as a means to disable villagers with the `spawn-npcs` server property.
+- Added new `Observable#subscribe` methods that take Java Consumers to make usage in Java a little cleaner.
+- Annotated a bunch of Kotlin methods and fields for cleaner Java names.
+- Fixed `Species#create` using the species name instead of identifier, which had led to certain mismatches generating random pokémon.
+- baseScale in NPCs has been removed from classes and presets, and in the entity it is replaced with hitboxScale and renderScale.
+- Added `EntityCallbacks` to `NPCEntity` and `PokemonEntity`. You can trigger custom callback types by using `[Entity].callbacks.process(...)`
+- Added `RenamePCBoxEvent.Pre` and `RenamePCBoxEvent.Post` events to prevent players from renaming a box or changing their input.
+- Added `ChangePCBoxWallpaperEvent.Pre` and `ChangePCBoxWallpaperEvent.Post` to prevent players from changing wallpapers or changing their selection.
+- Added `WallpaperCollectionEvent` which gets called when clients connect to a server, allowing the server to handle which of the client-found wallpapers it's allowed to move (collected wallpapers can be removed for example to make it "vanish" client-side).
+- Added `WallpaperUnlockedEvent`.
+- Renamed `SetPCBoxPokemonPacket` and the respective handler to `SetPCBoxPacket`.
+- Spawning Influences now have the context of what the other buckets are when adjusting bucket weights. This will break existing influences that do bucket weight adjustment.
+- Renamed heaps of things in the spawning system to make more sense.
+    - `SpawningContext` is now `SpawnablePosition`
+    - `WorldSlice` is `SpawningZone`
+    - `SpawningProspector` is now `SpawningZoneGenerator`
+-  Majorly refactored the hierarchy of `Spawner`
+- The base Spawner interface provides more functions to allow single-point and area spawning given appropriate inputs.
+- `TickingSpawner` is removed in favour of outside code handling ticking logic.
+- `AreaSpawner` is removed.
+- `BasicSpawner` is the first implementation of `Spawner` which can be used for any purpose.
+- `PlayerSpawner`s are now mixin'd into `ServerPlayer` and ticked from `ServerPlayer#tick`.
+- A hierarchy diagram can be found at `./docs/spawner-hierarchy.png` in the mod repository.
+- The `SpawnerManager` class has been removed as its functionality is all now handled elsewhere.
+- Renamed things in Spawn Rules to go with the other renames:
+    - `contextSelector` is now `spawnablePositionSelector`
+    - `context` is now `spawnable_position`
+- Added `.Pre` and `.Post` to the following events:
+    - `PokemonRecallEvent`
+    - `TradeEvent`
+    - `EvGainedEvent`
+
+### Molang & Datapacks
+- Added Datapackable Item interactions with Pokémon.
+- Added `visibility/hidden`, `visibility/hat` and `visibility/face` tags to control where and how certain items are held on a Pokémon.
+- The following usages for item predicates can now use item conditions like advancements do, you can learn about them in the [Minecraft wiki](https://minecraft.wiki/w/Advancement_definition#minecraft:filled_bucket).
+  - The `requiredContext` for an item interaction evolution
+  - The `itemCondition` for a held item evolution requirement
+  - The `fossils` for a fossil entry
+- Added `interpolate` boolean property to animated textures to allow gradual colour changes between frames.
+- Added support for action effects that are triggered by `|-activate|` Showdown instructions. `activate_{effect_id}` is the syntax.
+- Fixed location spawn filter components causing crashes.
+- Fixed a crash that would occur during battles if the opponent wild Pokémon species comes from a namespace other than cobblemon.
+- Fixed species additions not being capable of changing implemented status.
+- Added `transformedParts` to the root of poser JSONs so it now exists in both poses and the model overall.
+- Added advancement trigger to check riding stat boosts.
+- Fixed `heldItem` property inside spawn files not working and causing crashes.
+- Fixed `spawn_bedrock_particles` Molang function causing crashes when used in a server environment.
+- Added `translucent_cull` boolean option into resolver's layer to allow for translucent textures with culling.
+- The following move sources are now valid for the `moves` array in species data:
+  - `legacy:{move}`
+  - `special:{move}`
+- The Pokédex form lang key definition now follows `cobblemon.ui.pokedex.info.form.{species}-{formname}` instead of `cobblemon.ui.pokedex.info.form.{formname}`.
+- Added an optional parameter for `run_molang` to schedule the function.
+- Added datapack-defined starter categories via `data/<namespace>/starters/*.json`, with built-in fallback and `useConfigStarters` merge option.
+- The format of the `remedies.json` file has changed to allow for individual `friendshipDrop` amounts per remedy.
+- Added `prepare_{effect}` and `damage_{effect}` action effect hooks in battles for more battle particle effects.
+- Fixed `q.entity.find_nearby_block` causing crashes when attempting to use a block tag.
+- Spawn Filters can now access `v.spawn.class` to get the identifier of an NPC class for when trying to influence NPC spawns.
+- Callbacks now have `q.` for any context properties in addition to the `c.` properties, making it a bit more convenient when calling other scripts from Callbacks.
+- Added entity (as `q.entity`) that executed the command to the `/executemolangscript` command.
+- Molang triggered battles may now set the battle format, whether to clone the player's party, set level, or heal prior.
+- Fixed `clientActions` inside Dialogue pages being executed twice.
+- Fixed `background` field and added `textColor` field for dialogues.
+- Added support to reload some data registries using `/reload`:
+    - Molang scripts
+    - Callbacks
+    - Spawn Detail Presets
+    - Spawn Pools
+    - Spawn Rules
+    - Cosmetic Items
+    - Dialogues
+    - Fossils
+    - Natural Materials
+    - Action Effects
+    - Mechanics
+    - Unlockable Wallpapers
+    - Starter Data
+- Fixed `cobblemon:reel_in_pokemon` criteria not working when used together with a `baitId`.
+  - Also changed the default from `cobblemon:empty_bait` to `any`.
+  - The previous default is still available by using the above as `baitId`.
+- Added support for species-specific move action effects, using the format `{move_id}_{species}.json`.
+- Added `look_at_entity_types` variable for look_at_entities to specify what entity type or entity tag to look at.
+- Added various functions to `q.file` for JSON file handling in Molang, strictly for `./config` and `./data` folders that have `/molang/` in the path:
+  - `q.file.save(<path>, <struct>)` Saves to the given file path with the given variable struct.
+  - `q.file.load(<path>)` Loads a variable struct from the given path, or gets it from the cache if it's already been loaded.
+  - `q.file.exists(<path>)` Returns 1 if the given file path exists.
+  - `q.file.clear(<path>)` Clears the given file from the cache.
+- Using `q.run_script` will now allow additional arguments which will be put into `c.arg_1`, `c.arg_2`, etc.
+- Added a `behaviours` datapack folder which motivates the Behaviour Editor screen on NPCs and Pokémon.
+- Added very many behaviours to choose from.
+- Removed many NPC presets that now exist as behaviours. This is a breaking change if you are using NPCs with these presets.
+    - NPCs with these presets should be modified to instead list under `"behaviours"` all the equivalent behaviours.
+- Added "callback" support on `PokemonEntity` and `NPCEntity` that allows Molang scripts to be executed in response to certain scenarios.
+- Renamed the fishing_baits datapack folder to spawn_bait_effects.
+- Added `seasonings` datapack folder for controlling usable items in the campfire pot and what colour and flavour they apply.
+- Added campfire pot recipe type.
+- Added `marks` datapack folder.
+- Added `unlockable_pc_box_wallpapers` datapack folder for wallpapers that need to be unlocked before they're usable.
+- Wallpapers are loaded from `assets/<namespace>/textures/gui/pc/wallpaper/` and all wallpapers in this folder are available to the client to choose by default.
+- Added support for NPCs to use Pokémon models and vice versa. This will require changes in addons that add fossil types due to naming conflicts between fossils and the Pokémon species.
+- Added optional `filePath` parameter to `data` and `save_data` Molang functions to allow for global stores (ex. `../global/`). Path must end in a forward slash.
+- Added many new Molang functions to `pokemon`, `entity`, and `player` structs.
+- Added Molang function `q.delete_variable(<struct>, <variable_name>)` to delete a value from a variable structure in Molang data.
+- Added Molang function `q.delete_variables(<struct>)` to delete all values from a variable structure in Molang data.
+- Renamed Molang Flows to Molang Callbacks because that's less esoteric.
+- Adds Molang Callbacks for the following events:
+  - `poke_ball_capture_calculated`
+  - `evolution_tested`
+  - `evolution_accepted`
+  - `evolution_completed`
+  - `pokemon_healed`
+  - `pokemon_scanned`
+  - `berry_harvest`
+  - `loot_dropped`
+  - `pokemon_seen`
+  - `collect_egg`
+  - `hatch_egg`
+  - `experience_gained_pre`
+  - `experience_gained_post`
+  - `pokemon_catch_rate`
+  - `bait_set`
+  - `bait_set_pre`
+  - `bait_consumed`
+  - `pokerod_cast_pre`
+  - `pokerod_cast_post`
+  - `pokerod_reel`
+  - `bobber_spawn_pokemon_pre`
+  - `pokemon_aspects_changed`
+  - `friendship_updated`
+  - `change_pc_box_wallpaper_event_pre`
+  - `change_pc_box_wallpaper_event_post`
+  - `fullness_updated`
+  - `server_stopping`
+  - `starter_chosen`
+  - `ev_gained`
+  - `pokemon_released`
+  - `pokemon_nicknamed`
+  - `held_item_pre`
+  - `held_item_post`
+  - `shoulder_mounted`
+  - `trade_completed`
+  - `bobber_spawn_pokemon_post`
+  - `pokemon_entity_spawn`
+  - `fossil_revived`
+  - `player_tick_pre`
+  - `player_tick_post`
+  - `advancement_earned`
+  - `right_clicked_entity`
+  - `right_clicked_block`
+  - `player_died`
+  - `wallpaper_unlocked`
+- Added `q.has_argument(<argument_name>, [argument_value])` Molang function to several battle-related action effect contexts.
+- Added `q.has_argument_at(<index>, [argument_value])` Molang function to several battle-related action effect contexts.
+- Added `q.hit_count` Molang function to move action effect contexts.
+- Added `is_included`, `to_lower`, `to_upper`, and `string_length` as available Molang functions.
+- Added `q.split_string(<text>, <delimiter/comma>)` Outputs an array with the divided text.
+
+### Particles
+Added new/updated particles for the following moves:
+- Absorb
+- Acid
+- Acid Spray
+- Aerial Ace
+- Amnesia
+- Aurora Beam
+- Bite
+- Body Slam
+- Bubble
+- Bubble Beam
+- Bulldoze
+- Bullet Punch
+- Close Combat
+- Confusion
+- Crunch
+- Cotton Guard
+- Double Team
+- Dragon Claw
+- Egg Bomb
+- Ember
+- Eruption
+- Explosion
+- Fire Blast
+- Fire Punch
+- Fire Spin
+- Flame Burst
+- Flame Charge
+- Flamethrower
+- Flame Wheel
+- Frost Breath
+- Frustration
+- Giga Drain
+- Growl
+- Haze
+- Hidden Power
+- Horn Attack
+- Hyper Fang
+- Hypnosis
+- Ice Beam
+- Ice Punch
+- Ice Shard
+- Icy Wind
+- Infestation
+- Kinesis
+- Lava Plume
+- Leech Life
+- Leech Seed
+- Leer
+- Lick
+- Magical Leaf
+- Mega Drain
+- Minimize
+- Mist
+- Mud Bomb
+- MudSport
+- Mystical Fire
+- Nasty Plot
+- Poison Fang
+- Poison Gas
+- Poison Powder
+- Population Bomb
+- Pound
+- Powder
+- Powder Snow
+- Present
+- Protect
+- Psybeam
+- Psychic
+- Pursuit
+- Quick Attack
+- Rage Powder
+- Razor Leaf
+- Return
+- Rock Throw
+- Sand Attack
+- Scary Face
+- Scratch
+- Seed Bomb
+- Seismic Toss
+- Self Destruct
+- Shadow Ball
+- Shadow Claw
+- Sing
+- Sleep Powder
+- Sludge Bomb
+- Smokescreen
+- Spike
+- Spore
+- Stomp
+- String Shot
+- Stun Spore
+- Super Fang
+- Swords Dance
+- Tackle
+- Tail Whip
+- Thunder
+- Thunder Punch
+- Thunderbolt
+- Thunder Shock
+- Thunder Wave
+- Toxic
+- Water Gun
+- Water Pulse
+- Water Sport
+- Will-O-Wisp
+- Withdraw
+
+### Localization
+- Updated translations for:
+    - German, Spanish, Mexican Spanish, French, Canadian French, Japanese, Korean, Portuguese, Brazilian Portuguese, Ukrainian, Russian, Thai, Vietnamese, Simplified Chinese, Traditional Chinese
+- We've had many new translators join to help us out, so a heartfelt thank you to both our existing translators and all the new translators that have worked so hard to bring the mod to more of the world! <3

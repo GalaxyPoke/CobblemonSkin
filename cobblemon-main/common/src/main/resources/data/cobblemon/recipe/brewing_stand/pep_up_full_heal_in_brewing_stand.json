@@ -1,0 +1,12 @@
+{
+  "type": "cobblemon:brewing_stand",
+  "input": {
+    "item": "cobblemon:pep_up_flower"
+  },
+  "bottle": {
+    "tag": "cobblemon:full_heal_bottles"
+  },
+  "result": {
+    "id": "cobblemon:full_heal"
+  }
+}

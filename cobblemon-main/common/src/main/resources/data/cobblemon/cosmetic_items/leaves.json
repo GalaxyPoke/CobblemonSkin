@@ -1,0 +1,53 @@
+{
+  "pokemon": ["hawlucha"],
+  "cosmeticItems": [
+    {
+      "consumedItem": "minecraft:oak_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:spruce_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:birch_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:jungle_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:acacia_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:dark_oak_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:mangrove_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:azalea_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:flowering_azalea_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "minecraft:cherry_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "cobblemon:apricorn_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    },
+    {
+      "consumedItem": "cobblemon:saccharine_leaves",
+      "aspects": ["cosmetic_item-leaves"]
+    }
+  ]
+}

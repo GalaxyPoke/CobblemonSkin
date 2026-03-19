@@ -1,0 +1,7 @@
+{
+  "parent": "cobblemon:item/pokedex_red_model_flat",
+  "textures": {
+    "screen": "cobblemon:item/pokedexes/models/pokedex_screen_off",
+    "all": "cobblemon:item/pokedexes/models/pokedex_black"
+  }
+}

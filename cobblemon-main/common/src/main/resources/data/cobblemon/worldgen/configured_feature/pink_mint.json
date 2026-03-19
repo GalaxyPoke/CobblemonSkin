@@ -1,0 +1,11 @@
+{
+  "type": "cobblemon:mint",
+  "config": {
+    "state": {
+      "Name": "cobblemon:pink_mint",
+      "Properties": {
+        "is_wild": "true"
+      }
+    }
+  }
+}

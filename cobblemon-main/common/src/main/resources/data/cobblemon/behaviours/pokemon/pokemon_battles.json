@@ -1,0 +1,32 @@
+{
+  "name": "cobblemon.behaviour.pokemon_battles.name",
+  "description": "cobblemon.behaviour.pokemon_battles.desc",
+  "entityType": "cobblemon:pokemon",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:battling",
+      "tasksByPriority": {
+        "0": [
+          "switch_pokemon_from_battle",
+	      "manage_flight_in_battle",
+          "look_at_targeted_battle_pokemon",
+          {
+            "type": "look_at_target",
+            "minDurationTicks": 99999,
+            "maxDurationTicks": 99999
+          }
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "9": [
+          "switch_pokemon_to_battle"
+        ]
+      }
+    }
+  ]
+}

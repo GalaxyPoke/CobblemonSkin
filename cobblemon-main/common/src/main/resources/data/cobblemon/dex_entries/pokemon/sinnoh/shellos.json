@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:shellos",
+  "speciesId": "cobblemon:shellos",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "East",
+      "unlockForms": [
+        "East"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,50 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_benefit_mint": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:cyan_mint_leaf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_detriment_mint": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:red_mint_leaf"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:modest_mint"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_benefit_mint",
+      "has_the_recipe"
+    ],
+	[
+      "has_detriment_mint",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:modest_mint"
+    ]
+  }
+}

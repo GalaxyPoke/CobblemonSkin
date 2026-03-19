@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:vulpix",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:vulpix",
+      "model": "cobblemon:vulpix.geo",
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0037_vulpix/vulpix_shiny.png"
+    }
+  ]
+}

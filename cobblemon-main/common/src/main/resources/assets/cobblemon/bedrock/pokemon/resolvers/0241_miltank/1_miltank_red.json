@@ -1,0 +1,16 @@
+{
+  "species": "cobblemon:miltank",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["mooshtank-red"],
+      "model": "cobblemon:mooshtank.geo",
+      "texture": "cobblemon:textures/pokemon/0241_miltank/miltank_red_mushroom.png",
+      "layers": []
+    },
+    {
+      "aspects": ["mooshtank-red", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0241_miltank/miltank_red_mushroom_shiny.png"
+    }
+  ]
+}

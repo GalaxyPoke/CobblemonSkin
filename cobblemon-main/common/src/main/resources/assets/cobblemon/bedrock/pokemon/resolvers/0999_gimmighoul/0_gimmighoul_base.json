@@ -1,0 +1,95 @@
+{
+  "species": "cobblemon:gimmighoul",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gimmighoulchest",
+      "model": "cobblemon:gimmighoul_chest.geo",
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest.png",
+      "layers": []
+    },
+    {
+      "aspects": ["minecraft"],
+      "poser": "cobblemon:gimmighoulchest",
+      "model": "cobblemon:gimmighoul_chest_minecraft.geo",
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_minecraft.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "poser": "cobblemon:gimmighoulchest",
+      "model": "cobblemon:gimmighoul_chest.geo",
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_shiny.png"
+    },
+    {
+      "aspects": ["shiny", "minecraft"],
+      "poser": "cobblemon:gimmighoulchest",
+      "model": "cobblemon:gimmighoul_chest_minecraft.geo",
+      "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_minecraft_shiny.png"
+    },
+    {
+      "aspects": ["red-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_red.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["yellow-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_yellow.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["green-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_green.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["blue-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_blue.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["pink-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_pink.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["black-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_black.png"
+        }
+      ]
+    },
+    {
+      "aspects": ["white-gilded-chest"],
+      "layers": [
+        {
+          "name": "chest",
+          "texture": "cobblemon:textures/pokemon/0999_gimmighoul/gimmighoul_chest_white.png"
+        }
+      ]
+    }
+  ]
+}

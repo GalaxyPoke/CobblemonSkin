@@ -1,0 +1,28 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "TS",
+        "MH",
+        "B "
+    ],
+    "key": {
+        "T": {
+            "item": "minecraft:iron_trapdoor"
+        },
+        "S": {
+            "tag": "c:strings"
+        },
+        "M": {
+            "tag": "c:fertilizers"
+        },
+		"H": {
+			"item": "minecraft:rabbit_hide"
+		},
+		"B": {
+			"tag": "c:buckets/empty"
+		}
+    },
+    "result": {
+        "id": "cobblemon:terrain_extender"
+    }
+}

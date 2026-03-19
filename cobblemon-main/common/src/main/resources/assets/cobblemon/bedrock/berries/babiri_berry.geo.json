@@ -1,0 +1,27 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.babiri_berry - Converted",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "babiri",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1.5, -2, -1.5], "size": [3, 1, 3], "uv": [0, 4]},
+						{"origin": [-1, -4, -1], "size": [2, 1, 2], "uv": [0, 8]},
+						{"origin": [-1.5, -3, -1.5], "size": [3, 1, 3], "pivot": [0, -2.5, 0], "rotation": [0, -45, 0], "uv": [0, 0]},
+						{"origin": [-0.5, -1, -0.5], "size": [1, 1, 1], "uv": [6, 8]}
+					]
+				}
+			]
+		}
+	]
+}

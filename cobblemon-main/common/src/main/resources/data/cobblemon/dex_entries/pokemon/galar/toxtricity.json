@@ -1,0 +1,33 @@
+{
+  "id": "cobblemon:toxtricity",
+  "speciesId": "cobblemon:toxtricity",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Low-Key",
+      "unlockForms": [
+        "Low-Key"
+      ]
+    },
+    {
+      "displayForm": "Gmax",
+      "unlockForms": [
+        "Gmax"
+      ]
+    },
+    {
+      "displayForm": "Low-Key-Gmax",
+      "unlockForms": [
+        "Low-Key-Gmax"
+      ]
+    }
+  ],
+  "variations": []
+}

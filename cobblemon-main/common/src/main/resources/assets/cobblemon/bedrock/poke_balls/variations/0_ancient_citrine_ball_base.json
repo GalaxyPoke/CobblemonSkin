@@ -1,0 +1,13 @@
+{
+  "pokeball": "cobblemon:ancient_citrine_ball",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:ancient_poke_ball",
+      "model": "cobblemon:ancient_poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/ancient_citrine_ball.png",
+      "layers": []
+    }
+  ]
+}

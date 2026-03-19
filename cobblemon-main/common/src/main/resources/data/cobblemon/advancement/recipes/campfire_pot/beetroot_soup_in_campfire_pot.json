@@ -1,0 +1,39 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_beetroot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:beetroot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_original_recipe": {
+      "conditions": {
+        "recipe": "minecraft:beetroot_soup"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/beetroot_soup_in_campfire_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_beetroot",
+	  "has_original_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/beetroot_soup_in_campfire_pot"
+    ]
+  }
+}

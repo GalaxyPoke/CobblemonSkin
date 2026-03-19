@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "QLQ",
+        "RML",
+        "QRQ"
+    ],
+    "key": {
+        "L": {
+            "tag": "c:gems/lapis"
+        },
+        "R": {
+            "tag": "c:dusts/redstone"
+        },
+        "M": {
+            "item": "cobblemon:muscle_band"
+        },
+        "Q": {
+            "tag": "c:gems/quartz"
+        }
+    },
+    "result": {
+        "id": "cobblemon:choice_band"
+    }
+}

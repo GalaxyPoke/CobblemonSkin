@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:hitmontop",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:hitmontop",
+      "model": "cobblemon:hitmontop.geo",
+      "texture": "cobblemon:textures/pokemon/0237_hitmontop/hitmontop.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0237_hitmontop/hitmontop_shiny.png"
+    }
+  ]
+}

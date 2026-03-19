@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_ferocious",
+	"title": "cobblemon.mark.mark_personality_ferocious.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.mark_personality_ferocious.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_ferocious.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 85
+}

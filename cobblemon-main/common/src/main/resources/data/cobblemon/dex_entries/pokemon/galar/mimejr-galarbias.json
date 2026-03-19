@@ -1,0 +1,15 @@
+{
+  "id": "cobblemon:mimejr-galarbias",
+  "speciesId": "cobblemon:mimejr",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Galar-Bias",
+      "unlockForms": [
+        "Galar-Bias"
+      ]
+    }
+  ],
+  "variations": []
+}

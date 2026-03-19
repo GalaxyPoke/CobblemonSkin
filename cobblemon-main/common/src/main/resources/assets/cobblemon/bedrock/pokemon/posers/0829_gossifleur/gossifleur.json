@@ -1,0 +1,75 @@
+{
+    "portraitScale": 1.45,
+    "portraitTranslation": [0,0.32,0],
+    "profileScale": 0.56,
+    "profileTranslation": [0,0.96,0],
+    "animations": {
+      "cry": "q.bedrock_stateful('gossifleur', 'cry')",
+      "recoil": "q.bedrock_stateful('gossifleur', 'recoil')"
+    },
+    "poses": {
+      "battle-standing": {
+        "poseTypes": [
+          "STAND"
+        ],
+        "isBattle": true,
+        "animations": [
+          "q.look('head', 1, 1, 23, -10, 12, -12)",
+          "q.bedrock('gossifleur', 'battle_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('gossifleur', 'blink')",
+          "q.bedrock_quirk('gossifleur', 'quirk_twirl', 8, 20, 1)"
+        ]
+      },
+      "standing": {
+        "poseTypes": [
+          "STAND",
+          "NONE"
+        ],
+        "isBattle": false,
+        "animations": [
+          "q.look('head', 1, 1, 23, -10, 12, -12)",
+          "q.bedrock('gossifleur', 'ground_idle')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('gossifleur', 'blink')",
+          "q.bedrock_quirk('gossifleur', 'quirk_twirl', 8, 20, 1)"
+        ]
+      },
+      "portrait": {
+      "poseTypes": [
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": ["q.bedrock('gossifleur', 'portrait_idle')"
+        ],
+      "quirks": ["q.bedrock_quirk('gossifleur', 'blink')"
+        ]
+      },
+      "walking": {
+        "poseTypes": [
+          "WALK"
+        ],
+        "animations": [
+          "q.look('head', 1, 1, 23, -10, 12, -12)",
+          "q.bedrock('gossifleur', 'ground_walk')"
+        ],
+        "quirks": [
+          "q.bedrock_quirk('gossifleur', 'blink')",
+          "q.bedrock_quirk('gossifleur', 'quirk_twirl', 8, 20, 1)"
+        ]
+      },
+      "sleep": {
+        "poseTypes": [
+          "SLEEP"
+        ],
+        "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+        },
+        "animations": [
+          "q.bedrock('gossifleur', 'battle_sleep')"
+        ]
+      }
+    }
+  }

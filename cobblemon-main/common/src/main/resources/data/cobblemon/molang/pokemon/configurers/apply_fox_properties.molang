@@ -1,0 +1,20 @@
+q.entity.config.can_stand_on_powder_snow = true;
+q.entity.config.immune_to_sweet_berry_bush_block = true;
+
+'Add fox food to the pickup behaviour';
+t.fox_food = q.create_pickup_item('#minecraft:fox_food', 5);
+t.fox_food.set_fullness_value(2);
+t.fox_food.set_on_use_effect('q.entity.heal(2)');
+q.append(q.entity.config.pickup_items, t.fox_food);
+
+'Add regular food to the pickup behaviour';
+t.regular_food = q.create_pickup_item('q.item.is_food()', 4);
+t.regular_food.set_fullness_value(1);
+t.regular_food.set_on_use_effect('q.entity.heal(1)');
+q.append(q.entity.config.pickup_items, t.regular_food);
+
+'Add items in general to the pickup behaviour since foxes love picking up shit';
+t.generic_item = q.create_pickup_item(true, 1);
+t.generic_item.set_fullness_value(0);
+q.entity.behaviour.item_interact.add_pickup_item(t.generic_item);
+q.append(q.entity.config.pickup_items, t.generic_item);

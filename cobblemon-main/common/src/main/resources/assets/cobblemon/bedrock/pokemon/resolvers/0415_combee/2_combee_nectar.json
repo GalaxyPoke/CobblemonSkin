@@ -1,0 +1,14 @@
+{
+  "species": "cobblemon:combee",
+  "order": 2,
+  "variations": [
+    {
+      "aspects": ["has_nectar"],
+      "texture": "cobblemon:textures/pokemon/0415_combee/combee.png"
+    },
+	{
+      "aspects": ["has_nectar", "shiny"],
+      "texture": "cobblemon:textures/pokemon/0415_combee/combee.png"
+    }
+  ]
+}

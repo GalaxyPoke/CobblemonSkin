@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:starly",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "model": "cobblemon:starly_female.geo"
+    }
+  ]
+}

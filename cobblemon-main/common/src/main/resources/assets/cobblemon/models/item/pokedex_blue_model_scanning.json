@@ -1,0 +1,7 @@
+{
+  "parent": "cobblemon:item/pokedex_red_model",
+  "textures": {
+    "screen": "cobblemon:item/pokedexes/models/pokedex_screen_scan",
+    "all": "cobblemon:item/pokedexes/models/pokedex_blue"
+  }
+}

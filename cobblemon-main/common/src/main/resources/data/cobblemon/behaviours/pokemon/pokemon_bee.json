@@ -1,0 +1,92 @@
+{
+  "name": "cobblemon.behaviour.pokemon_bee.name",
+  "description": "cobblemon.behaviour.pokemon_bee.desc",
+  "entityType": "cobblemon:pokemon",
+  "onAdd": [
+    "q.entity.data.original_leaves_malus = q.entity.get_pathfinding_malus('LEAVES');",
+    "q.entity.set_pathfinding_malus('LEAVES', 4.0);",
+    "q.entity.config.can_path_through_sacc_leaves = true;"
+
+  ],
+  "onRemove": [
+    "q.entity.set_pathfinding_malus('LEAVES', q.entity.data.original_leaves_malus);",
+    "q.entity.config.can_path_through_sacc_leaves = false;"
+  ],
+  "configurations": [
+    {
+      "type": "script",
+      "executeEarly": true,
+      "script": "cobblemon:apply_bee_properties"
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "cobblemon:pokemon_pollination",
+      "condition": "!q.entity.is_in_party",
+      "tasksByPriority": {
+        "0": [
+          {
+            "type": "cobblemon:activity_change",
+            "activity": "minecraft:idle",
+            "condition": "q.entity.lacks_memory_value('cobblemon:has_nectar', 'cobblemon:nearby_flower') || (q.entity.has_memory_value('cobblemon:has_nectar') && (q.entity.lacks_memory_value('cobblemon:nearby_sacc_leaves', 'cobblemon:hive_location'))) || q.entity.has_memory_value('cobblemon:hive_cooldown') || ((q.entity.biome.is_in('#minecraft:is_overworld') && ((q.entity.world.time_of_day >= 13000 && q.entity.world.time_of_day <= 23000) || q.entity.world.is_raining)) && (q.entity.lacks_memory_value('cobblemon:hive_location')))"
+          },
+          {
+            "type": "cobblemon:activity_change",
+            "activity": "minecraft:fight",
+            "condition": "q.entity.has_memory_value('minecraft:attack_target')"
+          }
+        ],
+        "2": [
+          "pollinate_flower",
+          {
+            "type": "place_honey_in_hive",
+            "condition": "q.entity.is_wild"
+          },
+          "place_honey_in_sacc_leaves"
+        ],
+        "3": [
+          "path_to_flower",
+          {
+            "type": "path_to_hive",
+            "condition": "q.entity.is_wild"
+          },
+          "path_to_sacc_leaves"
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:idle",
+      "condition": "!q.entity.is_in_party",
+      "tasksByPriority": {
+        "0": [
+          {
+            "type": "cobblemon:activity_change",
+            "activity": "cobblemon:pokemon_pollination",
+            "condition": "((q.entity.has_memory_value('cobblemon:nearby_sacc_leaves') || q.entity.has_memory_value('cobblemon:hive_location')) && !q.entity.has_memory_value('cobblemon:hive_cooldown'))"
+          }
+        ],
+        "1": [
+          {
+            "type": "cobblemon:run_script",
+            "script": "cobblemon:wander_around_hive",
+            "_comment": "This tweaks the wander control to set a center point around the hive location to keep it from walking too far (if they're registered against a hive)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "minecraft:core",
+      "condition": "!q.entity.is_in_party",
+      "tasksByPriority": {
+        "9": [
+          {
+            "type": "cobblemon:memory_aspect",
+            "memory": "cobblemon:has_nectar",
+            "aspect": "has_nectar"
+          }
+        ]
+      }
+    }
+  ]
+}

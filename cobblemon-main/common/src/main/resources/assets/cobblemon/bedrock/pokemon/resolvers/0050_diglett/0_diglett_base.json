@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:diglett",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:diglett",
+      "model": "cobblemon:diglett.geo",
+      "texture": "cobblemon:textures/pokemon/0050_diglett/diglett.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0050_diglett/diglett_shiny.png"
+    }
+  ]
+}

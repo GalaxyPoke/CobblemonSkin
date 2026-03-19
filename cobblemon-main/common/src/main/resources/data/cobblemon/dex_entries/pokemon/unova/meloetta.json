@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:meloetta",
+  "speciesId": "cobblemon:meloetta",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Pirouette",
+      "unlockForms": [
+        "Pirouette"
+      ]
+    }
+  ],
+  "variations": []
+}

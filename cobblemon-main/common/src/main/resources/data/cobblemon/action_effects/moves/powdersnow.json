@@ -1,0 +1,59 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["powdersnow", "spray", "special"],
+      "delay": 1.25
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.powdersnow.actor');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:powdersnow_actor",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"]
+    },
+    {
+      "type": "entity_particles",
+      "effect": "cobblemon:powdersnow_actormist",
+      "locators": ["special", "target"],
+      "targetLocators": ["target"],
+      "delay": 0.03
+    },
+    {
+      "type": "pause",
+      "pause": 0.55
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "expressions": [
+        "q.sound('move.powdersnow.target');"
+      ]
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:powdersnow_target",
+      "locators": ["target"],
+      "delay": 0.05
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.9
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_cloudy",
+	"title": "cobblemon.mark.mark_weather_cloudy.title",
+	"titleColor": "959AAA",
+	"description": "cobblemon.mark.mark_weather_cloudy.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_cloudy.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 57
+}

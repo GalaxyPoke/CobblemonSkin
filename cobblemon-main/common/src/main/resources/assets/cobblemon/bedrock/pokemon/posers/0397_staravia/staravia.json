@@ -1,0 +1,55 @@
+{
+  "portraitScale": 2.51,
+  "portraitTranslation": [-0.34, -0.76, 0],
+  "profileScale": 0.89,
+  "profileTranslation": [0, 0.39, 0],
+  "rootBone": "staravia",
+  "animations": {
+    "cry": "q.bedrock_stateful('staravia', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE", "FLOAT"],
+      "animations": [
+        "q.look('torso', 1, 1, 18, -9, 45, -45)",
+        "q.look('head', 1, 1, 9, -10, 0, 0)",
+        "q.bedrock('staravia', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('staravia', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('torso', 1, 1, 18, -9, 0, 0)",
+        "q.look('head', 1, 1, 9, -10, 0, 0)",
+        "q.bedrock('staravia', 'ground_idle')",
+        "q.biped_walk(0.6, 1.0, 'leg_left', 'leg_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('staravia', 'blink')"]
+    },
+    "hover": {
+      "poseTypes": ["HOVER"],
+      "transformTicks": 0,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.look('torso', 1, 1, 18, -9, 0, 0)",
+        "q.look('head', 1, 1, 9, -10, 0, 0)",
+        "q.bedrock('staravia', 'air_idle')",
+        "q.sine_wing_flap(0.9, 0.9, 0, 'z', 'wing_open_left', 'wing_open_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('staravia', 'blink')"]
+    },
+    "fly": {
+      "poseTypes": ["FLY"],
+      "transformTicks": 0,
+      "animations": [
+        "q.pitch_tilt('body')",
+        "q.bedrock('staravia', 'air_fly')",
+        "q.sine_wing_flap(0.9, 0.9, 0, 'z', 'wing_open_left', 'wing_open_right')"
+      ],
+      "quirks": ["q.bedrock_quirk('staravia', 'blink')"]
+    }
+  }
+}

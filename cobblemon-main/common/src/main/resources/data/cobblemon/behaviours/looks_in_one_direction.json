@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon.behaviour.looks_in_one_direction.name",
+  "description": "cobblemon.behaviour.looks_in_one_direction.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "core",
+      "tasksByPriority": {
+        "0": [
+          "look_in_direction"
+        ]
+      }
+    }
+  ]
+}

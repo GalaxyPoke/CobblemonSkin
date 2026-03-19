@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+	"#cobblemon:seeds",
+	"#cobblemon:apricorns",
+	"#cobblemon:apricorn_sprouts",
+	"#cobblemon:mint_leaves",
+	"#cobblemon:berries",
+	"#cobblemon:herbs",
+	"cobblemon:vivichoke",
+	"cobblemon:medicinal_leek",
+	"cobblemon:big_root",
+	"cobblemon:energy_root",
+	"cobblemon:pep_up_flower"
+  ]
+}

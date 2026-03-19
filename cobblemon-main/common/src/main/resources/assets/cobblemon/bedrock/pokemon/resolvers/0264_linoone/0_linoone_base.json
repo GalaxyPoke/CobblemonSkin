@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:linoone",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:linoone",
+      "model": "cobblemon:linoone.geo",
+      "texture": "cobblemon:textures/pokemon/0264_linoone/linoone.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0264_linoone/linoone_shiny.png"
+    }
+  ]
+}

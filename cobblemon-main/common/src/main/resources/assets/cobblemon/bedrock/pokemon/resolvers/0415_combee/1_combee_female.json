@@ -1,0 +1,14 @@
+{
+  "species": "cobblemon:combee",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "model": "cobblemon:combee_female.geo"
+    },
+    {
+      "aspects": ["shiny", "female"],
+      "texture": "cobblemon:textures/pokemon/0415_combee/combee_shiny.png"
+    }
+  ]
+}

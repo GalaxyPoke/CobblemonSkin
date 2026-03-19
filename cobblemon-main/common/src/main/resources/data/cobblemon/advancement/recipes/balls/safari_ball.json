@@ -1,0 +1,66 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_green_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:green_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_yellow_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:yellow_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_white_apricorn": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "cobblemon:white_apricorn"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:safari_ball"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_green_apricorn",
+      "has_the_recipe"
+    ],
+	[
+      "has_yellow_apricorn",
+      "has_the_recipe"
+    ],
+	[
+      "has_white_apricorn",
+      "has_the_recipe"
+	]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:safari_ball"
+    ]
+  }
+}

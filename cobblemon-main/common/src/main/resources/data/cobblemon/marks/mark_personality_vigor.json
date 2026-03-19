@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_personality_vigor",
+	"title": "cobblemon.mark.mark_personality_vigor.title",
+	"titleColor": "E95A4A",
+	"description": "cobblemon.mark.mark_personality_vigor.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_personality_vigor.png",
+	"group": "personality",
+	"chance": 0.01,
+	"indexNumber": 96
+}

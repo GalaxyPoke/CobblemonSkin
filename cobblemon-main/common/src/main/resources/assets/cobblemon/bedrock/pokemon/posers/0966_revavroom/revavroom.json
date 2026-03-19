@@ -1,0 +1,86 @@
+{
+  "portraitScale": 1.43,
+  "portraitTranslation": [-0.58, 0.25, 0],
+  "profileScale": 0.52,
+  "profileTranslation": [0.05, 0.8, 0],
+  "rootBone": "revavroom",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('revavroom', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.bedrock('revavroom', 'ground_idle')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('revavroom', 'ride_ground')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('revavroom', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.bedrock('revavroom', 'ground_walk')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('revavroom', 'ride_ground')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('revavroom', 'blink')"
+      ]
+    },
+    "run": {
+      "poseTypes": ["WALK"],
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.bedrock('revavroom', 'ground_run')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('revavroom', 'ride_ground')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('revavroom', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('revavroom', 'sleep')"
+      ]
+    },
+    "in-air": {
+      "poseTypes": ["STAND", "WALK"],
+      "condition": "q.in_air",
+      "animations": [
+        "q.bedrock('revavroom', 'ride_jump')",
+        {
+          "condition": "q.is_ridden",
+          "animation": "q.bedrock('revavroom', 'ride_ground')"
+        }
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5,
+      "quirks": [
+        "q.bedrock_quirk('revavroom', 'blink')"
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "cobblemon:medicinal_brew"
+        },
+        {
+            "tag": "cobblemon:super_potion_ingredients"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:super_potion"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

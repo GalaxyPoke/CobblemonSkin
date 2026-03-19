@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:random_patch",
+    "config": {
+        "tries": 20,
+        "xz_spread": 5,
+        "y_spread": 5,
+        "feature": {
+            "feature": "cobblemon:galarica_nuts/galarica_bushes",
+            "placement": [
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:would_survive",
+                        "state": {
+                            "Name": "cobblemon:galarica_nut_bush",
+                            "Properties": {}
+                        }
+                    }
+                },
+                {
+                    "type": "minecraft:block_predicate_filter",
+                    "predicate": {
+                        "type": "minecraft:matching_blocks",
+                        "blocks": [
+                            "minecraft:air"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "group": "rabbit_stew",
+    "category": "foods",
+    "ingredients": [
+        {
+            "item": "minecraft:baked_potato"
+        },
+        {
+            "item": "minecraft:cooked_rabbit"
+        },
+        {
+            "item": "minecraft:bowl"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:red_mushroom"
+        }
+    ],
+    "result": {
+        "id": "minecraft:rabbit_stew",
+        "count": 1
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

@@ -1,0 +1,33 @@
+{
+  "requirements": [
+    {
+      "variant": "properties",
+      "target": "petilil"
+    }
+  ],
+  "interactions": [
+    {
+      "grouping": "cobblemon:bone_meal",
+      "cooldown": "18000",
+      "requirements": [
+        {
+          "variant": "owner_held_item",
+          "itemCondition": "#c:fertilizers"
+        }
+      ],
+      "effects": [
+        {
+          "variant": "shrink_item"
+        },
+        {
+          "variant": "drop_item",
+          "item": "cobblemon:revival_herb"
+        },
+        {
+          "variant": "play_sound",
+          "sound": "minecraft:item.bone_meal.use"
+        }
+      ]
+    }
+  ]
+}

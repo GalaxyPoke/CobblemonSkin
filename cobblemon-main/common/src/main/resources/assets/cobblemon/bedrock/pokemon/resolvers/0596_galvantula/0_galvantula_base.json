@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:galvantula",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:galvantula",
+      "model": "cobblemon:galvantula.geo",
+      "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0596_galvantula/galvantula_emissive_shiny.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon:village_plains_pokecenter_signtest/village_plains_pokecenter_signtest_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "cobblemon:village_plains_pokecenter_signtest",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

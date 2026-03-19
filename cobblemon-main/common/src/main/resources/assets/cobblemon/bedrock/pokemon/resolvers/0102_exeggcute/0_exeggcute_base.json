@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:exeggcute",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:exeggcute",
+      "model": "cobblemon:exeggcute.geo",
+      "texture": "cobblemon:textures/pokemon/0102_exeggcute/exeggcute.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0102_exeggcute/exeggcute_shiny.png"
+    }
+  ]
+}

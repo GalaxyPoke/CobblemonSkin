@@ -1,0 +1,32 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/candied_berry"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_berry": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#cobblemon:berries"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_berry"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/candied_berry"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "species": "cobblemon:araquanid",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:araquanid",
+      "model": "cobblemon:araquanid.geo",
+      "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "translucent",
+          "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid_translucent.png",
+          "translucent": true
+        }
+      ]
+    },
+    {
+      "aspects": [
+        "shiny"
+      ],
+      "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid_shiny.png",
+      "layers": [
+        {
+          "name": "glow",
+          "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid_emissive.png",
+          "emissive": true
+        },
+        {
+          "name": "translucent",
+          "texture": "cobblemon:textures/pokemon/0752_araquanid/araquanid_translucent.png",
+          "translucent": true
+        }
+      ]
+    }
+  ]
+}

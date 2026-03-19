@@ -1,0 +1,48 @@
+{
+  "id": "cobblemon:florges",
+  "speciesId": "cobblemon:florges",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Yellow",
+      "unlockForms": [
+        "Yellow"
+      ]
+    },
+    {
+      "displayForm": "Orange",
+      "unlockForms": [
+        "Orange"
+      ]
+    },
+    {
+      "displayForm": "Blue",
+      "unlockForms": [
+        "Blue"
+      ]
+    },
+    {
+      "displayForm": "White",
+      "unlockForms": [
+        "White"
+      ]
+    }
+  ],
+  "variations": [
+    {
+      "displayName": "cobblemon.pokedex.variation.flower",
+      "icon": "cobblemon:textures/gui/pokedex/variation/flower.png",
+      "aspects": [
+        "flower-red",
+        "flower-pink"
+      ]
+    }
+  ]
+}

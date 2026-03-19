@@ -1,0 +1,14 @@
+{
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1642136475,
+    "separation": 8,
+    "spacing": 34
+  },
+  "structures": [
+    {
+      "structure": "cobblemon:village_plains_pokecenter_signtest",
+      "weight": 1
+    }
+  ]
+}

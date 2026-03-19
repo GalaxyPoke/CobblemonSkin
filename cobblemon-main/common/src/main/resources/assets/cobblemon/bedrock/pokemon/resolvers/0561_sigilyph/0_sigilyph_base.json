@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:sigilyph",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:sigilyph",
+      "model": "cobblemon:sigilyph.geo",
+      "texture": "cobblemon:textures/pokemon/0561_sigilyph/sigilyph.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0561_sigilyph/sigilyph_shiny.png"
+    }
+  ]
+}

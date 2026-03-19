@@ -1,0 +1,10 @@
+{
+  "species": "cobblemon:luxio",
+  "order": 1,
+  "variations": [
+    {
+      "aspects": ["female"],
+      "model": "cobblemon:luxio_female.geo"
+    }
+  ]
+}

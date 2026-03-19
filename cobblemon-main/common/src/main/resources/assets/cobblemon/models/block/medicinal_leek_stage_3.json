@@ -1,0 +1,197 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"5": "cobblemon:block/crops/medicinal_leek_stage_3",
+		"particle": "cobblemon:block/crops/medicinal_leek_stage_3"
+	},
+	"elements": [
+		{
+			"from": [8, -2, 6],
+			"to": [8, 15, 12],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [10, 0, 7, 8.5], "texture": "#5"},
+				"west": {"uv": [7, 0, 10, 8.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [5, -2, 8],
+			"to": [13, 10, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [0.5, 2.5, 4.5, 8.5], "texture": "#5"},
+				"south": {"uv": [4.5, 2.5, 0.5, 8.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [5.05546, -2.94454, 8],
+			"to": [7.05546, -0.94454, 8],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"},
+				"south": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [8, -2.94454, 8.94454],
+			"to": [8, -0.94454, 10.94454],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9.5], "texture": "#5"},
+				"west": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"}
+			}
+		},
+		{
+			"from": [8.94454, -6.12652, 13],
+			"to": [10.94454, -4.12652, 13],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"},
+				"south": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [13, 0.94454, 12.12652],
+			"to": [13, 2.94454, 14.12652],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9.5], "texture": "#5"},
+				"west": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"}
+			}
+		},
+		{
+			"from": [3, 0.23744, 12.83363],
+			"to": [3, 2.23744, 14.83363],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9.5], "texture": "#5"},
+				"west": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"}
+			}
+		},
+		{
+			"from": [1.16637, 0.23744, 13],
+			"to": [3.16637, 2.23744, 13],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"},
+				"south": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [3, -6.12652, 5.05546],
+			"to": [3, -4.12652, 7.05546],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9.5], "texture": "#5"},
+				"west": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"}
+			}
+		},
+		{
+			"from": [1.87348, 0.94454, 3],
+			"to": [3.87348, 2.94454, 3],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"},
+				"south": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [13, -6.83363, 5.76256],
+			"to": [13, -4.83363, 7.76256],
+			"rotation": {"angle": 45, "axis": "x", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 8.5, 8.5, 9.5], "texture": "#5"},
+				"west": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"}
+			}
+		},
+		{
+			"from": [8.23744, -6.83363, 3],
+			"to": [10.23744, -4.83363, 3],
+			"rotation": {"angle": 45, "axis": "z", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 90, "texture": "#5"},
+				"south": {"uv": [7.5, 8.5, 8.5, 9.5], "rotation": 180, "texture": "#5"}
+			}
+		},
+		{
+			"from": [3, -1.5, 2],
+			"to": [3, 4.5, 4],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [7.5, 11.5, 6.5, 14.5], "texture": "#5"},
+				"west": {"uv": [6.5, 11.5, 7.5, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [2, -1.5, 3],
+			"to": [4, 4.5, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [6.5, 11.5, 7.5, 14.5], "texture": "#5"},
+				"south": {"uv": [7.5, 11.5, 6.5, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [11, -2.5, 3],
+			"to": [15, 7.5, 3],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [4, 9.5, 6, 14.5], "texture": "#5"},
+				"south": {"uv": [6, 9.5, 4, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [13, -2.5, 1],
+			"to": [13, 6.5, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [2, 10, 4, 14.5], "texture": "#5"},
+				"west": {"uv": [4, 10, 2, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [12, -1.5, 13],
+			"to": [14, 4.5, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [9.5, 11.5, 8.5, 14.5], "texture": "#5"},
+				"south": {"uv": [8.5, 11.5, 9.5, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [13, -1.5, 12],
+			"to": [13, 4.5, 14],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [8.5, 11.5, 9.5, 14.5], "texture": "#5"},
+				"west": {"uv": [9.5, 11.5, 8.5, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [1, -2.5, 13],
+			"to": [5, 7.5, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"north": {"uv": [6, 9.5, 4, 14.5], "texture": "#5"},
+				"south": {"uv": [4, 9.5, 6, 14.5], "texture": "#5"}
+			}
+		},
+		{
+			"from": [3, -2.5, 11],
+			"to": [3, 6.5, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 0, 8]},
+			"faces": {
+				"east": {"uv": [4, 10, 2, 14.5], "texture": "#5"},
+				"west": {"uv": [2, 10, 4, 14.5], "texture": "#5"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "medicinal_leek",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+		}
+	]
+}

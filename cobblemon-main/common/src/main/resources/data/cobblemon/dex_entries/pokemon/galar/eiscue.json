@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:eiscue",
+  "speciesId": "cobblemon:eiscue",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Noice-Face",
+      "unlockForms": [
+        "Noice-Face"
+      ]
+    }
+  ],
+  "variations": []
+}

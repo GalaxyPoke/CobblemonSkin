@@ -1,0 +1,17 @@
+{
+    "species": "cobblemon:honedge",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:honedge",
+        "model": "cobblemon:honedge.geo",
+        "texture": "cobblemon:textures/pokemon/0679_honedge/honedge.png",
+        "layers": []
+      },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0679_honedge/honedge_shiny.png"
+      }
+    ]
+  }

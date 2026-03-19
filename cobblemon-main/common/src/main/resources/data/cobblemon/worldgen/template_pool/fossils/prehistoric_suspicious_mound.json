@@ -1,0 +1,36 @@
+{
+    "name": "cobblemon:prehistoric_suspicious_mound",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/suspicious_mound1",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_suspicious_mound",
+                "projection": "rigid"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/suspicious_mound2",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_suspicious_mound",
+                "projection": "rigid"
+            }
+        },
+        {
+            "weight": 1,
+            "element": {
+                "location": "cobblemon:fossils/suspicious_mound3",
+                "element_type": "minecraft:single_pool_element",
+                "override_liquid_settings": "ignore_waterlogging",
+                "processors": "cobblemon:fossils/prehistoric_suspicious_mound",
+                "projection": "rigid"
+            }
+        }
+    ]
+}

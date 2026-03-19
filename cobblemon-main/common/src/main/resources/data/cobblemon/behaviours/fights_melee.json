@@ -1,0 +1,19 @@
+{
+  "name": "cobblemon.behaviour.fights_melee.name",
+  "description": "cobblemon.behaviour.fights_melee.desc",
+  "configurations": [
+    {
+      "type": "add_tasks_to_activity",
+      "activity": "fight",
+      "tasksByPriority": {
+        "0": [
+          "stop_attacking_if_target_invalid",
+          "move_to_attack_target"
+        ],
+        "1": [
+          "melee_attack"
+        ]
+      }
+    }
+  ]
+}

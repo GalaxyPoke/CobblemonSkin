@@ -1,0 +1,23 @@
+{
+  "species": "cobblemon:skeledirge",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:skeledirge",
+      "model": "cobblemon:skeledirge.geo",
+      "texture": "cobblemon:textures/pokemon/0911_skeledirge/skeledirge.png",
+      "layers": [
+        {
+          "name": "color",
+          "texture": "cobblemon:textures/pokemon/0911_skeledirge/skeledirge_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0911_skeledirge/skeledirge_shiny.png"
+    }
+  ]
+}

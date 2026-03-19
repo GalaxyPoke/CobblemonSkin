@@ -1,0 +1,50 @@
+{
+  "portraitScale": 2.4,
+  "portraitTranslation": [-0.24, -0.47, 0],
+  "profileScale": 0.63,
+  "profileTranslation": [0, 0.72, 0],
+  "rootBone": "ribombee",
+  "animations": {
+    "faint": "q.bedrock_primary('ribombee', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('ribombee', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseTypes": ["STAND", "NONE", "PORTRAIT", "PROFILE"],
+      "animations": [
+        "q.look('head', 1, 1, 15, -25, 15, -25)",
+        "q.look('scarf', 1, 1, 15, -25, 15, -25)",
+        "q.bedrock('ribombee', 'ground_idle')"
+      ]
+    },
+    "walking": {
+      "poseTypes": ["WALK"],
+      "animations": [
+        "q.look('head', 1, 1, 0, 0, 45, -45)",
+        "q.look('scarf', 1, 1, 0, 0, 45, -45)",
+        "q.bedrock('ribombee', 'ground_walk')"
+      ]
+    },
+    "hover": {
+      "poseTypes": ["HOVER", "FLOAT"],
+      "animations": [
+        "q.pitch_tilt('body', 0.22)",
+        "q.bedrock('ribombee', 'ground_idle')"
+      ]
+    },
+    "fly": {
+      "poseTypes": ["FLY", "SWIM"],
+      "animations": [
+        "q.pitch_tilt('body', 0.22)",
+        "q.bedrock('ribombee', 'ground_walk')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('ribombee', 'sleep')"]
+    }
+  }
+}

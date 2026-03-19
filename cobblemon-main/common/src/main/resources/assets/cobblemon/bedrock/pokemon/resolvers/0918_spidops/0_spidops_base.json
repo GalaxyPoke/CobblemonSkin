@@ -1,0 +1,16 @@
+{
+    "species": "cobblemon:spidops",
+    "order": 0,
+    "variations": [
+      {
+        "aspects": [],
+        "poser": "cobblemon:spidops",
+        "model": "cobblemon:spidops.geo",
+        "texture": "cobblemon:textures/pokemon/0918_spidops/spidops.png"
+        },
+      {
+        "aspects": ["shiny"],
+        "texture": "cobblemon:textures/pokemon/0918_spidops/spidops_shiny.png"  
+      }
+    ]
+  }

@@ -1,0 +1,17 @@
+{
+  "visible": false,
+  "configurations": [
+    {
+      "type": "cobblemon:apply_behaviours",
+      "condition": "!q.entity.is_in_party && q.entity.behaviour.herd.has_tolerated_leaders",
+      "behaviours": [
+        "cobblemon:pokemon_herds"
+      ]
+    },
+    {
+      "type": "cobblemon:add_memories_and_sensors",
+      "condition": "!q.entity.is_in_party && q.entity.behaviour.herd.max_size > 0",
+      "memories": ["cobblemon:herd_size"]
+    }
+  ]
+}

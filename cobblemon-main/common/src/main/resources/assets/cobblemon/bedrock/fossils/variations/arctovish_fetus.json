@@ -1,0 +1,13 @@
+{
+  "name": "cobblemon:arctovish_fetus",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:arctovish_fetus",
+      "model": "cobblemon:arctovish_fetus.geo",
+      "texture": "cobblemon:textures/fossils/arctovish.png",
+      "layers": []
+    }
+  ]
+}

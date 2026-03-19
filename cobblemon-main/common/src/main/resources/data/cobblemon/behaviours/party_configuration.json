@@ -1,0 +1,62 @@
+{
+  "name": "Configurable Party",
+  "description": "Has a party that you can configure directly.",
+  "entityType": "cobblemon:npc",
+  "undo": "q.entity.set_npc_party(0);",
+  "configurations": [
+    {
+      "type": "script",
+      "script": "cobblemon:configure_npc_party",
+      "variables": [
+        {
+          "variableName": "npc_party_pokemon1",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 1",
+          "description": "The first Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "npc_party_pokemon2",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 2",
+          "description": "The second Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "npc_party_pokemon3",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 3",
+          "description": "The third Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "npc_party_pokemon4",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 4",
+          "description": "The fourth Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "npc_party_pokemon5",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 5",
+          "description": "The fifth Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        },
+        {
+          "variableName": "npc_party_pokemon6",
+          "category": "cobblemon.entity.variable.category.battling",
+          "displayName": "Pokémon 6",
+          "description": "The sixth Pokémon in the party.",
+          "type": "TEXT",
+          "defaultValue": ""
+        }
+      ]
+    }
+  ]
+}

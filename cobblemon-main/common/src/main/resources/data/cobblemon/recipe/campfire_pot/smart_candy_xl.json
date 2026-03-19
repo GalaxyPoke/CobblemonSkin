@@ -1,0 +1,27 @@
+{
+  "type": "cobblemon:cooking_pot",
+  "group": "iv_candy",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "cobblemon:hondew_berry"
+    },
+    "H": {
+      "item": "minecraft:honeycomb"
+    },
+    "E": {
+      "item": "cobblemon:exp_candy_xl"
+    }
+  },
+  "pattern": [
+    "BHB",
+    "HEH",
+    "BHB"
+  ],
+  "result": {
+    "count": 3,
+    "id": "cobblemon:smart_candy"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

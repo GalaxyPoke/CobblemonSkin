@@ -1,0 +1,5 @@
+{
+  "texture": "cobblemon:textures/gui/pc/wallpaper/biome/wallpaper_biome_cave.png",
+  "displayName": "generator.single_biome_caves",
+  "enabled": true
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "cobblemon:recipes/root",
+  "criteria": {
+    "has_blue_orchid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:blue_orchid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "cobblemon:campfire_pot/suspicious_stew_from_blue_orchid_in_campfire_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_orchid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "cobblemon:campfire_pot/suspicious_stew_from_blue_orchid_in_campfire_pot"
+    ]
+  }
+}

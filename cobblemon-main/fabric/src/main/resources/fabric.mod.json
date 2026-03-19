@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "cobblemon",
+  "version": "${version}",
+  "name": "Cobblemon",
+  "description": "Adds Pokémon to the world, letting you find, battle, capture, and evolve them.",
+  "authors": [
+    "The Cobblemon Team"
+  ],
+  "contact": {
+    "homepage": "https://cobblemon.com/",
+    "sources": "https://gitlab.com/cable-mc/cobblemon",
+    "issues": "https://gitlab.com/cable-mc/cobblemon/-/issues"
+  },
+  "license": "MPL-2.0",
+  "icon": "assets/cobblemon/icon_cobblemon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cobblemon.mod.fabric.FabricBootstrap"
+    ],
+    "client": [
+      "com.cobblemon.mod.fabric.client.CobblemonFabricClient"
+    ],
+    "jei_mod_plugin": [
+      "com.cobblemon.mod.common.integration.jei.CobblemonJeiPlugin"
+    ],
+    "dynamiclights": [
+      "com.cobblemon.mod.common.compat.lambdynamiclights.LambDynamicLightsInitializer"
+    ],
+    "modmenu": [
+      "com.cobblemon.mod.fabric.client.integration.modmenu.CobblemonModMenu"
+    ]
+  },
+  "mixins": [
+    "mixins.cobblemon-common.json",
+    "mixins.cobblemon-fabric.json"
+  ],
+  "accessWidener": "cobblemon-common.accesswidener",
+  "depends": {
+    "fabricloader": ">=${fabric_loader_version}",
+    "fabric-api": ">=${fabric_api_version}",
+    "minecraft": "${minecraft_version}",
+    "java": "${java_version}"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.curseforge": "https://www.curseforge.com/minecraft/mc-mods/cobblemon",
+        "modmenu.modrinth": "https://modrinth.com/mod/cobblemon",
+        "modmenu.discord": "https://discord.gg/cobblemon"
+      }
+    },
+    "loom:injected_interfaces": {
+      "net/minecraft/class_630": ["com/cobblemon/mod/common/client/render/models/blockbench/pose/Bone"]
+    }
+  }
+}

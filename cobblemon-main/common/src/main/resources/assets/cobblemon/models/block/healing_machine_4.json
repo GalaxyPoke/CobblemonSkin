@@ -1,0 +1,91 @@
+{
+    "parent": "cobblemon:block/healing_machine_0",
+    "elements": [
+        {
+            "from": [ 0, 0, 0 ],
+            "to": [ 16, 10, 16 ],
+            "faces": {
+                "north": { "uv": [ 4, 13.5, 8, 16 ], "texture": "#all" },
+                "east": { "uv": [ 0, 11, 4, 13.5 ], "texture": "#all" },
+                "south": { "uv": [ 4, 11, 8, 13.5 ], "texture": "#all" },
+                "west": { "uv": [ 0, 13.5, 4, 16 ], "texture": "#all" },
+                "up": { "uv": [ 8, 12, 12, 16 ], "texture": "#all" },
+                "down": { "uv": [ 12, 12, 16, 16 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 1, 10, 0 ],
+            "to": [ 15, 14, 2 ],
+            "faces": {
+                "north": { "uv": [ 8.5, 11, 12, 12 ], "texture": "#all" },
+                "east": { "uv": [ 8, 11, 8.5, 12 ], "texture": "#all" },
+                "south": { "uv": [ 12.5, 11, 16, 12 ], "texture": "#all" },
+                "west": { "uv": [ 12, 11, 12.5, 12 ], "texture": "#all" },
+                "up": { "uv": [ 8.5, 10.5, 12, 11 ], "texture": "#all" },
+                "down": { "uv": [ 12, 10.5, 15.5, 11 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 1, 10, 14 ],
+            "to": [ 15, 14, 16 ],
+            "faces": {
+                "north": { "uv": [ 8.5, 9.5, 12, 10.5 ], "texture": "#all" },
+                "east": { "uv": [ 8, 9.5, 8.5, 10.5 ], "texture": "#all" },
+                "south": { "uv": [ 12.5, 9.5, 16, 10.5 ], "texture": "#all" },
+                "west": { "uv": [ 12, 9.5, 12.5, 10.5 ], "texture": "#all" },
+                "up": { "uv": [ 8.5, 9, 12, 9.5 ], "texture": "#all" },
+                "down": { "uv": [ 12, 9, 15.5, 9.5 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 1, 10, 2 ],
+            "to": [ 3, 12, 14 ],
+            "faces": {
+                "north": { "uv": [ 3.5, 10.5, 4, 11 ], "texture": "#all" },
+                "east": { "uv": [ 0.5, 10.5, 3.5, 11 ], "texture": "#all" },
+                "south": { "uv": [ 0, 10.5, 0.5, 11 ], "texture": "#all" },
+                "west": { "uv": [ 4, 10.5, 7, 11 ], "texture": "#all" },
+                "up": { "uv": [ 0.5, 10, 3.5, 10.5 ], "rotation": 90, "texture": "#all" },
+                "down": { "uv": [ 3.5, 10, 6.5, 10.5 ], "rotation": 90, "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 13, 10, 2 ],
+            "to": [ 15, 12, 14 ],
+            "faces": {
+                "north": { "uv": [ 3.5, 9.5, 4, 10 ], "texture": "#all" },
+                "east": { "uv": [ 0.5, 9.5, 3.5, 10 ], "texture": "#all" },
+                "south": { "uv": [ 0, 9.5, 0.5, 10 ], "texture": "#all" },
+                "west": { "uv": [ 4, 9.5, 7, 10 ], "texture": "#all" },
+                "up": { "uv": [ 0.5, 9, 3.5, 9.5 ], "rotation": 90, "texture": "#all" },
+                "down": { "uv": [ 3.5, 9, 6.5, 9.5 ], "rotation": 90, "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 3, 10, 2 ],
+            "to": [ 13, 11, 14 ],
+            "faces": {
+                "north": { "uv": [ 10, 5, 13, 5.25 ], "texture": "#all" },
+                "east": { "uv": [ 12.25, 4.5, 16, 4.75 ], "texture": "#all" },
+                "south": { "uv": [ 13, 5, 16, 5.25 ], "texture": "#all" },
+                "west": { "uv": [ 12.25, 4.75, 16, 5 ], "texture": "#all" },
+                "up": { "uv": [ 2, 0, 14, 15 ], "texture": "#tray" },
+                "down": { "uv": [ 13, 5.25, 16, 9 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 4, 12, 2.01 ],
+            "to": [ 12, 13, 2.01 ],
+            "faces": {
+                "south": { "uv": [ 2.5, 0.25, 5, 0.5 ], "texture": "#all" }
+            }
+        },
+        {
+            "from": [ 4, 12, 13.99 ],
+            "to": [ 12, 13, 13.99 ],
+            "faces": {
+                "north": { "uv": [ 0, 0.25, 2.5, 0.5 ], "texture": "#all" }
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_uncommon",
+	"title": "cobblemon.mark.mark_uncommon.title",
+	"titleColor": "B5773D",
+	"description": "cobblemon.mark.mark_uncommon.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_uncommon.png",
+	"group": "uncommon",
+	"chance": 0.02,
+	"indexNumber": 68
+}

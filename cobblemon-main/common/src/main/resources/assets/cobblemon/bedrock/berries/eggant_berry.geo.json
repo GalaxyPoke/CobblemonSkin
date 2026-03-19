@@ -1,0 +1,99 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.eggant_berry",
+				"texture_width": 8,
+				"texture_height": 8,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 1.5,
+				"visible_bounds_offset": [0, 0.25, 0]
+			},
+			"bones": [
+				{
+					"name": "Eggant",
+					"pivot": [0, 0, 0],
+					"cubes": [
+						{"origin": [-1, -4.5, -1], "size": [2, 2, 2], "uv": [0, 0]},
+						{"origin": [-0.5, -2.5, -0.5], "size": [1, 2, 1], "uv": [0, 4]},
+						{"origin": [0, -1, -0.5], "size": [0, 1, 1], "pivot": [0, -0.25, 0], "rotation": [0, 45, 0], "uv": [2, 6]},
+						{"origin": [-0.5, -1, 0], "size": [1, 1, 0], "pivot": [0, -0.25, 0], "rotation": [0, 45, 0], "uv": [0, 7]}
+					]
+				},
+				{
+					"name": "leaf_front",
+					"parent": "Eggant",
+					"pivot": [0, -0.5, -0.5],
+					"rotation": [-15, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -2.5, -0.5], "size": [1, 2, 0], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "leaf_front2",
+					"parent": "leaf_front",
+					"pivot": [0, -2.5, -0.5],
+					"rotation": [-60, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -3.5, -0.5], "size": [1, 1, 0], "uv": [4, 6]}
+					]
+				},
+				{
+					"name": "leaf_right",
+					"parent": "Eggant",
+					"pivot": [-0.5, -0.5, 0],
+					"rotation": [0, 0, 15],
+					"cubes": [
+						{"origin": [-0.5, -2.5, -0.5], "size": [0, 2, 1], "uv": [6, -1]}
+					]
+				},
+				{
+					"name": "leaf_right2",
+					"parent": "leaf_right",
+					"pivot": [-0.5, -2.5, 0],
+					"rotation": [0, 0, 60],
+					"cubes": [
+						{"origin": [-0.5, -3.5, -0.5], "size": [0, 1, 1], "uv": [6, 5]}
+					]
+				},
+				{
+					"name": "leaf_left",
+					"parent": "Eggant",
+					"pivot": [0.5, -0.5, 0],
+					"rotation": [0, 0, -15],
+					"cubes": [
+						{"origin": [0.5, -2.5, -0.5], "size": [0, 2, 1], "uv": [6, 3]}
+					]
+				},
+				{
+					"name": "leaf_left2",
+					"parent": "leaf_left",
+					"pivot": [0.5, -2.5, 0],
+					"rotation": [0, 0, -60],
+					"cubes": [
+						{"origin": [0.5, -3.5, -0.5], "size": [0, 1, 1], "uv": [6, 6]}
+					]
+				},
+				{
+					"name": "leaf_back",
+					"parent": "Eggant",
+					"pivot": [0, -0.5, 0.5],
+					"rotation": [15, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -2.5, 0.5], "size": [1, 2, 0], "uv": [4, 4]}
+					]
+				},
+				{
+					"name": "leaf_back2",
+					"parent": "leaf_back",
+					"pivot": [0, -2.5, 0.5],
+					"rotation": [60, 0, 0],
+					"cubes": [
+						{"origin": [-0.5, -3.5, 0.5], "size": [1, 1, 0], "uv": [4, 7]}
+					]
+				}
+			]
+		}
+	]
+}

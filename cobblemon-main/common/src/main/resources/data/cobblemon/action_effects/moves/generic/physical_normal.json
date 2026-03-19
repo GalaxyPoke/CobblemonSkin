@@ -1,0 +1,27 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["physical"],
+      "delay": 1.2
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == false",
+      "expressions": ["q.sound('impact_normal');"]
+    },
+    {
+      "type": "entity_molang",
+      "expressions": ["q.particle('cobblemon:impact_normal', 'target')"],
+      "entityCondition": "q.entity.is_user == false"
+    }
+  ]
+}

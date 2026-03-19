@@ -1,0 +1,103 @@
+{
+  "timeline": [
+    {
+      "type": "add_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "animation",
+      "animation": ["closecombat", "physical"],
+      "delay": 1.2
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_molang",
+          "expressions": ["q.play_animation(q.bedrock_stateful('closecombat', 'actor'))"]
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == true",
+          "expressions": [
+            "q.sound('move.closecombat.actor_1');"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.225
+    },
+    {
+      "type": "sequence",
+      "keyframes": [
+        {
+          "type": "entity_particles",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "effect": "cobblemon:closecombat_target",
+          "locator": "target"
+        },
+        {
+          "type": "entity_molang",
+          "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+          "expressions": [
+            "q.sound('move.closecombat.target');"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.2
+    },
+    {
+      "type": "entity_particles",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "effect": "cobblemon:closecombat_target2",
+      "locator": "target"
+    },
+    {
+      "type": "animation",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "animation": ["recoil"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.75
+    },
+    {
+      "type": "animation",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "animation": ["recoil"]
+    },
+    {
+      "type": "pause",
+      "pause": 0.7
+    },
+    {
+      "type": "entity_molang",
+      "entityCondition": "q.entity.is_user == true",
+      "expressions": [
+        "q.sound('move.closecombat.actor_2');"
+      ]
+    },
+    {
+      "type": "pause",
+      "pause": 0.05
+    },
+    {
+      "type": "animation",
+      "entityCondition": "q.entity.is_user == false && q.missed(q.entity.uuid) == false",
+      "animation": ["recoil"]
+    },
+    {
+      "type": "remove_holds",
+      "holds": ["effects"]
+    },
+    {
+      "type": "pause",
+      "pause": 1.9
+    }
+  ]
+}

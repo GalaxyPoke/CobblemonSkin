@@ -1,0 +1,24 @@
+{
+  "displayName": "Pikachu Daylight Multiplier - (Example file). See https://wiki.cobblemon.com/index.php/Spawn_Rules",
+  "enabled": "false",
+  "components": [
+    {
+      "type": "weight",
+      "spawnDetailSelector": "v.spawn_detail.pokemon.species == 'pikachu'",
+      "spawnablePositionSelector": "v.spawnable_position.light > 8",
+      "weight": "v.weight * 20"
+    },
+    {
+      "type": "filter",
+      "spawnDetailSelector": "v.spawn_detail.pokemon.species == 'pikachu'",
+      "spawnablePositionSelector": "v.spawnable_position.light < 8",
+      "allow": "false"
+    },
+    {
+      "type": "location",
+      "allow": "v.y > 100 || v.world.is_of('minecraft:overworld')"
+    }
+  ]
+}
+
+

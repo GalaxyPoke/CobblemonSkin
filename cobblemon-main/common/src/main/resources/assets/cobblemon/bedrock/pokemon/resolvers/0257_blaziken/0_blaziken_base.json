@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:blaziken",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:blaziken",
+      "model": "cobblemon:blaziken_male.geo",
+      "texture": "cobblemon:textures/pokemon/0257_blaziken/blaziken.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0257_blaziken/blaziken_shiny.png"
+    }
+  ]
+}

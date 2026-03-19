@@ -1,0 +1,10 @@
+{
+	"name": "cobblemon.mark.mark_weather_misty",
+	"title": "cobblemon.mark.mark_weather_misty.title",
+	"titleColor": "3D5FA4",
+	"description": "cobblemon.mark.mark_weather_misty.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_weather_misty.png",
+	"group": "weather",
+	"chance": 0.02,
+	"indexNumber": 64
+}

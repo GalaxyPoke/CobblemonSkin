@@ -1,0 +1,114 @@
+{
+  "portraitScale": 2.17,
+  "portraitTranslation": [ -0.82, -0.33, 0],
+  "profileScale": 0.88,
+  "profileTranslation": [ -0.02, 0.47, 0],
+  "rootBone": "skiddo",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('skiddo', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('skiddo', 'cry')",
+    "recoil": "q.bedrock_stateful('skiddo', 'recoil')",
+    "physical": "q.bedrock_primary('skiddo', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('skiddo', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('skiddo', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('skiddo', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('skiddo', 'blink')",
+        "q.bedrock_quirk('skiddo', 'quirk_ground_idle')",
+        "q.bedrock_primary_quirk('skiddo', 'quirk_jump', 10, 30, 1, q.curve('symmetrical_wide'))"
+      ],
+      "transformTicks": 10
+    },
+    "battle-standing": {
+      "poseTypes": ["STAND"],
+      "isBattle": true,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('skiddo', 'battle_idle')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_primary('skiddo', 'battle_cry', q.curve('symmetrical_wide'))"
+      },
+      "quirks": ["q.bedrock_quirk('skiddo', 'blink')"]
+    },
+    "in-air": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('skiddo', 'ride_jump')",
+        "q.bedrock('skiddo', 'ride_ground_run')"
+      ],
+      "transformTicks": 2,
+      "transformToTicks": 2
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('skiddo', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('skiddo', 'ground_walk')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('skiddo', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('skiddo', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["STAND","WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('skiddo', 'ground_run')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('skiddo', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('skiddo', 'blink')"
+      ],
+      "transformTicks": 5
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "portraitScale": 1.59,
+  "portraitTranslation": [-0.1, 0.76, 0],
+  "profileScale": 0.7,
+  "profileTranslation": [0.01, 0.73, 0],
+  "rootBone": "cursola",
+  "animations": {
+      "faint": "q.bedrock_primary('cursola', 'faint', q.curve('one'))",
+      "cry": "q.bedrock_stateful('cursola', 'cry')",
+      "recoil": "q.bedrock_stateful('cursola', 'recoil')",
+      "special": "q.bedrock_primary('cursola', 'special', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+      "battle-standing": {
+      "isBattle": true,
+      "poseTypes": ["STAND"],
+      "animations": [
+        "q.look('head_ai', 0.5)",
+        "q.bedrock('cursola', 'battle_idle')"
+      ],
+      "quirks": ["q.bedrock_quirk('cursola', 'blink')"]
+    },
+    "standing": {
+      "isBattle": false,
+      "poseTypes": ["STAND", "FLOAT", "PORTRAIT", "PROFILE", "NONE"],
+      "animations": [
+        "q.look('head_ai', 0.5)",
+        "q.bedrock('cursola', 'ground_idle')"
+      ],
+        "quirks": [
+          "q.bedrock_quirk('cursola', 'blink')"
+        ]
+    },
+    "walking": {
+      "poseTypes": ["WALK", "SWIM"],
+      "animations": [
+        "q.look('head_ai', 0.5)",
+        "q.bedrock('cursola', 'ground_walk')"
+      ],
+      "quirks": ["q.bedrock_quirk('cursola', 'blink')"]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('cursola', 'sleep')"
+      ]
+    }
+  }
+}

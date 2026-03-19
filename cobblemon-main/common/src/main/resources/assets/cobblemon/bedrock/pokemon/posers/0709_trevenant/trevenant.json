@@ -1,0 +1,76 @@
+{
+  "rootBone": "trevenant",
+  "portraitScale": 1.6,
+  "portraitTranslation": [ -0.2, 1.8, 0 ],
+  "profileScale": 0.45,
+  "profileTranslation": [ 0, 0.93, 0 ],
+  "animations": {
+    "faint": "q.bedrock_primary('trevenant', 'faint', q.curve('one'))",
+    "cry": "q.bedrock_stateful('trevenant', 'cry')"
+  },
+  "poses": {
+    "battle_idle": {
+      "poseName": "battle_idle",
+      "isBattle": true,
+      "poseTypes": [
+        "STAND",
+        "FLOAT"
+      ],
+      "animations": [
+        "q.bedrock('trevenant', 'battle_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('trevenant', 'blink')"
+      ],
+      "namedAnimations": {
+        "faint": "q.bedrock_primary('trevenant', 'battle_faint', q.curve('one'))",
+        "cry": "q.bedrock_stateful('trevenant', 'battle_cry')"
+      }
+    },
+    "stand": {
+      "poseName": "stand",
+      "isBattle": false,
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "animations": [
+        "q.bedrock('trevenant', 'ground_idle')"
+      ],
+      "transformTicks": 10,
+      "quirks": [
+        "q.bedrock_quirk('trevenant', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.bedrock('trevenant', 'ground_walk')"
+      ],
+      "transformTicks": 5,
+      "quirks": [
+        "q.bedrock_quirk('trevenant', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('trevenant', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    }
+  }
+}

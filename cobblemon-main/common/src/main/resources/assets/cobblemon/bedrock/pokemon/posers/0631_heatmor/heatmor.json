@@ -1,0 +1,55 @@
+{
+  "portraitScale": 2.23,
+  "portraitTranslation": [ -0.78, 0.77, 0],
+  "profileScale": 0.6,
+  "profileTranslation": [ -0.04, 0.88, 0],
+  "rootBone": "heatmor",
+  "poses": {
+    "sleep": {
+      "poseName": "sleep",
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('heatmor', 'sleep')"
+      ]
+    },
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": [
+        "STAND",
+        "FLOAT",
+        "PORTRAIT",
+        "PROFILE",
+        "NONE"
+      ],
+      "animations": [
+        "q.look('head_ai', 0.15, 0.15)",
+        "q.look('neck2', 0.35, 0.10)",
+        "q.look('neck', 0.35, 0.20)",
+        "q.look('torso2', 0.15, 0.35)",
+        "q.bedrock('heatmor', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('heatmor', 'blink')"
+      ]
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": [
+        "WALK",
+        "SWIM"
+      ],
+      "animations": [
+        "q.look('head_ai', 0.15, 0.15)",
+        "q.look('neck2', 0.35, 0.10)",
+        "q.look('neck', 0.35, 0.20)",
+        "q.look('torso2', 0.15, 0.35)",
+        "q.bedrock('heatmor', 'ground_walk')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('heatmor', 'blink')"
+      ]
+    }
+  }
+}

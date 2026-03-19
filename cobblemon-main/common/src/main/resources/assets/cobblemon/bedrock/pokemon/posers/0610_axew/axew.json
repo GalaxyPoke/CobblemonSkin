@@ -1,0 +1,93 @@
+{
+  "portraitScale": 2.01,
+  "portraitTranslation": [-0.19,-0.71,0],
+  "profileScale": 0.87,
+  "profileTranslation": [0,0.45,1],
+  "rootBone": "axew",
+  "animations": {
+    "cry": "q.bedrock_stateful('axew', 'cry')",
+    "recoil": "q.bedrock_stateful('axew', 'recoil')",
+    "physical": "q.bedrock_primary('axew', 'physical', q.curve('symmetrical_wide'))",
+    "special": "q.bedrock_primary('axew', 'special', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('axew', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "battle-standing": {
+      "poseTypes": [
+        "STAND"
+      ],
+      "isBattle": true,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('axew', 'battle_idle')",
+       {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('axew', 'hold_item')"
+       }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('axew', 'blink')"
+      ]
+    },
+    "standing": {
+      "poseTypes": [
+        "STAND",
+        "NONE",
+        "PORTRAIT",
+        "PROFILE"
+      ],
+      "isBattle": false,
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('axew', 'ground_idle')",
+       {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('axew', 'hold_item')"
+       }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('axew', 'blink')"
+      ]
+    },
+    "walking": {
+      "poseTypes": [
+        "WALK"
+      ],
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('axew', 'ground_walk')",
+       {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('axew', 'hold_item')"
+       }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('axew', 'blink')"
+      ]
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["WALK"],
+      "condition": "q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('axew', 'ground_run')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('axew', 'blink')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": [
+        "SLEEP"
+      ],
+      "animations": [
+        "q.bedrock('axew', 'sleep')",
+       {
+          "condition": "q.is_holding_item",
+          "animation": "q.bedrock('axew', 'hold_item')"
+       }
+      ]
+    }
+  }
+}

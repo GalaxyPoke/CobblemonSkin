@@ -1,0 +1,13 @@
+{
+  "pokeball": "cobblemon:quick_ball",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:poke_ball",
+      "model": "cobblemon:poke_ball.geo",
+      "texture": "cobblemon:textures/poke_balls/quick_ball.png",
+      "layers": []
+    }
+  ]
+}

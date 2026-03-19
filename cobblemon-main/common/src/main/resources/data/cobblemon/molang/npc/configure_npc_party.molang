@@ -1,0 +1,16 @@
+t.pokemon1 = q.entity.config.npc_party_pokemon1;
+t.pokemon2 = q.entity.config.npc_party_pokemon2;
+t.pokemon3 = q.entity.config.npc_party_pokemon3;
+t.pokemon4 = q.entity.config.npc_party_pokemon4;
+t.pokemon5 = q.entity.config.npc_party_pokemon5;
+t.pokemon6 = q.entity.config.npc_party_pokemon6;
+
+t.party = q.entity.create_npc_party();
+!q.is_blank(t.pokemon1) ? t.party.add_by_properties(t.pokemon1);
+!q.is_blank(t.pokemon2) ? t.party.add_by_properties(t.pokemon2);
+!q.is_blank(t.pokemon3) ? t.party.add_by_properties(t.pokemon3);
+!q.is_blank(t.pokemon4) ? t.party.add_by_properties(t.pokemon4);
+!q.is_blank(t.pokemon5) ? t.party.add_by_properties(t.pokemon5);
+!q.is_blank(t.pokemon6) ? t.party.add_by_properties(t.pokemon6);
+
+q.entity.set_npc_party(t.party.count > 0 ? t.party : 0);

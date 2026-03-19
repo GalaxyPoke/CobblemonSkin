@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:numel",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:numel",
+      "model": "cobblemon:numel.geo",
+      "texture": "cobblemon:textures/pokemon/0322_numel/numel.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0322_numel/numel_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "cobblemon:cooking_pot",
+  "group": "iv_candy_bad",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "cobblemon:hondew_berry"
+    },
+    "B": {
+      "item": "cobblemon:enigma_berry"
+    },
+    "E": {
+      "item": "cobblemon:exp_candy_xl"
+    }
+  },
+  "pattern": [
+    "HBH",
+    "BEB",
+    "HBH"
+  ],
+  "result": {
+    "count": 3,
+    "id": "cobblemon:numb_candy"
+  },
+  "seasoningTag": "cobblemon:empty",
+  "seasoningProcessors": []
+}

@@ -1,0 +1,15 @@
+{
+  "name": "cobblemon.behaviour.pokemon_gets_mad_at_thrower.name",
+  "description": "cobblemon.behaviour.pokemon_gets_mad_at_thrower.desc",
+  "entityType": "cobblemon:pokemon",
+  "onAdd": "q.entity.add_callback('cobblemon:hit_by_pokeball', 'cobblemon:get_mad_at_thrower');",
+  "onRemove": "q.entity.remove_callback('cobblemon:hit_by_pokeball', 'cobblemon:get_mad_at_thrower');",
+  "configurations": [
+    {
+      "type": "add_memories_and_sensors",
+      "memories": [
+        "minecraft:flee_target"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "species": "cobblemon:meowstic",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:meowstic_male",
+      "model": "cobblemon:meowstic_male.geo",
+      "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_male.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_male_emissive.png",
+          "emissive": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_male_shiny.png",
+      "layers": [
+        {
+          "name": "emissive",
+          "texture": "cobblemon:textures/pokemon/0678_meowstic/meowstic_male_emissive.png",
+          "emissive": true
+        }
+      ]
+    }
+  ]
+}

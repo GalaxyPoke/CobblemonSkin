@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:boltund",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:boltund",
+      "model": "cobblemon:boltund.geo",
+      "texture": "cobblemon:textures/pokemon/0836_boltund/boltund.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0836_boltund/boltund_shiny.png"
+    }
+  ]
+}

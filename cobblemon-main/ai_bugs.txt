@@ -1,0 +1,9 @@
+
+- Nodemaker bug, it thinks jumps are possible from water up an entire block - they aint
+   https://gyazo.com/759b8285e7c07046ff2e54adf0d7a7ac
+
+- Why is magikarp trying to path through ice
+  https://gyazo.com/ae230758c529f885eeb0dd91e60530d2
+
+- We should use mixins to put the path node filtering from OmniPathNodeMaker in the base classes otherwise
+  NPC wandering will be jank too.

@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "cobblemon:black_apricorn_sapling",
+    "cobblemon:blue_apricorn_sapling",
+    "cobblemon:green_apricorn_sapling",
+    "cobblemon:pink_apricorn_sapling",
+    "cobblemon:red_apricorn_sapling",
+    "cobblemon:white_apricorn_sapling",
+    "cobblemon:yellow_apricorn_sapling"
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "portraitScale": 1.48,
+  "portraitTranslation": [ -0.98, 1.1, 0],
+  "profileScale": 0.55,
+  "profileTranslation": [ 0, 0.96, 0],
+  "rootBone": "gogoat",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.35, 0],
+    "seat_1_reverse": [0, 0.35, 0]
+  },
+  "animations": {
+    "cry": "q.bedrock_stateful('gogoat', 'cry')"
+  },
+  "poses": {
+    "standing": {
+      "poseName": "standing",
+      "poseTypes": ["STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "condition": "!q.in_air",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gogoat', 'ground_idle')"
+      ],
+      "quirks": [
+        "q.bedrock_quirk('gogoat', 'blink')"
+      ],
+      "transformTicks": 10
+    },
+    "in-air": {
+      "poseTypes": ["STAND", "WALK"],
+      "isBattle": false,
+      "condition": "q.in_air && q.is_ridden",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gogoat', 'ride_jump')",
+        "q.bedrock('gogoat', 'ride_ground_run')"
+      ],
+      "transformTicks": 5,
+      "transformToTicks": 5
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "animations": [
+        "q.bedrock('gogoat', 'sleep')"
+      ],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      }
+    },
+    "walk": {
+      "poseName": "walk",
+      "poseTypes": ["WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && !q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gogoat', 'ground_walk')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('gogoat', 'ride_ground_walk')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('gogoat', 'blink')"
+      ],
+      "transformTicks": 5
+    },
+    "run": {
+      "poseName": "run",
+      "poseTypes": ["STAND","WALK"],
+      "isBattle": false,
+      "condition": "!q.in_air && q.is_sprinting",
+      "animations": [
+        "q.look('head')",
+        "q.bedrock('gogoat', 'ground_run')",
+        {
+          "condition": "q.is_ridden && q.has_entity",
+          "animation": "q.bedrock('gogoat', 'ride_ground_run')"
+        }
+      ],
+      "quirks": [
+        "q.bedrock_quirk('gogoat', 'blink')"
+      ],
+      "transformTicks": 5
+    }
+  }
+}

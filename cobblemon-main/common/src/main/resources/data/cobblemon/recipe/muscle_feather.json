@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "minecraft:feather"
+        },
+        {
+            "item": "cobblemon:red_mint_leaf"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:muscle_feather",
+        "count": 3
+    }
+}

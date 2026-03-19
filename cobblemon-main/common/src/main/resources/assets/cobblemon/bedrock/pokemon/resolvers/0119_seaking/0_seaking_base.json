@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:seaking",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:seaking",
+      "model": "cobblemon:seaking_male.geo",
+      "texture": "cobblemon:textures/pokemon/0119_seaking/seaking.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0119_seaking/seaking_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+    "type": "cobblemon:cooking_pot_shapeless",
+    "category": "medicines",
+    "ingredients": [
+        {
+            "item": "minecraft:sculk"
+        },
+        {
+            "item": "minecraft:honeycomb"
+        }
+    ],
+    "result": {
+        "id": "cobblemon:exp_candy_xs"
+    },
+    "seasoningTag": "cobblemon:empty",
+    "seasoningProcessors": []
+}

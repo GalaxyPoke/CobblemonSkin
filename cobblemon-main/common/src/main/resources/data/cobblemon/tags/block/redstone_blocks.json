@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+	"minecraft:activator_rail",
+  	"minecraft:comparator",
+	"minecraft:daylight_detector",
+	"minecraft:detector_rail",
+	"minecraft:dispenser",
+	"minecraft:dropper",
+	"minecraft:hopper",
+	"minecraft:observer",
+	"minecraft:piston",
+	"minecraft:powered_rail",
+	"minecraft:redstone_block",
+	"minecraft:redstone_lamp",
+	"minecraft:redstone_torch",
+	"minecraft:redstone_wire",
+  	"minecraft:repeater",
+	"minecraft:sticky_piston",
+	{
+      "id": "#c:redstone_blocks",
+      "required": false
+    }
+  ]
+}

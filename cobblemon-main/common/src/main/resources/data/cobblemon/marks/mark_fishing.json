@@ -1,0 +1,9 @@
+{
+	"name": "cobblemon.mark.mark_fishing",
+	"title": "cobblemon.mark.mark_fishing.title",
+	"titleColor": "49BCF4",
+	"description": "cobblemon.mark.mark_fishing.desc",
+	"texture": "cobblemon:textures/gui/mark/mark_fishing.png",
+	"chance": 0.04,
+	"indexNumber": 66
+}

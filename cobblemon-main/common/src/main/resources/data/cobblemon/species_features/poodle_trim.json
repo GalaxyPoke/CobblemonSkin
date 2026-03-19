@@ -1,0 +1,27 @@
+{
+  "type": "choice",
+  "keys": [
+    "poodle_trim"
+  ],
+  "default": "natural",
+  "choices": [
+    "natural",
+    "heart",
+    "star",
+    "diamond",
+    "debutante",
+    "matron",
+    "dandy",
+    "la_reine",
+    "kabuki",
+    "pharaoh",
+    "matcha",
+    "lavender",
+    "cinnamon",
+    "crusader",
+    "rocker",
+    "mourner"
+  ],
+  "isAspect": true,
+  "aspectFormat": "{{choice}}-trim"
+}

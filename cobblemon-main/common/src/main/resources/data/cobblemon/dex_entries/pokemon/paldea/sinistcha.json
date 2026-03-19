@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:sinistcha",
+  "speciesId": "cobblemon:sinistcha",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Masterpiece",
+      "unlockForms": [
+        "Masterpiece"
+      ]
+    }
+  ],
+  "variations": []
+}

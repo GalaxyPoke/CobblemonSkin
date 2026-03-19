@@ -1,0 +1,14 @@
+{
+  "ingredient": "minecraft:cornflower",
+  "colour": "blue",
+  "mobEffects": [
+    {
+      "effect": "minecraft:jump_boost",
+      "duration": 100,
+      "amplifier": 0,
+      "ambient": false,
+      "visible": true,
+      "showIcon": true
+    }
+  ]
+}

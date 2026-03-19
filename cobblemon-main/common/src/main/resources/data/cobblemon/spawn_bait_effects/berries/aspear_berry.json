@@ -1,0 +1,17 @@
+{
+  "item": "cobblemon:aspear_berry",
+  "effects": [
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "water_1"
+    },
+    {
+      "type": "cobblemon:egg_group",
+      "chance": 1.00,
+      "value": 10.0,
+      "subcategory": "water_2"
+    }
+  ]
+}

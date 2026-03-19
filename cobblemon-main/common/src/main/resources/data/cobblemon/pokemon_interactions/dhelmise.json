@@ -1,0 +1,34 @@
+{
+  "requirements": [
+    {
+      "variant": "properties",
+      "target": "dhelmise"
+    }
+  ],
+  "interactions": [
+    {
+      "grouping": "cobblemon:bone_meal",
+      "cooldown": "6000",
+      "requirements": [
+        {
+          "variant": "owner_held_item",
+          "itemCondition": "#c:fertilizers"
+        }
+      ],
+      "effects": [
+        {
+          "variant": "shrink_item"
+        },
+        {
+          "variant": "drop_item",
+          "item": "minecraft:kelp",
+          "amount": "1-2"
+        },
+        {
+          "variant": "play_sound",
+          "sound": "minecraft:item.bone_meal.use"
+        }
+      ]
+    }
+  ]
+}

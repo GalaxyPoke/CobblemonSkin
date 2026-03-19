@@ -1,0 +1,78 @@
+{
+  "portraitScale": 1.12,
+  "portraitTranslation": [-0.27, -0.05, 0],
+  "profileScale": 0.49,
+  "profileTranslation": [0, 0.98, 0],
+  "rootBone": "bronzong",
+  "firstPersonCameraOffset": {
+    "seat_1": [0, 0.45, 0],
+    "seat_2": [0, 0.45, 0]
+  },
+  "thirdPersonCameraOffset": {
+    "seat_1": [0, 0.3, 0],
+    "seat_1_reverse": [0, 0.3, 0],
+    "seat_2": [0, 0.3, 0],
+    "seat_2_reverse": [0, 0.3, 0]
+  },
+  "thirdPersonCameraOffsetNoViewBobbing": {
+    "seat_1": [0, 0.3, 0],
+    "seat_1_reverse": [0, 0.3, 0],
+    "seat_2": [0, 0.3, 0],
+    "seat_2_reverse": [0, 0.3, 0]
+  },
+  "animations": {
+    "faint": "q.bedrock_primary('bronzong', 'faint')",
+    "cry": "q.bedrock_stateful('bronzong', 'cry')",
+    "recoil": "q.bedrock_stateful('bronzong', 'recoil')",
+    "physical": "q.bedrock_primary('bronzong', 'physical', q.curve('symmetrical_wide'))",
+    "status": "q.bedrock_primary('bronzong', 'status', q.curve('symmetrical_wide'))"
+  },
+  "poses": {
+    "hover": {
+      "poseTypes": ["HOVER", "STAND", "FLOAT", "NONE", "PORTRAIT", "PROFILE"],
+      "isBattle": false,
+      "transformTicks": 10,
+      "animations": [
+        "q.bedrock('bronzong', 'ground_idle')",
+        {
+          "condition": "q.has_entity ? q.is_ridden",
+          "animation": "q.bedrock('bronzong', 'ride_mount_run')"
+        }
+      ]
+    },
+    "battle_hover": {
+      "poseTypes": ["HOVER", "STAND", "FLOAT", "NONE"],
+      "isBattle": true,
+      "animations": ["q.bedrock('bronzong', 'ground_idle')"]
+    },
+    "walking": {
+      "poseTypes": ["FLY", "WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.is_ridden && !q.is_sprinting : 1.0",
+      "animations": [
+        "q.bedrock('bronzong', 'ground_walk')"
+      ]
+    },
+    "running": {
+      "poseTypes": ["FLY", "WALK", "SWIM"],
+      "condition": "q.has_entity ? !q.is_ridden && q.is_sprinting : 0.0",
+      "animations": [
+        "q.bedrock('bronzong', 'ground_run')"
+      ]
+    },
+    "mount-walking": {
+      "poseTypes": ["WALK", "SWIM", "FLY"],
+      "condition": "q.has_entity ? q.is_ridden && !q.is_sprinting : 0.0",
+      "animations": [
+        "q.bedrock('bronzong', 'mount_run')",
+        "q.bedrock('bronzong', 'ride_mount_run')"
+      ]
+    },
+    "sleep": {
+      "poseTypes": ["SLEEP"],
+      "namedAnimations": {
+        "cry": "q.bedrock_stateful('dummy', 'cry')"
+      },
+      "animations": ["q.bedrock('bronzong', 'sleep')"]
+    }
+  }
+}

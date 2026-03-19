@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:poltchageist",
+  "speciesId": "cobblemon:poltchageist",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Artisan",
+      "unlockForms": [
+        "Artisan"
+      ]
+    }
+  ],
+  "variations": []
+}

@@ -1,0 +1,21 @@
+{
+    "name": "Looks At Players",
+    "description": "Turns to look at nearby players.",
+    "configurations": [
+        {
+            "type": "add_tasks_to_activity",
+            "activity": "idle",
+            "tasksByPriority": {
+                "0": [
+                    "cobblemon:look_at_entities"
+                ]
+            }
+        },
+        {
+            "type": "cobblemon:set_variables",
+            "variableValues": {
+                "look_at_entity_types": "'minecraft:player'"
+            }
+        }
+    ]
+}

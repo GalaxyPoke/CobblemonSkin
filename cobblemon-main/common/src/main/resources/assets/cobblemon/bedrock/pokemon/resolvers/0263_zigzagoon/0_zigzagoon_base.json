@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:zigzagoon",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:zigzagoon",
+      "model": "cobblemon:zigzagoon.geo",
+      "texture": "cobblemon:textures/pokemon/0263_zigzagoon/zigzagoon.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0263_zigzagoon/zigzagoon_shiny.png"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:wishiwashi",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:wishiwashi_solo",
+      "model": "cobblemon:wishiwashi_solo.geo",
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0746_wishiwashi/wishiwashi_solo_shiny.png"
+    }
+  ]
+}

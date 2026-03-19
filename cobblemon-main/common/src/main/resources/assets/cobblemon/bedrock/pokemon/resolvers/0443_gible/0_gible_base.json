@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:gible",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:gible",
+      "model": "cobblemon:gible_male.geo",
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0443_gible/gible_shiny.png"
+    }
+  ]
+}

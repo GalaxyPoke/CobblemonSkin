@@ -1,0 +1,32 @@
+{
+  "species": "cobblemon:toedscruel",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:toedscruel",
+      "model": "cobblemon:toedscruel.geo",
+      "texture": "cobblemon:textures/pokemon/0949_toedscruel/toedscruel.png",
+      "layers": [
+        {
+          "name": "transparency",
+          "texture": "cobblemon:textures/pokemon/0949_toedscruel/toedscruel_transparency.png",
+          "translucent": true,
+		  "translucent_cull": true
+        }
+      ]
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0949_toedscruel/toedscruel_shiny.png",
+      "layers": [
+        {
+          "name": "transparency",
+          "texture": "cobblemon:textures/pokemon/0949_toedscruel/toedscruel_transparency_shiny.png",
+          "translucent": true,
+          "translucent_cull": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "",
+    "title": "Species",
+    "description": "A Pokémon species",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The Pokémon's name",
+            "type": "string"
+        },
+        "nationalPokedexNumber": {
+            "description": "The Pokémon's Pokédex number",
+            "type": "integer"
+        },
+        "primaryType": {
+            "description": "The Pokémon's primary type",
+            "type": "string"
+        },
+        "secondaryType": {
+            "description": "The Pokémon secondary type",
+            "type": "string"
+        },
+        "maleRatio": {
+            "description": "The Pokémon's gender ratio",
+            "type": ["number", "null"]
+        },
+        "baseStats": {
+            "description": "The Pokémon's base stats",
+            "type": "object",
+            "hp": {
+                "description": "The Pokémon's base health stat",
+                "type": "integer"
+            },
+            "attack": {
+                "description": "The Pokémon's base attack stat",
+                "type": "integer"
+            },
+            "defence": {
+                "description": "The Pokémon's base defence stat",
+                "type": "integer"
+            },
+            "specialAttack": {
+                "description": "The Pokémon's base special attack stat",
+                "type": "integer"
+            },
+            "specialDefence": {
+                "description": "The Pokémon's base special defence stat",
+                "type": "integer"
+            },
+            "speed": {
+                "description": "The Pokémon's base speed stat",
+                "type": "integer"
+            }
+        },
+        "catchRate": {
+            "description": "The Pokémon's catch rate",
+            "type": "integer"
+        },
+        "baseScale": {
+            "description": "The Pokémon's base scale",
+            "type": "number"
+        },
+        "hitbox": {
+            "description": "The Pokémon's hitbox",
+            "type": "object",
+            "width": {
+                "description": "The width of the hitbox",
+                "type": "number"
+            },
+            "height": {
+                "description": "The height of the hitbox",
+                "type": "number"
+            },
+            "fixed": {
+                "description": "idk",
+                "type": "boolean"
+            }
+        },
+        "evolutions": {
+            "description": "The Pokémon's evolutions",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "variant": {
+                    "description": "The ID of the event that attempts to start an evolution",
+                    "type": "string",
+                    "enum": ["level_up", "trade", "item_interact"]
+                },
+                "id": {
+                    "description": "An unique ID for this evolution, IE pikachu_level",
+                    "type": "string"
+                },
+                "result": {
+                    "description": "The PokemonProperties that represents the result of this evolution",
+                    "type": "string"
+                },
+                "optional": {
+                    "description": "If this evolution will allow the user to choose when to start it or not",
+                    "type": "boolean"
+                },
+                "consumeHeldItem": {
+                    "description": "If this evolution will consume the held item",
+                    "type": "boolean"
+                },
+                "data": {
+                    "description": "The data that backs this event"
+                },
+                "requirements": {
+                    "description": "The requirements behind this evolution",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "variant": {
+                            "description": "The ID of the requirement",
+                            "type": "string",
+                            "enum": ["friendship", "held_item", "world", "area", "biome", "time", "stat_balance", "has_move"]
+                        },
+                        "data": {
+                            "description": "The data that backs this requirement"
+                        }
+                    }
+                }
+            }
+        },
+        "battleTheme": {
+            "description": "The SoundEvent ID for the theme to play when encountering a wild Pokémon of this species",
+            "type": "string"
+        }
+    }
+  }

@@ -1,0 +1,17 @@
+{
+  "species": "cobblemon:mabosstiff",
+  "order": 0,
+  "variations": [
+    {
+      "aspects": [],
+      "poser": "cobblemon:mabosstiff",
+      "model": "cobblemon:mabosstiff.geo",
+      "texture": "cobblemon:textures/pokemon/0943_mabosstiff/mabosstiff.png",
+      "layers": []
+    },
+    {
+      "aspects": ["shiny"],
+      "texture": "cobblemon:textures/pokemon/0943_mabosstiff/mabosstiff_shiny.png"
+    }
+  ]
+}

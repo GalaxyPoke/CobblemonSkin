@@ -1,0 +1,21 @@
+{
+  "id": "cobblemon:magearna",
+  "speciesId": "cobblemon:magearna",
+  "displayAspects": [],
+  "conditionAspects": [],
+  "forms": [
+    {
+      "displayForm": "Normal",
+      "unlockForms": [
+        "Normal"
+      ]
+    },
+    {
+      "displayForm": "Original",
+      "unlockForms": [
+        "Original"
+      ]
+    }
+  ],
+  "variations": []
+}

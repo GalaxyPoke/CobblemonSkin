@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "cobblemon:potted_pep_up_flower",
+    "cobblemon:potted_red_apricorn_sapling",
+    "cobblemon:potted_yellow_apricorn_sapling",
+    "cobblemon:potted_green_apricorn_sapling",
+    "cobblemon:potted_blue_apricorn_sapling",
+    "cobblemon:potted_pink_apricorn_sapling",
+    "cobblemon:potted_black_apricorn_sapling",
+    "cobblemon:potted_white_apricorn_sapling",
+    "cobblemon:potted_saccharine_sapling"
+  ]
+}

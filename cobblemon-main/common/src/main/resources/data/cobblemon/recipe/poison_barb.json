@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "  G",
+        " I ",
+        "I  "
+    ],
+    "key": {
+        "G": {
+            "item": "cobblemon:poison_gem"
+        },
+        "I": {
+            "tag": "c:ingots/iron"
+        }
+    },
+    "result": {
+        "id": "cobblemon:poison_barb"
+    }
+}
