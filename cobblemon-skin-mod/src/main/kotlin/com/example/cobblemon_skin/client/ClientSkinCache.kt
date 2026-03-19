@@ -1,13 +1,18 @@
 package com.example.cobblemon_skin.client
 
 import com.example.cobblemon_skin.CobblemonSkinMod
+import com.example.cobblemon_skin.loader.SkinPackLoader
 import com.example.cobblemon_skin.network.SkinInfo
-import com.example.cobblemon_skin.network.SkinResourceData
+import net.fabricmc.loader.api.FabricLoader
+import java.io.ByteArrayInputStream
+import java.io.ByteArrayOutputStream
 import java.io.File
+import java.util.zip.ZipInputStream
 
 /**
- * Client-side skin cache. Stores skin metadata received from server
- * and caches downloaded resource data to disk.
+ * Client-side skin cache. Stores skin metadata received from server,
+ * manages resource pack downloading via chunked transfer, and handles
+ * ZIP extraction + resource reload.
  */
 object ClientSkinCache {
 
@@ -15,16 +20,23 @@ object ClientSkinCache {
     var skinList: List<SkinInfo> = emptyList()
         private set
 
-    /** Set of skinIds whose resources have been downloaded and written to cache. */
-    private val downloadedSkins = mutableSetOf<String>()
-
-    /** Pending resource requests (skinIds currently being downloaded). */
-    private val pendingRequests = mutableSetOf<String>()
-
-    private val cacheDir: File by lazy {
-        val gameDir = net.fabricmc.loader.api.FabricLoader.getInstance().gameDir.toFile()
-        File(gameDir, "resourcepacks/cobblemon_skin_cache")
+    /** The resource pack directory where server-delivered packs are extracted. */
+    private val packDir: File by lazy {
+        FabricLoader.getInstance().gameDir.resolve("resourcepacks/cobblemon_skin_skins").toFile()
     }
+
+    /** File storing the hash of the currently cached resource pack. */
+    private val hashFile: File by lazy {
+        File(packDir, ".server_pack_hash")
+    }
+
+    /** Buffer for accumulating resource pack chunks during download. */
+    private var chunkBuffer: ByteArrayOutputStream? = null
+    private var expectedChunks = 0
+    private var receivedChunks = 0
+
+    /** Flag indicating a resource reload should be triggered on next tick. */
+    var needsReload = false
 
     fun updateSkinList(skins: List<SkinInfo>) {
         skinList = skins
@@ -44,105 +56,108 @@ object ClientSkinCache {
 
     fun getAvailableSkinIds(): List<String> = skinList.map { it.skinId }
 
-    fun isSkinDownloaded(skinId: String): Boolean = skinId in downloadedSkins
-
-    fun isRequestPending(skinId: String): Boolean = skinId in pendingRequests
-
-    fun markRequestPending(skinId: String) { pendingRequests.add(skinId) }
-
     /**
-     * Called when skin resource data is received from server.
-     * Writes files to the cache resource pack directory.
+     * Check if the locally cached resource pack matches the server's hash.
+     * Returns true if the pack is up-to-date and no download is needed.
      */
-    fun onSkinResourceReceived(data: SkinResourceData) {
-        pendingRequests.remove(data.skinId)
-        val skinId = data.skinId
-
-        try {
-            // Ensure cache pack exists with mcmeta
-            cacheDir.mkdirs()
-            val mcmeta = File(cacheDir, "pack.mcmeta")
-            if (!mcmeta.exists()) {
-                mcmeta.writeText("""{"pack":{"pack_format":34,"description":"CobblemonSkin client cache"}}""")
-            }
-
-            val assetsDir = File(cacheDir, "assets/cobblemon")
-
-            // Write resolver
-            val resolverDir = File(assetsDir, "bedrock/pokemon/resolvers/skin_cache")
-            resolverDir.mkdirs()
-            File(resolverDir, "${skinId}.json").writeBytes(data.resolverJson)
-
-            // Write model
-            if (data.modelGeo != null) {
-                val modelsDir = File(assetsDir, "bedrock/pokemon/models")
-                modelsDir.mkdirs()
-                // Extract model filename from resolver JSON
-                val modelName = extractModelName(String(data.resolverJson))
-                if (modelName != null) {
-                    File(modelsDir, "$modelName.json").writeBytes(data.modelGeo)
-                }
-            }
-
-            // Write poser
-            if (data.poserJson != null) {
-                val posersDir = File(assetsDir, "bedrock/pokemon/posers")
-                posersDir.mkdirs()
-                val poserName = extractPoserName(String(data.resolverJson))
-                if (poserName != null) {
-                    File(posersDir, "$poserName.json").writeBytes(data.poserJson)
-                }
-            }
-
-            // Write animation
-            if (data.animationJson != null) {
-                val animDir = File(assetsDir, "bedrock/pokemon/animations")
-                animDir.mkdirs()
-                // Use skinId as animation group name
-                File(animDir, "$skinId.animation.json").writeBytes(data.animationJson)
-            }
-
-            // Write textures (main + extras)
-            for ((path, bytes) in data.extraTextures) {
-                val texFile = File(assetsDir, path.removePrefix("cobblemon/"))
-                texFile.parentFile.mkdirs()
-                texFile.writeBytes(bytes)
-            }
-
-            downloadedSkins.add(skinId)
-            CobblemonSkinMod.LOGGER.info("Cached skin resource: $skinId")
-
-        } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.error("Failed to cache skin resource $skinId: ${e.message}")
+    fun isPackCached(serverHash: String): Boolean {
+        if (serverHash.isEmpty()) return true
+        if (!hashFile.exists()) return false
+        return try {
+            hashFile.readText().trim() == serverHash
+        } catch (_: Exception) {
+            false
         }
     }
 
     /**
-     * Check if a resource reload is needed (new skins downloaded since last reload).
+     * Called when a resource pack chunk is received from the server.
+     * Accumulates chunks and triggers extraction when all are received.
      */
-    private var lastReloadCount = 0
-    fun needsResourceReload(): Boolean = downloadedSkins.size > lastReloadCount
-    fun markReloaded() { lastReloadCount = downloadedSkins.size }
+    fun onChunkReceived(chunkIndex: Int, totalChunks: Int, data: ByteArray, packHash: String) {
+        if (chunkBuffer == null) {
+            chunkBuffer = ByteArrayOutputStream()
+            expectedChunks = totalChunks
+            receivedChunks = 0
+            CobblemonSkinMod.LOGGER.info("Starting resource pack download ($totalChunks chunks)")
+        }
+
+        chunkBuffer!!.write(data)
+        receivedChunks++
+
+        if (receivedChunks % 10 == 0 || receivedChunks >= expectedChunks) {
+            CobblemonSkinMod.LOGGER.info("Resource pack download: $receivedChunks/$expectedChunks chunks")
+        }
+
+        if (receivedChunks >= expectedChunks) {
+            val zipBytes = chunkBuffer!!.toByteArray()
+            chunkBuffer = null
+
+            CobblemonSkinMod.LOGGER.info("Resource pack download complete (${zipBytes.size / 1024}KB)")
+            extractServerPack(zipBytes, packHash)
+        }
+    }
+
+    /**
+     * Extract the server-delivered resource pack ZIP to the resource pack directory
+     * and schedule a resource reload.
+     */
+    private fun extractServerPack(zipBytes: ByteArray, packHash: String) {
+        try {
+            // Clean existing pack directory (except .server_pack_hash)
+            if (packDir.exists()) {
+                packDir.listFiles()?.forEach { f ->
+                    if (f.name != ".server_pack_hash") {
+                        if (f.isDirectory) f.deleteRecursively() else f.delete()
+                    }
+                }
+            }
+            packDir.mkdirs()
+
+            // Extract ZIP
+            var fileCount = 0
+            ZipInputStream(ByteArrayInputStream(zipBytes)).use { zis ->
+                var entry = zis.nextEntry
+                while (entry != null) {
+                    val file = File(packDir, entry.name)
+                    // Zip slip protection
+                    if (!file.canonicalPath.startsWith(packDir.canonicalPath)) {
+                        CobblemonSkinMod.LOGGER.warn("Skipping zip entry outside target dir: ${entry.name}")
+                        entry = zis.nextEntry
+                        continue
+                    }
+                    if (entry.isDirectory) {
+                        file.mkdirs()
+                    } else {
+                        file.parentFile.mkdirs()
+                        file.outputStream().use { zis.copyTo(it) }
+                        fileCount++
+                    }
+                    entry = zis.nextEntry
+                }
+            }
+
+            // Write hash file
+            hashFile.writeText(packHash)
+
+            // Ensure pack is enabled in options.txt
+            SkinPackLoader.ensurePackEnabled()
+
+            CobblemonSkinMod.LOGGER.info("Extracted server resource pack: $fileCount files")
+
+            // Schedule resource reload
+            needsReload = true
+
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.error("Failed to extract server resource pack: ${e.message}")
+        }
+    }
 
     fun clear() {
         skinList = emptyList()
-        downloadedSkins.clear()
-        pendingRequests.clear()
-        lastReloadCount = 0
-    }
-
-    // ── Helpers ──────────────────────────────────────────────────────────────
-
-    private fun extractModelName(resolverJson: String): String? {
-        val regex = """"model"\s*:\s*"cobblemon:([^"]+)"""".toRegex()
-        val match = regex.find(resolverJson) ?: return null
-        val ref = match.groupValues[1]
-        return if (ref.endsWith(".geo")) ref else if (ref.endsWith(".geo.json")) ref.removeSuffix(".json") else "$ref.geo"
-    }
-
-    private fun extractPoserName(resolverJson: String): String? {
-        val regex = """"poser"\s*:\s*"cobblemon:([^"]+)"""".toRegex()
-        val match = regex.find(resolverJson) ?: return null
-        return match.groupValues[1]
+        chunkBuffer = null
+        expectedChunks = 0
+        receivedChunks = 0
+        needsReload = false
     }
 }

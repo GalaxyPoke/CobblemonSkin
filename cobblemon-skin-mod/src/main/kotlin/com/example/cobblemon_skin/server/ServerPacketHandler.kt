@@ -12,14 +12,15 @@ import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking
 object ServerPacketHandler {
 
     fun register() {
-        // Send skin list when player joins
+        // Send skin list + pack hash when player joins
         ServerPlayConnectionEvents.JOIN.register { handler, _, _ ->
             val player = handler.player
-            CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${SkinManager.getSkinInfoList().size} skins)")
-            SkinPackets.sendSkinList(player, SkinManager.getSkinInfoList())
+            val packHash = ResourcePackTransfer.packHash
+            CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${SkinManager.getSkinInfoList().size} skins, pack=$packHash)")
+            SkinPackets.sendSkinList(player, SkinManager.getSkinInfoList(), packHash)
         }
 
-        // Handle C2S: skin resource request
+        // Handle C2S: skin resource request (on-demand, kept for compatibility)
         ServerPlayNetworking.registerGlobalReceiver(SkinResourceRequest.ID) { payload: SkinResourceRequest, context: ServerPlayNetworking.Context ->
             val player = context.player()
             val skinId = payload.skinId
@@ -30,6 +31,28 @@ object ServerPacketHandler {
                 SkinPackets.sendSkinResource(player, data)
             } else {
                 CobblemonSkinMod.LOGGER.warn("Skin resource not found: $skinId")
+            }
+        }
+
+        // Handle C2S: resource pack download request
+        ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { _: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
+            val player = context.player()
+            if (!ResourcePackTransfer.isReady()) {
+                CobblemonSkinMod.LOGGER.warn("Resource pack not ready for ${player.name.string}")
+                return@registerGlobalReceiver
+            }
+
+            val totalChunks = ResourcePackTransfer.getTotalChunks()
+            CobblemonSkinMod.LOGGER.info("Sending resource pack to ${player.name.string} ($totalChunks chunks)")
+
+            for (i in 0 until totalChunks) {
+                val chunkData = ResourcePackTransfer.getChunkData(i)
+                try {
+                    ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, chunkData))
+                } catch (e: Exception) {
+                    CobblemonSkinMod.LOGGER.error("Failed to send chunk $i to ${player.name.string}: ${e.message}")
+                    break
+                }
             }
         }
 

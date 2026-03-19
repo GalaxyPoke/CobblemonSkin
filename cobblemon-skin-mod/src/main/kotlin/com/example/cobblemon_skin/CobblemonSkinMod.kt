@@ -54,6 +54,9 @@ object CobblemonSkinMod : ModInitializer {
         SkinPackLoader.loadAll()
         SkinConfig.load()
 
+        // Prepare resource pack ZIP for client delivery
+        com.example.cobblemon_skin.server.ResourcePackTransfer.prepare()
+
         CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
             SkinCommand.register(dispatcher)
         }

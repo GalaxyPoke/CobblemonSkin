@@ -115,9 +115,8 @@ object SkinPackLoader {
         saveManifest(newManifest)
 
         val total = processed + cached
-        if (total == 0 && generatedPackDir.exists()) {
-            generatedPackDir.deleteRecursively()
-        } else if (total > 0) {
+        // Always ensure pack is enabled (may contain server-delivered resources)
+        if (total > 0 || generatedPackDir.exists()) {
             ensurePackEnabled()
         }
 
@@ -284,7 +283,7 @@ object SkinPackLoader {
      * Ensures the generated resource pack is in options.txt so Minecraft loads it
      * at startup, avoiding a costly mid-game resource reload that can cause OOM.
      */
-    private fun ensurePackEnabled() {
+    fun ensurePackEnabled() {
         val packEntry = "file/cobblemon_skin_skins"
         try {
             val optionsFile = FabricLoader.getInstance().gameDir.resolve("options.txt").toFile()

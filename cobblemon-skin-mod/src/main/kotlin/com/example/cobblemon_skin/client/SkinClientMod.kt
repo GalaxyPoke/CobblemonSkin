@@ -9,12 +9,16 @@ import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking
 import net.minecraft.client.KeyMapping
+import net.minecraft.client.Minecraft
 import org.lwjgl.glfw.GLFW
 
 @Environment(EnvType.CLIENT)
 object SkinClientMod : ClientModInitializer {
 
     private lateinit var openGuiKey: KeyMapping
+
+    /** The pack hash received from the server, used to tag downloaded chunks. */
+    private var serverPackHash: String = ""
 
     override fun onInitializeClient() {
         // Register keybinding: K key
@@ -26,7 +30,7 @@ object SkinClientMod : ClientModInitializer {
             )
         )
 
-        // Open SkinScreen each time the key is pressed
+        // Open SkinScreen each time the key is pressed + check for pending resource reload
         ClientTickEvents.END_CLIENT_TICK.register { client ->
             while (openGuiKey.consumeClick()) {
                 val skins = ClientSkinCache.getAvailableSkinIds()
@@ -34,22 +38,50 @@ object SkinClientMod : ClientModInitializer {
                     client.setScreen(SkinScreen(skins))
                 }
             }
+
+            // Trigger resource reload if pack was just extracted
+            if (ClientSkinCache.needsReload) {
+                ClientSkinCache.needsReload = false
+                CobblemonSkinMod.LOGGER.info("Triggering resource pack reload...")
+                client.reloadResourcePacks().thenRun {
+                    CobblemonSkinMod.LOGGER.info("Resource pack reload complete")
+                }
+            }
         }
 
         // ── S2C Packet Handlers ─────────────────────────────────────────────
 
-        // Receive skin list from server on join
+        // Receive skin list + pack hash from server on join
         ClientPlayNetworking.registerGlobalReceiver(SkinListPayload.ID) { payload: SkinListPayload, context ->
             context.client().execute {
                 ClientSkinCache.updateSkinList(payload.skins)
+
+                // Check if we need to download the resource pack
+                serverPackHash = payload.packHash
+                if (payload.packHash.isNotEmpty() && !ClientSkinCache.isPackCached(payload.packHash)) {
+                    CobblemonSkinMod.LOGGER.info("Resource pack hash mismatch, requesting download...")
+                    try {
+                        ClientPlayNetworking.send(ResourcePackRequestC2S())
+                    } catch (e: Exception) {
+                        CobblemonSkinMod.LOGGER.error("Failed to request resource pack: ${e.message}")
+                    }
+                } else {
+                    CobblemonSkinMod.LOGGER.info("Resource pack is up-to-date, no download needed")
+                }
             }
         }
 
-        // Receive skin resource data (on-demand response)
+        // Receive resource pack chunk from server
+        ClientPlayNetworking.registerGlobalReceiver(ResourcePackChunkS2C.ID) { payload: ResourcePackChunkS2C, context ->
+            context.client().execute {
+                ClientSkinCache.onChunkReceived(payload.chunkIndex, payload.totalChunks, payload.data, serverPackHash)
+            }
+        }
+
+        // Receive skin resource data (on-demand, kept for compatibility)
         ClientPlayNetworking.registerGlobalReceiver(SkinResourcePayload.ID) { payload: SkinResourcePayload, context ->
             context.client().execute {
-                ClientSkinCache.onSkinResourceReceived(payload.data)
-                // TODO: trigger resource reload if needed
+                CobblemonSkinMod.LOGGER.debug("Received on-demand skin resource: ${payload.data.skinId}")
             }
         }
 
@@ -57,19 +89,7 @@ object SkinClientMod : ClientModInitializer {
         ClientPlayNetworking.registerGlobalReceiver(SkinApplyBroadcast.ID) { payload: SkinApplyBroadcast, context ->
             context.client().execute {
                 CobblemonSkinMod.LOGGER.info("Skin apply broadcast: player=${payload.playerUUID} slot=${payload.slot} skin=${payload.skinId}")
-                // The Cobblemon aspect system handles visual updates automatically
             }
-        }
-    }
-
-    /** Request skin resource data from server (called when user previews a skin). */
-    fun requestSkinResource(skinId: String) {
-        if (ClientSkinCache.isSkinDownloaded(skinId) || ClientSkinCache.isRequestPending(skinId)) return
-        ClientSkinCache.markRequestPending(skinId)
-        try {
-            ClientPlayNetworking.send(SkinResourceRequest(skinId))
-        } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.debug("Failed to request skin resource: ${e.message}")
         }
     }
 
