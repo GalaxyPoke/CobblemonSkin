@@ -12,13 +12,21 @@ import net.minecraft.client.KeyMapping
 import net.minecraft.client.Minecraft
 import org.lwjgl.glfw.GLFW
 
+/**
+ * Client-side mod initializer.
+ * Receives skin list + resource pack chunks from server (sent by Bukkit plugin).
+ * Apply/Clear uses chat commands for maximum Arclight compatibility.
+ */
 @Environment(EnvType.CLIENT)
 object SkinClientMod : ClientModInitializer {
 
     private lateinit var openGuiKey: KeyMapping
 
-    /** The pack hash received from the server, used to tag downloaded chunks. */
+    /** The pack hash received from the server. */
     private var serverPackHash: String = ""
+
+    /** Countdown ticks before requesting the resource pack. */
+    private var packRequestDelay = -1
 
     override fun onInitializeClient() {
         // Register keybinding: K key
@@ -30,12 +38,30 @@ object SkinClientMod : ClientModInitializer {
             )
         )
 
-        // Open SkinScreen each time the key is pressed + check for pending resource reload
+        // Load local fallback skins (from skin_list.json if present)
+        ClientSkinCache.loadFromLocal()
+
+        // Tick handler: keybinding + delayed pack request + reload
         ClientTickEvents.END_CLIENT_TICK.register { client ->
             while (openGuiKey.consumeClick()) {
+                // 按 K 时轻量刷新皮肤列表（只重新读取 skin_list.json，不重载资源包）
+                ClientSkinCache.refreshSkinList()
                 val skins = ClientSkinCache.getAvailableSkinIds()
                 if (skins.isNotEmpty()) {
                     client.setScreen(SkinScreen(skins))
+                }
+            }
+
+            // Delayed resource pack request
+            if (packRequestDelay > 0) {
+                packRequestDelay--
+            } else if (packRequestDelay == 0) {
+                packRequestDelay = -1
+                CobblemonSkinMod.LOGGER.info("Requesting resource pack download from server...")
+                try {
+                    ClientPlayNetworking.send(ResourcePackRequestC2S())
+                } catch (e: Exception) {
+                    CobblemonSkinMod.LOGGER.error("Failed to request resource pack: ${e.message}")
                 }
             }
 
@@ -49,29 +75,24 @@ object SkinClientMod : ClientModInitializer {
             }
         }
 
-        // ── S2C Packet Handlers ─────────────────────────────────────────────
+        // ── S2C Packet Handlers (receive data from server/plugin) ───────────
 
-        // Receive skin list + pack hash from server on join
+        // Receive skin list + pack hash from server
         ClientPlayNetworking.registerGlobalReceiver(SkinListPayload.ID) { payload: SkinListPayload, context ->
             context.client().execute {
                 ClientSkinCache.updateSkinList(payload.skins)
-
-                // Check if we need to download the resource pack
                 serverPackHash = payload.packHash
+
                 if (payload.packHash.isNotEmpty() && !ClientSkinCache.isPackCached(payload.packHash)) {
-                    CobblemonSkinMod.LOGGER.info("Resource pack hash mismatch, requesting download...")
-                    try {
-                        ClientPlayNetworking.send(ResourcePackRequestC2S())
-                    } catch (e: Exception) {
-                        CobblemonSkinMod.LOGGER.error("Failed to request resource pack: ${e.message}")
-                    }
+                    CobblemonSkinMod.LOGGER.info("Resource pack hash mismatch, will request download in 5 seconds...")
+                    packRequestDelay = 100 // 100 ticks = 5 seconds
                 } else {
                     CobblemonSkinMod.LOGGER.info("Resource pack is up-to-date, no download needed")
                 }
             }
         }
 
-        // Receive resource pack chunk from server
+        // Receive resource pack chunk — stream to disk
         ClientPlayNetworking.registerGlobalReceiver(ResourcePackChunkS2C.ID) { payload: ResourcePackChunkS2C, context ->
             context.client().execute {
                 ClientSkinCache.onChunkReceived(payload.chunkIndex, payload.totalChunks, payload.data, serverPackHash)
@@ -85,7 +106,7 @@ object SkinClientMod : ClientModInitializer {
             }
         }
 
-        // Receive skin apply broadcast from server
+        // Receive skin apply broadcast
         ClientPlayNetworking.registerGlobalReceiver(SkinApplyBroadcast.ID) { payload: SkinApplyBroadcast, context ->
             context.client().execute {
                 CobblemonSkinMod.LOGGER.info("Skin apply broadcast: player=${payload.playerUUID} slot=${payload.slot} skin=${payload.skinId}")
@@ -93,21 +114,15 @@ object SkinClientMod : ClientModInitializer {
         }
     }
 
-    /** Request server to apply skin to party slot. */
+    /** Apply skin via chat command (reliable on Arclight). */
     fun requestApplySkin(slot: Int, skinId: String) {
-        try {
-            ClientPlayNetworking.send(SkinApplyRequest(slot, skinId))
-        } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.debug("Failed to send skin apply request: ${e.message}")
-        }
+        val conn = Minecraft.getInstance().player?.connection ?: return
+        conn.sendCommand("pokemonskin set $skinId $slot")
     }
 
-    /** Request server to clear skin from party slot. */
+    /** Clear skin via chat command. */
     fun requestClearSkin(slot: Int) {
-        try {
-            ClientPlayNetworking.send(SkinClearRequest(slot))
-        } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.debug("Failed to send skin clear request: ${e.message}")
-        }
+        val conn = Minecraft.getInstance().player?.connection ?: return
+        conn.sendCommand("pokemonskin clear $slot")
     }
 }

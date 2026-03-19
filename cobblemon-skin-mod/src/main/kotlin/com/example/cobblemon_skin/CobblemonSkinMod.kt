@@ -7,8 +7,10 @@ import com.example.cobblemon_skin.config.SkinConfig
 import com.example.cobblemon_skin.config.UiConfig
 import com.example.cobblemon_skin.loader.SkinPackLoader
 import com.example.cobblemon_skin.network.SkinPackets
+import net.fabricmc.api.EnvType
 import net.fabricmc.api.ModInitializer
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback
+import net.fabricmc.loader.api.FabricLoader
 import org.slf4j.LoggerFactory
 
 object CobblemonSkinMod : ModInitializer {
@@ -43,25 +45,29 @@ object CobblemonSkinMod : ModInitializer {
     override fun onInitialize() {
         LOGGER.info("CobblemonSkin mod initializing...")
 
-        // v2.0: Server manages skin packs, client receives via packets
+        // Register packet codecs on BOTH sides (needed for channel negotiation)
         SkinPackets.registerCommon()
 
-        // Server-side: scan skin packs and register packet handlers
-        com.example.cobblemon_skin.server.SkinManager.loadAll()
-        com.example.cobblemon_skin.server.ServerPacketHandler.register()
+        val isDedicatedServer = FabricLoader.getInstance().environmentType == EnvType.SERVER
+        if (isDedicatedServer) {
+            LOGGER.info("Running on dedicated server — loading skin packs...")
+            com.example.cobblemon_skin.server.SkinManager.loadAll()
+            SkinPackLoader.loadAll()
+            SkinConfig.load()
+            com.example.cobblemon_skin.server.ResourcePackTransfer.prepare()
 
-        // Legacy resource pack generation for Cobblemon resolver loading
-        SkinPackLoader.loadAll()
-        SkinConfig.load()
+            // Register server-side packet handlers (tick-based chunk sender + C2S receivers)
+            // NOTE: Skin list sending is triggered by Bukkit plugin's PlayerJoinEvent, NOT here
+            com.example.cobblemon_skin.server.ServerPacketHandler.register()
 
-        // Prepare resource pack ZIP for client delivery
-        com.example.cobblemon_skin.server.ResourcePackTransfer.prepare()
+            CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
+                SkinCommand.register(dispatcher)
+            }
 
-        CommandRegistrationCallback.EVENT.register { dispatcher, _, _ ->
-            SkinCommand.register(dispatcher)
+            LOGGER.info("CobblemonSkin server initialized. ${registeredSkins.size} skins registered.")
+        } else {
+            LOGGER.info("Running on client — packet codecs registered, waiting for server data.")
         }
-
-        LOGGER.info("CobblemonSkin mod initialized. ${registeredSkins.size} skins registered.")
     }
 
     fun registerSkin(skinId: String) {

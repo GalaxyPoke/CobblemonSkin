@@ -1,8 +1,8 @@
 package com.example.cobblemon_skin.client
 
 import com.example.cobblemon_skin.CobblemonSkinMod
-import com.example.cobblemon_skin.loader.SkinPackLoader
 import com.example.cobblemon_skin.network.SkinInfo
+import com.google.gson.JsonParser
 import net.fabricmc.loader.api.FabricLoader
 import java.io.File
 import java.io.FileInputStream
@@ -10,71 +10,127 @@ import java.io.FileOutputStream
 import java.util.zip.ZipInputStream
 
 /**
- * Client-side skin cache. Stores skin metadata received from server,
- * manages resource pack downloading via chunked transfer, and handles
- * ZIP extraction + resource reload.
+ * Client-side skin cache. Two sources:
+ * 1. Local skin_list.json (immediate, available at startup)
+ * 2. Server packets (SkinListPayload + ResourcePackChunkS2C, sent by Bukkit plugin)
+ *
+ * When server data arrives, it overrides the local data.
  */
 object ClientSkinCache {
 
-    /** Skin metadata list received from server on join. */
-    var skinList: List<SkinInfo> = emptyList()
-        private set
+    /** Skin IDs available to the client. */
+    private var skinIds: List<String> = emptyList()
+    private var localLoaded = false
 
-    /** The resource pack directory where server-delivered packs are extracted. */
+    /** Flag indicating a resource reload should be triggered on next tick. */
+    var needsReload = false
+
     private val packDir: File by lazy {
-        FabricLoader.getInstance().gameDir.resolve("resourcepacks/cobblemon_skin_skins").toFile()
+        FabricLoader.getInstance().gameDir.resolve("cobblemon_skin_cache").toFile()
     }
 
-    /** File storing the hash of the currently cached resource pack. */
-    private val hashFile: File by lazy {
-        File(packDir, ".server_pack_hash")
-    }
+    private val hashFile: File by lazy { File(packDir, ".server_pack_hash") }
 
-    /** Temp file for streaming resource pack chunks to disk (avoids memory pressure). */
+    // ── Temp state for streaming resource pack download ──
     private var tempFile: File? = null
     private var tempOutputStream: FileOutputStream? = null
     private var expectedChunks = 0
     private var receivedChunks = 0
 
-    /** Flag indicating a resource reload should be triggered on next tick. */
-    var needsReload = false
+    // ═══════════════════════════════════════════════════════════════════════
+    //  LOCAL LOADING (skin_list.json fallback)
+    // ═══════════════════════════════════════════════════════════════════════
+
+    fun loadFromLocal() {
+        if (localLoaded) return
+        localLoaded = true
+
+        val listFile = File(packDir, "skin_list.json")
+        if (!listFile.exists()) {
+            CobblemonSkinMod.LOGGER.info("No skin_list.json found — waiting for server data")
+            return
+        }
+
+        try {
+            val root = JsonParser.parseString(listFile.readText()).asJsonObject
+            val arr = root.getAsJsonArray("skins") ?: return
+            val ids = mutableListOf<String>()
+
+            for (elem in arr) {
+                val obj = elem.asJsonObject
+                val skinId = obj.get("skinId")?.asString ?: continue
+                val species = obj.get("species")?.asString ?: ""
+                val quality = obj.get("quality")?.asString ?: "普通"
+                val description = obj.get("description")?.asString ?: ""
+                val detail = obj.get("detail")?.asString ?: ""
+                val obtain = obj.get("obtain")?.asString ?: ""
+
+                CobblemonSkinMod.registerSkin(skinId)
+                ids.add(skinId)
+                if (species.isNotEmpty()) {
+                    CobblemonSkinMod.skinSpeciesMap[skinId] = species
+                }
+                CobblemonSkinMod.skinMetaMap[skinId] = CobblemonSkinMod.SkinMeta(description, quality, obtain, detail)
+
+                val uiScale = obj.get("uiScale")?.asFloat
+                val uiOx = obj.get("uiOffsetX")?.asInt
+                val uiOy = obj.get("uiOffsetY")?.asInt
+                if (uiScale != null || uiOx != null || uiOy != null) {
+                    CobblemonSkinMod.skinUiConfigs[skinId] = CobblemonSkinMod.SkinUiConfig(
+                        uiScale ?: 1.0f, uiOx ?: 0, uiOy ?: 0
+                    )
+                }
+            }
+            skinIds = ids
+            CobblemonSkinMod.LOGGER.info("Loaded ${ids.size} skins from local skin_list.json")
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.error("Failed to read skin_list.json: ${e.message}")
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════
+    //  NETWORK: skin list from server
+    // ═══════════════════════════════════════════════════════════════════════
 
     fun updateSkinList(skins: List<SkinInfo>) {
-        skinList = skins
-        // Update CobblemonSkinMod registrations
+        val ids = mutableListOf<String>()
         skins.forEach { info ->
             CobblemonSkinMod.registerSkin(info.skinId)
+            ids.add(info.skinId)
             if (info.species.isNotEmpty()) {
                 CobblemonSkinMod.skinSpeciesMap[info.skinId] = info.species
             }
             CobblemonSkinMod.skinMetaMap[info.skinId] = CobblemonSkinMod.SkinMeta(
-                description = info.description,
-                quality = info.quality
+                description = info.description, quality = info.quality
             )
         }
-        CobblemonSkinMod.LOGGER.info("Client received skin list: ${skins.size} skins")
+        skinIds = ids
+        CobblemonSkinMod.LOGGER.info("Client received skin list from server: ${skins.size} skins")
     }
 
-    fun getAvailableSkinIds(): List<String> = skinList.map { it.skinId }
+    fun getAvailableSkinIds(): List<String> = skinIds
 
     /**
-     * Check if the locally cached resource pack matches the server's hash.
-     * Returns true if the pack is up-to-date and no download is needed.
+     * 轻量刷新：如果皮肤列表为空，重新读取本地 skin_list.json。
+     * 如果服务器已发送数据则跳过（服务器数据更新）。
      */
+    fun refreshSkinList() {
+        if (skinIds.isEmpty()) {
+            localLoaded = false
+            loadFromLocal()
+        }
+    }
+
+    // ═══════════════════════════════════════════════════════════════════════
+    //  NETWORK: resource pack caching + chunk streaming
+    // ═══════════════════════════════════════════════════════════════════════
+
     fun isPackCached(serverHash: String): Boolean {
         if (serverHash.isEmpty()) return true
         if (!hashFile.exists()) return false
-        return try {
-            hashFile.readText().trim() == serverHash
-        } catch (_: Exception) {
-            false
-        }
+        return try { hashFile.readText().trim() == serverHash } catch (_: Exception) { false }
     }
 
-    /**
-     * Called when a resource pack chunk is received from the server.
-     * Accumulates chunks and triggers extraction when all are received.
-     */
     fun onChunkReceived(chunkIndex: Int, totalChunks: Int, data: ByteArray, packHash: String) {
         try {
             if (tempFile == null) {
@@ -83,14 +139,15 @@ object ClientSkinCache {
                 tempOutputStream = FileOutputStream(tempFile!!)
                 expectedChunks = totalChunks
                 receivedChunks = 0
-                CobblemonSkinMod.LOGGER.info("Starting resource pack download ($totalChunks chunks) → temp file")
+                CobblemonSkinMod.LOGGER.info("Starting resource pack download ($totalChunks chunks)")
             }
 
             tempOutputStream!!.write(data)
             receivedChunks++
 
-            if (receivedChunks % 10 == 0 || receivedChunks >= expectedChunks) {
-                CobblemonSkinMod.LOGGER.info("Resource pack download: $receivedChunks/$expectedChunks chunks")
+            if (receivedChunks % 20 == 0 || receivedChunks >= expectedChunks) {
+                val pct = (receivedChunks * 100) / expectedChunks
+                CobblemonSkinMod.LOGGER.info("Resource pack download: $receivedChunks/$expectedChunks ($pct%)")
             }
 
             if (receivedChunks >= expectedChunks) {
@@ -100,8 +157,11 @@ object ClientSkinCache {
                 tempFile = null
 
                 CobblemonSkinMod.LOGGER.info("Resource pack download complete (${zipFile.length() / 1024}KB)")
-                extractServerPack(zipFile, packHash)
-                zipFile.delete()
+
+                Thread({
+                    extractServerPack(zipFile, packHash)
+                    zipFile.delete()
+                }, "CobblemonSkin-Extract").start()
             }
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.error("Error receiving chunk: ${e.message}")
@@ -116,13 +176,8 @@ object ClientSkinCache {
         tempFile = null
     }
 
-    /**
-     * Extract the server-delivered resource pack ZIP to the resource pack directory
-     * and schedule a resource reload.
-     */
     private fun extractServerPack(zipFile: File, packHash: String) {
         try {
-            // Clean existing pack directory (except .server_pack_hash)
             if (packDir.exists()) {
                 packDir.listFiles()?.forEach { f ->
                     if (f.name != ".server_pack_hash") {
@@ -132,17 +187,13 @@ object ClientSkinCache {
             }
             packDir.mkdirs()
 
-            // Extract ZIP from temp file (streams from disk, low memory usage)
             var fileCount = 0
             ZipInputStream(FileInputStream(zipFile)).use { zis ->
                 var entry = zis.nextEntry
                 while (entry != null) {
                     val file = File(packDir, entry.name)
-                    // Zip slip protection
                     if (!file.canonicalPath.startsWith(packDir.canonicalPath)) {
-                        CobblemonSkinMod.LOGGER.warn("Skipping zip entry outside target dir: ${entry.name}")
-                        entry = zis.nextEntry
-                        continue
+                        entry = zis.nextEntry; continue
                     }
                     if (entry.isDirectory) {
                         file.mkdirs()
@@ -155,27 +206,11 @@ object ClientSkinCache {
                 }
             }
 
-            // Write hash file
             hashFile.writeText(packHash)
-
-            // Ensure pack is enabled in options.txt
-            SkinPackLoader.ensurePackEnabled()
-
-            CobblemonSkinMod.LOGGER.info("Extracted server resource pack: $fileCount files")
-
-            // Schedule resource reload
+            CobblemonSkinMod.LOGGER.info("Extracted skin cache: $fileCount files")
             needsReload = true
-
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.error("Failed to extract server resource pack: ${e.message}")
         }
-    }
-
-    fun clear() {
-        skinList = emptyList()
-        cleanupTempFile()
-        expectedChunks = 0
-        receivedChunks = 0
-        needsReload = false
     }
 }

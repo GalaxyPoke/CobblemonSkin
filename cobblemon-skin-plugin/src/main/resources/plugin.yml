@@ -1,0 +1,22 @@
+name: CobblemonSkin
+version: "1.0.0"
+main: com.example.cobblemon_skin.plugin.CobblemonSkinPlugin
+api-version: "1.21"
+description: "CobblemonSkin Bukkit 命令管理插件"
+
+commands:
+  skin:
+    description: "管理宝可梦皮肤"
+    usage: "/skin <list|set|clear|admin>"
+    permission: cobblemon.skin.use
+
+permissions:
+  cobblemon.skin.use:
+    description: "使用皮肤命令"
+    default: true
+  cobblemon.skin.list:
+    description: "查看皮肤列表"
+    default: true
+  cobblemon.skin.admin:
+    description: "管理员皮肤命令"
+    default: op

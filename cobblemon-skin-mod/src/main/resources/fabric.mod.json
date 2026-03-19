@@ -16,7 +16,7 @@
       { "adapter": "kotlin", "value": "com.example.cobblemon_skin.client.SkinClientMod" }
     ]
   },
-  "mixins": [],
+  "mixins": ["cobblemon_skin.mixins.json"],
   "depends": {
     "fabricloader": ">=${loader_version}",
     "fabric-language-kotlin": ">=${fabric_kotlin_version}",

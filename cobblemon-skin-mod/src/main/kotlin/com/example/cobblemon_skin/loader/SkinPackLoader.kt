@@ -120,7 +120,43 @@ object SkinPackLoader {
             ensurePackEnabled()
         }
 
+        // Write skin_list.json so clients can discover available skins locally
+        writeSkinListJson()
+
         CobblemonSkinMod.LOGGER.info("SkinPackLoader: $total skin(s) loaded ($processed new/changed, $cached cached, $removed removed)")
+    }
+
+    /**
+     * Writes a skin_list.json into the generated resource pack directory.
+     * Clients read this to discover available skins without network packets.
+     */
+    private fun writeSkinListJson() {
+        try {
+            val arr = com.google.gson.JsonArray()
+            for (skinId in CobblemonSkinMod.registeredSkins) {
+                val obj = com.google.gson.JsonObject()
+                obj.addProperty("skinId", skinId)
+                obj.addProperty("species", CobblemonSkinMod.skinSpeciesMap[skinId] ?: "")
+                val meta = CobblemonSkinMod.skinMetaMap[skinId]
+                obj.addProperty("quality", meta?.quality ?: "普通")
+                obj.addProperty("description", meta?.description ?: "")
+                obj.addProperty("detail", meta?.detail ?: "")
+                obj.addProperty("obtain", meta?.obtain ?: "")
+                val ui = CobblemonSkinMod.skinUiConfigs[skinId]
+                if (ui != null) {
+                    obj.addProperty("uiScale", ui.scale)
+                    obj.addProperty("uiOffsetX", ui.offsetX)
+                    obj.addProperty("uiOffsetY", ui.offsetY)
+                }
+                arr.add(obj)
+            }
+            val root = com.google.gson.JsonObject()
+            root.add("skins", arr)
+            File(generatedPackDir, "skin_list.json").writeText(GSON.toJson(root))
+            CobblemonSkinMod.LOGGER.info("Wrote skin_list.json with ${arr.size()} skins")
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.error("Failed to write skin_list.json: ${e.message}")
+        }
     }
 
     /**

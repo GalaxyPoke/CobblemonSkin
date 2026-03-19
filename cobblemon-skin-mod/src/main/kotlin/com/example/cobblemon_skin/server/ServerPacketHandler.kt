@@ -10,27 +10,49 @@ import java.util.UUID
 
 /**
  * Server-side packet handler. Registers C2S packet receivers and JOIN event.
- * Uses tick-based throttling for resource pack delivery to avoid flooding connections.
+ * Sends resource pack chunks via throttled tick-based delivery (streaming from disk).
+ *
+ * Key improvements over previous version:
+ * - Chunks are read from disk per-tick (no memory pressure)
+ * - Transfer only starts when client explicitly requests it (after a delay)
+ * - Throttled to 1 chunk/tick (~5MB/sec) to avoid connection flooding
  */
 object ServerPacketHandler {
 
     /** Pending resource pack transfers: player UUID → next chunk index to send. */
     private val pendingTransfers = mutableMapOf<UUID, Int>()
 
-    /** How many 512KB chunks to send per server tick (512KB × 2 = 1MB/tick = ~20MB/sec). */
-    private const val CHUNKS_PER_TICK = 2
+    /** How many 256KB chunks to send per server tick. 1 × 256KB × 20tps = ~5MB/sec. */
+    private const val CHUNKS_PER_TICK = 1
+
+    /** Reference to the server, set when first tick event fires. */
+    @Volatile
+    private var serverRef: net.minecraft.server.MinecraftServer? = null
+
+    /**
+     * Called by Bukkit plugin (via reflection) after PlayerJoinEvent with delay.
+     * Sends skin list + pack hash to the specified player.
+     */
+    @JvmStatic
+    fun sendSkinListToPlayer(playerUuid: UUID) {
+        val server = serverRef ?: return
+        val player = server.playerList.getPlayer(playerUuid) ?: return
+        val packHash = ResourcePackTransfer.packHash
+        val skins = SkinManager.getSkinInfoList()
+        CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${skins.size} skins, pack=$packHash)")
+        try {
+            SkinPackets.sendSkinList(player, skins, packHash)
+        } catch (e: Exception) {
+            CobblemonSkinMod.LOGGER.error("Failed to send skin list to ${player.name.string}: ${e.message}")
+        }
+    }
 
     fun register() {
-        // Send skin list + pack hash when player joins
-        ServerPlayConnectionEvents.JOIN.register { handler, _, _ ->
-            val player = handler.player
-            val packHash = ResourcePackTransfer.packHash
-            CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${SkinManager.getSkinInfoList().size} skins, pack=$packHash)")
-            SkinPackets.sendSkinList(player, SkinManager.getSkinInfoList(), packHash)
-        }
+        // NO JOIN event handler — Bukkit plugin's PlayerJoinEvent triggers sendSkinListToPlayer()
 
-        // Tick-based throttled chunk sending
+        // Tick-based throttled chunk sending (reads from disk, low memory)
         ServerTickEvents.END_SERVER_TICK.register { server ->
+            if (serverRef == null) serverRef = server
             if (pendingTransfers.isEmpty()) return@register
             val totalChunks = ResourcePackTransfer.getTotalChunks()
             val iterator = pendingTransfers.iterator()
@@ -44,7 +66,8 @@ object ServerPacketHandler {
                 val endIndex = minOf(startIndex + CHUNKS_PER_TICK, totalChunks)
                 for (i in startIndex until endIndex) {
                     try {
-                        ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, ResourcePackTransfer.getChunkData(i)))
+                        val chunkData = ResourcePackTransfer.readChunk(i)
+                        ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, chunkData))
                     } catch (e: Exception) {
                         CobblemonSkinMod.LOGGER.error("Failed to send chunk $i to ${player.name.string}: ${e.message}")
                         iterator.remove()
@@ -60,6 +83,19 @@ object ServerPacketHandler {
             }
         }
 
+        // Handle C2S: resource pack download request — queue for tick-based delivery
+        ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { _: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
+            val player = context.player()
+            if (!ResourcePackTransfer.isReady()) {
+                CobblemonSkinMod.LOGGER.warn("Resource pack not ready for ${player.name.string}")
+                return@registerGlobalReceiver
+            }
+
+            val totalChunks = ResourcePackTransfer.getTotalChunks()
+            CobblemonSkinMod.LOGGER.info("Queuing resource pack transfer for ${player.name.string} ($totalChunks chunks)")
+            pendingTransfers[player.uuid] = 0
+        }
+
         // Handle C2S: skin resource request (on-demand, kept for compatibility)
         ServerPlayNetworking.registerGlobalReceiver(SkinResourceRequest.ID) { payload: SkinResourceRequest, context: ServerPlayNetworking.Context ->
             val player = context.player()
@@ -72,19 +108,6 @@ object ServerPacketHandler {
             } else {
                 CobblemonSkinMod.LOGGER.warn("Skin resource not found: $skinId")
             }
-        }
-
-        // Handle C2S: resource pack download request — queue for tick-based delivery
-        ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { _: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
-            val player = context.player()
-            if (!ResourcePackTransfer.isReady()) {
-                CobblemonSkinMod.LOGGER.warn("Resource pack not ready for ${player.name.string}")
-                return@registerGlobalReceiver
-            }
-
-            val totalChunks = ResourcePackTransfer.getTotalChunks()
-            CobblemonSkinMod.LOGGER.info("Queuing resource pack transfer for ${player.name.string} ($totalChunks chunks)")
-            pendingTransfers[player.uuid] = 0
         }
 
         // Handle C2S: skin apply request
