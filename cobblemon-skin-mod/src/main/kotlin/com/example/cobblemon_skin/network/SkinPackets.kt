@@ -22,15 +22,10 @@ data class SkinInfo(
     val description: String
 )
 
-/** Full skin resource data sent on demand. */
+/** Per-skin resource files sent on demand (models, textures, posers, animations). */
 data class SkinResourceData(
     val skinId: String,
-    val resolverJson: ByteArray,
-    val modelGeo: ByteArray?,          // null = use species default model
-    val texturePng: ByteArray?,        // null = use species default texture
-    val poserJson: ByteArray?,         // null = use species default poser
-    val animationJson: ByteArray?,     // null = no custom animation
-    val extraTextures: Map<String, ByteArray>  // layer textures, emissive, shiny, etc.
+    val files: Map<String, ByteArray>  // relativePath → content
 ) {
     override fun equals(other: Any?) = other is SkinResourceData && skinId == other.skinId
     override fun hashCode() = skinId.hashCode()
@@ -69,7 +64,7 @@ data class SkinListPayload(val skins: List<SkinInfo>, val packHash: String) : Cu
     override fun type(): CustomPacketPayload.Type<SkinListPayload> = ID
 }
 
-/** S2C: Server sends skin resource data (on-demand, response to client request). */
+/** S2C: Server sends per-skin resource files (on-demand, response to client request). */
 data class SkinResourcePayload(val data: SkinResourceData) : CustomPacketPayload {
     companion object {
         val ID: CustomPacketPayload.Type<SkinResourcePayload> = CustomPacketPayload.Type(
@@ -79,32 +74,17 @@ data class SkinResourcePayload(val data: SkinResourceData) : CustomPacketPayload
             object : StreamCodec<RegistryFriendlyByteBuf, SkinResourcePayload> {
                 override fun decode(buf: RegistryFriendlyByteBuf): SkinResourcePayload {
                     val skinId = buf.readUtf()
-                    val resolver = buf.readByteArray()
-                    val model = readOptionalBytes(buf)
-                    val texture = readOptionalBytes(buf)
-                    val poser = readOptionalBytes(buf)
-                    val animation = readOptionalBytes(buf)
-                    val extraCount = buf.readVarInt()
-                    val extras = (0 until extraCount).associate { buf.readUtf() to buf.readByteArray() }
-                    return SkinResourcePayload(SkinResourceData(skinId, resolver, model, texture, poser, animation, extras))
+                    val fileCount = buf.readVarInt()
+                    val files = (0 until fileCount).associate { buf.readUtf() to buf.readByteArray() }
+                    return SkinResourcePayload(SkinResourceData(skinId, files))
                 }
                 override fun encode(buf: RegistryFriendlyByteBuf, value: SkinResourcePayload) {
-                    val d = value.data
-                    buf.writeUtf(d.skinId)
-                    buf.writeByteArray(d.resolverJson)
-                    writeOptionalBytes(buf, d.modelGeo)
-                    writeOptionalBytes(buf, d.texturePng)
-                    writeOptionalBytes(buf, d.poserJson)
-                    writeOptionalBytes(buf, d.animationJson)
-                    buf.writeVarInt(d.extraTextures.size)
-                    d.extraTextures.forEach { (k, v) -> buf.writeUtf(k); buf.writeByteArray(v) }
-                }
-                private fun readOptionalBytes(buf: RegistryFriendlyByteBuf): ByteArray? {
-                    return if (buf.readBoolean()) buf.readByteArray() else null
-                }
-                private fun writeOptionalBytes(buf: RegistryFriendlyByteBuf, data: ByteArray?) {
-                    buf.writeBoolean(data != null)
-                    if (data != null) buf.writeByteArray(data)
+                    buf.writeUtf(value.data.skinId)
+                    buf.writeVarInt(value.data.files.size)
+                    value.data.files.forEach { (path, bytes) ->
+                        buf.writeUtf(path)
+                        buf.writeByteArray(bytes)
+                    }
                 }
             }
     }

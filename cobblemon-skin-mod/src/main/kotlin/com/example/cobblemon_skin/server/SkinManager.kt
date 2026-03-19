@@ -37,16 +37,10 @@ object SkinManager {
     fun getSkinInfoList(): List<SkinInfo> = skinInfoList.toList()
 
     fun getSkinResourceData(skinId: String): SkinResourceData? {
-        val pack = skinPacks[skinId] ?: return null
-        return SkinResourceData(
-            skinId = pack.skinId,
-            resolverJson = pack.resolverFile?.readBytes() ?: return null,
-            modelGeo = pack.modelFile?.readBytes(),
-            texturePng = pack.textureFiles.values.firstOrNull()?.readBytes(),
-            poserJson = pack.poserFile?.readBytes(),
-            animationJson = pack.animationFile?.readBytes(),
-            extraTextures = pack.textureFiles.mapValues { it.value.readBytes() }
-        )
+        if (!skinPacks.containsKey(skinId)) return null
+        val files = ResourcePackTransfer.getSkinFiles(skinId)
+        if (files.isEmpty()) return null
+        return SkinResourceData(skinId = skinId, files = files)
     }
 
     /**

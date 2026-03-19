@@ -37,7 +37,7 @@ object ServerPacketHandler {
     fun sendSkinListToPlayer(playerUuid: UUID) {
         val server = serverRef ?: return
         val player = server.playerList.getPlayer(playerUuid) ?: return
-        val packHash = ResourcePackTransfer.packHash
+        val packHash = ResourcePackTransfer.resolverPackHash
         val skins = SkinManager.getSkinInfoList()
         CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${skins.size} skins, pack=$packHash)")
         try {
@@ -96,17 +96,18 @@ object ServerPacketHandler {
             pendingTransfers[player.uuid] = 0
         }
 
-        // Handle C2S: skin resource request (on-demand, kept for compatibility)
+        // Handle C2S: skin resource request (on-demand per-skin files)
         ServerPlayNetworking.registerGlobalReceiver(SkinResourceRequest.ID) { payload: SkinResourceRequest, context: ServerPlayNetworking.Context ->
             val player = context.player()
             val skinId = payload.skinId
-            CobblemonSkinMod.LOGGER.debug("Player ${player.name.string} requested skin resource: $skinId")
+            CobblemonSkinMod.LOGGER.info("Player ${player.name.string} requested skin files: $skinId")
 
-            val data = SkinManager.getSkinResourceData(skinId)
-            if (data != null) {
-                SkinPackets.sendSkinResource(player, data)
+            val files = ResourcePackTransfer.getSkinFiles(skinId)
+            if (files.isNotEmpty()) {
+                SkinPackets.sendSkinResource(player, SkinResourceData(skinId, files))
+                CobblemonSkinMod.LOGGER.info("Sent ${files.size} files for skin '$skinId' to ${player.name.string}")
             } else {
-                CobblemonSkinMod.LOGGER.warn("Skin resource not found: $skinId")
+                CobblemonSkinMod.LOGGER.warn("No files found for skin: $skinId")
             }
         }
 

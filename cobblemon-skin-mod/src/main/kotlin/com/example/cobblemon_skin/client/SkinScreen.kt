@@ -250,6 +250,7 @@ class SkinScreen(private val availableSkins: List<String>) : Screen(Component.li
 
     private fun applySkin(skinId: String) {
         if (selectedSlot < 0) return
+        SkinClientMod.requestSkinResources(skinId)
         SkinClientMod.requestApplySkin(selectedSlot + 1, skinId)
         invalidateCaches()
     }
@@ -1082,6 +1083,7 @@ class SkinScreen(private val availableSkins: List<String>) : Screen(Component.li
 
             if (mx in cx..(cx + cardW) && my in cy..(cy + cardH)) {
                 selectedSkin = if (selectedSkin == skinId) null else skinId
+                if (selectedSkin != null) SkinClientMod.requestSkinResources(selectedSkin!!)
                 return true
             }
         }
@@ -1125,6 +1127,7 @@ class SkinScreen(private val availableSkins: List<String>) : Screen(Component.li
                         val cx = px + padX + col * (cardW + cardGap)
                         if (mx in cx..(cx + cardW) && my in curY..(curY + cardH)) {
                             selectedSkin = if (selectedSkin == skinId) null else skinId
+                            if (selectedSkin != null) SkinClientMod.requestSkinResources(selectedSkin!!)
                             return true
                         }
                     }
