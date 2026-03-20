@@ -28,11 +28,18 @@ object ResourcePackTransfer {
     var resolverPackHash: String = ""
         private set
 
+    /** Hash of the asset pack (models+textures+posers+animations). */
+    var assetPackHash: String = ""
+        private set
+
     /** Chunk size: 256KB per packet. */
     const val CHUNK_SIZE = 256 * 1024
 
     private var resolverPackFile: File? = null
     private var resolverPackFileSize: Long = 0
+
+    private var assetPackFile: File? = null
+    private var assetPackFileSize: Long = 0
 
     val generatedPackDir: File by lazy {
         FabricLoader.getInstance().gameDir.resolve("resourcepacks/cobblemon_skin_skins").toFile()
@@ -46,6 +53,7 @@ object ResourcePackTransfer {
     fun prepare() {
         if (!generatedPackDir.exists() || generatedPackDir.listFiles().isNullOrEmpty()) {
             resolverPackHash = ""
+            assetPackHash = ""
             CobblemonSkinMod.LOGGER.info("ResourcePackTransfer: no resource pack to serve")
             return
         }
@@ -53,7 +61,7 @@ object ResourcePackTransfer {
         try {
             val gameDir = FabricLoader.getInstance().gameDir.toFile()
 
-            // Resolver-only ZIP: pack.mcmeta + skin_list.json + all resolvers
+            // Resolver-only ZIP: pack.mcmeta + skin_list.json + all resolvers (~100KB)
             val resolverZip = File(gameDir, "cobblemon_skin_resolvers.zip")
             zipDirectory(generatedPackDir, resolverZip) { file ->
                 val rel = file.relativeTo(generatedPackDir).path.replace('\\', '/')
@@ -65,27 +73,45 @@ object ResourcePackTransfer {
             resolverPackFileSize = resolverZip.length()
             resolverPackHash = computeHash(resolverZip)
 
+            // Asset ZIP: models + textures + posers + animations (everything else)
+            val assetZip = File(gameDir, "cobblemon_skin_assets.zip")
+            zipDirectory(generatedPackDir, assetZip) { file ->
+                val rel = file.relativeTo(generatedPackDir).path.replace('\\', '/')
+                rel != "pack.mcmeta" &&
+                    rel != "skin_list.json" &&
+                    !rel.startsWith("assets/cobblemon/bedrock/pokemon/resolvers/") &&
+                    !rel.startsWith(".")
+            }
+            assetPackFile = assetZip
+            assetPackFileSize = assetZip.length()
+            assetPackHash = computeHash(assetZip)
+
             val resolverKB = resolverPackFileSize / 1024.0
+            val assetMB = assetPackFileSize / (1024.0 * 1024.0)
             CobblemonSkinMod.LOGGER.info(
-                "ResourcePackTransfer: resolver pack=${String.format("%.1f", resolverKB)}KB (hash=$resolverPackHash)"
+                "ResourcePackTransfer: resolver=${String.format("%.1f", resolverKB)}KB, assets=${String.format("%.1f", assetMB)}MB"
             )
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.error("ResourcePackTransfer: failed to prepare: ${e.message}", e)
             resolverPackHash = ""
+            assetPackHash = ""
         }
     }
 
-    // ── Resolver pack chunk streaming ────────────────────────────────────────
+    // ── Chunk streaming (packType: 0=resolver, 1=asset) ──────────────────────
 
-    fun getTotalChunks(): Int {
-        if (resolverPackFileSize <= 0) return 0
-        return ((resolverPackFileSize + CHUNK_SIZE - 1) / CHUNK_SIZE).toInt()
+    fun getTotalChunks(packType: Int): Int {
+        val size = if (packType == 0) resolverPackFileSize else assetPackFileSize
+        if (size <= 0) return 0
+        return ((size + CHUNK_SIZE - 1) / CHUNK_SIZE).toInt()
     }
 
-    fun readChunk(chunkIndex: Int): ByteArray {
-        val file = resolverPackFile ?: return ByteArray(0)
+    fun readChunk(packType: Int, chunkIndex: Int): ByteArray {
+        val file = if (packType == 0) resolverPackFile else assetPackFile
+        val fileSize = if (packType == 0) resolverPackFileSize else assetPackFileSize
+        if (file == null) return ByteArray(0)
         val offset = chunkIndex.toLong() * CHUNK_SIZE
-        val length = minOf(CHUNK_SIZE.toLong(), resolverPackFileSize - offset).toInt()
+        val length = minOf(CHUNK_SIZE.toLong(), fileSize - offset).toInt()
         if (length <= 0) return ByteArray(0)
 
         RandomAccessFile(file, "r").use { raf ->

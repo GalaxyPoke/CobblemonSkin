@@ -35,8 +35,8 @@ data class SkinResourceData(
 //  S2C PACKETS (Server → Client)
 // ═══════════════════════════════════════════════════════════════════════════
 
-/** S2C: Server sends full skin list metadata + resource pack hash on player join. */
-data class SkinListPayload(val skins: List<SkinInfo>, val packHash: String) : CustomPacketPayload {
+/** S2C: Server sends full skin list metadata + resolver/asset pack hashes on player join. */
+data class SkinListPayload(val skins: List<SkinInfo>, val packHash: String, val assetHash: String = "") : CustomPacketPayload {
     companion object {
         val ID: CustomPacketPayload.Type<SkinListPayload> = CustomPacketPayload.Type(
             ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "skin_list")
@@ -45,14 +45,16 @@ data class SkinListPayload(val skins: List<SkinInfo>, val packHash: String) : Cu
             object : StreamCodec<RegistryFriendlyByteBuf, SkinListPayload> {
                 override fun decode(buf: RegistryFriendlyByteBuf): SkinListPayload {
                     val packHash = buf.readUtf()
+                    val assetHash = buf.readUtf()
                     val count = buf.readVarInt()
                     val skins = (0 until count).map {
                         SkinInfo(buf.readUtf(), buf.readUtf(), buf.readUtf(), buf.readUtf(), buf.readUtf())
                     }
-                    return SkinListPayload(skins, packHash)
+                    return SkinListPayload(skins, packHash, assetHash)
                 }
                 override fun encode(buf: RegistryFriendlyByteBuf, value: SkinListPayload) {
                     buf.writeUtf(value.packHash)
+                    buf.writeUtf(value.assetHash)
                     buf.writeVarInt(value.skins.size)
                     value.skins.forEach { s ->
                         buf.writeUtf(s.skinId); buf.writeUtf(s.species); buf.writeUtf(s.displayName)
@@ -164,23 +166,24 @@ data class SkinClearRequest(val slot: Int) : CustomPacketPayload {
     override fun type(): CustomPacketPayload.Type<SkinClearRequest> = ID
 }
 
-/** C2S: Client requests the full resource pack download. */
-class ResourcePackRequestC2S : CustomPacketPayload {
+/** C2S: Client requests a resource pack download. packType: 0=resolver, 1=asset */
+data class ResourcePackRequestC2S(val packType: Int = 0) : CustomPacketPayload {
     companion object {
         val ID: CustomPacketPayload.Type<ResourcePackRequestC2S> = CustomPacketPayload.Type(
             ResourceLocation.fromNamespaceAndPath(CobblemonSkinMod.MOD_ID, "respack_request")
         )
         val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, ResourcePackRequestC2S> =
             object : StreamCodec<RegistryFriendlyByteBuf, ResourcePackRequestC2S> {
-                override fun decode(buf: RegistryFriendlyByteBuf) = ResourcePackRequestC2S()
-                override fun encode(buf: RegistryFriendlyByteBuf, value: ResourcePackRequestC2S) {}
+                override fun decode(buf: RegistryFriendlyByteBuf) = ResourcePackRequestC2S(buf.readVarInt())
+                override fun encode(buf: RegistryFriendlyByteBuf, value: ResourcePackRequestC2S) { buf.writeVarInt(value.packType) }
             }
     }
     override fun type(): CustomPacketPayload.Type<ResourcePackRequestC2S> = ID
 }
 
-/** S2C: Server sends a chunk of the resource pack ZIP. */
+/** S2C: Server sends a chunk of a resource pack ZIP. packType: 0=resolver, 1=asset */
 data class ResourcePackChunkS2C(
+    val packType: Int,
     val chunkIndex: Int,
     val totalChunks: Int,
     val data: ByteArray
@@ -192,9 +195,10 @@ data class ResourcePackChunkS2C(
         val STREAM_CODEC: StreamCodec<RegistryFriendlyByteBuf, ResourcePackChunkS2C> =
             object : StreamCodec<RegistryFriendlyByteBuf, ResourcePackChunkS2C> {
                 override fun decode(buf: RegistryFriendlyByteBuf): ResourcePackChunkS2C {
-                    return ResourcePackChunkS2C(buf.readVarInt(), buf.readVarInt(), buf.readByteArray())
+                    return ResourcePackChunkS2C(buf.readVarInt(), buf.readVarInt(), buf.readVarInt(), buf.readByteArray())
                 }
                 override fun encode(buf: RegistryFriendlyByteBuf, value: ResourcePackChunkS2C) {
+                    buf.writeVarInt(value.packType)
                     buf.writeVarInt(value.chunkIndex)
                     buf.writeVarInt(value.totalChunks)
                     buf.writeByteArray(value.data)
@@ -202,8 +206,8 @@ data class ResourcePackChunkS2C(
             }
     }
     override fun type(): CustomPacketPayload.Type<ResourcePackChunkS2C> = ID
-    override fun equals(other: Any?) = other is ResourcePackChunkS2C && chunkIndex == other.chunkIndex
-    override fun hashCode() = chunkIndex
+    override fun equals(other: Any?) = other is ResourcePackChunkS2C && packType == other.packType && chunkIndex == other.chunkIndex
+    override fun hashCode() = packType * 31 + chunkIndex
 }
 
 // ═══════════════════════════════════════════════════════════════════════════
@@ -227,9 +231,9 @@ object SkinPackets {
         PayloadTypeRegistry.playC2S().register(ResourcePackRequestC2S.ID, ResourcePackRequestC2S.STREAM_CODEC)
     }
 
-    fun sendSkinList(player: ServerPlayer, skins: List<SkinInfo>, packHash: String) {
+    fun sendSkinList(player: ServerPlayer, skins: List<SkinInfo>, packHash: String, assetHash: String = "") {
         try {
-            ServerPlayNetworking.send(player, SkinListPayload(skins, packHash))
+            ServerPlayNetworking.send(player, SkinListPayload(skins, packHash, assetHash))
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.debug("Skin list send skipped for ${player.name.string}: ${e.message}")
         }

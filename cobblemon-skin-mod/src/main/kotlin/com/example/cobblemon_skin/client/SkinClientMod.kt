@@ -23,10 +23,14 @@ object SkinClientMod : ClientModInitializer {
     private lateinit var openGuiKey: KeyMapping
 
     /** The resolver pack hash received from the server. */
-    private var serverPackHash: String = ""
+    private var serverResolverHash: String = ""
 
-    /** Countdown ticks before requesting the resolver pack. */
-    private var packRequestDelay = -1
+    /** The asset pack hash received from the server. */
+    private var serverAssetHash: String = ""
+
+    /** Countdown ticks before requesting packs. */
+    private var resolverRequestDelay = -1
+    private var assetRequestDelay = -1
 
     override fun onInitializeClient() {
         // Register keybinding: K key
@@ -41,65 +45,104 @@ object SkinClientMod : ClientModInitializer {
         // Load local fallback skins (from skin_list.json if present)
         ClientSkinCache.loadFromLocal()
 
-        // Tick handler: keybinding + delayed pack request + reload
+        // Tick handler: keybinding + delayed pack requests + reload
         ClientTickEvents.END_CLIENT_TICK.register { client ->
             while (openGuiKey.consumeClick()) {
-                // 按 K 时轻量刷新皮肤列表（只重新读取 skin_list.json，不重载资源包）
                 ClientSkinCache.refreshSkinList()
                 val skins = ClientSkinCache.getAvailableSkinIds()
-                if (skins.isNotEmpty()) {
+                if (skins.isEmpty()) continue
+
+                if (!ClientSkinCache.assetsFullyLoaded) {
+                    // 皮肤资源尚未加载完成，显示进度提示
+                    val pct = ClientSkinCache.assetDownloadProgress
+                    val player = client.player ?: continue
+                    player.displayClientMessage(
+                        net.minecraft.network.chat.Component.literal("§e皮肤资源加载中... ($pct%)"),
+                        true
+                    )
+                } else {
                     client.setScreen(SkinScreen(skins))
                 }
             }
 
             // Delayed resolver pack request
-            if (packRequestDelay > 0) {
-                packRequestDelay--
-            } else if (packRequestDelay == 0) {
-                packRequestDelay = -1
-                CobblemonSkinMod.LOGGER.info("Requesting resolver pack download from server...")
+            if (resolverRequestDelay > 0) {
+                resolverRequestDelay--
+            } else if (resolverRequestDelay == 0) {
+                resolverRequestDelay = -1
+                CobblemonSkinMod.LOGGER.info("Requesting resolver pack from server...")
                 try {
-                    ClientPlayNetworking.send(ResourcePackRequestC2S())
+                    ClientPlayNetworking.send(ResourcePackRequestC2S(0))
                 } catch (e: Exception) {
                     CobblemonSkinMod.LOGGER.error("Failed to request resolver pack: ${e.message}")
                 }
             }
 
-            // Trigger resource reload if resolver pack or skin files were just saved
+            // Delayed asset pack request
+            if (assetRequestDelay > 0) {
+                assetRequestDelay--
+            } else if (assetRequestDelay == 0) {
+                assetRequestDelay = -1
+                CobblemonSkinMod.LOGGER.info("Requesting asset pack from server...")
+                try {
+                    ClientPlayNetworking.send(ResourcePackRequestC2S(1))
+                } catch (e: Exception) {
+                    CobblemonSkinMod.LOGGER.error("Failed to request asset pack: ${e.message}")
+                }
+            }
+
+            // Trigger resource reload if any pack was just extracted
             if (ClientSkinCache.needsReload) {
                 ClientSkinCache.needsReload = false
                 CobblemonSkinMod.LOGGER.info("Triggering resource pack reload...")
                 client.reloadResourcePacks().thenRun {
                     CobblemonSkinMod.LOGGER.info("Resource pack reload complete")
+                    // After resolver pack reload, auto-request asset pack if needed
+                    if (serverAssetHash.isNotEmpty() && !ClientSkinCache.isAssetPackCached(serverAssetHash)) {
+                        if (assetRequestDelay < 0) {
+                            CobblemonSkinMod.LOGGER.info("Asset pack needed, will request in 2 seconds...")
+                            assetRequestDelay = 40 // 40 ticks = 2 seconds
+                        }
+                    }
                 }
             }
         }
 
         // ── S2C Packet Handlers (receive data from server/plugin) ───────────
 
-        // Receive skin list + resolver pack hash from server
+        // Receive skin list + resolver/asset pack hashes from server
         ClientPlayNetworking.registerGlobalReceiver(SkinListPayload.ID) { payload: SkinListPayload, context ->
             context.client().execute {
                 ClientSkinCache.updateSkinList(payload.skins)
-                serverPackHash = payload.packHash
+                serverResolverHash = payload.packHash
+                serverAssetHash = payload.assetHash
 
+                // Check if resolver pack needs download
                 if (payload.packHash.isNotEmpty() && !ClientSkinCache.isResolverPackCached(payload.packHash)) {
-                    CobblemonSkinMod.LOGGER.info("Resolver pack hash mismatch, will request download in 3 seconds...")
-                    packRequestDelay = 60 // 60 ticks = 3 seconds
+                    CobblemonSkinMod.LOGGER.info("Resolver pack hash mismatch, will request in 3 seconds...")
+                    resolverRequestDelay = 60
                 } else {
-                    CobblemonSkinMod.LOGGER.info("Resolver pack is up-to-date, no download needed")
+                    CobblemonSkinMod.LOGGER.info("Resolver pack is up-to-date")
+                    // Resolver cached, check if asset pack needs download
+                    if (payload.assetHash.isNotEmpty() && !ClientSkinCache.isAssetPackCached(payload.assetHash)) {
+                        CobblemonSkinMod.LOGGER.info("Asset pack hash mismatch, will request in 5 seconds...")
+                        assetRequestDelay = 100
+                    } else {
+                        CobblemonSkinMod.LOGGER.info("Asset pack is up-to-date")
+                    }
                 }
             }
         }
 
-        // Receive resolver pack chunk — stream to disk
+        // Receive pack chunks — route by packType (0=resolver, 1=asset)
         ClientPlayNetworking.registerGlobalReceiver(ResourcePackChunkS2C.ID) { payload: ResourcePackChunkS2C, context ->
             context.client().execute {
-                ClientSkinCache.onChunkReceived(payload.chunkIndex, payload.totalChunks, payload.data, serverPackHash)
+                val hash = if (payload.packType == 0) serverResolverHash else serverAssetHash
+                ClientSkinCache.onChunkReceived(payload.packType, payload.chunkIndex, payload.totalChunks, payload.data, hash)
             }
         }
 
-        // Receive per-skin resource files (on-demand)
+        // Receive per-skin resource files (on-demand, kept for individual requests)
         ClientPlayNetworking.registerGlobalReceiver(SkinResourcePayload.ID) { payload: SkinResourcePayload, context ->
             context.client().execute {
                 val skinId = payload.data.skinId
@@ -115,23 +158,19 @@ object SkinClientMod : ClientModInitializer {
         ClientPlayNetworking.registerGlobalReceiver(SkinApplyBroadcast.ID) { payload: SkinApplyBroadcast, context ->
             context.client().execute {
                 CobblemonSkinMod.LOGGER.info("Skin apply broadcast: player=${payload.playerUUID} slot=${payload.slot} skin=${payload.skinId}")
-                // If this skin's resources aren't cached, request them
-                if (payload.skinId.isNotEmpty() && !ClientSkinCache.isSkinResourceCached(payload.skinId)) {
-                    requestSkinResources(payload.skinId)
-                }
             }
         }
     }
 
     /**
-     * Requests a specific skin's model/texture files from the server.
-     * Called when a skin is selected in the GUI or when encountering a skinned Pokemon.
+     * Requests a specific skin's model/texture files from the server (on-demand fallback).
      */
     fun requestSkinResources(skinId: String) {
         if (ClientSkinCache.isSkinResourceCached(skinId)) {
             ClientSkinCache.touchSkin(skinId)
             return
         }
+        if (ClientSkinCache.assetsFullyLoaded) return
         if (skinId in ClientSkinCache.pendingDownloads) return
 
         ClientSkinCache.pendingDownloads.add(skinId)

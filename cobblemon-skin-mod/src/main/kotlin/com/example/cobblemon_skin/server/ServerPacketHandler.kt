@@ -19,8 +19,9 @@ import java.util.UUID
  */
 object ServerPacketHandler {
 
-    /** Pending resource pack transfers: player UUID → next chunk index to send. */
-    private val pendingTransfers = mutableMapOf<UUID, Int>()
+    /** Transfer state per player: packType (0=resolver, 1=asset) + next chunk index. */
+    private data class TransferState(val packType: Int, var chunkIndex: Int)
+    private val pendingTransfers = mutableMapOf<UUID, TransferState>()
 
     /** How many 256KB chunks to send per server tick. 1 × 256KB × 20tps = ~5MB/sec. */
     private const val CHUNKS_PER_TICK = 1
@@ -37,11 +38,12 @@ object ServerPacketHandler {
     fun sendSkinListToPlayer(playerUuid: UUID) {
         val server = serverRef ?: return
         val player = server.playerList.getPlayer(playerUuid) ?: return
-        val packHash = ResourcePackTransfer.resolverPackHash
+        val resolverHash = ResourcePackTransfer.resolverPackHash
+        val assetHash = ResourcePackTransfer.assetPackHash
         val skins = SkinManager.getSkinInfoList()
-        CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${skins.size} skins, pack=$packHash)")
+        CobblemonSkinMod.LOGGER.info("Sending skin list to ${player.name.string} (${skins.size} skins, resolver=$resolverHash, asset=$assetHash)")
         try {
-            SkinPackets.sendSkinList(player, skins, packHash)
+            SkinPackets.sendSkinList(player, skins, resolverHash, assetHash)
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.error("Failed to send skin list to ${player.name.string}: ${e.message}")
         }
@@ -54,46 +56,49 @@ object ServerPacketHandler {
         ServerTickEvents.END_SERVER_TICK.register { server ->
             if (serverRef == null) serverRef = server
             if (pendingTransfers.isEmpty()) return@register
-            val totalChunks = ResourcePackTransfer.getTotalChunks()
             val iterator = pendingTransfers.iterator()
             while (iterator.hasNext()) {
-                val (uuid, startIndex) = iterator.next()
+                val (uuid, state) = iterator.next()
                 val player = server.playerList.getPlayer(uuid)
                 if (player == null) {
                     iterator.remove()
                     continue
                 }
-                val endIndex = minOf(startIndex + CHUNKS_PER_TICK, totalChunks)
-                for (i in startIndex until endIndex) {
+                val totalChunks = ResourcePackTransfer.getTotalChunks(state.packType)
+                val endIndex = minOf(state.chunkIndex + CHUNKS_PER_TICK, totalChunks)
+                for (i in state.chunkIndex until endIndex) {
                     try {
-                        val chunkData = ResourcePackTransfer.readChunk(i)
-                        ServerPlayNetworking.send(player, ResourcePackChunkS2C(i, totalChunks, chunkData))
+                        val chunkData = ResourcePackTransfer.readChunk(state.packType, i)
+                        ServerPlayNetworking.send(player, ResourcePackChunkS2C(state.packType, i, totalChunks, chunkData))
                     } catch (e: Exception) {
-                        CobblemonSkinMod.LOGGER.error("Failed to send chunk $i to ${player.name.string}: ${e.message}")
+                        CobblemonSkinMod.LOGGER.error("Failed to send chunk $i (type=${state.packType}) to ${player.name.string}: ${e.message}")
                         iterator.remove()
                         break
                     }
                 }
                 if (endIndex >= totalChunks) {
-                    CobblemonSkinMod.LOGGER.info("Resource pack transfer complete for ${player.name.string}")
+                    val typeName = if (state.packType == 0) "resolver" else "asset"
+                    CobblemonSkinMod.LOGGER.info("$typeName pack transfer complete for ${player.name.string}")
                     iterator.remove()
                 } else {
-                    pendingTransfers[uuid] = endIndex
+                    state.chunkIndex = endIndex
                 }
             }
         }
 
         // Handle C2S: resource pack download request — queue for tick-based delivery
-        ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { _: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
+        ServerPlayNetworking.registerGlobalReceiver(ResourcePackRequestC2S.ID) { payload: ResourcePackRequestC2S, context: ServerPlayNetworking.Context ->
             val player = context.player()
             if (!ResourcePackTransfer.isReady()) {
                 CobblemonSkinMod.LOGGER.warn("Resource pack not ready for ${player.name.string}")
                 return@registerGlobalReceiver
             }
 
-            val totalChunks = ResourcePackTransfer.getTotalChunks()
-            CobblemonSkinMod.LOGGER.info("Queuing resource pack transfer for ${player.name.string} ($totalChunks chunks)")
-            pendingTransfers[player.uuid] = 0
+            val packType = payload.packType
+            val totalChunks = ResourcePackTransfer.getTotalChunks(packType)
+            val typeName = if (packType == 0) "resolver" else "asset"
+            CobblemonSkinMod.LOGGER.info("Queuing $typeName pack transfer for ${player.name.string} ($totalChunks chunks)")
+            pendingTransfers[player.uuid] = TransferState(packType, 0)
         }
 
         // Handle C2S: skin resource request (on-demand per-skin files)

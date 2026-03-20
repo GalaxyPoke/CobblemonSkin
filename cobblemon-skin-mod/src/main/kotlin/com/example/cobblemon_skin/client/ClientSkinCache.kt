@@ -36,7 +36,8 @@ object ClientSkinCache {
         FabricLoader.getInstance().gameDir.resolve("cobblemon_skin_cache").toFile()
     }
 
-    private val hashFile: File by lazy { File(packDir, ".resolver_pack_hash") }
+    private val resolverHashFile: File by lazy { File(packDir, ".resolver_pack_hash") }
+    private val assetHashFile: File by lazy { File(packDir, ".asset_pack_hash") }
     private val lruFile: File by lazy { File(packDir, ".lru_cache.json") }
 
     /** LRU tracking: skinId → last access timestamp (ms). */
@@ -45,11 +46,22 @@ object ClientSkinCache {
     /** Skins currently being downloaded (avoid duplicate requests). */
     val pendingDownloads = mutableSetOf<String>()
 
-    // ── Temp state for streaming resolver pack download ──
-    private var tempFile: File? = null
-    private var tempOutputStream: FileOutputStream? = null
-    private var expectedChunks = 0
-    private var receivedChunks = 0
+    /** Whether ALL skin assets (models+textures) are fully loaded. */
+    var assetsFullyLoaded = false
+        private set
+
+    /** Asset download progress: 0–100. */
+    var assetDownloadProgress = 0
+        private set
+
+    // ── Temp state for streaming downloads (resolver=0, asset=1) ──
+    private class DownloadState {
+        var tempFile: File? = null
+        var tempOutputStream: FileOutputStream? = null
+        var expectedChunks = 0
+        var receivedChunks = 0
+    }
+    private val downloadStates = arrayOf(DownloadState(), DownloadState())
 
     // ═══════════════════════════════════════════════════════════════════════
     //  LOCAL LOADING (skin_list.json fallback)
@@ -137,53 +149,70 @@ object ClientSkinCache {
     }
 
     // ═══════════════════════════════════════════════════════════════════════
-    //  PHASE 1: Resolver pack streaming (on join)
+    //  PACK CACHING + CHUNK STREAMING (resolver=0, asset=1)
     // ═══════════════════════════════════════════════════════════════════════
 
     fun isResolverPackCached(serverHash: String): Boolean {
         if (serverHash.isEmpty()) return true
-        if (!hashFile.exists()) return false
-        return try { hashFile.readText().trim() == serverHash } catch (_: Exception) { false }
+        if (!resolverHashFile.exists()) return false
+        return try { resolverHashFile.readText().trim() == serverHash } catch (_: Exception) { false }
     }
 
-    fun onChunkReceived(chunkIndex: Int, totalChunks: Int, data: ByteArray, packHash: String) {
+    fun isAssetPackCached(serverHash: String): Boolean {
+        if (serverHash.isEmpty()) return true
+        if (!assetHashFile.exists()) return false
+        val cached = try { assetHashFile.readText().trim() == serverHash } catch (_: Exception) { false }
+        if (cached) assetsFullyLoaded = true
+        return cached
+    }
+
+    fun onChunkReceived(packType: Int, chunkIndex: Int, totalChunks: Int, data: ByteArray, packHash: String) {
+        val state = downloadStates[packType.coerceIn(0, 1)]
+        val typeName = if (packType == 0) "resolver" else "asset"
         try {
-            if (tempFile == null) {
+            if (state.tempFile == null) {
                 val gameDir = FabricLoader.getInstance().gameDir.toFile()
-                tempFile = File(gameDir, "cobblemon_skin_resolvers_download.tmp")
-                tempOutputStream = FileOutputStream(tempFile!!)
-                expectedChunks = totalChunks
-                receivedChunks = 0
-                CobblemonSkinMod.LOGGER.info("Starting resolver pack download ($totalChunks chunks)")
+                state.tempFile = File(gameDir, "cobblemon_skin_${typeName}_download.tmp")
+                state.tempOutputStream = FileOutputStream(state.tempFile!!)
+                state.expectedChunks = totalChunks
+                state.receivedChunks = 0
+                CobblemonSkinMod.LOGGER.info("Starting $typeName pack download ($totalChunks chunks)")
             }
 
-            tempOutputStream!!.write(data)
-            receivedChunks++
+            state.tempOutputStream!!.write(data)
+            state.receivedChunks++
 
-            if (receivedChunks >= expectedChunks) {
-                tempOutputStream!!.close()
-                tempOutputStream = null
-                val zipFile = tempFile!!
-                tempFile = null
+            // Update progress for asset pack
+            if (packType == 1 && state.expectedChunks > 0) {
+                assetDownloadProgress = (state.receivedChunks * 100) / state.expectedChunks
+            }
 
-                CobblemonSkinMod.LOGGER.info("Resolver pack download complete (${zipFile.length() / 1024}KB)")
+            if (state.receivedChunks >= state.expectedChunks) {
+                state.tempOutputStream!!.close()
+                state.tempOutputStream = null
+                val zipFile = state.tempFile!!
+                state.tempFile = null
+
+                CobblemonSkinMod.LOGGER.info("$typeName pack download complete (${zipFile.length() / 1024}KB)")
 
                 Thread({
-                    extractResolverPack(zipFile, packHash)
+                    extractPack(zipFile, packType, packHash)
                     zipFile.delete()
-                }, "CobblemonSkin-Extract").start()
+                }, "CobblemonSkin-Extract-$typeName").start()
             }
         } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.error("Error receiving resolver chunk: ${e.message}")
-            cleanupTempFile()
+            CobblemonSkinMod.LOGGER.error("Error receiving $typeName chunk: ${e.message}")
+            cleanupDownloadState(state)
         }
     }
 
     /**
-     * Extracts resolver-only pack. Preserves existing model/texture files
-     * (only overwrites resolvers, pack.mcmeta, skin_list.json).
+     * Extracts a pack ZIP to the cache directory.
+     * Resolver pack: overwrites resolvers, pack.mcmeta, skin_list.json.
+     * Asset pack: adds models, textures, posers, animations.
      */
-    private fun extractResolverPack(zipFile: File, packHash: String) {
+    private fun extractPack(zipFile: File, packType: Int, packHash: String) {
+        val typeName = if (packType == 0) "resolver" else "asset"
         try {
             packDir.mkdirs()
 
@@ -206,19 +235,26 @@ object ClientSkinCache {
                 }
             }
 
+            val hashFile = if (packType == 0) resolverHashFile else assetHashFile
             hashFile.writeText(packHash)
-            CobblemonSkinMod.LOGGER.info("Extracted resolver pack: $fileCount files")
+
+            if (packType == 1) {
+                assetsFullyLoaded = true
+                assetDownloadProgress = 100
+            }
+
+            CobblemonSkinMod.LOGGER.info("Extracted $typeName pack: $fileCount files")
             needsReload = true
         } catch (e: Exception) {
-            CobblemonSkinMod.LOGGER.error("Failed to extract resolver pack: ${e.message}")
+            CobblemonSkinMod.LOGGER.error("Failed to extract $typeName pack: ${e.message}")
         }
     }
 
-    private fun cleanupTempFile() {
-        try { tempOutputStream?.close() } catch (_: Exception) {}
-        tempOutputStream = null
-        try { tempFile?.delete() } catch (_: Exception) {}
-        tempFile = null
+    private fun cleanupDownloadState(state: DownloadState) {
+        try { state.tempOutputStream?.close() } catch (_: Exception) {}
+        state.tempOutputStream = null
+        try { state.tempFile?.delete() } catch (_: Exception) {}
+        state.tempFile = null
     }
 
     // ═══════════════════════════════════════════════════════════════════════
