@@ -46,6 +46,10 @@ object ClientSkinCache {
     /** Skins currently being downloaded (avoid duplicate requests). */
     val pendingDownloads = mutableSetOf<String>()
 
+    /** Whether the resolver pack has been extracted (skin_list available). */
+    var resolverReady = false
+        private set
+
     /** Whether ALL skin assets (models+textures) are fully loaded. */
     var assetsFullyLoaded = false
         private set
@@ -238,13 +242,31 @@ object ClientSkinCache {
             val hashFile = if (packType == 0) resolverHashFile else assetHashFile
             hashFile.writeText(packHash)
 
-            if (packType == 1) {
+            if (packType == 0) {
+                // Resolver pack: only refresh skin list, do NOT reload resources
+                // (models/textures not yet available — would crash Cobblemon)
+                resolverReady = true
+                val skinListFile = File(packDir, "skin_list.json")
+                if (skinListFile.exists()) {
+                    try {
+                        val arr = JsonParser.parseString(skinListFile.readText()).asJsonArray
+                        val ids = arr.map { it.asString }
+                        if (ids.isNotEmpty()) {
+                            skinIds = ids
+                            CobblemonSkinMod.LOGGER.info("Refreshed skin list from resolver pack: ${ids.size} skins")
+                        }
+                    } catch (e: Exception) {
+                        CobblemonSkinMod.LOGGER.warn("Failed to parse skin_list.json from resolver pack: ${e.message}")
+                    }
+                }
+            } else {
+                // Asset pack: models+textures are now present, safe to reload
                 assetsFullyLoaded = true
                 assetDownloadProgress = 100
+                needsReload = true
             }
 
             CobblemonSkinMod.LOGGER.info("Extracted $typeName pack: $fileCount files")
-            needsReload = true
         } catch (e: Exception) {
             CobblemonSkinMod.LOGGER.error("Failed to extract $typeName pack: ${e.message}")
         }

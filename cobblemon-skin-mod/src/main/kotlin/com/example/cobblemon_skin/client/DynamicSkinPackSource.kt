@@ -29,6 +29,10 @@ object DynamicSkinPackSource : RepositorySource {
         if (!cacheDir.exists()) return
         val mcmeta = File(cacheDir, "pack.mcmeta")
         if (!mcmeta.exists()) return
+        // Only provide this pack when asset files are present (not just resolvers).
+        // Loading resolvers without models causes Cobblemon to crash.
+        val assetHash = File(cacheDir, ".asset_pack_hash")
+        if (!assetHash.exists()) return
 
         try {
             val locationInfo = PackLocationInfo(

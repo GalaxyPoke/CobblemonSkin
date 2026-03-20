@@ -91,19 +91,19 @@ object SkinClientMod : ClientModInitializer {
                 }
             }
 
-            // Trigger resource reload if any pack was just extracted
+            // After resolver pack extracted (no reload!), immediately request asset pack
+            if (ClientSkinCache.resolverReady && assetRequestDelay < 0 &&
+                serverAssetHash.isNotEmpty() && !ClientSkinCache.isAssetPackCached(serverAssetHash)) {
+                CobblemonSkinMod.LOGGER.info("Resolver ready, requesting asset pack in 1 second...")
+                assetRequestDelay = 20 // 20 ticks = 1 second
+            }
+
+            // Trigger resource reload only after ASSET pack is extracted (models+resolvers both present)
             if (ClientSkinCache.needsReload) {
                 ClientSkinCache.needsReload = false
-                CobblemonSkinMod.LOGGER.info("Triggering resource pack reload...")
+                CobblemonSkinMod.LOGGER.info("Asset pack ready, triggering resource pack reload...")
                 client.reloadResourcePacks().thenRun {
-                    CobblemonSkinMod.LOGGER.info("Resource pack reload complete")
-                    // After resolver pack reload, auto-request asset pack if needed
-                    if (serverAssetHash.isNotEmpty() && !ClientSkinCache.isAssetPackCached(serverAssetHash)) {
-                        if (assetRequestDelay < 0) {
-                            CobblemonSkinMod.LOGGER.info("Asset pack needed, will request in 2 seconds...")
-                            assetRequestDelay = 40 // 40 ticks = 2 seconds
-                        }
-                    }
+                    CobblemonSkinMod.LOGGER.info("Resource pack reload complete — all skins available")
                 }
             }
         }
